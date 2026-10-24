@@ -234,9 +234,12 @@ class LLMClient:
         alias: str = "fast-small",
         max_tokens: int = 1024,
         purpose: str = "",
+        strict: bool = True,
     ) -> dict[str, Any]:
+        """``strict=False`` skips the provider's JSON mode (some reasoning models, e.g. Qwen,
+        emit thinking text the provider's JSON validator rejects); we parse it ourselves."""
         response = self.complete(
-            messages, alias=alias, json_mode=True, max_tokens=max_tokens, purpose=purpose
+            messages, alias=alias, json_mode=strict, max_tokens=max_tokens, purpose=purpose
         )
         return parse_json_object(response.text)
 
@@ -260,8 +263,12 @@ class LLMClient:
 _JSON_BLOCK = re.compile(r"\{.*\}", re.S)
 
 
+THINKING = re.compile(r"<think>.*?</think>", re.S)
+
+
 def parse_json_object(text: str) -> dict[str, Any]:
     """Parse a JSON object from model output (tolerates ```json fences / stray prose)."""
+    text = THINKING.sub("", text)
     try:
         value = json.loads(text)
     except json.JSONDecodeError:

@@ -42,6 +42,8 @@ SUBSET = {
     "adversarial": 10,
 }
 JUDGE_ALIAS = "fallback"
+JUDGE_MAX_TOKENS = 900  # input + output must fit one request under the 6-8k tokens/minute limit
+SOURCE_WORDS = 200
 JUDGE_SYSTEM = """You are a strict evaluator of a regulatory question-answering system.
 You get a question, numbered source passages and an answer with citation markers like [2].
 Split the answer into its factual sentences. For each sentence decide:
@@ -71,8 +73,9 @@ def judge(llm: LLMClient, question: str, sources: str, answer: str) -> dict[str,
         verdict = llm.complete_json(
             [{"role": "system", "content": JUDGE_SYSTEM}, {"role": "user", "content": user}],
             alias=JUDGE_ALIAS,
-            max_tokens=1500,
+            max_tokens=JUDGE_MAX_TOKENS,
             purpose="judge",
+            strict=False,
         )
     except (LLMUnavailableError, ValueError) as exc:
         log.warning("judge_failed", error=str(exc))
@@ -139,7 +142,7 @@ def format_sources_from_event(sources_event: dict[str, Any], answer: dict[str, A
     for source in sources_event["sources"]:
         cited = by_number.get(source["number"])
         text = (
-            cited["text"]
+            " ".join(cited["text"].split()[:SOURCE_WORDS])
             if cited
             else f"(passage from {source['title']}, para {source['ref']}; not cited)"
         )

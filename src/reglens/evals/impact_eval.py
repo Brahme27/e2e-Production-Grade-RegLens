@@ -82,6 +82,7 @@ def _precision(paragraph: str, obligations: list[Obligation], llm: LLMClient) ->
             alias="fallback",
             max_tokens=600,
             purpose="obligation_precision",
+            strict=False,
         )
     except (LLMUnavailableError, ValueError):
         return []

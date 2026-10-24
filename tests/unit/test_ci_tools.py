@@ -78,3 +78,68 @@ def test_smoke_checks_pass_against_a_healthy_stack() -> None:
 def test_smoke_main_reports_failures(capsys: pytest.CaptureFixture[str]) -> None:
     assert smoke.main(["--api", "http://127.0.0.1:9"]) == 1  # nothing listening
     assert "FAIL  api health" in capsys.readouterr().out
+
+
+def test_results_markdown_from_reports(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> None:
+    from reglens import results  # noqa: PLC0415
+
+    settings = Settings(
+        artifacts_dir=tmp_path / "art", data_dir=tmp_path / "data", evals_dir=tmp_path / "evals"
+    )
+    reports = settings.reports_dir
+    reports.mkdir(parents=True)
+    overall = {**BASE, "recall@5": 0.8, "temporal_precision": 1.0}
+    row = {
+        "key": "G",
+        "label": "prod",
+        "overall": overall,
+        "latency_ms": {"p50": 1, "p95": 3149},
+        "by_category": {"lookup": overall},
+    }
+    (reports / "ablation.json").write_text(json.dumps([row]))
+    summary = {"faithfulness": 0.9, "citation_precision": 0.85, "n": 60, "latency_p95_ms": 4000}
+    (reports / "generation_eval.json").write_text(json.dumps({"final": {"summary": summary}}))
+    (reports / "abstention.json").write_text(
+        json.dumps({"threshold": -2.1, "balanced_accuracy": 0.9, "n": 139})
+    )
+    scores = {"precision": 1.0, "recall": 0.9, "f1": 0.95}
+    (reports / "supersession_eval.json").write_text(
+        json.dumps(
+            {
+                "gold_edges": 57,
+                "rules": scores,
+                "rules_plus_llm": scores,
+                "rules_internal": scores,
+                "rules_plus_llm_internal": scores,
+            }
+        )
+    )
+    (reports / "router_eval.json").write_text(
+        json.dumps({"golden_accuracy": 0.903, "golden_n": 175})
+    )
+    confusion = {
+        g: {"covered": 1, "partially_covered": 0, "not_covered": 0}
+        for g in ("covered", "partially_covered", "not_covered")
+    }
+    (reports / "impact_eval.json").write_text(
+        json.dumps(
+            {
+                "extraction": scores,
+                "gaps": {
+                    "n": 41,
+                    "accuracy": 0.8,
+                    "gap_detection_accuracy": 0.9,
+                    "cohen_kappa": 0.7,
+                    "confusion": confusion,
+                },
+            }
+        )
+    )
+    (settings.artifacts_dir / "llm-usage.jsonl").write_text(
+        json.dumps({"purpose": "answer", "prompt_tokens": 10, "completion_tokens": 2}) + "\n"
+    )
+    monkeypatch.setattr(results, "get_settings", lambda: settings)
+    results.main()
+    text = (tmp_path / "docs" / "RESULTS.md").read_text(encoding="utf-8")
+    assert "| G | prod | 0.870" in text and "3,149 ms" in text
+    assert "Faithfulness" in text and "Cohen's κ" in text and "| **total** | **1** |" in text
