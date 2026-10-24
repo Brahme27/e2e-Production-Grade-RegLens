@@ -65,6 +65,14 @@ class ImpactState(TypedDict, total=False):
     status: str
 
 
+def csv_safe(value: Any) -> Any:
+    """Neutralise spreadsheet formulas: obligation and rationale text comes from regulator
+    documents and an LLM, and a cell starting with = + - @ would be evaluated by Excel."""
+    if isinstance(value, str) and value[:1] in ("=", "+", "-", "@", "\t", "\r"):
+        return "'" + value
+    return value
+
+
 class ImpactWorkflow:
     def __init__(
         self,
@@ -81,8 +89,11 @@ class ImpactWorkflow:
         self.policy_search = policy_search
         self.llm = llm
         self.tickets_dir = tickets_dir
-        self.today = today or date.today()
+        self._today = today  # fixed in tests/evals; otherwise the date of each run
         self.graph = self._build().compile(checkpointer=InMemorySaver())
+
+    def today(self) -> date:
+        return self._today or date.today()
 
     # ---------------------------------------------------------------- nodes
     def load_target(self, state: ImpactState) -> ImpactState:
@@ -187,7 +198,7 @@ class ImpactWorkflow:
                     "policy_refs": ", ".join(gap.get("policy_refs") or gap.get("evidence") or []),
                     "priority": severity,
                     "due": (
-                        self.today + timedelta(days=SEVERITY_DAYS.get(severity, 60))
+                        self.today() + timedelta(days=SEVERITY_DAYS.get(severity, 60))
                     ).isoformat(),
                     "entity": state["entity"],
                 }
@@ -214,7 +225,7 @@ class ImpactWorkflow:
             ]
             writer = csv.DictWriter(handle, fieldnames=fields)
             writer.writeheader()
-            writer.writerows(tickets)
+            writer.writerows([{k: csv_safe(v) for k, v in t.items()} for t in tickets])
 
     # ---------------------------------------------------------------- graph
     def _build(self) -> StateGraph[ImpactState]:

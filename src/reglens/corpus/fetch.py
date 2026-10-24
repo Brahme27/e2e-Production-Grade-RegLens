@@ -24,6 +24,7 @@ log = get_logger(__name__)
 
 RETRY_STATUSES = frozenset({429, 500, 502, 503, 504})
 HTTP_OK = 200
+HTTP_SERVER_ERROR = 500
 HTTP_NOT_FOUND = 404
 
 
@@ -105,14 +106,17 @@ class PoliteFetcher:
         parts = urlsplit(url)
         host = f"{parts.scheme}://{parts.netloc}"
         if host not in self._robots:
-            parser: RobotFileParser | None = RobotFileParser()
             try:
                 response = self._client.get(f"{host}/robots.txt")
-                if response.status_code == HTTP_OK:
-                    parser.parse(response.text.splitlines())  # type: ignore[union-attr]
-                else:  # no robots.txt (or an error page): nothing is disallowed
-                    parser = None
-            except httpx.HTTPError:
+            except httpx.HTTPError:  # unreachable: disallow for now, ask again next time
+                return False
+            parser: RobotFileParser | None = RobotFileParser()
+            if response.status_code == HTTP_OK:
+                parser.parse(response.text.splitlines())  # type: ignore[union-attr]
+            elif response.status_code >= HTTP_SERVER_ERROR:
+                # robots.txt unavailable: RFC 9309 says assume complete disallow
+                parser.parse(["User-agent: *", "Disallow: /"])  # type: ignore[union-attr]
+            else:  # 4xx: there is no robots.txt, so nothing is disallowed
                 parser = None
             self._robots[host] = parser
         robots = self._robots[host]

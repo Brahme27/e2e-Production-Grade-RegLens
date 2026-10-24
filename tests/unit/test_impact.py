@@ -18,7 +18,7 @@ from reglens.impact.policies import (
     load_policies,
     parse_policy,
 )
-from reglens.impact.workflow import ImpactWorkflow, load_entities
+from reglens.impact.workflow import ImpactWorkflow, csv_safe, load_entities
 from reglens.index.store import Hit, VectorStore
 from reglens.llm.client import LLMClient, LLMResponse
 from reglens.parse.model import Paragraph, ParsedDocument
@@ -263,9 +263,39 @@ def test_impact_api_review_and_approve(tmp_path: Path) -> None:
             == 404
         )
         assert c.get(f"/v1/impact/{run_id}/tickets.csv", headers=key).status_code == 404
+        again = c.post(
+            "/v1/impact", json={"doc_key": "rbi-io@current", "entity": "sahyadri-bank"}, headers=key
+        )
+        assert again.status_code == 201  # same obligations, new run: no id clash
+        assert len(c.get("/v1/obligations", headers=key).json()) == 4
         done = c.post(f"/v1/impact/{run_id}/approve", headers=key).json()
         assert done["status"] == "tickets_created" and len(done["tickets"]) == 1
         assert c.post(f"/v1/impact/{run_id}/approve", headers=key).status_code == 409
+        late = c.patch(f"/v1/gaps/{gap_id}", json={"review_status": "approved"}, headers=key)
+        assert late.status_code == 409  # decisions are frozen once tickets exist
         csv_text = c.get(f"/v1/impact/{run_id}/tickets.csv", headers=key).text
         assert csv_text.startswith("ticket,title,obligation")
         assert c.get("/v1/impact/..%2Fx/tickets.csv", headers=key).status_code == 404
+
+
+def test_csv_cells_cannot_become_spreadsheet_formulas() -> None:
+    assert csv_safe('=HYPERLINK("http://x")') == '\'=HYPERLINK("http://x")'
+    assert csv_safe("-1+2") == "'-1+2" and csv_safe("@SUM(A1)") == "'@SUM(A1)"
+    assert csv_safe("Escalate within 20 days.") == "Escalate within 20 days."
+    assert csv_safe(3) == 3
+
+
+def test_ticket_due_dates_use_the_day_of_the_run(tmp_path: Path) -> None:
+    workflow = ImpactWorkflow(
+        {}, {}, _search(["sahyadri-bank"]), LLMClient(Scripted(), tmp_path), tmp_path / "t"
+    )
+    assert workflow.today() == date.today()
+    pinned = ImpactWorkflow(
+        {},
+        {},
+        _search(["sahyadri-bank"]),
+        LLMClient(Scripted(), tmp_path),
+        tmp_path / "t",
+        today=date(2026, 1, 1),
+    )
+    assert pinned.today() == date(2026, 1, 1)

@@ -62,7 +62,10 @@ class SupersessionEdge(Base):
 class Obligation(Base):
     __tablename__ = "obligations"
 
-    id: Mapped[str] = mapped_column(String(64), primary_key=True)
+    # "<run id>:<obligation key>": the same rule analysed in two runs (or for two firms)
+    # must never share rows, reviews or overrides
+    id: Mapped[str] = mapped_column(String(100), primary_key=True)
+    obligation_key: Mapped[str] = mapped_column(String(64), index=True)
     impact_run: Mapped[str] = mapped_column(String(64), index=True)
     doc_key: Mapped[str] = mapped_column(String(160), index=True)
     source_ref: Mapped[str] = mapped_column(String(120))

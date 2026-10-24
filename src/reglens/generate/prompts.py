@@ -6,7 +6,7 @@ from datetime import date
 
 from reglens.index.store import Hit
 
-PROMPT_VERSION = "answer-v1"
+PROMPT_VERSION = "answer-v2"  # v2: source status is relative to the question's date
 NOT_FOUND = "NOT_FOUND"
 
 ANSWER_SYSTEM = f"""You are RegLens, a research assistant for compliance teams covering RBI, SEBI,
@@ -28,14 +28,26 @@ GLOBAL_ADDENDUM = """This is a broad, thematic question: identify the main theme
 sources as a short bulleted list, each bullet cited."""
 
 
-def format_sources(hits: list[Hit]) -> str:
+def status_on(start: date | None, end: date | None, day: date | None) -> str:
+    """Whether a text applied on the question's date (not on the day the index was built)."""
+    day = day or date.today()
+    if start is not None and day < start:
+        return "not yet in force"
+    if end is not None and day >= end:
+        return "no longer in force"
+    return "in force"
+
+
+def format_sources(hits: list[Hit], as_of: date | None = None) -> str:
     blocks = []
     for number, hit in enumerate(hits, start=1):
         c = hit.chunk
         name = f"{c.title} ({c.doc_number})" if c.doc_number else c.title
         valid = f"valid {c.valid_from or '?'} to {c.valid_to or 'now'}"
+        status = status_on(c.valid_from, c.valid_to, as_of)
         blocks.append(
-            f"[{number}] {c.regulator} | {name} | para {c.ref} | status: {c.status}, {valid}\n{c.text}"
+            f"[{number}] {c.regulator} | {name} | para {c.ref} | {status} on the date asked, "
+            f"{valid}\n{c.text}"
         )
     return "\n\n".join(blocks)
 
@@ -59,5 +71,5 @@ def answer_messages(
         docs = sorted({h.chunk.doc_id for h in hits if h.chunk.doc_id in summaries})
         overview = "\n".join(f"- {summaries[d]}" for d in docs)
         parts.append(f"Document overviews:\n{overview}")
-    parts.append(f"Sources:\n{format_sources(hits)}")
+    parts.append(f"Sources:\n{format_sources(hits, as_of)}")
     return [{"role": "system", "content": system}, {"role": "user", "content": "\n\n".join(parts)}]

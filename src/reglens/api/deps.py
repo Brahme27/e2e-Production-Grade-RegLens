@@ -16,6 +16,7 @@ ASK_LATENCY = Histogram(
     "reglens_ask_seconds", "End-to-end /v1/ask latency", buckets=(0.1, 0.3, 0.5, 1, 2, 4, 6, 10, 20)
 )
 FEEDBACK = Counter("reglens_feedback_total", "User feedback", ["score"])
+MAX_TRACKED_CLIENTS = 10_000
 
 
 def require_api_key(request: Request, x_api_key: Annotated[str | None, Header()] = None) -> None:
@@ -43,13 +44,26 @@ class RateLimiter:
                 self._buckets[client] = (tokens, now)
                 return False
             self._buckets[client] = (tokens - 1, now)
+            if len(self._buckets) > MAX_TRACKED_CLIENTS:  # bounded memory: forget the idlest
+                idlest = sorted(self._buckets, key=lambda k: self._buckets[k][1])
+                for key in idlest[: len(idlest) // 2]:
+                    del self._buckets[key]
             return True
 
 
-def rate_limited(request: Request, x_api_key: Annotated[str | None, Header()] = None) -> None:
+def client_id(request: Request) -> str:
+    """Who is calling, for rate limiting. Not the API key: every console user shares the proxy's
+    key. The rightmost X-Forwarded-For hop is the one written by the nearest trusted proxy (the
+    console's BFF or the AWS load balancer); hops to its left are whatever the client claimed."""
+    hops = [h.strip() for h in request.headers.get("x-forwarded-for", "").split(",") if h.strip()]
+    if hops:
+        return hops[-1]
+    return request.client.host if request.client else "anonymous"
+
+
+def rate_limited(request: Request) -> None:
     limiter: RateLimiter = request.app.state.rate_limiter
-    client = x_api_key or (request.client.host if request.client else "anonymous")
-    if not limiter.allow(client):
+    if not limiter.allow(client_id(request)):
         raise HTTPException(status_code=429, detail="too many requests, slow down")
 
 

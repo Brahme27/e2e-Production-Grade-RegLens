@@ -80,7 +80,7 @@ def ask(
     return answer
 
 
-@router.post("/feedback", status_code=201)
+@router.post("/feedback", status_code=201, dependencies=[Depends(rate_limited)])
 def feedback(body: FeedbackIn, svc: Annotated[Any, Depends(services)]) -> dict[str, str]:
     """Thumbs up/down on an answer: stored, counted, and sent to Langfuse as a score."""
     REQUESTS.labels("feedback").inc()

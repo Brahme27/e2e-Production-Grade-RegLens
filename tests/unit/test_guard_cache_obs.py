@@ -263,3 +263,15 @@ def test_answer_to_dict_shape() -> None:
 
     payload = answer_to_dict(Answer("q", "text", True, "lookup", None))
     assert payload["verification"] is None and payload["disclaimer"].startswith("Information only")
+
+
+def test_cached_today_answers_expire_when_the_date_changes(
+    qa: tuple[QAService, ScriptedLLM],
+) -> None:
+    service, _ = qa
+    question = AskRequest("How often must the outsourcing policy be reviewed?")
+    service.today = lambda: date(2026, 10, 24)
+    assert not service.ask(question)["cached"]
+    assert service.ask(question)["cached"]
+    service.today = lambda: date(2026, 10, 25)  # a new day: what is "in force" may differ
+    assert not service.ask(question)["cached"]

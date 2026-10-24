@@ -12,7 +12,7 @@ import pytest
 from fastapi.testclient import TestClient
 
 from reglens.api.app import create_app
-from reglens.api.deps import RateLimiter
+from reglens.api.deps import RateLimiter, client_id
 from reglens.config import Settings
 from reglens.obs.tracing import Tracer
 from reglens.parse.model import Paragraph, ParsedDocument
@@ -158,6 +158,33 @@ def test_rate_limit(client: tuple[TestClient, FakeQA]) -> None:
         for _ in range(3)
     ]
     assert codes == [200, 200, 429]
+    other = {**KEY, "X-Forwarded-For": "203.0.113.9"}  # same key, different person: own bucket
+    assert (
+        c.post("/v1/ask?stream=false", json={"question": "What must firms do?"}, headers=other)
+    ).status_code == 200
+    c.app.state.rate_limiter = RateLimiter(per_minute=1)  # type: ignore[attr-defined]
+    feedback = {"trace_id": "trace-123456", "score": 1}
+    assert c.post("/v1/feedback", json=feedback, headers=KEY).status_code == 201
+    assert c.post("/v1/feedback", json=feedback, headers=KEY).status_code == 429
+
+
+def test_client_id_trusts_only_the_nearest_proxy() -> None:
+    from starlette.requests import Request  # noqa: PLC0415
+
+    def request(forwarded: str | None) -> Request:
+        headers = [(b"x-forwarded-for", forwarded.encode())] if forwarded else []
+        return Request({"type": "http", "headers": headers, "client": ("10.0.0.5", 1234)})
+
+    assert client_id(request("1.1.1.1, 198.51.100.7")) == "198.51.100.7"  # spoofed hop ignored
+    assert client_id(request(None)) == "10.0.0.5"
+
+
+def test_rate_limiter_forgets_idle_clients(monkeypatch: pytest.MonkeyPatch) -> None:
+    monkeypatch.setattr("reglens.api.deps.MAX_TRACKED_CLIENTS", 4)
+    limiter = RateLimiter(per_minute=10)
+    for i in range(5):
+        assert limiter.allow(f"client-{i}")
+    assert len(limiter._buckets) <= 4 and "client-4" in limiter._buckets
 
 
 def test_feedback_is_stored(client: tuple[TestClient, FakeQA]) -> None:

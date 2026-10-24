@@ -105,12 +105,41 @@ def test_fetch_waits_between_requests_to_same_host(tmp_path: Path) -> None:
 
 def test_fetch_network_error_retries_then_fails(tmp_path: Path) -> None:
     def handler(request: httpx.Request) -> httpx.Response:
+        if request.url.path == "/robots.txt":
+            return httpx.Response(404)
         raise httpx.ConnectError("down", request=request)
 
     fetcher = make_fetcher(tmp_path, handler)
     with pytest.raises(FetchError, match="ConnectError"):
         fetcher.get("https://reg.example/x")
     fetcher.close()
+
+
+def test_robots_server_error_means_disallow(tmp_path: Path) -> None:
+    def handler(request: httpx.Request) -> httpx.Response:
+        if request.url.path == "/robots.txt":
+            return httpx.Response(503)
+        return httpx.Response(200, content=b"<html>page</html>")
+
+    fetcher = make_fetcher(tmp_path, handler)
+    with pytest.raises(FetchError, match="robots"):
+        fetcher.get("https://reg.example/x")
+
+
+def test_robots_unreachable_disallows_but_is_retried(tmp_path: Path) -> None:
+    attempts: list[str] = []
+
+    def handler(request: httpx.Request) -> httpx.Response:
+        if request.url.path == "/robots.txt":
+            attempts.append("robots")
+            if len(attempts) == 1:
+                raise httpx.ConnectError("blip", request=request)
+            return httpx.Response(404)
+        return httpx.Response(200, content=b"<html>page</html>")
+
+    fetcher = make_fetcher(tmp_path, handler)
+    assert not fetcher.allowed("https://reg.example/x")
+    assert fetcher.get("https://reg.example/x").content == b"<html>page</html>"
 
 
 # ---------------------------------------------------------------- sources

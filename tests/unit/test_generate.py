@@ -14,7 +14,7 @@ from reglens.generate.answer import (
     is_not_found,
     strip_invalid_markers,
 )
-from reglens.generate.prompts import answer_messages, format_sources
+from reglens.generate.prompts import answer_messages, format_sources, status_on
 from reglens.generate.verify import lexical_support, verify
 from reglens.index.store import Hit
 from reglens.llm.client import LLMClient, LLMResponse, LLMUnavailableError
@@ -59,7 +59,9 @@ def answerer(text: str, tmp_path: Path, threshold: float = 0.1) -> tuple[Answere
 
 def test_prompt_numbers_sources_and_adds_route_instructions() -> None:
     sources = format_sources(HITS)
-    assert sources.startswith("[1] RBI | Title of doc (NUM/doc) | para 20 | status: current")
+    assert sources.startswith(
+        "[1] RBI | Title of doc (NUM/doc) | para 20 | in force on the date asked, valid 2020-01-01"
+    )
     messages = answer_messages("q?", HITS, date(2024, 3, 1), "comparison")
     assert "comparison question" in messages[0]["content"]
     assert "As of: 2024-03-01" in messages[1]["content"]
@@ -145,3 +147,37 @@ def test_stream_yields_text_then_final_answer(tmp_path: Path) -> None:
 
 def test_marker_removal_for_display() -> None:
     assert answer_text_without_markers("Rule applies [1][2]. Next [3].") == "Rule applies. Next."
+
+
+def test_source_status_is_relative_to_the_question_date() -> None:
+    start, end = date(2020, 1, 1), date(2023, 1, 1)
+    assert status_on(start, end, date(2019, 6, 1)) == "not yet in force"
+    assert status_on(start, end, date(2021, 6, 1)) == "in force"
+    assert status_on(start, end, date(2023, 1, 1)) == "no longer in force"
+    assert status_on(None, None, None) == "in force"
+
+
+class BreaksMidStream:
+    """Streams the opening of an answer, then the connection drops."""
+
+    def __init__(self) -> None:
+        self.completions = 0
+
+    def __call__(self, *args: object, **kwargs: object) -> LLMResponse:
+        self.completions += 1
+        return LLMResponse("A different full answer [1].", model="fake")
+
+    def stream(self, *args: object, **kwargs: object) -> object:
+        yield "The policy must be reviewed "
+        raise LLMUnavailableError("connection reset")
+
+
+def test_stream_failure_after_text_was_shown_does_not_re_ask(tmp_path: Path) -> None:
+    backend = BreaksMidStream()
+    ans = Answerer(LLMClient(backend, tmp_path), abstain_threshold=0.1)  # type: ignore[arg-type]
+    events = list(ans.stream(retrieval()))
+    final = events[-1]
+    assert events[0] == "The policy must be reviewed "  # the user saw this...
+    assert isinstance(final, Answer) and final.text == UNAVAILABLE_TEXT  # ...it is replaced
+    assert final.reason == "llm_interrupted" and len(final.citations) == 2
+    assert backend.completions == 0  # no second, different answer is generated

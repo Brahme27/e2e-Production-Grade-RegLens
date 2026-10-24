@@ -9,7 +9,7 @@ measure is exactly what users get.
 
 from __future__ import annotations
 
-from collections.abc import Iterator
+from collections.abc import Callable, Iterator
 from dataclasses import asdict, dataclass
 from datetime import date
 from typing import Any
@@ -83,6 +83,7 @@ class QAService:
         config: RetrievalConfig,
         *,
         guard_llm: LLMClient | None = None,
+        today: Callable[[], date] = date.today,
     ) -> None:
         self.retriever = retriever
         self.answerer = answerer
@@ -90,6 +91,7 @@ class QAService:
         self.cache = cache
         self.config = config
         self.guard_llm = guard_llm
+        self.today = today
 
     def ask_stream(self, request: AskRequest) -> Iterator[dict[str, Any]]:
         trace = self.tracer.start(
@@ -145,12 +147,13 @@ class QAService:
         signals = analyse(question)
         as_of = request.as_of or signals.as_of
         regulators = request.regulators or signals.regulators
+        cache_day = as_of or self.today()  # "today" answers expire when the date changes
 
         embedding: list[float] = []
         if self.cache is not None:
             with trace.span("cache") as span:
                 embedding = self.retriever.embedder.dense_query(question)
-                hit = self.cache.get(embedding, as_of, regulators)
+                hit = self.cache.get(embedding, cache_day, regulators)
                 span.output = {"hit": hit is not None}
             if hit is not None:
                 yield {
@@ -195,5 +198,5 @@ class QAService:
             span.metadata = {"model": self.answerer.alias, "abstained": final_answer.abstained}
         payload = answer_to_dict(final_answer) | {"trace_id": trace.id, "cached": False}
         if self.cache is not None and not final_answer.abstained and embedding:
-            self.cache.put(embedding, as_of, regulators, payload)
+            self.cache.put(embedding, cache_day, regulators, payload)
         yield {"type": "final", "answer": payload}

@@ -5,7 +5,7 @@
 import { connection, type NextRequest } from "next/server";
 
 const API_URL = () => process.env.API_URL ?? "http://localhost:8000";
-// Only these API areas may be reached through the proxy.
+// Only these API areas may be reached through the proxy (matched on whole path segments).
 const ALLOWED_PREFIXES = [
   "v1/ask",
   "v1/feedback",
@@ -22,21 +22,59 @@ const ALLOWED_PREFIXES = [
 
 type Method = "GET" | "POST" | "PATCH";
 
+const notFound = () => Response.json({ detail: "not found" }, { status: 404 });
+
+// Segments arrive URL-decoded, so "%2e%2e" is already "..". Anything that could change the path
+// once re-encoded (dot segments, slashes, a leftover "%" from double encoding) is refused.
+function safePath(segments: string[]): string | null {
+  const bad = segments.some(
+    (s) => s === "" || s === "." || s === ".." || /[\\/%]/.test(s),
+  );
+  if (bad) return null;
+  const joined = segments.join("/");
+  const allowed = ALLOWED_PREFIXES.some((p) => joined === p || joined.startsWith(`${p}/`));
+  return allowed ? segments.map(encodeURIComponent).join("/") : null;
+}
+
+// Writes must come from this console's own pages (blocks cross-site form posts) and be JSON.
+function writeAllowed(req: NextRequest): boolean {
+  const origin = req.headers.get("origin");
+  if (origin && origin !== req.nextUrl.origin) {
+    const host = req.headers.get("x-forwarded-host") ?? req.headers.get("host");
+    if (!host || new URL(origin).host !== host) return false;
+  }
+  const type = req.headers.get("content-type") ?? "";
+  return type.split(";")[0].trim().toLowerCase() === "application/json";
+}
+
+// The client's address for the API's rate limiter: the rightmost forwarded hop is the one
+// written by our own load balancer; anything to its left is what the browser claimed.
+function clientAddress(req: NextRequest): string | null {
+  const hops = (req.headers.get("x-forwarded-for") ?? "")
+    .split(",")
+    .map((h) => h.trim())
+    .filter(Boolean);
+  return hops.at(-1) ?? req.headers.get("x-real-ip");
+}
+
 async function forward(req: NextRequest, ctx: RouteContext<"/api/proxy/[...path]">, method: Method) {
   await connection(); // always run at request time, never cached
   const { path } = await ctx.params;
-  const joined = path.join("/");
-  if (joined.includes("..") || !ALLOWED_PREFIXES.some((p) => joined.startsWith(p))) {
-    return Response.json({ detail: "not found" }, { status: 404 });
+  const target = safePath(path);
+  if (!target) return notFound();
+  if (method !== "GET" && !writeAllowed(req)) {
+    return Response.json({ detail: "cross-origin or non-JSON write refused" }, { status: 403 });
   }
   const headers: Record<string, string> = { "Content-Type": "application/json" };
   if (process.env.API_KEY) headers["X-API-Key"] = process.env.API_KEY;
   const accept = req.headers.get("accept");
   if (accept) headers["Accept"] = accept;
+  const client = clientAddress(req);
+  if (client) headers["X-Forwarded-For"] = client;
 
   let upstream: Response;
   try {
-    upstream = await fetch(`${API_URL()}/${joined}${req.nextUrl.search}`, {
+    upstream = await fetch(`${API_URL()}/${target}${req.nextUrl.search}`, {
       method,
       headers,
       body: method === "GET" ? undefined : await req.text(),

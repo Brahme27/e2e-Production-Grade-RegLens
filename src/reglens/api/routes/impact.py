@@ -9,7 +9,7 @@ from fastapi.responses import FileResponse
 from pydantic import BaseModel, Field
 from sqlalchemy import select
 
-from reglens.api.deps import AUTH, REQUESTS, services
+from reglens.api.deps import AUTH, REQUESTS, rate_limited, services
 from reglens.store.db import GapJudgement, Obligation, session_scope
 
 router = APIRouter(prefix="/v1", dependencies=AUTH, tags=["impact"])
@@ -32,9 +32,11 @@ def _save(engine: Any, state: dict[str, Any]) -> None:
     gaps = {g["obligation_id"]: g for g in state.get("gaps", [])}
     with session_scope(engine) as session:
         for o in state.get("obligations", []):
-            session.merge(
+            row_id = f"{state['run_id']}:{o['id']}"  # never shared between runs or firms
+            session.add(
                 Obligation(
-                    id=o["id"],
+                    id=row_id,
+                    obligation_key=o["id"],
                     impact_run=state["run_id"],
                     doc_key=state["doc_key"],
                     source_ref=o["source_ref"],
@@ -50,7 +52,7 @@ def _save(engine: Any, state: dict[str, Any]) -> None:
             if gap:
                 session.add(
                     GapJudgement(
-                        obligation_id=o["id"],
+                        obligation_id=row_id,
                         entity=state["entity"],
                         status=gap["status"],
                         rationale=gap["rationale"],
@@ -73,7 +75,7 @@ def _rows(
             query = query.where(GapJudgement.entity == entity)
         return [
             {
-                "obligation_id": o.id,
+                "obligation_id": o.obligation_key,
                 "run_id": o.impact_run,
                 "doc_key": o.doc_key,
                 "source_ref": o.source_ref,
@@ -93,7 +95,7 @@ def _rows(
         ]
 
 
-@router.post("/impact", status_code=201)
+@router.post("/impact", status_code=201, dependencies=[Depends(rate_limited)])
 def start_impact(body: ImpactIn, svc: Annotated[Any, Depends(services)]) -> dict[str, Any]:
     """Run the change-impact workflow up to human review."""
     REQUESTS.labels("impact").inc()
@@ -130,6 +132,10 @@ def review_gap(
         gap = session.get(GapJudgement, gap_id)
         if gap is None:
             raise HTTPException(status_code=404, detail="unknown gap")
+        obligation = session.get(Obligation, gap.obligation_id)
+        run_id = obligation.impact_run if obligation else ""
+        if svc.impact.state(run_id).get("status") != "awaiting_review":
+            raise HTTPException(status_code=409, detail="this run is no longer awaiting review")
         gap.review_status = body.review_status
         gap.reviewer_note = body.note
         if body.review_status == "overridden":

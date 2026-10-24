@@ -122,8 +122,10 @@ class Retriever:
                 flt = SearchFilter(as_of=effective_as_of, regulators=(regulator,))
                 candidates.extend(self._first_stage(question, config, flt, per_side))
         else:
-            single = mentioned if len(mentioned) == 1 else ()
-            flt = SearchFilter(as_of=effective_as_of, regulators=single)
+            # explicit filters from the request are always applied; regulators merely named in
+            # the question narrow the search only when exactly one is named
+            chosen = regulators or (mentioned if len(mentioned) == 1 else ())
+            flt = SearchFilter(as_of=effective_as_of, regulators=chosen)
             candidates = self._first_stage(question, config, flt, config.candidates)
         timings["search"] = (time.perf_counter() - stage) * 1000
 

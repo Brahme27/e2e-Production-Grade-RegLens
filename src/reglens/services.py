@@ -6,6 +6,7 @@ once and passed around, so a test can swap any piece for a fake.
 
 from __future__ import annotations
 
+import hashlib
 import json
 from collections.abc import Callable
 from datetime import date
@@ -89,6 +90,21 @@ def build_answerer(settings: Settings, llm: LLMClient | None = None) -> Answerer
 SERVING_CONFIG = RetrievalConfig(diversify_global=False)
 
 
+def index_fingerprint(settings: Settings) -> str:
+    """Identifies the serving index by what it is built from (parsed documents, validity, models,
+    variant), so a re-crawl or re-parse invalidates cached answers even in a persistent Redis."""
+    processed = settings.data_dir / "processed"
+    digest = hashlib.sha256(
+        f"{settings.serving_variant}|{settings.dense_model}|{settings.sparse_model}".encode()
+    )
+    files = [processed / "validity.json", *sorted((processed / "documents").glob("*.json"))]
+    for path in files:
+        if path.exists():
+            digest.update(path.name.encode())
+            digest.update(path.read_bytes())
+    return f"{settings.serving_variant}-{digest.hexdigest()[:12]}"
+
+
 class Services:
     """Lazily built application services (the API starts fast; tests inject fakes)."""
 
@@ -139,7 +155,7 @@ class Services:
     @property
     def qa(self) -> QAService:
         def make() -> QAService:
-            version = f"{self.settings.serving_variant}|{PROMPT_VERSION}"
+            version = f"{index_fingerprint(self.settings)}|{PROMPT_VERSION}"
             return QAService(
                 self.retriever,
                 build_answerer(self.settings, self.llm),

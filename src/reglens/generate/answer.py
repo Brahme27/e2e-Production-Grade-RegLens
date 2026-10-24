@@ -155,17 +155,22 @@ class Answerer:
                 purpose="answer",
             )
         except LLMUnavailableError:
-            fallback = Answer(
-                retrieval.question,
-                UNAVAILABLE_TEXT,
-                True,
-                retrieval.route,
-                retrieval.as_of,
-                reason="llm_unavailable",
-            )
-            fallback.citations = [citation_for(i, h) for i, h in enumerate(retrieval.hits, start=1)]
-            return fallback
+            return self._unavailable(retrieval, "llm_unavailable")
         return self._finish(retrieval, response.text)
+
+    @staticmethod
+    def _unavailable(retrieval: RetrievalResult, reason: str) -> Answer:
+        """No generated answer: say so and list the retrieved passages instead."""
+        fallback = Answer(
+            retrieval.question,
+            UNAVAILABLE_TEXT,
+            True,
+            retrieval.route,
+            retrieval.as_of,
+            reason=reason,
+        )
+        fallback.citations = [citation_for(i, h) for i, h in enumerate(retrieval.hits, start=1)]
+        return fallback
 
     def stream(self, retrieval: RetrievalResult) -> Iterator[str | Answer]:
         """Yield text deltas, then the final verified Answer as the last item."""
@@ -198,7 +203,10 @@ class Answerer:
                 released = True
                 yield so_far
         except LLMUnavailableError:
-            yield self.answer(retrieval)  # falls back to passages
+            if released:  # the user saw part of an unverified answer: replace it, don't re-ask
+                yield self._unavailable(retrieval, "llm_interrupted")
+            else:  # nothing shown yet: one more (non-streaming) attempt, then passages
+                yield self.answer(retrieval)
             return
         yield self._finish(retrieval, "".join(parts))
 

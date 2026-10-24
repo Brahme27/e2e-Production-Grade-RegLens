@@ -93,15 +93,48 @@ def stated_commencement(doc: ParsedDocument) -> date | None:
     return None
 
 
+def _version_starts(
+    by_doc: dict[str, list[ParsedDocument]],
+) -> dict[str, list[tuple[date | None, ParsedDocument]]]:
+    """Each document's versions with their start dates, oldest first.
+
+    A stated commencement ("shall come into force from April 1, 2024") beats the issue date
+    for an un-versioned document.
+    """
+    result = {}
+    for doc_id, versions in by_doc.items():
+        starts = [
+            (
+                (stated_commencement(v) or v.effective_from)
+                if len(versions) == 1
+                else v.effective_from,
+                v,
+            )
+            for v in versions
+        ]
+        result[doc_id] = sorted(starts, key=lambda item: item[0] or date.min)
+    return result
+
+
 def _repeal_dates(
-    documents: list[ParsedDocument], edges: list[Edge], known: set[str]
+    documents: list[ParsedDocument],
+    edges: list[Edge],
+    starts: dict[str, list[tuple[date | None, ParsedDocument]]],
 ) -> dict[str, tuple[date, str]]:
-    """When (and by whom) each corpus document was repealed: the earliest repeal wins."""
+    """When (and by whom) each corpus document was repealed: the earliest repeal wins.
+
+    Without a stated "with effect from" date, the old text ends when the new document starts
+    to apply: its stated commencement if it has one ("shall come into force from 1 April
+    2026"), otherwise its first date (issue date or earliest version), so there is no gap
+    in which neither text applies.
+    """
     repealed: dict[str, tuple[date, str]] = {}
     for edge in edges:
-        if edge.type != "SUPERSEDES" or edge.target not in known:
+        if edge.type != "SUPERSEDES" or edge.target not in starts:
             continue
-        when = edge.effective or start_date(edge.source, documents)
+        versions = starts.get(edge.source, [])
+        commencement = stated_commencement(versions[0][1]) if versions else None
+        when = edge.effective or commencement or start_date(edge.source, documents)
         if when is not None and (edge.target not in repealed or when < repealed[edge.target][0]):
             repealed[edge.target] = (when, edge.source)
     return repealed
@@ -121,26 +154,20 @@ def compute_validity(
     by_doc: dict[str, list[ParsedDocument]] = {}
     for doc in documents:
         by_doc.setdefault(doc.doc_id, []).append(doc)
-    repealed = _repeal_dates(documents, edges, set(by_doc))
+    starts = _version_starts(by_doc)
+    repealed = _repeal_dates(documents, edges, starts)
 
     result: dict[str, Validity] = {}
-    for doc_id, versions in by_doc.items():
-        # a stated commencement beats the issue date for an un-versioned document
-        starts = [
-            (
-                (stated_commencement(v) or v.effective_from)
-                if len(versions) == 1
-                else v.effective_from,
-                v,
-            )
-            for v in versions
-        ]
-        starts.sort(key=lambda item: item[0] or date.min)
-        for index, (start, version) in enumerate(starts):
-            end = starts[index + 1][0] if index + 1 < len(starts) else None
+    for doc_id, versions in starts.items():
+        for index, (start, version) in enumerate(versions):
+            end = versions[index + 1][0] if index + 1 < len(versions) else None
             superseded_by = None
-            if index == len(starts) - 1 and doc_id in repealed:
-                end, superseded_by = repealed[doc_id]
+            if doc_id in repealed:  # a repeal ends EVERY version still open on that date
+                repeal_day, repealer = repealed[doc_id]
+                if end is None or repeal_day < end:
+                    end, superseded_by = repeal_day, repealer
+                if start is not None and end < start:
+                    end = start  # a snapshot taken after the repeal never applied: empty interval
             result[version.key] = Validity(
                 key=version.key,
                 doc_id=doc_id,
