@@ -1,0 +1,109 @@
+# Change-impact gold set (hand-labelled 2026-10-24).
+# Stage 1 (obligation extraction) is scored against `obligations` per target paragraph set.
+# Stage 2 (gap judgement) is scored by giving the judge each GOLD obligation and comparing
+# its verdict with `gap`, which is true BY CONSTRUCTION: the synthetic policies in
+# data/policies/ were written to cover, partly cover or miss each obligation.
+#   covered | partially_covered | not_covered
+
+targets:
+  - id: io-2026
+    doc_key: rbi-cb-internal-ombudsman-2026@current
+    entity: sahyadri-bank
+    paragraphs: ["5", "7", "8", "9", "11", "12", "13", "14", "16"]
+  - id: pra-outsourcing-2025
+    doc_key: pra-outsourcing@asof2026-10-24
+    entity: northbridge-bank
+    paragraphs: ["2.1", "2.1C", "2.1D", "2.1E", "2.1G"]
+  - id: sysc-15a
+    doc_key: fca-sysc-15a@current
+    entity: northbridge-bank
+    paragraphs: ["SYSC 15A.2.1R", "SYSC 15A.2.2R", "SYSC 15A.2.5R", "SYSC 15A.2.9R", "SYSC 15A.4.1R", "SYSC 15A.5.1R", "SYSC 15A.5.3R", "SYSC 15A.5.8R", "SYSC 15A.6.1R", "SYSC 15A.6.2R", "SYSC 15A.7.1R", "SYSC 15A.8.1R"]
+
+obligations:
+  # ---------------- RBI Internal Ombudsman Directions 2026 -> Sahyadri Bank
+  - {id: IO-01, target: io-2026, ref: "5", gap: covered,
+     text: "The Internal Ombudsman must be a retired or serving officer of General Manager rank (or equivalent) with at least seven years of relevant experience, and must not have been employed by the bank or its group companies."}
+  - {id: IO-02, target: io-2026, ref: "5", gap: partially_covered,
+     text: "The Internal Ombudsman must not be over 70 years of age before the completion of the tenure."}
+  - {id: IO-03, target: io-2026, ref: "7", gap: covered,
+     text: "Every bank must appoint at least one Internal Ombudsman."}
+  - {id: IO-04, target: io-2026, ref: "7", gap: not_covered,
+     text: "The Customer Service Committee of the Board must determine at least once a year the number of IOs and Deputy IOs needed, having regard to the volume and complexity of complaints."}
+  - {id: IO-05, target: io-2026, ref: "8", gap: partially_covered,
+     text: "The bank must ensure the post of Internal Ombudsman is never vacant; the Deputy IO acts during temporary absence, and if both are absent a General Manager-rank official may be designated for up to one month with Customer Service Committee approval."}
+  - {id: IO-06, target: io-2026, ref: "8", gap: covered,
+     text: "The IO / Deputy IO must be appointed on contract for a fixed term of at least three years, with total tenure not exceeding five years."}
+  - {id: IO-07, target: io-2026, ref: "8", gap: not_covered,
+     text: "The bank must start the process of appointing a new IO at least three months before the incumbent's tenure expires, with a reasonable overlap between outgoing and incoming IO."}
+  - {id: IO-08, target: io-2026, ref: "8", gap: partially_covered,
+     text: "If the IO post falls vacant for reasons beyond the bank's control, the bank must inform the RBI within 10 working days and appoint a new IO within three months."}
+  - {id: IO-09, target: io-2026, ref: "9", gap: covered,
+     text: "The IO must report administratively to the Competent Authority and functionally to the Customer Service Committee of the Board."}
+  - {id: IO-10, target: io-2026, ref: "11", gap: covered,
+     text: "Internal Audit must audit the implementation of the Directions annually, without assessing the correctness of the IO's decisions."}
+  - {id: IO-11, target: io-2026, ref: "12", gap: partially_covered,
+     text: "The office of the IO must analyse the pattern of all complaints quarterly (by product, category, customer group and geography) and give inputs for policy intervention."}
+  - {id: IO-12, target: io-2026, ref: "13", gap: covered,
+     text: "The IO must report on its activities, including complaint analysis, to the Customer Service Committee of the Board, preferably quarterly and at least half-yearly."}
+  - {id: IO-13, target: io-2026, ref: "13", gap: not_covered,
+     text: "An IO decision can be overruled only with the approval of the Competent Authority, and every overruled case must be placed before the Customer Service Committee of the Board."}
+  - {id: IO-14, target: io-2026, ref: "14", gap: partially_covered,
+     text: "The bank must have a fully automated complaints management system that auto-escalates partially resolved or wholly rejected complaints to the IO within 20 days of receipt (or early enough to give the IO at least 10 days where a resolution timeline is prescribed)."}
+  - {id: IO-15, target: io-2026, ref: "14", gap: covered,
+     text: "The bank must communicate the final decision to the complainant within 30 days of receiving the complaint."}
+  - {id: IO-16, target: io-2026, ref: "14", gap: covered,
+     text: "For complaints still partially resolved or rejected after IO review, the bank must tell the complainant they can approach the RBI Ombudsman, giving the RBI CMS portal URL and the CRPC address."}
+  - {id: IO-17, target: io-2026, ref: "14", gap: not_covered,
+     text: "The bank must not publish the contact details of the IO / Deputy IO in the public domain."}
+  - {id: IO-18, target: io-2026, ref: "16", gap: partially_covered,
+     text: "The bank must send the details of a newly appointed IO or Deputy IO to the RBI's Consumer Education and Protection Department within five working days of appointment."}
+  - {id: IO-19, target: io-2026, ref: "16", gap: covered,
+     text: "The bank must report on the IO's functioning to the RBI's Consumer Education and Protection Department every quarter, by the 15th of the month following the quarter."}
+
+  # ---------------- PRA Rulebook Outsourcing (Oct 2025 version) -> Northbridge Bank
+  - {id: PO-01, target: pra-outsourcing-2025, ref: "2.1", gap: covered,
+     text: "When relying on a third party for critical operational functions, the firm must take reasonable steps to avoid undue additional operational risk."}
+  - {id: PO-02, target: pra-outsourcing-2025, ref: "2.1", gap: covered,
+     text: "The firm must not outsource important operational functions in a way that materially impairs its internal control or the PRA's ability to monitor its compliance."}
+  - {id: PO-03, target: pra-outsourcing-2025, ref: "2.1C", gap: covered,
+     text: "A firm outsourcing critical or important functions remains fully responsible for its regulatory obligations and senior management must not delegate its responsibility."}
+  - {id: PO-04, target: pra-outsourcing-2025, ref: "2.1D", gap: covered,
+     text: "The firm must ensure the service provider has the ability, capacity, resources, organisational structure and any required authorisation to perform the outsourced functions."}
+  - {id: PO-05, target: pra-outsourcing-2025, ref: "2.1D", gap: partially_covered,
+     text: "The firm must have methods and procedures to assess the service provider's standard of performance and review the services on an ongoing basis."}
+  - {id: PO-06, target: pra-outsourcing-2025, ref: "2.1D", gap: covered,
+     text: "The firm must take appropriate action where the service provider may not be performing the functions effectively or in compliance with the law."}
+  - {id: PO-07, target: pra-outsourcing-2025, ref: "2.1D", gap: not_covered,
+     text: "The firm must retain the necessary expertise and resources in-house to oversee outsourced functions effectively and manage the associated risks."}
+  - {id: PO-08, target: pra-outsourcing-2025, ref: "2.1E", gap: covered,
+     text: "The rights and obligations of the firm and the service provider must be clearly allocated in a written agreement."}
+  - {id: PO-09, target: pra-outsourcing-2025, ref: "2.1E", gap: partially_covered,
+     text: "The firm must preserve its instruction and termination rights, its rights of information, and its rights of inspection and access to books and premises."}
+  - {id: PO-10, target: pra-outsourcing-2025, ref: "2.1E", gap: partially_covered,
+     text: "The written agreement must allow sub-outsourcing only with the firm's prior written consent."}
+  - {id: PO-11, target: pra-outsourcing-2025, ref: "2.1G", gap: partially_covered,
+     text: "The firm must be able to make available to the PRA, on request, all information needed to supervise the outsourced function."}
+
+  # ---------------- FCA SYSC 15A Operational Resilience -> Northbridge Bank
+  - {id: OR-01, target: sysc-15a, ref: "SYSC 15A.2.1R", gap: covered,
+     text: "The firm must identify its important business services."}
+  - {id: OR-02, target: sysc-15a, ref: "SYSC 15A.2.2R", gap: partially_covered,
+     text: "The firm must review its important business services, impact tolerances and mapping when there is a material change and in any event at least once a year."}
+  - {id: OR-03, target: sysc-15a, ref: "SYSC 15A.2.5R", gap: covered,
+     text: "The firm must set an impact tolerance for each important business service."}
+  - {id: OR-04, target: sysc-15a, ref: "SYSC 15A.2.9R", gap: covered,
+     text: "The firm must be able to remain within its impact tolerance for each important business service in a severe but plausible disruption."}
+  - {id: OR-05, target: sysc-15a, ref: "SYSC 15A.4.1R", gap: covered,
+     text: "The firm must identify and document the people, processes, technology, facilities and information needed to deliver each important business service (mapping)."}
+  - {id: OR-06, target: sysc-15a, ref: "SYSC 15A.5.1R", gap: not_covered,
+     text: "The firm must develop and keep up to date a testing plan detailing how it will gain assurance it can remain within its impact tolerances."}
+  - {id: OR-07, target: sysc-15a, ref: "SYSC 15A.5.3R", gap: partially_covered,
+     text: "The firm must carry out scenario testing of its ability to remain within impact tolerance for EACH important business service in severe but plausible scenarios."}
+  - {id: OR-08, target: sysc-15a, ref: "SYSC 15A.5.8R", gap: not_covered,
+     text: "After scenario testing or an actual disruption, the firm must run a lessons-learned exercise and make the improvements needed to address weaknesses."}
+  - {id: OR-09, target: sysc-15a, ref: "SYSC 15A.6.1R", gap: partially_covered,
+     text: "The firm must keep an up-to-date written self-assessment of its compliance and retain each version for at least six years."}
+  - {id: OR-10, target: sysc-15a, ref: "SYSC 15A.7.1R", gap: covered,
+     text: "The firm's governing body must approve and regularly review the written self-assessment records."}
+  - {id: OR-11, target: sysc-15a, ref: "SYSC 15A.8.1R", gap: not_covered,
+     text: "The firm must maintain an internal and external communication strategy to reduce harm from operational disruptions and communicate clearly and promptly with stakeholders."}

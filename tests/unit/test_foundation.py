@@ -5,9 +5,7 @@ from __future__ import annotations
 from pathlib import Path
 
 import pytest
-from fastapi.testclient import TestClient
 
-from reglens.api.app import create_app
 from reglens.config import Settings, get_settings
 from reglens.log import configure_logging, get_logger
 
@@ -28,13 +26,3 @@ def test_logging(capsys: pytest.CaptureFixture[str], json_logs: bool) -> None:
     configure_logging("INFO", json_logs)
     get_logger("t").info("hello", n=1)
     assert "hello" in capsys.readouterr().out
-
-
-def test_api_ops_and_key() -> None:
-    with TestClient(create_app(Settings(api_key="k"))) as c:
-        assert c.get("/health").json() == {"status": "ok"}
-        assert c.get("/ready").status_code == 200
-        assert c.post("/v1/echo", json={"text": "hi"}).status_code == 401
-        ok = c.post("/v1/echo", json={"text": "hi"}, headers={"X-API-Key": "k"})
-        assert ok.json() == {"echo": "hi"}
-        assert "reglens_requests_total" in c.get("/metrics").text

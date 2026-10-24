@@ -1,0 +1,13 @@
+# The (fictional) firms whose internal policies RegLens checks for gaps.
+# applies_to uses the same tags as configs/sources.yaml, so applicability is a set overlap.
+entities:
+  - id: sahyadri-bank
+    name: Sahyadri Bank Ltd
+    jurisdiction: India
+    description: Scheduled commercial bank with 140 branches in Maharashtra and Karnataka.
+    applies_to: [commercial_banks]
+  - id: northbridge-bank
+    name: Northbridge Bank plc
+    jurisdiction: United Kingdom
+    description: PRA-authorised retail and SME bank, dual-regulated by the FCA.
+    applies_to: [uk_banks, fca_firms]
