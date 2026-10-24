@@ -1,0 +1,22 @@
+# Code asks for logical aliases, never provider model IDs. Swap providers here.
+# Free open-weight models on Groq; check current IDs: https://console.groq.com/docs/models
+# Free tier (Oct 2026): 1,000 requests/day and 8,000 tokens/minute PER MODEL, so fallbacks
+# to a different model also spread the load across separate quotas.
+model_list:
+  - model_name: reasoning-large
+    litellm_params: {model: groq/openai/gpt-oss-120b}
+  - model_name: fast-small
+    litellm_params: {model: groq/openai/gpt-oss-20b}
+  - model_name: fallback
+    litellm_params: {model: groq/qwen/qwen3.8-27b}
+  # local CPU fallback (needs Ollama):
+  # - model_name: local
+  #   litellm_params: {model: ollama_chat/qwen3:4b, api_base: "http://localhost:11434"}
+
+fallbacks:
+  - reasoning-large: [fallback, fast-small]
+  - fast-small: [fallback]
+
+router_settings:
+  num_retries: 2
+  timeout: 60

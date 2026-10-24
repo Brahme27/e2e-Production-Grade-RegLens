@@ -1,0 +1,11 @@
+name: reglens
+services:
+  api:
+    build: .
+    image: reglens-api:local
+    environment:
+      REGLENS_API_KEY: ${REGLENS_API_KEY:-local-dev-key}
+      REGLENS_GROQ_API_KEY: ${REGLENS_GROQ_API_KEY:-}
+    ports:
+      - "${API_PORT:-8000}:8000"
+    mem_limit: 512m
