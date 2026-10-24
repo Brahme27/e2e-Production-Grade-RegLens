@@ -12,7 +12,7 @@ import hashlib
 import json
 import re
 import time
-from collections.abc import Callable
+from collections.abc import Callable, Iterator
 from dataclasses import asdict, dataclass
 from datetime import UTC, datetime
 from pathlib import Path
@@ -121,6 +121,28 @@ class LiteLLMBackend:
             )
         raise LLMUnavailableError("rate limited")  # pragma: no cover - loop always returns
 
+    def stream(self, alias: str, messages: list[Message], *, max_tokens: int) -> Iterator[str]:
+        """Yield text deltas as the model produces them (no rate-limit retry mid-stream)."""
+        try:
+            response: Any = self._router.completion(
+                model=alias,
+                messages=messages,
+                temperature=0.0,
+                max_tokens=max_tokens,
+                reasoning_effort="low",
+                drop_params=True,
+                stream=True,
+            )
+            for chunk in response:
+                delta = chunk.choices[0].delta.content if chunk.choices else None
+                if delta:
+                    yield str(delta)
+        except Exception as exc:
+            raise LLMUnavailableError(f"{type(exc).__name__}: {exc}") from exc
+
+
+STREAM_REPLAY_CHARS = 24
+
 
 class LLMClient:
     """Cached, logged access to a backend. ``backend=None`` means cache-only (CI/tests)."""
@@ -168,12 +190,42 @@ class LLMClient:
             raise LLMUnavailableError("no LLM backend configured and no cached answer")
         response = self.backend(alias, messages, json_mode=json_mode, max_tokens=max_tokens)
         self.calls += 1
+        self._store(path, alias, purpose, response)
+        return response
+
+    def stream(
+        self,
+        messages: list[Message],
+        *,
+        alias: str = "reasoning-large",
+        max_tokens: int = 1024,
+        purpose: str = "",
+    ) -> Iterator[str]:
+        """Stream text; a cached answer is replayed in small pieces, a new one is cached."""
+        key = self.cache_key(alias, messages, False, max_tokens)
+        path = self._cache_path(key)
+        if path.exists() or self.backend is None or not hasattr(self.backend, "stream"):
+            text = self.complete(messages, alias=alias, max_tokens=max_tokens, purpose=purpose).text
+            for start in range(0, len(text), STREAM_REPLAY_CHARS):
+                yield text[start : start + STREAM_REPLAY_CHARS]
+            return
+        started = time.perf_counter()
+        parts: list[str] = []
+        for delta in self.backend.stream(alias, messages, max_tokens=max_tokens):
+            parts.append(delta)
+            yield delta
+        response = LLMResponse(
+            text="".join(parts), model=alias, latency_ms=(time.perf_counter() - started) * 1000
+        )
+        self.calls += 1
+        self._store(path, alias, purpose, response)
+
+    def _store(self, path: Path, alias: str, purpose: str, response: LLMResponse) -> None:
         path.parent.mkdir(parents=True, exist_ok=True)
         record = {"alias": alias, "purpose": purpose, "response": asdict(response)}
         text = json.dumps(record, ensure_ascii=False, indent=1) + "\n"
         path.write_text(text, encoding="utf-8")
         self._log_usage(alias, purpose, response)
-        return response
 
     def complete_json(
         self,

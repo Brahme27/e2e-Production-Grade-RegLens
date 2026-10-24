@@ -45,11 +45,14 @@ class Settings(BaseSettings):
     dense_model: str = "BAAI/bge-small-en-v1.5"
     sparse_model: str = "Qdrant/bm25"
     rerank_model: str = "BAAI/bge-reranker-v2-m3-int8"
-    models_cache_dir: Path | None = None  # None -> fastembed default cache
+    models_cache_dir: Path | None = Field(default=PROJECT_ROOT / ".cache" / "fastembed")
+    serving_variant: str = "para_ctx_sum"  # which index variant the alias "reglens" serves
 
     # secrets
     groq_api_key: SecretStr | None = None
     api_key: SecretStr | None = None  # when set, /v1 endpoints need header X-API-Key
+    rate_limit_per_minute: int = 30  # /v1/ask per client (API key or IP)
+    cors_origins: list[str] = Field(default_factory=lambda: ["http://localhost:3000"])
     langfuse_public_key: SecretStr | None = None
     langfuse_secret_key: SecretStr | None = None
     langfuse_host: str = "https://cloud.langfuse.com"

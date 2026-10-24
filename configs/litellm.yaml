@@ -9,6 +9,9 @@ model_list:
     litellm_params: {model: groq/openai/gpt-oss-20b}
   - model_name: fallback
     litellm_params: {model: groq/qwen/qwen3.8-27b}
+  # Meta's prompt-attack classifier: replies with a probability, 14,400 requests/day free
+  - model_name: prompt-guard
+    litellm_params: {model: groq/meta-llama/llama-prompt-guard-2-86m}
   # local CPU fallback (needs Ollama):
   # - model_name: local
   #   litellm_params: {model: ollama_chat/qwen3:4b, api_base: "http://localhost:11434"}

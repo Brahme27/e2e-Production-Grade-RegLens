@@ -10,9 +10,11 @@ Retrieval later filters on ``valid_from <= as_of < valid_to``, so a question "as
 
 from __future__ import annotations
 
+import json
 import re
 from dataclasses import dataclass
 from datetime import date
+from pathlib import Path
 from typing import Literal
 
 from reglens.parse.model import Paragraph, ParsedDocument
@@ -62,6 +64,24 @@ def paragraph_interval(
     if validity.valid_from and start and start > validity.valid_from:
         start = validity.valid_from  # never later than the version itself
     return start, validity.valid_to
+
+
+def load_validity(path: Path) -> dict[str, Validity]:
+    """Read ``data/processed/validity.json`` written by the temporal run."""
+    raw = json.loads(path.read_text(encoding="utf-8"))
+    result = {}
+    for key, row in raw.items():
+        doc_id, version = key.split("@", 1)
+        result[key] = Validity(
+            key=key,
+            doc_id=doc_id,
+            version=version,
+            valid_from=date.fromisoformat(row["valid_from"]) if row["valid_from"] else None,
+            valid_to=date.fromisoformat(row["valid_to"]) if row["valid_to"] else None,
+            status=row["status"],
+            superseded_by=row["superseded_by"],
+        )
+    return result
 
 
 def stated_commencement(doc: ParsedDocument) -> date | None:
