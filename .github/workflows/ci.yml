@@ -1,29 +1,109 @@
 name: ci
+
 on:
   push:
     branches: [main]
   pull_request:
+  schedule:
+    - cron: "0 2 * * 1" # weekly: full pipeline from a fresh crawl + quality gate
+  workflow_dispatch:
+
 concurrency:
   group: ci-${{ github.ref }}
   cancel-in-progress: true
+
 jobs:
   python:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: astral-sh/setup-uv@v5
-        with: {enable-cache: true}
-      - run: uv sync --locked
-      - run: uv run poe lint
-      - run: uv run ruff format --check src tests
-      - run: uv run poe typecheck
-      - run: uv run poe test
-  docker:
+        with:
+          enable-cache: true
+      - name: Install dependencies (exactly as locked)
+        run: uv sync --locked
+      - name: Lint
+        run: uv run poe lint
+      - name: Format check
+        run: uv run ruff format --check src tests
+      - name: Type check
+        run: uv run poe typecheck
+      - name: Unit tests + coverage gate (80%), no network, no API keys
+        run: uv run poe test
+
+  frontend:
     runs-on: ubuntu-latest
-    needs: python
+    defaults:
+      run:
+        working-directory: frontend
     steps:
       - uses: actions/checkout@v4
-      - run: docker compose build
-      - run: docker compose up -d && sleep 15 && curl -fsS http://localhost:8000/health
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: pnpm
+          cache-dependency-path: frontend/pnpm-lock.yaml
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm lint
+      - run: pnpm build
+
+  infra:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: hashicorp/setup-terraform@v3
+      - name: Terraform fmt + validate
+        run: |
+          terraform -chdir=infra/terraform fmt -check -recursive
+          terraform -chdir=infra/terraform/envs/dev init -backend=false -input=false
+          terraform -chdir=infra/terraform/envs/dev validate
+
+  # Heavier: rebuild the corpus and indexes from the regulators' sites, gate retrieval quality,
+  # then build, scan and smoke-test the images. LLM steps replay the committed answer cache,
+  # so no API key is needed and results are deterministic.
+  pipeline-and-docker:
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    needs: [python, frontend]
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+      - name: Cache raw downloads (be polite to the regulators)
+        uses: actions/cache@v4
+        with:
+          path: data/raw
+          key: raw-${{ hashFiles('configs/sources.yaml') }}
+      - name: Corpus -> parsed -> time model -> serving index -> router
+        env:
+          REGLENS_SERVING_VARIANT: para_ctx
+        run: |
+          uv sync --locked
+          uv run poe crawl
+          uv run poe parse
+          uv run poe temporal
+          uv run python -m reglens.index.build --variants para_ctx --no-llm
+          uv run poe router
+      - name: Retrieval quality gate (production row vs committed baseline)
+        run: |
+          uv run python -m reglens.evals.ablation --rows G
+          uv run python -m reglens.evals.gate --row G
+      - uses: docker/setup-buildx-action@v3
+      - name: Build images
+        run: docker compose build
+      - name: Scan API image for vulnerabilities
+        uses: aquasecurity/trivy-action@0.28.0
+        with:
+          image-ref: reglens-api:local
+          severity: CRITICAL,HIGH
+          ignore-unfixed: true
+          exit-code: "0" # report only; flip to "1" to block merges on findings
+      - name: Start stack and smoke test
+        run: |
+          docker compose up -d
+          uv run python -m reglens.smoke --api http://localhost:8000 --web http://localhost:3000
       - if: always()
-        run: docker compose down
+        run: docker compose logs --tail 100 && docker compose down -v

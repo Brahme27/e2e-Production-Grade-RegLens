@@ -24,7 +24,7 @@ WORKDIR /app
 COPY --from=builder /app/.venv /app/.venv
 COPY configs ./configs
 COPY --chown=app:app data/processed/documents ./data/processed/documents
-COPY --chown=app:app data/processed/validity.json data/processed/supersession_edges.json data/processed/doc_summaries.json ./data/processed/
+COPY --chown=app:app data/processed/*.json ./data/processed/
 COPY --chown=app:app data/policies ./data/policies
 COPY --chown=app:app evals ./evals
 COPY --chown=app:app cache/llm ./cache/llm

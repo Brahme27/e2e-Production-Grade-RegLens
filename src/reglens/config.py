@@ -2,9 +2,11 @@
 
 from __future__ import annotations
 
+import json
 from functools import lru_cache
 from pathlib import Path
 from typing import Literal
+from urllib.parse import quote_plus
 
 from pydantic import Field, SecretStr
 from pydantic_settings import BaseSettings, SettingsConfigDict
@@ -33,6 +35,9 @@ class Settings(BaseSettings):
 
     # storage: local files by default, real services in docker compose / cloud
     database_url: str | None = None  # None -> SQLite file under artifacts/
+    # on AWS: host + the RDS-managed JSON secret {"username": ..., "password": ...}
+    db_host: str | None = None
+    db_credentials: SecretStr | None = None
     qdrant_url: str | None = None  # None -> embedded Qdrant under artifacts/qdrant
     qdrant_collection: str = "reglens"
     redis_url: str | None = None  # None -> in-process semantic cache
@@ -69,7 +74,14 @@ class Settings(BaseSettings):
 
     @property
     def sqlalchemy_url(self) -> str:
-        return self.database_url or f"sqlite:///{(self.artifacts_dir / 'reglens.db').as_posix()}"
+        if self.database_url:
+            return self.database_url
+        if self.db_host and self.db_credentials:
+            creds = json.loads(self.db_credentials.get_secret_value())
+            user = quote_plus(creds["username"])
+            password = quote_plus(creds["password"])
+            return f"postgresql+psycopg://{user}:{password}@{self.db_host}:5432/reglens"
+        return f"sqlite:///{(self.artifacts_dir / 'reglens.db').as_posix()}"
 
 
 @lru_cache(maxsize=1)

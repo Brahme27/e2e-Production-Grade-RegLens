@@ -26,3 +26,12 @@ def test_logging(capsys: pytest.CaptureFixture[str], json_logs: bool) -> None:
     configure_logging("INFO", json_logs)
     get_logger("t").info("hello", n=1)
     assert "hello" in capsys.readouterr().out
+
+
+def test_database_url_from_rds_secret() -> None:
+    s = Settings(
+        db_host="db.internal", db_credentials='{"username": "reglens", "password": "p@ss/word"}'
+    )
+    assert s.sqlalchemy_url == "postgresql+psycopg://reglens:p%40ss%2Fword@db.internal:5432/reglens"
+    assert Settings(database_url="sqlite:///x.db").sqlalchemy_url == "sqlite:///x.db"
+    assert Settings().sqlalchemy_url.startswith("sqlite:///")
