@@ -1,0 +1,12 @@
+{
+ "alias": "fallback",
+ "purpose": "judge",
+ "response": {
+  "text": "{\n  \"sentences\": [\n    {\n      \"text\": \"Client‑issued documents (e.g., PAN, photograph, address proof) must be captured digitally and submitted as a photo/scan of the original using an electronic or digital signature (including Aadhaar e‑Sign) [2].\",\n      \"supported\": true,\n      \"cited_supports\": true\n    },\n    {\n      \"text\": \"The submitted documents must be verified by the intermediary through the same electronic/digital signature mechanism [1][2].\",\n      \"supported\": false,\n      \"cited_supports\": false\n    },\n    {\n      \"text\": \"The client’s mobile number and email address must be captured digitally, uploaded to the KRA system, and verified by the KRA using a One‑Time‑Password (OTP) or any other verifiable mechanism [1][5].\",\n      \"supported\": false,\n      \"cited_supports\": false\n    }\n  ],\n  \"relevancy\": 4\n}",
+  "model": "qwen/qwen3.8-27b",
+  "prompt_tokens": 854,
+  "completion_tokens": 224,
+  "latency_ms": 1185.7386000046972,
+  "cached": false
+ }
+}

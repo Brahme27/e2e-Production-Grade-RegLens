@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "gap_judge",
+ "response": {
+  "text": "{\"status\":\"covered\",\"rationale\":\"Clause §2.1 explicitly states that the Board retains ultimate responsibility and senior managers may not delegate accountability for outsourced functions, matching the obligation.\",\"policy_refs\":[\"NB-POL-OPR-012 §2.1\"],\"confidence\":0.99}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 661,
+  "completion_tokens": 122,
+  "latency_ms": 976.5471999999136,
+  "cached": false
+ }
+}

@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "gap_judge",
+ "response": {
+  "text": "{\"status\":\"not_covered\",\"rationale\":\"The policy requires retaining each self-assessment version for only three years, which is shorter than the six-year requirement, so the obligation is not met.\",\"policy_refs\":[\"NB-POL-OPR-020 §6.2\"],\"confidence\":0.96}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 591,
+  "completion_tokens": 172,
+  "latency_ms": 2334.6551000140607,
+  "cached": false
+ }
+}

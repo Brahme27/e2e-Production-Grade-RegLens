@@ -1,0 +1,12 @@
+{
+ "alias": "fallback",
+ "purpose": "judge",
+ "response": {
+  "text": "{\n  \"sentences\": [\n    {\n      \"text\": \"Verify the identity and address of the walk‑in customer for every sale of third‑party products worth ₹50,000 or more, as required under clause (5) of paragraph 21 of the Directions.\",\n      \"supported\": true,\n      \"cited_supports\": true\n    },\n    {\n      \"text\": \"Obtain and verify the customer’s PAN (or equivalent e‑document) and, where applicable, Form 60 for those without PAN.\",\n      \"supported\": true,\n      \"cited_supports\": true\n    },\n    {\n      \"text\": \"Maintain transaction details of the sale and related records in accordance with paragraph 50 of Chapter VII.\",\n      \"supported\": true,\n      \"cited_supports\": true\n    },\n    {\n      \"text\": \"Ensure AML software capable of capturing, generating and analysing alerts for filing CTR/STR for such transactions is available.\",\n      \"supported\": true,\n      \"cited_supports\": true\n    },\n    {\n      \"text\": \"Conduct the transaction only by debit to the customer’s account or against cheques, and incorporate the purchaser’s name on the face of the instrument.\",\n      \"supported\": false,\n      \"cited_supports\": false\n    }\n  ],\n  \"relevancy\": 4\n}",
+  "model": "qwen/qwen3.8-27b",
+  "prompt_tokens": 1151,
+  "completion_tokens": 313,
+  "latency_ms": 1182.171799999196,
+  "cached": false
+ }
+}

@@ -1,0 +1,12 @@
+{
+ "alias": "fallback",
+ "purpose": "judge",
+ "response": {
+  "text": "{\n  \"sentences\": [\n    {\n      \"text\": \"Verify the walk‑in customer’s identity and address for any sale of third‑party products of ₹ 50,000 or more [1(a)].\",\n      \"supported\": false,\n      \"cited_supports\": false\n    },\n    {\n      \"text\": \"Obtain and verify the customer’s PAN (for both account‑based and walk‑in customers) and ensure the transaction is executed only by debit to the customer’s account or against a cheque [1(d)].\",\n      \"supported\": false,\n      \"cited_supports\": false\n    },\n    {\n      \"text\": \"Maintain the transaction details and related records as prescribed in paragraph 46, i.e., keep identification, address and full transaction information (nature, amount, currency, date and parties) for at least five years and make them readily available to authorities [1(b)][5].\",\n      \"supported\": true,\n      \"cited_supports\": true\n    }\n  ],\n  \"relevancy\": 2\n}",
+  "model": "qwen/qwen3.8-27b",
+  "prompt_tokens": 1037,
+  "completion_tokens": 240,
+  "latency_ms": 11967.97389999847,
+  "cached": false
+ }
+}

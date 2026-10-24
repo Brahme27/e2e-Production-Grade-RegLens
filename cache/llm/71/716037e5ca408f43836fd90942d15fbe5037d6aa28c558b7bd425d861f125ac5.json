@@ -1,0 +1,12 @@
+{
+ "alias": "fallback",
+ "purpose": "judge",
+ "response": {
+  "text": "```json\n{\"sentences\": [{\"text\": \"A bank must first obtain prior regulatory approval for the amendment under Section 35B of the Banking Regulation Act, 1949 by submitting the proposal through the RBI's Pravaah Portal, and only after that approval may it circulate the draft amendments to shareholders or convene a shareholders' meeting [1].\", \"supported\": true, \"cited_supports\": true}], \"relevancy\": 5}\n```",
+  "model": "qwen/qwen3.8-27b",
+  "prompt_tokens": 864,
+  "completion_tokens": 487,
+  "latency_ms": 48860.0067999796,
+  "cached": false
+ }
+}

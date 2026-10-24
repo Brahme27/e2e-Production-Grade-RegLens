@@ -1,0 +1,12 @@
+{
+ "alias": "fallback",
+ "purpose": "judge",
+ "response": {
+  "text": "{\n  \"sentences\": [\n    {\n      \"text\": \"Managers of AIFs or VCFs who are classified as self‑certification REs and have a client base of fewer than 100 clients are exempted from the mandatory Market‑SOC (M‑SOC) requirement.\",\n      \"supported\": true,\n      \"cited_supports\": true\n    },\n    {\n      \"text\": \"The corpus threshold used for categorisation is the sum of the corpus of all AIFs, VCFs, and their schemes managed by the manager, but the exemption is triggered solely by the client‑base criterion [1].\",\n      \"supported\": false,\n      \"cited_supports\": false\n    }\n  ],\n  \"relevancy\": 5\n}",
+  "model": "qwen/qwen3.8-27b",
+  "prompt_tokens": 1167,
+  "completion_tokens": 174,
+  "latency_ms": 9898.626800015336,
+  "cached": false
+ }
+}

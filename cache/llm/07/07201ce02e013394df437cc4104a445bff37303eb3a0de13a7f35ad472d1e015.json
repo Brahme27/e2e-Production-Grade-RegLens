@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "gap_judge",
+ "response": {
+  "text": "{\"status\":\"partially_covered\",\"rationale\":\"The policy mandates appointing a successor within three months, matching the appointment deadline, but only requires RBI notification of the appointment within 15 days, not vacancy reporting within 10 working days as required.\",\"policy_refs\":[\"SB-POL-CS-007 §3.3\",\"SB-POL-CS-007 §6.1\"],\"confidence\":0.95}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 795,
+  "completion_tokens": 209,
+  "latency_ms": 1214.3123999994714,
+  "cached": false
+ }
+}

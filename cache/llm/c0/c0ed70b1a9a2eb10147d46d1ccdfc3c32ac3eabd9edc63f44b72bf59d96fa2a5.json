@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "answer",
+ "response": {
+  "text": "- RBI: Commercial banks must conduct an **annual compliance risk assessment** to identify and assess major compliance risks, and prepare a plan to manage them. The annual review must cover compliance failures, regulatory guideline compliance, independence of the compliance function, internal controls, and progress on rectifying deficiencies, and it must be reported to senior management and the board [3].  \n- FCA: Under SYSC 6.1.3‑BR, a firm’s compliance function must conduct a **risk‑based assessment** that informs a risk‑based monitoring programme covering all designated investment business and ancillary activities, including complaints handling. The programme must set priorities based on the assessment and be overseen by a compliance officer with necessary authority and resources [1].",
+  "model": "reasoning-large",
+  "prompt_tokens": 0,
+  "completion_tokens": 0,
+  "latency_ms": 12680.750600004103,
+  "cached": false
+ }
+}

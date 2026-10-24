@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "gap_judge",
+ "response": {
+  "text": "{\"status\":\"covered\",\"rationale\":\"Clause §4.4 requires an annual audit of the policy implementation and explicitly states that the audit shall not assess the correctness of the Internal Ombudsman's decisions, matching the obligation.\",\"policy_refs\":[\"SB-POL-CS-007 §4.4\"],\"confidence\":0.99}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 689,
+  "completion_tokens": 125,
+  "latency_ms": 814.0312999894377,
+  "cached": false
+ }
+}

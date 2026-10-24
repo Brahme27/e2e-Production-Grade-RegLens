@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "gap_judge",
+ "response": {
+  "text": "{\"status\":\"not_covered\",\"rationale\":\"The policy does not contain any clause requiring the Committee to determine the number of Internal Ombudsmen and Deputy IOs annually based on complaint volume and complexity.\",\"policy_refs\":[],\"confidence\":0.97}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 655,
+  "completion_tokens": 126,
+  "latency_ms": 1045.915500028059,
+  "cached": false
+ }
+}

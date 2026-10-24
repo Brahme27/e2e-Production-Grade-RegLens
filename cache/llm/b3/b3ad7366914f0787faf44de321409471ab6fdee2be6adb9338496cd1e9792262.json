@@ -1,0 +1,12 @@
+{
+ "alias": "fallback",
+ "purpose": "judge",
+ "response": {
+  "text": "{\n  \"sentences\": [\n    {\n      \"text\": \"If the FCA and a firm cannot reach agreement after discussion regarding individual guidance on operational resilience, the FCA may consider other tools available to it [1].\",\n      \"supported\": true,\n      \"cited_supports\": true\n    },\n    {\n      \"text\": \"This includes using its powers under sections 55J and 55L of the Act on its own initiative to require the firm to take specific steps in line with the FCA’s view to comply with the requirements [1].\",\n      \"supported\": true,\n      \"cited_supports\": true\n    }\n  ],\n  \"relevancy\": 5\n}",
+  "model": "qwen/qwen3.8-27b",
+  "prompt_tokens": 911,
+  "completion_tokens": 159,
+  "latency_ms": 8140.054499992402,
+  "cached": false
+ }
+}

@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "gap_judge",
+ "response": {
+  "text": "{\"status\":\"covered\",\"rationale\":\"The policy explicitly requires documentation that outsourcing will not materially impair internal control or regulator monitoring, directly meeting the obligation.\",\"policy_refs\":[\"NB-POL-OPR-012 §2.3\"],\"confidence\":0.99}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 693,
+  "completion_tokens": 147,
+  "latency_ms": 5610.220300004585,
+  "cached": false
+ }
+}

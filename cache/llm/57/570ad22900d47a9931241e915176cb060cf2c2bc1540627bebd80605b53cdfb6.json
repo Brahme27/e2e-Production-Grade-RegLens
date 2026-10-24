@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "gap_judge",
+ "response": {
+  "text": "{\"status\":\"covered\",\"rationale\":\"Clause §5.2 requires escalation and a remediation plan, including possible termination, which meets the obligation to take appropriate action when a provider is underperforming or non‑compliant.\",\"policy_refs\":[\"NB-POL-OPR-012 §5.2\"],\"confidence\":0.98}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 692,
+  "completion_tokens": 128,
+  "latency_ms": 5294.582300004549,
+  "cached": false
+ }
+}

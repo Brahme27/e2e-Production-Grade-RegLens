@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "answer",
+ "response": {
+  "text": "- **Board-approved outsourcing policy**: NBFCs must have a comprehensive outsourcing policy approved by the Board, covering criteria for selecting activities and service providers, delegation of authority based on risk and materiality, and monitoring systems [7].\n- **Risk identification**: NBFCs must evaluate and guard against ten key risks—strategic, reputation, compliance, operational, legal, exit strategy, counterparty, country, contractual, and concentration/systemic risk [5].\n- **Pre-outsourcing assessment**: Before outsourcing IT services, an NBFC must conduct a comprehensive assessment of attendant benefits, risks, and the availability of commensurate processes to manage those risks [3].\n- **Contractual safeguards for IT outsourcing**: Agreements must include provisions on subcontractor oversight, NBFC access to data and records, material adverse event reporting, IT Act compliance, SLAs, data storage in India, data-sharing limits, resolution and indemnity clauses, contingency plans, and third-party visibility [1].\n- **Periodic due diligence**: NBFCs must review the financial and operational condition of the service provider at least annually, using a risk-based approach, to detect deterioration in performance, confidentiality, security, or operational resilience [6][8].\n- **Audit**: Regular internal or external audits must assess the adequacy of the NBFC's risk management practices in overseeing outsourcing arrangements and compliance with the Directions [2].\n- **Additional controls for SOC outsourcing**: Where Security Operations Centre operations are outsourced, NBFCs must identify asset ownership, maintain oversight of rule definitions and analytics, periodically assess SOC facilities, integrate SOC reporting with the NBFC's incident response process, and review alert-handling processes [4].",
+  "model": "reasoning-large",
+  "prompt_tokens": 0,
+  "completion_tokens": 0,
+  "latency_ms": 55195.44019998284,
+  "cached": false
+ }
+}

@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "gap_judge",
+ "response": {
+  "text": "{\"status\":\"partially_covered\",\"rationale\":\"The policy mentions learning from disruptions in its purpose and mandates scenario testing, but it does not explicitly require a post‑test lessons‑learned exercise or specific improvement actions as the obligation does.\",\"policy_refs\":[\"NB-POL-OPR-020 §1.1\",\"NB-POL-OPR-020 §5.1\"],\"confidence\":0.78}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 676,
+  "completion_tokens": 159,
+  "latency_ms": 3566.102000011597,
+  "cached": false
+ }
+}

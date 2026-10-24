@@ -1,0 +1,12 @@
+{
+ "alias": "fallback",
+ "purpose": "judge",
+ "response": {
+  "text": "```json\n{\n  \"sentences\": [\n    {\n      \"text\": \"The Board must put in place a risk- and materiality-based framework for approving IT outsourcing, approve policies to evaluate those risks, establish an administrative senior-management structure, guard against conflicts of interest, and review any adverse developments [1][3].\",\n      \"supported\": true,\n      \"cited_supports\": true\n    },\n    {\n      \"text\": \"It must also ensure a Board-approved IT-outsourcing policy that defines roles (Board, committees, senior management, IT function), selection criteria, materiality thresholds, delegation of authority, business-continuity and exit arrangements [4].\",\n      \"supported\": true,\n      \"cited_supports\": true\n    },\n    {\n      \"text\": \"A common-platform firm must exercise due skill, care and diligence when entering into, managing or terminating outsourcing of critical or important operational functions [9].\",\n      \"supported\": true,\n      \"cited_supports\": true\n    },\n    {\n      \"text\": \"If it outsources such functions, the firm remains fully responsible for all UK market-law obligations and may not delegate senior-management responsibility, alter client obligations, undermine authorisation conditions, or remove any condition on which its authorisation was granted [10].\",\n      \"supported\": true,\n      \"cited_supports\": true\n    },\n    {\n      \"text\": \"The RBI places the governance and oversight responsibilities on the Board (framework, policy approval, conflict checks, review), whereas the FCA imposes a continuous duty of skill, care and ultimate accountability on the firm itself, prohibiting any delegation of its regulatory responsibilities.\",\n      \"supported\": true,\n      \"cited_supports\": false\n    }\n  ],\n  \"relevancy\": 5\n}\n```",
+  "model": "qwen/qwen3.8-27b",
+  "prompt_tokens": 1631,
+  "completion_tokens": 395,
+  "latency_ms": 16913.32789999433,
+  "cached": false
+ }
+}

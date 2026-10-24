@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "answer",
+ "response": {
+  "text": "SEBI requires that the effectiveness of vulnerability‑mitigation measures be quantified through a **standardised, quantifiable method** that covers five broad domains of SOC functionality. REs must calculate the functional efficacy of their SOC using the prescribed metrics and submit the results in the format specified in the CSCRF. This calculation is to be performed on a half‑yearly basis for MIIs and Qualified REs, and yearly for other REs, and must be reported to SEBI. [4]",
+  "model": "reasoning-large",
+  "prompt_tokens": 0,
+  "completion_tokens": 0,
+  "latency_ms": 10271.1707999988,
+  "cached": false
+ }
+}

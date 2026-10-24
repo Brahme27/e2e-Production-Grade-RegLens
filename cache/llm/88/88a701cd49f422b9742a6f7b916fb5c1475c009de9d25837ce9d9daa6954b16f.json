@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "answer",
+ "response": {
+  "text": "The requirements in this chapter apply to a CRR firm with respect to the carrying on of the following activities from an establishment in the UK:\n*   regulated activities;\n*   activities that constitute dealing in investments as principal, disregarding the exclusion in article 15 of the Regulated Activities Order;\n*   ancillary activities;\n*   in relation to MiFID business, ancillary services; and\n*   unregulated activities in a prudential context [7][8].\n\nAdditionally, the requirements apply in a prudential context with respect to activities wherever they are carried on, and taking into account any activity of other members of a group of which the firm is a member [7][8].",
+  "model": "reasoning-large",
+  "prompt_tokens": 0,
+  "completion_tokens": 0,
+  "latency_ms": 40908.80589999142,
+  "cached": false
+ }
+}

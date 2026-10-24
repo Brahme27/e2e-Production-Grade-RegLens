@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "gap_judge",
+ "response": {
+  "text": "{\"status\":\"not_covered\",\"rationale\":\"No policy clause restricts publishing the IO/Deputy IO contact details in the public domain; the provided clauses only address appointment, reporting, and audit matters.\",\"policy_refs\":[],\"confidence\":0.99}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 724,
+  "completion_tokens": 83,
+  "latency_ms": 4221.785400004592,
+  "cached": false
+ }
+}

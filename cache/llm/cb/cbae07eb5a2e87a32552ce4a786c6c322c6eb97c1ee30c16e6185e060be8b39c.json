@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "answer",
+ "response": {
+  "text": "- The compliance function is a core element of a bank’s corporate‑governance framework, working alongside internal audit and risk‑management processes and aligned with the Basel Committee on Banking Supervision framework [1].  \n- Banks must organise the compliance function and prioritise compliance‑risk management in proportion to their size, complexity, risk profile and organisational structure [1].  \n- The Chief Compliance Officer (CCO) must take part in quarterly informal discussions with the RBI (or meet the Chief General Manager, Department of Supervision, if no meeting is held) and receive copies of RBI inspection‑report compliance communications [3][7].  \n- Banks are required to implement enterprise‑wide, workflow‑based compliance tools that enable:  \n  1. effective communication and collaboration among business, compliance, IT and senior‑management teams;  \n  2. identification, assessment, monitoring and management of compliance requirements;  \n  3. escalation of non‑compliance issues;  \n  4. recording of competent‑authority approvals for any deviations or delays; and  \n  5. a unified dashboard view of the bank’s overall compliance position [3][7].  \n- The compliance function must ensure:  \n  * regular, mandatory training on compliance laws, rules and standards for all staff;  \n  * a quality‑assurance and improvement programme subject to independent external review at least once every three years;  \n  * oversight by internal audit, with audit findings reported to the CCO, and inclusion of compliance risk in the bank’s risk‑assessment methodology [7].  \n- For banks operating across jurisdictions or receiving directions from other regulators (e.g., IRDAI, SEBI), the compliance function must monitor and report such requirements, ensuring local legal and regulatory compliance with appropriate expertise and oversight [7].",
+  "model": "reasoning-large",
+  "prompt_tokens": 0,
+  "completion_tokens": 0,
+  "latency_ms": 1994.5083000056911,
+  "cached": false
+ }
+}

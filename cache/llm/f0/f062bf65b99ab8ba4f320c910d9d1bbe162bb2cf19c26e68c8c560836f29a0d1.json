@@ -1,0 +1,12 @@
+{
+ "alias": "fallback",
+ "purpose": "judge",
+ "response": {
+  "text": "```json\n{\"sentences\": [{\"text\": \"A common‑platform firm may be exempt from SYSC 6.1.3‑CR(4) and (5) where it can demonstrate that, given the nature, scale and complexity of its business and the range of its designated investment business, the requirements of those rules would not be proportionate and that its compliance function remains effective [1].\", \"supported\": true, \"cited_supports\": true}, {\"text\": \"In that circumstance the firm must continuously assess whether the effectiveness of its compliance function is being compromised and must review that assessment on a regular basis [1].\", \"supported\": true, \"cited_supports\": true}], \"relevancy\": 5}\n```",
+  "model": "qwen/qwen3.8-27b",
+  "prompt_tokens": 899,
+  "completion_tokens": 824,
+  "latency_ms": 55388.551300013205,
+  "cached": false
+ }
+}

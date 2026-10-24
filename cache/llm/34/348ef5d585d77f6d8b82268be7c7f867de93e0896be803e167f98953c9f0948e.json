@@ -1,0 +1,12 @@
+{
+ "alias": "fallback",
+ "purpose": "judge",
+ "response": {
+  "text": "```json\n{\n  \"sentences\": [\n    {\n      \"text\": \"The Deputy Internal Ombudsman must have at least five years of relevant experience in banking, non‑banking finance, regulation, supervision, payment‑and‑settlement systems, credit information or consumer‑protection, and must be a retired or serving officer of a rank equivalent to Deputy General Manager in the RBI or another financial‑sector regulator [1].\",\n      \"supported\": true,\n      \"cited_supports\": true\n    },\n    {\n      \"text\": \"The candidate must not have been employed, nor be currently employed, by the bank or any of its holding, associate or subsidiary companies [1].\",\n      \"supported\": true,\n      \"cited_supports\": true\n    },\n    {\n      \"text\": \"The appointee must be under 70 years of age at the end of the tenure [1].\",\n      \"supported\": true,\n      \"cited_supports\": true\n    }\n  ],\n  \"relevancy\": 5\n}\n```",
+  "model": "qwen/qwen3.8-27b",
+  "prompt_tokens": 1046,
+  "completion_tokens": 237,
+  "latency_ms": 1235.6818999978714,
+  "cached": false
+ }
+}

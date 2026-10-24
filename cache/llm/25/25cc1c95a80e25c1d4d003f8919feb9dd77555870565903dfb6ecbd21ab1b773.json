@@ -1,0 +1,12 @@
+{
+ "alias": "fallback",
+ "purpose": "judge",
+ "response": {
+  "text": "```json\n{\n  \"sentences\": [\n    {\n      \"text\": \"The board of directors and senior management are ultimately responsible for establishing a sound model",
+  "model": "qwen/qwen3.8-27b",
+  "prompt_tokens": 694,
+  "completion_tokens": 900,
+  "latency_ms": 2923.574100015685,
+  "cached": false
+ }
+}

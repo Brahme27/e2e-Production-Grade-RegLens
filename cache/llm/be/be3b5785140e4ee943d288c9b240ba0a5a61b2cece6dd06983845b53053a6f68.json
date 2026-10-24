@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "gap_judge",
+ "response": {
+  "text": "{\"status\":\"covered\",\"rationale\":\"Clause §3.1 explicitly requires a fixed three‑year term with a possible one‑time extension, limiting total tenure to five years, which satisfies the obligation.\",\"policy_refs\":[\"SB-POL-CS-007 §3.1\"],\"confidence\":0.99}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 699,
+  "completion_tokens": 165,
+  "latency_ms": 1196.9385000120383,
+  "cached": false
+ }
+}

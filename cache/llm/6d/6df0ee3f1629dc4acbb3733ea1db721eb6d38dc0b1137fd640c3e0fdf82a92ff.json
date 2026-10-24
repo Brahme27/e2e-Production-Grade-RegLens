@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "answer",
+ "response": {
+  "text": "- Regulated activities carried out by FCA‑ or PRA‑regulated firms [1][4]  \n- Activities that constitute dealing in investments as principal, irrespective of the Regulated Activities Order exemption [1][4]  \n- Ancillary activities and ancillary services linked to MiFID or equivalent third‑country business [1][4]  \n- Collective portfolio‑management activities [1]  \n- Provision of payment services and issuance of electronic money, and any activities connected to those services [1]  \n- Un‑regulated activities when they arise in a prudential context [1][4]  \n- Data‑reporting services supplied by a consolidated tape provider [1]  \n- Persons carrying on regulated activities, payment‑service provision, electronic‑money issuance, CBTL business, credit‑reference or finance‑platform services, and voluntary‑jurisdiction participants for complaint‑handling purposes [2]  ",
+  "model": "reasoning-large",
+  "prompt_tokens": 0,
+  "completion_tokens": 0,
+  "latency_ms": 1281.439300015336,
+  "cached": false
+ }
+}

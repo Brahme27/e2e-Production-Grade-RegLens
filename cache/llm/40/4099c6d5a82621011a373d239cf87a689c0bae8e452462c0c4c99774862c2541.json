@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "gap_judge",
+ "response": {
+  "text": "{\"status\":\"covered\",\"rationale\":\"Clause §6.2 requires the quarterly report on the Internal Ombudsman's functioning to be submitted on or before the 15th day of the month following each quarter, matching the obligation.\",\"policy_refs\":[\"SB-POL-CS-007 §6.2\"],\"confidence\":0.99}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 722,
+  "completion_tokens": 144,
+  "latency_ms": 4616.1167999962345,
+  "cached": false
+ }
+}

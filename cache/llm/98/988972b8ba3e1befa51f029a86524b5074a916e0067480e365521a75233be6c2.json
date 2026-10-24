@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "gap_judge",
+ "response": {
+  "text": "{\"status\":\"covered\",\"rationale\":\"Clause SB-POL-CS-007 §4.1 explicitly requires the Internal Ombudsman to report administratively to the Competent Authority and functionally to the Customer Service Committee, matching the obligation.\",\"policy_refs\":[\"SB-POL-CS-007 §4.1\"],\"confidence\":0.99}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 692,
+  "completion_tokens": 122,
+  "latency_ms": 873.9248999918345,
+  "cached": false
+ }
+}

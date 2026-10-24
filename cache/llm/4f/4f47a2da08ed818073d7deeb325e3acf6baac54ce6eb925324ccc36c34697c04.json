@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "gap_judge",
+ "response": {
+  "text": "{\"status\":\"covered\",\"rationale\":\"The policy explicitly requires the bank to appoint at least one Internal Ombudsman, matching the obligation.\",\"policy_refs\":[\"SB-POL-CS-007 §2.1\"],\"confidence\":0.99}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 725,
+  "completion_tokens": 99,
+  "latency_ms": 673.3220999885816,
+  "cached": false
+ }
+}

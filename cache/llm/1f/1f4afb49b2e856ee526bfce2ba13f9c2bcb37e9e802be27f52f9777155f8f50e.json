@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "answer",
+ "response": {
+  "text": "- **Governance and oversight** – banks must establish a dedicated compliance function with a Chief Compliance Officer reporting directly to the Board or Audit Committee, independent of internal audit, and subject to quarterly Board/ACB reviews and annual policy refreshes [1][3][42]  \n- **Scope of responsibilities** – ensure adherence to all statutory, regulatory and self‑regulatory codes, vet and disseminate regulatory guidelines, and monitor compliance with directions from other regulators (e.g., IRDAI, SEBI) [18][33][50]  \n- **Risk measurement** – develop mechanisms (performance indicators, metrics) to measure and assess compliance risk and use the results to enhance risk assessment [40]  \n- **Staffing and competence** – appoint qualified staff with knowledge of law, accountancy, IT and practical banking experience; provide regular training on new products, corporate governance, risk management and supervisory practices [29]  \n- **Reporting and independence** – compliance function must be free to report irregularities to senior management and have direct access to the Board/ACB without fear of reprisal [42]",
+  "model": "reasoning-large",
+  "prompt_tokens": 0,
+  "completion_tokens": 0,
+  "latency_ms": 1306.065500015393,
+  "cached": false
+ }
+}

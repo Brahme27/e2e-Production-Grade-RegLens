@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "answer",
+ "response": {
+  "text": "- NBFCs must adopt a **risk‑based approach** to outsourcing, evaluating materiality, criticality, and associated risks before engagement, and continuously monitoring the arrangement【1】【4】.  \n- A **Board‑approved IT outsourcing policy** is required, detailing roles of Board, committees, senior management, selection criteria, delegation of authority, disaster recovery, monitoring systems, and exit strategies【1】【4】.  \n- **Cyber‑incident reporting**: the service provider must report incidents without undue delay; the NBFC must forward the incident to RBI within six hours of detection【1】.  \n- **Contractual safeguards**: agreements must cover subcontractor performance, audit rights, data access, SLAs, data storage location, data handling, indemnities, contingency plans, and RBI inspection rights【2】【8】.  \n- **Data protection and segregation**: NBFCs must ensure isolation of customer data, ‘need‑to‑know’ access, and immediate RBI notification on breaches【5】【6】.  \n- **Exit and continuity**: arrangements must include clear exit strategies, business continuity plans, and provisions for service provider liquidation or default【3】【8】.",
+  "model": "reasoning-large",
+  "prompt_tokens": 0,
+  "completion_tokens": 0,
+  "latency_ms": 12028.491600009147,
+  "cached": false
+ }
+}

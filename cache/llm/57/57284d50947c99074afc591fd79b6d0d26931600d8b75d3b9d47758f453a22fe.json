@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "answer",
+ "response": {
+  "text": "- Managers of AIFs or VCFs that are classified as **self‑certification REs** and whose **client base is fewer than 100 clients** are exempt from the mandatory Market‑SOC (M‑SOC) requirement [1][2].  \n- The exemption also applies when the **aggregate corpus of all AIFs, VCFs and their schemes managed by the manager is Rs 3,000 crores or less** [1][2].",
+  "model": "reasoning-large",
+  "prompt_tokens": 0,
+  "completion_tokens": 0,
+  "latency_ms": 1423.7367000023369,
+  "cached": false
+ }
+}

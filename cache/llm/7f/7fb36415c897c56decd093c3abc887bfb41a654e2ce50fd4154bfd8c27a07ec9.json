@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "answer",
+ "response": {
+  "text": "A firm must allocate overall responsibility for the establishment and maintenance of effective anti-money laundering systems and controls to a director or senior manager [1]. This individual may also serve as the money laundering reporting officer (MLRO) [1]. However, a firm may not allocate this overall responsibility to a person who is approved to perform the other overall responsibility function [1].",
+  "model": "reasoning-large",
+  "prompt_tokens": 0,
+  "completion_tokens": 0,
+  "latency_ms": 28457.021300011547,
+  "cached": false
+ }
+}

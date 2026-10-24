@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "answer",
+ "response": {
+  "text": "A bank must first obtain prior regulatory approval for the amendment of its Articles of Association under Section 35B of the Banking Regulation Act, 1949, by submitting the proposal through the RBI’s Pravaah Portal; only after this approval may it circulate the draft amendments to shareholders or convene a shareholders’ meeting [1].",
+  "model": "reasoning-large",
+  "prompt_tokens": 0,
+  "completion_tokens": 0,
+  "latency_ms": 823.4840999939479,
+  "cached": false
+ }
+}

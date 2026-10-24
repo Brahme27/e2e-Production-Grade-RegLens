@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "answer",
+ "response": {
+  "text": "A common platform firm must ensure that outsourcing critical or important operational functions does **not** result in the delegation of responsibility by senior management [1][7].",
+  "model": "reasoning-large",
+  "prompt_tokens": 0,
+  "completion_tokens": 0,
+  "latency_ms": 985.386100015603,
+  "cached": false
+ }
+}

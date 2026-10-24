@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "answer",
+ "response": {
+  "text": "The PRA defines “prudential context” as the setting in which a firm’s activities have, or might reasonably be regarded as likely to have, a negative effect on: (1) the safety and soundness of firms; or (2) the ability of the firm to meet either the “fit and proper” test in threshold conditions 4E and 5E (Suitability) or the applicable requirements and standards under the regulatory system relating to the firm’s financial resources. [6]",
+  "model": "reasoning-large",
+  "prompt_tokens": 0,
+  "completion_tokens": 0,
+  "latency_ms": 11585.107099992456,
+  "cached": false
+ }
+}

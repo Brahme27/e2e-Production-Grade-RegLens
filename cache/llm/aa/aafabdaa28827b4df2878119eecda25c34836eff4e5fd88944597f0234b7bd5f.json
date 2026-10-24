@@ -1,0 +1,12 @@
+{
+ "alias": "fallback",
+ "purpose": "judge",
+ "response": {
+  "text": "{\n  \"sentences\": [\n    {\n      \"text\": \"The client must submit a photo/scan of an officially valid document (or Aadhaar e‑Sign) through Digiocker or another electronic/digital signature platform [1].\",\n      \"supported\": true,\n      \"cited_supports\": true\n    },\n    {\n      \"text\": \"The PAN, name, photograph, address, mobile number and email ID are to be captured digitally and the same documents must be signed electronically.\",\n      \"supported\": false,\n      \"cited_supports\": false\n    },\n    {\n      \"text\": \"The mobile number and email address provided by the client must be verified by a One‑Time‑Password (OTP) or any other verifiable mechanism.\",\n      \"supported\": true,\n      \"cited_supports\": false\n    },\n    {\n      \"text\": \"Intermediaries must upload the verified mobile number and email address to the KRA system and ensure they belong to the client, not to employees or distributors.\",\n      \"supported\": false,\n      \"cited_supports\": false\n    }\n  ],\n  \"relevancy\": 3\n}",
+  "model": "qwen/qwen3.8-27b",
+  "prompt_tokens": 868,
+  "completion_tokens": 1104,
+  "latency_ms": 2683.1763999944087,
+  "cached": false
+ }
+}

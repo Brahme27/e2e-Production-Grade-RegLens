@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "answer",
+ "response": {
+  "text": "\"Other matters\" means, in relation to a requirement under the MODR, matters within the scope of 1.1 that are not within the scope of that requirement. [2]",
+  "model": "reasoning-large",
+  "prompt_tokens": 0,
+  "completion_tokens": 0,
+  "latency_ms": 11467.789899994386,
+  "cached": false
+ }
+}

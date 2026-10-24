@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "answer",
+ "response": {
+  "text": "- The PRA uses the term **“material outsourcing”** to capture any outsourcing arrangement that, if weak or failed, would seriously jeopardise a firm’s ability to meet the Threshold Conditions or comply with the Fundamental Rules [2].  \n- For PRA purposes, a “material outsourcing” arrangement **encompasses** any “critical or important outsourcing” arrangement defined in the retained EU legislation (e.g., the EBA Outsourcing Guidelines) [1].  \n- The PRA’s materiality test therefore incorporates the EU concept of a **“critical or important operational function”**, applying the same criteria used for critical/important outsourcing under EU rules, with only limited PRA‑specific exceptions [8].",
+  "model": "reasoning-large",
+  "prompt_tokens": 0,
+  "completion_tokens": 0,
+  "latency_ms": 990.5091000255197,
+  "cached": false
+ }
+}

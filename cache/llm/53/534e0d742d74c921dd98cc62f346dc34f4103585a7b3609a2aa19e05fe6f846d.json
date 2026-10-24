@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "gap_judge",
+ "response": {
+  "text": "{\"status\":\"covered\",\"rationale\":\"The policy explicitly requires the bank to identify its important business services, directly satisfying the obligation.\",\"policy_refs\":[\"NB-POL-OPR-020 §2.1\"],\"confidence\":0.99}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 634,
+  "completion_tokens": 105,
+  "latency_ms": 2740.909999993164,
+  "cached": false
+ }
+}

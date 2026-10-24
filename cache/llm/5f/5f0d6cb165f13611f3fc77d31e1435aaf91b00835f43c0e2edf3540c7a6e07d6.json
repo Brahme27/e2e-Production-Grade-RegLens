@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "gap_judge",
+ "response": {
+  "text": "{\"status\":\"not_covered\",\"rationale\":\"The policy clauses focus on identifying important services, impact tolerances, and self-assessment, but do not address maintaining an internal and external communication strategy for operational disruptions.\",\"policy_refs\":[],\"confidence\":0.97}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 647,
+  "completion_tokens": 92,
+  "latency_ms": 3744.92409999948,
+  "cached": false
+ }
+}

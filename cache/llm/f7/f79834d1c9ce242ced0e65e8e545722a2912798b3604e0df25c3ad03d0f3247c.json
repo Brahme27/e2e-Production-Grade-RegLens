@@ -1,0 +1,12 @@
+{
+ "alias": "fallback",
+ "purpose": "judge",
+ "response": {
+  "text": "{\n  \"sentences\": [\n    {\n      \"text\": \"The board of directors and senior management are ultimately responsible for establishing a sound model‑risk‑management (MRM) framework that ensures key business decisions affecting the firm's safety and soundness are supported by reliable and appropriate model output and are aligned with the board‑defined model risk appetite.\",\n      \"supported\": true,\n      \"cited_supports\": true\n    }\n  ],\n  \"relevancy\": 4\n}",
+  "model": "qwen/qwen3.8-27b",
+  "prompt_tokens": 691,
+  "completion_tokens": 753,
+  "latency_ms": 1825.9785000118427,
+  "cached": false
+ }
+}

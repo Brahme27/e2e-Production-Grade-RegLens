@@ -1,0 +1,12 @@
+{
+ "alias": "fallback",
+ "purpose": "judge",
+ "response": {
+  "text": "{\n  \"sentences\": [\n    {\n      \"text\": \"Regulated activities carried out by FCA‑ or PRA‑regulated firms\",\n      \"supported\": true,\n      \"cited_supports\": true\n    },\n    {\n      \"text\": \"Activities that constitute dealing in investments as principal, irrespective of the Regulated Activities Order exemption\",\n      \"supported\": true,\n      \"cited_supports\": true\n    },\n    {\n      \"text\": \"Ancillary activities and ancillary services linked to MiFID or equivalent third‑country business\",\n      \"supported\": true,\n      \"cited_supports\": true\n    },\n    {\n      \"text\": \"Collective portfolio‑management activities\",\n      \"supported\": true,\n      \"cited_supports\": true\n    }]}",
+  "model": "qwen/qwen3.8-27b",
+  "prompt_tokens": 1290,
+  "completion_tokens": 1500,
+  "latency_ms": 33333.33930000663,
+  "cached": false
+ }
+}

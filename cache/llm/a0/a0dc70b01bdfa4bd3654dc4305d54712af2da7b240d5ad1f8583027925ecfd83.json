@@ -1,0 +1,12 @@
+{
+ "alias": "fallback",
+ "purpose": "judge",
+ "response": {
+  "text": "{\n  \"sentences\": [\n    {\n      \"text\": \"A common platform firm must, on request, provide the FCA with all information necessary to enable the FCA to supervise the compliance of the outsourced activities with the requirements of the regulatory system and with the UK law on markets in financial instruments.\",\n      \"supported\": false,\n      \"cited_supports\": false\n    }\n  ],\n  \"relevancy\": 3\n}",
+  "model": "qwen/qwen3.8-27b",
+  "prompt_tokens": 961,
+  "completion_tokens": 99,
+  "latency_ms": 482.4003000103403,
+  "cached": false
+ }
+}

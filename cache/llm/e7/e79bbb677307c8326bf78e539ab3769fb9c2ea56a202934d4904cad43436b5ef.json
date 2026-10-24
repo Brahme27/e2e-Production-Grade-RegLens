@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "answer",
+ "response": {
+  "text": "Stock exchanges and depositories must monitor compliance with beneficial ownership identification rules through half-yearly internal audits [3]. For mutual funds, this compliance is monitored by the Boards of the Asset Management Companies and the Trustees [3]. For other registered intermediaries, compliance is monitored by their Board of Directors [3].",
+  "model": "reasoning-large",
+  "prompt_tokens": 0,
+  "completion_tokens": 0,
+  "latency_ms": 41863.332600012654,
+  "cached": false
+ }
+}

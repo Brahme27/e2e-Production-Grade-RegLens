@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "answer",
+ "response": {
+  "text": "Key areas covered by RBI’s 2026 Cybersecurity, Technology: Risk, Resilience and Assurance Framework Directions for commercial banks include:  \n\n- **Governance & oversight** – Board approval of IT, cybersecurity, and business‑continuity strategies; establishment of an IT Strategy Committee and audit‑committee oversight of IS audit. [8]  \n- **Risk management** – Periodic assessment of inherent and potential IT risks; integration of IT risk into enterprise‑wide risk frameworks. [8]  \n- **Asset & data management** – Up‑to‑date inventory of information assets; classification of data by sensitivity; enterprise data dictionary for shared understanding. [47‑48]  \n- **Controls & architecture** – Cyber‑risk management architecture, preventive, detective and corrective controls; vendor and third‑party arrangements; patch, vulnerability and change management; cryptographic controls. [46‑48]  \n- **Incident & crisis management** – Definition of cyber incidents; incident response and recovery management; cyber‑crisis management. [15]  \n- **Physical & environmental security** – Controls for data‑centre and disaster‑recovery sites, monitoring of environmental parameters, e‑surveillance, and geographic separation. [60‑63]  \n- **Capacity & availability** – Annual assessment of IT capacity; ensuring infrastructure supports business functions and service delivery channels. [65]  \n- **Business continuity & disaster recovery** – BCP and DR policies, testing, and alignment with IT strategy. [163]  \n- **Monitoring & audit** – Maintenance of network architecture diagrams; periodic review of critical devices and configurations; audit trail and log monitoring. [69]",
+  "model": "reasoning-large",
+  "prompt_tokens": 0,
+  "completion_tokens": 0,
+  "latency_ms": 11986.115399980918,
+  "cached": false
+ }
+}

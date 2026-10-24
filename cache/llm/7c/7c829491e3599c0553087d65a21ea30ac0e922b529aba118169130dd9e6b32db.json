@@ -1,0 +1,12 @@
+{
+ "alias": "fallback",
+ "purpose": "judge",
+ "response": {
+  "text": "```json\n{\n  \"sentences\": [\n    {\n      \"text\": \"A firm must provide the audit committee with a report on the effectiveness of its MRM for financial reporting at least annually.\",\n      \"supported\": false,\n      \"cited_supports\": false\n    },\n    {\n      \"text\": \"The report must be available on a timely basis so that the external auditor can assess and respond to the risk of material misstatement during the statutory audit.\",\n      \"supported\": true,\n      \"cited_supports\": true\n    }\n  ],\n  \"relevancy\": 3\n}\n```",
+  "model": "qwen/qwen3.8-27b",
+  "prompt_tokens": 922,
+  "completion_tokens": 137,
+  "latency_ms": 1831.2337000097614,
+  "cached": false
+ }
+}

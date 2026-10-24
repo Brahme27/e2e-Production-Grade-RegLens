@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "gap_judge",
+ "response": {
+  "text": "{\"status\":\"covered\",\"rationale\":\"The policy requires annual reviews of each material arrangement against service levels and includes escalation and remediation procedures, satisfying the obligation for ongoing performance assessment and review.\",\"policy_refs\":[\"NB-POL-OPR-012 §5.1\",\"NB-POL-OPR-012 §5.2\"],\"confidence\":0.97}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 644,
+  "completion_tokens": 140,
+  "latency_ms": 4835.722600022564,
+  "cached": false
+ }
+}

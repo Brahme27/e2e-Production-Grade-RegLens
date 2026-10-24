@@ -1,0 +1,12 @@
+{
+ "alias": "fallback",
+ "purpose": "judge",
+ "response": {
+  "text": "{\n  \"sentences\": [\n    {\n      \"text\": \"Stock exchanges and depositories must monitor compliance with beneficial ownership identification rules through half-yearly internal audits [3].\",\n      \"supported\": true,\n      \"cited_supports\": true\n    },\n    {\n      \"text\": \"For mutual funds, this compliance is monitored by the Boards of the Asset Management Companies and the Trustees [3].\",\n      \"supported\": true,\n      \"cited_supports\": true\n    },\n    {\n      \"text\": \"For other registered intermediaries, compliance is monitored by their Board of Directors [3].\",\n      \"supported\": true,\n      \"cited_supports\": true\n    }\n  ],\n  \"relevancy\": 5\n}",
+  "model": "qwen/qwen3.8-27b",
+  "prompt_tokens": 1021,
+  "completion_tokens": 170,
+  "latency_ms": 8297.51349997241,
+  "cached": false
+ }
+}

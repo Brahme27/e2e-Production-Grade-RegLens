@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "answer",
+ "response": {
+  "text": "Managers of AIFs or VCFs who are classified as self‑certification REs and have a client base of fewer than 100 clients are exempted from the mandatory Market‑SOC (M‑SOC) requirement. The corpus threshold used for categorisation is the sum of the corpus of all AIFs, VCFs, and their schemes managed by the manager, but the exemption is triggered solely by the client‑base criterion [1].",
+  "model": "reasoning-large",
+  "prompt_tokens": 0,
+  "completion_tokens": 0,
+  "latency_ms": 11671.348400006536,
+  "cached": false
+ }
+}

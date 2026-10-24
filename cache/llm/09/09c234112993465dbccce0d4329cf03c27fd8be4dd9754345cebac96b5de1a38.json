@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "gap_judge",
+ "response": {
+  "text": "{\"status\":\"covered\",\"rationale\":\"The policy explicitly requires documenting how a third‑party arrangement avoids undue additional operational risk before entering a material arrangement, meeting the obligation's requirement.\",\"policy_refs\":[\"NB-POL-OPR-012 §2.3\"],\"confidence\":0.97}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 660,
+  "completion_tokens": 128,
+  "latency_ms": 5230.311099992832,
+  "cached": false
+ }
+}

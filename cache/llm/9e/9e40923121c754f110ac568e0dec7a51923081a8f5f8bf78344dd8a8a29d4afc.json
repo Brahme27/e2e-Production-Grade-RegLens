@@ -1,0 +1,12 @@
+{
+ "alias": "fallback",
+ "purpose": "judge",
+ "response": {
+  "text": "{\n  \"sentences\": [\n    {\n      \"text\": \"The outsourcing policy must contain a clear exit strategy that sets out the minimum period to execute the plan, identifies alternative arrangements (e.g., a different provider or the RE itself), and includes clauses for the safe removal or destruction of data, hardware and all records (digital and physical) [1][5].\",\n      \"supported\": true,\n      \"cited_supports\": true\n    },\n    {\n      \"text\": \"The agreement must prohibit the service provider from erasing, purging, revoking, altering or changing any data during the transition period unless specifically directed by the regulator or the RE, and the provider must fully cooperate with the RE and any new provider to ensure a smooth hand-over [1][3].\",\n      \"supported\": true,\n      \"cited_supports\": true\n    }\n  ],\n  \"relevancy\": 5\n}",
+  "model": "qwen/qwen3.8-27b",
+  "prompt_tokens": 1232,
+  "completion_tokens": 201,
+  "latency_ms": 31633.679899998242,
+  "cached": false
+ }
+}

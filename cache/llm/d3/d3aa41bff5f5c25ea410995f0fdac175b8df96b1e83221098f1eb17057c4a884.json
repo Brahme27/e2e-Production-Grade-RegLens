@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "answer",
+ "response": {
+  "text": "**SEBI:** The Board must mandate regular reviews by internal or external auditors of the outsourcing policies, risk management system, and regulatory requirements, and the intermediary must review the financial and operational capabilities of the third party to assess its ability to continue meeting outsourcing obligations [1]. The Board also has overall responsibility for ensuring ongoing outsourcing decisions align with the outsourcing policy in a changing business environment [2]. Due diligence must assess the third party's resources, financial soundness, compatibility of systems, reputation, concentration, and (for foreign providers) the host-country environment [3].\n\n**PRA:** The outsourcing policy must be principles-based and sufficiently detailed to guide staff, and Table 4 requires it to include \"links to other relevant policies\" (cross-referencing paragraph 4.8) and, under oversight, \"independent review and audit of compliance with legal and regulatory requirements and policies\" [4]. Firms may also rely on group-level policies and procedures, provided they comply with UK legal and regulatory obligations [6], and should share relevant internal policies (e.g. ICT, information security, operational resilience) with third-party providers [7].\n\n**Key difference:** SEBI prescribes a specific, standing obligation for auditor-led reviews of both the policy and the third party's capabilities, whereas the PRA embeds independent review and audit as one component within a broader, principles-based policy framework that explicitly cross-references other regulatory sources and permits reliance on group-level arrangements.",
+  "model": "reasoning-large",
+  "prompt_tokens": 0,
+  "completion_tokens": 0,
+  "latency_ms": 48253.928600024665,
+  "cached": false
+ }
+}

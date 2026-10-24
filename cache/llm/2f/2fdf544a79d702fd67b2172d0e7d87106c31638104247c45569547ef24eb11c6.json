@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "obligations",
+ "response": {
+  "text": "{\"obligations\":[{\"text\":\"When outsourcing critical or important operational functions, the firm must ensure that the respective rights and obligations of the firm and the service provider are clearly allocated and set out in a written agreement.\",\"actor\":\"firm\",\"action\":\"ensure rights and obligations are clearly allocated and set out in a written agreement\",\"condition\":\"when outsourcing critical or important operational functions\",\"deadline\":\"\",\"source_ref\":\"2.1E\",\"severity\":\"high\"},{\"text\":\"When outsourcing critical or important operational functions, the firm must preserve its instruction and termination rights, its rights of information, and its right to inspections and access to books and premises.\",\"actor\":\"firm\",\"action\":\"preserve instruction and termination rights, rights of information, and right to inspections and access to books and premises\",\"condition\":\"when outsourcing critical or important operational functions\",\"deadline\":\"\",\"source_ref\":\"2.1E\",\"severity\":\"high\"},{\"text\":\"When outsourcing critical or important operational functions, the firm must ensure that the written agreement with the service provider only permits sub‑outsourcing by the service provider with the prior written consent of the firm.\",\"actor\":\"firm\",\"action\":\"ensure agreement restricts sub‑outsourcing to require prior written consent of the firm\",\"condition\":\"when outsourcing critical or important operational functions\",\"deadline\":\"\",\"source_ref\":\"2.1E\",\"severity\":\"medium\"},{\"text\":\"The firm must be able, upon request by the PRA, to make available all information necessary to enable the PRA to supervise compliance of the outsourced function, service or activity with regulatory requirements.\",\"actor\":\"firm\",\"action\":\"make available all information necessary for PRA supervision\",\"condition\":\"upon request by the PRA\",\"deadline\":\"\",\"source_ref\":\"2.1G\",\"severity\":\"high\"}]}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 469,
+  "completion_tokens": 586,
+  "latency_ms": 1895.090700010769,
+  "cached": false
+ }
+}

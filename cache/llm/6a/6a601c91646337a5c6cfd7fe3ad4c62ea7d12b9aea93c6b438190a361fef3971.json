@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "answer",
+ "response": {
+  "text": "- A firm must provide the audit committee with a report on the effectiveness of its MRM for financial reporting **at least annually**. [1]  \n- The report must be available on a **timely basis** so that the external auditor can assess and respond to the risk of material misstatement during the statutory audit. [1]",
+  "model": "reasoning-large",
+  "prompt_tokens": 0,
+  "completion_tokens": 0,
+  "latency_ms": 10937.340900010895,
+  "cached": false
+ }
+}

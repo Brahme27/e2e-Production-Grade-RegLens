@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "gap_judge",
+ "response": {
+  "text": "{\"status\":\"not_covered\",\"rationale\":\"The policy clauses focus on accountability, oversight, due diligence, and exit planning but do not require the firm to retain in‑house expertise and resources to oversee outsourced functions as mandated by the obligation.\",\"policy_refs\":[],\"confidence\":0.92}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 667,
+  "completion_tokens": 122,
+  "latency_ms": 2722.0404999970924,
+  "cached": false
+ }
+}

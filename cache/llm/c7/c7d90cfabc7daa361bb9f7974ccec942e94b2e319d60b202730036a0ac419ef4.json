@@ -1,0 +1,12 @@
+{
+ "alias": "fallback",
+ "purpose": "judge",
+ "response": {
+  "text": "```json\n{\n  \"sentences\": [\n    {\n      \"text\": \"IT Governance – strategic alignment, risk management, resource management, performance management, and Business Continuity/DR Management\",\n      \"supported\": true,\n      \"cited_supports\": true\n    },\n    {\n      \"text\": \"Risk Management Policy – must include IT and cybersecurity risks, reviewed and updated at least annually by the RMCB in consultation with the ITSC\",\n      \"supported\": true,\n      \"cited_supports\": true\n    },\n    {\n      \"text\": \"Network Security – controls for wireless LANs, access device configurations, patch levels, and secure configuration of VLAN/LAN/WAN interfaces and external interconnections\",\n      \"supported\": true,\n      \"cited_supports\": true\n    },\n    {\n      \"text\": \"Cryptographic Controls – strong key lengths, algorithms, cipher suites and protocols; adoption of internationally accepted, non-deprecated standards\",\n      \"supported\": true,\n      \"cited_supports\": true\n    },\n    {\n      \"text\": \"Vulnerability Assessment / Penetration Testing (VA/PT) – banks must review coverage and scope and ensure reasonable assurance is explicitly provided in audit reports\",\n      \"supported\": true,\n      \"cited_supports\": true\n    },\n    {\n      \"text\": \"Metrics & Monitoring – comprehensive KPIs and KRIs including anti-malware coverage, patch latency, user awareness training extent, and vulnerability-related metrics\",\n      \"supported\": true,\n      \"cited_supports\": true\n    },\n    {\n      \"text\": \"Awareness & Training – targeted training for key personnel in executive, operational, and security administration/management roles\",\n      \"supported\": true,\n      \"cited_supports\": true\n    }\n  ],\n  \"relevancy\": 5\n}\n```",
+  "model": "qwen/qwen3.8-27b",
+  "prompt_tokens": 1193,
+  "completion_tokens": 415,
+  "latency_ms": 19601.308599987533,
+  "cached": false
+ }
+}

@@ -1,0 +1,12 @@
+{
+ "alias": "fallback",
+ "purpose": "judge",
+ "response": {
+  "text": "```json\n{\n  \"sentences\": [\n    {\n      \"text\": \"The Board must approve a comprehensive IT‑outsourcing policy that sets out the roles and responsibilities of the Board, its committees, senior management, the IT function, business units and oversight/assurance functions [1].\",\n      \"supported\": true,\n      \"cited_supports\": true\n    },\n    {\n      \"text\": \"The policy must include selection criteria for services and providers, materiality thresholds, delegation of authority, disaster‑recovery/BCP plans, monitoring and review systems, and exit/termination processes [1].\",\n      \"supported\": true,\n      \"cited_supports\": true\n    },\n    {\n      \"text\": \"Senior management is tasked with risk evaluation, periodic performance reviews, incident reporting, business‑continuity testing, data‑confidentiality oversight, independent audits and maintaining sufficient in‑house capability to oversee outsourced services [5].\",\n      \"supported\": false,\n      \"cited_supports\": false\n    },\n    {\n      \"text\": \"The board‑approved outsourcing policy must be principles‑based but detailed enough to guide staff; it must cover board responsibilities, involvement of business lines and senior‑management functions, links to other policies, record‑keeping, conflict‑of‑interest management and business‑continuity planning [9][10].\",\n      \"supported\": true,\n      \"cited_supports\": true\n    },\n    {\n      \"text\": \"It must set out pre‑outsourcing due‑diligence, materiality and risk assessment, sign‑off authority, ongoing oversight (including incident reporting, SLA performance, strategic reviews, sub‑outsourcing changes), independent audit of compliance and renewal processes [9].\",\n      \"supported\": false,\n      \"cited_supports\": false\n    },\n    {\n      \"text\": \"RBI’s policy is prescriptive, enumerating specific elements such as disaster‑recovery plans, exit strategies and data‑location clauses, whereas the PRA’s policy is principles‑based and focuses on high‑level governance, risk‑assessment processes and ongoing oversight without prescribing detailed contractual clauses.\",\n      \"supported\": false,\n      \"cited_supports\": false\n    }\n  ],\n  \"relevancy\": 4\n}\n```",
+  "model": "qwen/qwen3.8-27b",
+  "prompt_tokens": 2022,
+  "completion_tokens": 503,
+  "latency_ms": 1507.9903999867383,
+  "cached": false
+ }
+}

@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "answer",
+ "response": {
+  "text": "- Verify the identity and address of the walk‑in customer for every sale of third‑party products worth ₹50,000 or more, as required under clause (5) of paragraph 21 of the Directions.  \n- Obtain and verify the customer’s PAN (or equivalent e‑document) and, where applicable, Form 60 for those without PAN.  \n- Maintain transaction details of the sale and related records in accordance with paragraph 50 of Chapter VII.  \n- Ensure AML software capable of capturing, generating and analysing alerts for filing CTR/STR for such transactions is available.  \n- Conduct the transaction only by debit to the customer’s account or against cheques, and incorporate the purchaser’s name on the face of the instrument.  \n\n[3]",
+  "model": "reasoning-large",
+  "prompt_tokens": 0,
+  "completion_tokens": 0,
+  "latency_ms": 25168.98630000651,
+  "cached": false
+ }
+}

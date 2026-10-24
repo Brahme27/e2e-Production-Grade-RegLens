@@ -1,0 +1,12 @@
+{
+ "alias": "fallback",
+ "purpose": "judge",
+ "response": {
+  "text": "```json\n{\n  \"sentences\": [\n    {\n      \"text\": \"The frequency of monitoring and the nature of the information a firm must collect depend on the type of firm, its role in the distribution chain, the nature of the product, and the target market [2].\",\n      \"supported\": true,\n      \"cited_supports\": false\n    },\n    {\n      \"text\": \"Firms must regularly monitor outcomes to determine if products meet customer needs, provide fair value, support effective decision-making, and provide necessary support [1].\",\n      \"supported\": true,\n      \"cited_supports\": false\n    },\n    {\n      \"text\": \"For firms without direct contact with retail customers, the monitoring obligation applies proportionately, requiring them to act reasonably to obtain information about outcomes experienced by retail customers at the end of the distribution chain [1].\",\n      \"supported\": true,\n      \"cited_supports\": true\n    },\n    {\n      \"text\": \"Specific monitoring or reviews required under other Consumer Duty outcomes can be utilized to satisfy these general monitoring obligations [1].\",\n      \"supported\": true,\n      \"cited_supports\": true\n    }\n  ],\n  \"relevancy\": 4\n}\n```",
+  "model": "qwen/qwen3.8-27b",
+  "prompt_tokens": 1231,
+  "completion_tokens": 276,
+  "latency_ms": 10759.462899994105,
+  "cached": false
+ }
+}

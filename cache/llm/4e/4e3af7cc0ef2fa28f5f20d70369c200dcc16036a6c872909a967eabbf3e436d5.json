@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "gap_judge",
+ "response": {
+  "text": "{\"status\":\"covered\",\"rationale\":\"The policy explicitly requires the firm to remain within impact tolerances for each important business service during severe but plausible disruptions, matching the obligation.\",\"policy_refs\":[\"NB-POL-OPR-020 §3.2\"],\"confidence\":0.99}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 658,
+  "completion_tokens": 141,
+  "latency_ms": 2635.936499980744,
+  "cached": false
+ }
+}

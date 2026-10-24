@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "gap_judge",
+ "response": {
+  "text": "{\"status\":\"partially_covered\",\"rationale\":\"The policy requires reporting the appointment within 15 days, which is longer than the required five working days, so it does not fully meet the obligation.\",\"policy_refs\":[\"SB-POL-CS-007 §6.1\"],\"confidence\":0.97}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 763,
+  "completion_tokens": 134,
+  "latency_ms": 2529.477299976861,
+  "cached": false
+ }
+}

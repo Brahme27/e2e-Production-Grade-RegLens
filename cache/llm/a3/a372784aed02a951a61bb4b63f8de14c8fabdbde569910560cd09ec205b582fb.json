@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "answer",
+ "response": {
+  "text": "- The PRA requires that a report on the effectiveness of the model‑risk‑management (MRM) framework for financial reporting be provided to the audit committee on a regular basis and **at least annually**【1†para 3.8】.  \n- The report must be supplied **in a timely manner** so the external auditor can use it when assessing and responding to the risk of material misstatement in the statutory audit【1†para 3.8】.",
+  "model": "reasoning-large",
+  "prompt_tokens": 0,
+  "completion_tokens": 0,
+  "latency_ms": 883.4931000019424,
+  "cached": false
+ }
+}

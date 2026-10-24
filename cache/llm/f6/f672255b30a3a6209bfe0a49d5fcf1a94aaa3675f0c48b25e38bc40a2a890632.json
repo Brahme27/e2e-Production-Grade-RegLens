@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "answer",
+ "response": {
+  "text": "- RBI commercial banks must review the financial and operational condition of each service provider at least annually, test business‑continuity plans, and retain control to intervene if the provider fails or is insolvent [1][6].  \n- RBI requires that the outsourcing agreement be written, vetted by legal counsel, and include provisions for monitoring, audits, confidentiality, and contingency plans, with the bank retaining ultimate responsibility for the outsourced activity [4][6].  \n- FCA’s SYSC 8 treats an outsourced function as “critical or important” if a defect would materially impair the firm’s regulatory compliance or financial performance [3].  \n- FCA requires that the firm retain supervisory control, maintain access to data and premises, be able to terminate the arrangement immediately if needed, and have a written agreement that preserves the firm’s instruction, termination, information, and inspection rights [7].",
+  "model": "reasoning-large",
+  "prompt_tokens": 0,
+  "completion_tokens": 0,
+  "latency_ms": 10828.392099996563,
+  "cached": false
+ }
+}

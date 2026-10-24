@@ -1,0 +1,12 @@
+{
+ "alias": "fallback",
+ "purpose": "judge",
+ "response": {
+  "text": "```json\n{\n  \"sentences\": [\n    {\n      \"text\": \"NBFCs must have a comprehensive outsourcing policy approved by the Board, covering criteria for selecting activities and service providers, delegation of authority based on risk and materiality, and monitoring systems [7].\",\n      \"supported\": true,\n      \"cited_supports\": true\n    },\n    {\n      \"text\": \"NBFCs must evaluate and guard against ten key risks—strategic, reputation, compliance, operational, legal, exit strategy, counterparty, country, contractual, and concentration/systemic risk [5].\",\n      \"supported\": false,\n      \"cited_supports\": false\n    },\n    {\n      \"text\": \"Before outsourcing IT services, an NBFC must conduct a comprehensive assessment of attendant benefits, risks, and the availability of commensurate processes to manage those risks [3].\",\n      \"supported\": true,\n      \"cited_supports\": true\n    },\n    {\n      \"text\": \"Agreements must include provisions on subcontractor oversight, NBFC access to data and records, material adverse event reporting, IT Act compliance, SLAs, data storage in India, data-sharing limits, resolution and indemnity clauses, contingency plans, and third-party visibility [1].\",\n      \"supported\": false,\n      \"cited_supports\": false\n    },\n    {\n      \"text\": \"NBFCs must review the financial and operational condition of the service provider at least annually, using a risk-based approach, to detect deterioration in performance, confidentiality, security, or operational resilience [6][8].\",\n      \"supported\": true,\n      \"cited_supports\": true\n    },\n    {\n      \"text\": \"Regular internal or external audits must assess the adequacy of the NBFC's risk management practices in overseeing outsourcing arrangements and compliance with the Directions [2].\",\n      \"supported\": true,\n      \"cited_supports\": true\n    },\n    {\n      \"text\": \"Where Security Operations Centre operations are outsourced, NBFCs must identify asset ownership, maintain oversight of rule definitions and analytics, periodically assess SOC facilities, integrate SOC reporting with the NBFC's incident response process, and review alert-handling processes [4].\",\n      \"supported\": true,\n      \"cited_supports\": true\n    }\n  ],\n  \"relevancy\": 5\n}\n```",
+  "model": "qwen/qwen3.8-27b",
+  "prompt_tokens": 1991,
+  "completion_tokens": 522,
+  "latency_ms": 35233.96869999124,
+  "cached": false
+ }
+}

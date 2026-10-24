@@ -1,0 +1,12 @@
+{
+ "alias": "fallback",
+ "purpose": "judge",
+ "response": {
+  "text": "```json\n{\n  \"sentences\": [\n    {\n      \"text\": \"The expectations in the PRA’s Supervisory Statement apply to all forms of outsourcing and, where indicated, other non‑outsourcing third‑party arrangements entered into by PRA‑regulated firms[2].\",\n      \"supported\": true,\n      \"cited_supports\": true\n    },\n    {\n      \"text\": \"In developing those expectations the PRA took account of a range of international standards, including: the Basel Committee on Banking Supervision’s draft “Principles for Operational Resilience”; the Financial Stability Board’s “Effective Practices for Cyber Incident Response and Recovery”; the G‑7 “Fundamental Elements for Third‑Party Cyber Risk Management in the Financial Sector”; and the International Organisation of Securities Commissions’ draft “Principles on Outsourcing”[2].\",\n      \"supported\": true,\n      \"cited_supports\": true\n    }\n  ],\n  \"relevancy\": 5\n}\n```",
+  "model": "qwen/qwen3.8-27b",
+  "prompt_tokens": 1030,
+  "completion_tokens": 219,
+  "latency_ms": 7698.304199991981,
+  "cached": false
+ }
+}

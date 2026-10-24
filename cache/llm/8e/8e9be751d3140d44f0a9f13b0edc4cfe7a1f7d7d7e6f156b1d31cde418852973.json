@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "gap_judge",
+ "response": {
+  "text": "{\"status\":\"not_covered\",\"rationale\":\"The policy clauses address accountability, due diligence, and oversight but do not require the firm to provide information to the PRA on request, so the obligation is not met.\",\"policy_refs\":[],\"confidence\":0.92}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 654,
+  "completion_tokens": 119,
+  "latency_ms": 4632.604400016135,
+  "cached": false
+ }
+}

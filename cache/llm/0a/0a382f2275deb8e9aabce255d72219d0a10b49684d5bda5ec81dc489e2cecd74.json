@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "answer",
+ "response": {
+  "text": "If the FCA and a firm cannot reach agreement after discussion regarding individual guidance on operational resilience, the FCA may consider other tools available to it [1]. This includes using its powers under sections 55J and 55L of the Act on its own initiative to require the firm to take specific steps in line with the FCA’s view to comply with the requirements [1].",
+  "model": "reasoning-large",
+  "prompt_tokens": 0,
+  "completion_tokens": 0,
+  "latency_ms": 34927.34669998754,
+  "cached": false
+ }
+}

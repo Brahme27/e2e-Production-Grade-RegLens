@@ -1,0 +1,12 @@
+{
+ "alias": "fallback",
+ "purpose": "judge",
+ "response": {
+  "text": "```json\n{\n  \"sentences\": [\n    {\n      \"text\": \"RBI (NBFC) requires a Board‑approved IT outsourcing policy that sets out roles and responsibilities of the Board, committees, senior management, IT and business functions, and oversight and assurance functions; it must include criteria for selecting services and providers, materiality parameters, delegation of authority, disaster recovery and business continuity plans, monitoring systems, and termination/exit strategies [1].\",\n      \"supported\": true,\n      \"cited_supports\": true\n    },\n    {\n      \"text\": \"PRA (UK bank) expects a Board‑approved outsourcing policy that covers governance under the Senior Managers and Certification Regime, record‑keeping, materiality and risk assessment in the pre‑outsourcing phase, due diligence on third parties, and written agreements that address data security, access/audit rights, sub‑outsourcing, and business continuity/exit strategies [5].\",\n      \"supported\": false,\n      \"cited_supports\": false\n    }\n  ],\n  \"relevancy\": 4\n}\n```",
+  "model": "qwen/qwen3.8-27b",
+  "prompt_tokens": 1361,
+  "completion_tokens": 236,
+  "latency_ms": 43765.521699999226,
+  "cached": false
+ }
+}

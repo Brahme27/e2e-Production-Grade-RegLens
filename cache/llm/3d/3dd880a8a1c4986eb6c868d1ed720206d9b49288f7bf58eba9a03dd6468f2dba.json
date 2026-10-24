@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "answer",
+ "response": {
+  "text": "The PRA’s Supervisory Statement SS2/21 (March 2026) sets out the regulator’s expectations for PRA‑regulated firms on outsourcing and third‑party risk management. It defines “outsourcing” and “third‑party arrangement” in the PRA Rulebook, applies a principle of proportionality to intragroup outsourcing and to non‑significant firms, and requires governance under the Senior Managers and Certification Regime (SM&CR) and record‑keeping. Firms must conduct materiality and risk assessments in the pre‑outsourcing phase, perform due diligence on third parties, and notify the PRA of material arrangements before entry. Written agreements for material outsourcing must cover data security, access/audit rights, sub‑outsourcing, and business continuity/exit strategies. The statement also aligns with existing PRA requirements and international standards such as BCBS Operational Resilience Principles and IOSCO principles on outsourcing. [3]",
+  "model": "reasoning-large",
+  "prompt_tokens": 0,
+  "completion_tokens": 0,
+  "latency_ms": 12377.521499991417,
+  "cached": false
+ }
+}

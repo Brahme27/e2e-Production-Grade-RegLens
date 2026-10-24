@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "answer",
+ "response": {
+  "text": "- The board of directors and senior management are ultimately responsible for establishing a sound model‑risk‑management (MRM) framework that ensures key business decisions affecting the firm’s safety and soundness are supported by reliable and appropriate model output and are aligned with the board‑defined model risk appetite【1】.",
+  "model": "reasoning-large",
+  "prompt_tokens": 0,
+  "completion_tokens": 0,
+  "latency_ms": 1079.6240999770816,
+  "cached": false
+ }
+}

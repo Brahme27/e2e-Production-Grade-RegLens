@@ -1,0 +1,12 @@
+{
+ "alias": "fallback",
+ "purpose": "judge",
+ "response": {
+  "text": "```json\n{\n  \"sentences\": [\n    {\n      \"text\": \"SEBI requires that the effectiveness of vulnerability‑mitigation measures be quantified through a standardised, quantifiable method that covers five broad domains of SOC functionality.\",\n      \"supported\": false,\n      \"cited_supports\": false\n    },\n    {\n      \"text\": \"REs must calculate the functional efficacy of their SOC using the prescribed metrics and submit the results in the format specified in the CSCRF.\",\n      \"supported\": false,\n      \"cited_supports\": false\n    },\n    {\n      \"text\": \"This calculation is to be performed on a half‑yearly basis for MIIs and Qualified REs, and yearly for other REs, and must be reported to SEBI.\",\n      \"supported\": false,\n      \"cited_supports\": false\n    }\n  ],\n  \"relevancy\": 1\n}\n```",
+  "model": "qwen/qwen3.8-27b",
+  "prompt_tokens": 1138,
+  "completion_tokens": 206,
+  "latency_ms": 730.4129999829456,
+  "cached": false
+ }
+}

@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "obligations",
+ "response": {
+  "text": "{\"obligations\":[{\"text\":\"A firm must identify its important business services.\",\"actor\":\"firm\",\"action\":\"identify important business services\",\"condition\":\"\",\"deadline\":\"\",\"source_ref\":\"SYSC 15A.2.1R\",\"severity\":\"medium\"},{\"text\":\"A firm must keep its compliance with SYSC 15A.2.1R under review.\",\"actor\":\"firm\",\"action\":\"keep compliance with SYSC 15A.2.1R under review\",\"condition\":\"\",\"deadline\":\"\",\"source_ref\":\"SYSC 15A.2.2R\",\"severity\":\"medium\"},{\"text\":\"A firm must consider its compliance with SYSC 15A.2.1R if there is a material change to the firm’s business or the market in which it operates.\",\"actor\":\"firm\",\"action\":\"consider compliance with SYSC 15A.2.1R\",\"condition\":\"if there is a material change to the firm’s business or the market in which it operates\",\"deadline\":\"\",\"source_ref\":\"SYSC 15A.2.2R\",\"severity\":\"medium\"},{\"text\":\"A firm must consider its compliance with SYSC 15A.2.1R no later than 1 year after it last carried out the relevant assessment.\",\"actor\":\"firm\",\"action\":\"consider compliance with SYSC 15A.2.1R\",\"condition\":\"in any event\",\"deadline\":\"no later than 1 year after the last relevant assessment\",\"source_ref\":\"SYSC 15A.2.2R\",\"severity\":\"medium\"},{\"text\":\"A firm must set an impact tolerance for each of its important business services.\",\"actor\":\"firm\",\"action\":\"set an impact tolerance for each important business service\",\"condition\":\"for each important business service\",\"deadline\":\"\",\"source_ref\":\"SYSC 15A.5R\",\"severity\":\"medium\"}]}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 448,
+  "completion_tokens": 571,
+  "latency_ms": 1819.7940999816637,
+  "cached": false
+ }
+}

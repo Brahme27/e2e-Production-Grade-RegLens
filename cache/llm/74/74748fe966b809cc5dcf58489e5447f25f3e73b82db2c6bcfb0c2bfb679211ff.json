@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "answer",
+ "response": {
+  "text": "**RBI (NBFC – IT outsourcing)**  \n- The Board must approve a comprehensive IT‑outsourcing policy that sets out the roles and responsibilities of the Board, its committees, senior management, the IT function, business units and oversight/assurance functions [1].  \n- The policy must include selection criteria for services and providers, materiality thresholds, delegation of authority, disaster‑recovery/BCP plans, monitoring and review systems, and exit/termination processes [1].  \n- Senior management is tasked with risk evaluation, periodic performance reviews, incident reporting, business‑continuity testing, data‑confidentiality oversight, independent audits and maintaining sufficient in‑house capability to oversee outsourced services [5].  \n\n**PRA (UK bank – outsourcing)**  \n- The board‑approved outsourcing policy must be principles‑based but detailed enough to guide staff; it must cover board responsibilities, involvement of business lines and senior‑management functions, links to other policies, record‑keeping, conflict‑of‑interest management and business‑continuity planning [9][10].  \n- It must set out pre‑outsourcing due‑diligence, materiality and risk assessment, sign‑off authority, ongoing oversight (including incident reporting, SLA performance, strategic reviews, sub‑outsourcing changes), independent audit of compliance and renewal processes [9].  \n\n**Key difference**  \n- RBI’s policy is prescriptive, enumerating specific elements such as disaster‑recovery plans, exit strategies and data‑location clauses, whereas the PRA’s policy is principles‑based and focuses on high‑level governance, risk‑assessment processes and ongoing oversight without prescribing detailed contractual clauses.",
+  "model": "reasoning-large",
+  "prompt_tokens": 0,
+  "completion_tokens": 0,
+  "latency_ms": 1404.5544999826234,
+  "cached": false
+ }
+}

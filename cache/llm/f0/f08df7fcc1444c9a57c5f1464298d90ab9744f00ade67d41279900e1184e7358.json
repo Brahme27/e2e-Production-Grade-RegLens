@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "gap_judge",
+ "response": {
+  "text": "{\"status\":\"covered\",\"rationale\":\"Clause §4.1 explicitly requires identifying and documenting people, processes, technology, facilities and information for each important business service, satisfying the mapping requirement.\",\"policy_refs\":[\"NB-POL-OPR-020 §4.1\"],\"confidence\":0.99}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 625,
+  "completion_tokens": 146,
+  "latency_ms": 2605.760199978249,
+  "cached": false
+ }
+}

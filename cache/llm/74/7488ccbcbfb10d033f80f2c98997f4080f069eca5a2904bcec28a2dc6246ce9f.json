@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "answer",
+ "response": {
+  "text": "- The firm must allocate overall responsibility for establishing and maintaining effective anti‑money‑laundering systems and controls to a **director or senior manager** (who may also be the Money Laundering Reporting Officer) [1].  \n- That individual **may not** be someone who is already approved to perform another overall‑responsibility function within the firm [1].",
+  "model": "reasoning-large",
+  "prompt_tokens": 0,
+  "completion_tokens": 0,
+  "latency_ms": 944.4518999953289,
+  "cached": false
+ }
+}

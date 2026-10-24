@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "answer",
+ "response": {
+  "text": "- The Deputy Internal Ombudsman must be a retired or serving officer of a Regulated Entity (RE) at a rank equivalent to **Deputy General Manager** (or higher) in the RBI or another financial‑sector regulator [1].  \n- The candidate must have **at least five years of experience** in banking, non‑banking finance, regulation, supervision, payment‑settlement systems, credit information or consumer‑protection [1].  \n- The person **must not have been employed, nor be currently employed, by the bank or any of its holding, associate or subsidiary companies** [1].  \n- The appointee **must be under 70 years of age** at the end of the tenure [1].",
+  "model": "reasoning-large",
+  "prompt_tokens": 0,
+  "completion_tokens": 0,
+  "latency_ms": 1178.0816999962553,
+  "cached": false
+ }
+}

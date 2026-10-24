@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "gap_judge",
+ "response": {
+  "text": "{\"status\":\"not_covered\",\"rationale\":\"The policy caps age at appointment (65) but does not restrict the Ombudsman from exceeding 70 during the tenure, so it does not satisfy the obligation.\",\"policy_refs\":[\"SB-POL-CS-007 §2.3\"],\"confidence\":0.97}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 702,
+  "completion_tokens": 140,
+  "latency_ms": 1002.3613999946974,
+  "cached": false
+ }
+}

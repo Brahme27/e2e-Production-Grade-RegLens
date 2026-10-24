@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "gap_judge",
+ "response": {
+  "text": "{\"status\":\"covered\",\"rationale\":\"Clause §3.1 requires due diligence on the provider's ability, capacity, resources, organisational structure and required authorisations, directly meeting the obligation.\",\"policy_refs\":[\"NB-POL-OPR-012 §3.1\"],\"confidence\":0.98}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 668,
+  "completion_tokens": 125,
+  "latency_ms": 3340.832000016235,
+  "cached": false
+ }
+}

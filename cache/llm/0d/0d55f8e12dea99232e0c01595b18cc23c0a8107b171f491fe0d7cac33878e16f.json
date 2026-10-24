@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "answer",
+ "response": {
+  "text": "Under SEBI's digital KYC rules, clients must submit documents via electronic/digital signature, including Aadhaar e-Sign, which is accepted in lieu of a wet signature [4]. The \"original seen and verified\" requirement for officially valid documents is met if the investor provides a clear photograph or scanned copy of the original, or a digitally signed document issued through DigiLocker [1]. For bank details, clients must provide a photo or scan of a signed cancelled cheque, and the bank account details must be verified using the Penny Drop mechanism or a bank API [4]. While the sources detail document and bank verification, they do not specify distinct submission or verification requirements for mobile numbers or email addresses in the context of digital KYC execution [1][2][4].",
+  "model": "reasoning-large",
+  "prompt_tokens": 0,
+  "completion_tokens": 0,
+  "latency_ms": 45581.202900008066,
+  "cached": false
+ }
+}

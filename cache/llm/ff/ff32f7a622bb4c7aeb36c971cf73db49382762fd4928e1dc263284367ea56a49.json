@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "gap_judge",
+ "response": {
+  "text": "{\"status\":\"partially_covered\",\"rationale\":\"The policy mandates annual scenario testing and self‑assessment documentation, but does not explicitly require a maintained testing plan as specified by the obligation.\",\"policy_refs\":[\"NB-POL-OPR-020 §5.1\",\"NB-POL-OPR-020 §6.1\"],\"confidence\":0.87}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 658,
+  "completion_tokens": 165,
+  "latency_ms": 3957.3825999978,
+  "cached": false
+ }
+}

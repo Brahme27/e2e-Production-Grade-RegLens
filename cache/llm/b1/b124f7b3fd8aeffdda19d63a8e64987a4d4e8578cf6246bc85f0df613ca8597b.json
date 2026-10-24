@@ -1,0 +1,12 @@
+{
+ "alias": "fallback",
+ "purpose": "judge",
+ "response": {
+  "text": "{\"sentences\": [{\"text\": \"\\\"Other matters\\\" means, in relation to a requirement under the MODR, matters that fall within the scope of the Part's overall scope (as set out in paragraph 1.1) but are not covered by that specific requirement [1][2][3][4].\", \"supported\": true, \"cited_supports\": true}], \"relevancy\": 5}",
+  "model": "qwen/qwen3.8-27b",
+  "prompt_tokens": 1204,
+  "completion_tokens": 493,
+  "latency_ms": 51399.370300001465,
+  "cached": false
+ }
+}

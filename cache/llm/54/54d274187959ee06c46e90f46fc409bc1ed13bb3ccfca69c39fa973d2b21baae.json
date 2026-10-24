@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "answer",
+ "response": {
+  "text": "- **Scope:** The SS applies to all forms of outsourcing and, where indicated, non-outsourcing third party arrangements by PRA-regulated firms, including specific provisions for cloud usage [5][8]. Credit unions and non-directive firms (NDFs) are subject to lighter, proportionate expectations [4].\n- **Overarching aim:** Firms must apply adequate governance and controls to all third party dependencies that can impact the PRA's statutory objectives, a principle the BCBS calls \"third party dependency management\" [7].\n- **Governance and board engagement:** Expectations cover board engagement, allocation of responsibilities, the SM&CR, outsourcing policies, and record-keeping (including the Outsourcing Register) [1].\n- **Materiality and risk assessment:** Firms must assess the materiality and risks of *all* third party arrangements, irrespective of whether they meet the definition of outsourcing [3].\n- **Pre-outsourcing due diligence:** Firms must conduct materiality/risk assessments, perform due diligence on third parties, and notify the PRA where required [5].\n- **Written agreements:** Material outsourcing arrangements must be governed by written agreements addressing minimum specified areas [5].\n- **Key operational areas:** The SS sets out detailed expectations on data security, access/audit/information rights, sub-outsourcing, and business continuity and exit strategies [5].\n- **Policy flexibility:** Firms may adopt a single holistic third party risk management policy or separate policies for outsourcing and non-outsourcing arrangements, provided they are aligned, consistent, and risk-based [6].\n- **Alignment with FCA and international standards:** The expectations are substantively aligned with FCA SYSC rules and informed by BCBS, FSB, G-7, and IOSCO standards [2][8].",
+  "model": "reasoning-large",
+  "prompt_tokens": 0,
+  "completion_tokens": 0,
+  "latency_ms": 51148.49110000068,
+  "cached": false
+ }
+}

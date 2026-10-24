@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "answer",
+ "response": {
+  "text": "- Verify the walk‑in customer’s identity and address for any sale of third‑party products of ₹ 50,000 or more [1(a)].  \n- Obtain and verify the customer’s PAN (for both account‑based and walk‑in customers) and ensure the transaction is executed only by debit to the customer’s account or against a cheque [1(d)].  \n- Maintain the transaction details and related records as prescribed in paragraph 46, i.e., keep identification, address and full transaction information (nature, amount, currency, date and parties) for at least five years and make them readily available to authorities [1(b)][5].",
+  "model": "reasoning-large",
+  "prompt_tokens": 0,
+  "completion_tokens": 0,
+  "latency_ms": 1037.522300001001,
+  "cached": false
+ }
+}

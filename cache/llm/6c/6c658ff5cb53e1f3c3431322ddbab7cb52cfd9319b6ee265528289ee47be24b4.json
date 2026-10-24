@@ -1,0 +1,12 @@
+{
+ "alias": "fallback",
+ "purpose": "obligation_precision",
+ "response": {
+  "text": "{\"verdicts\": [true, true, true]}",
+  "model": "qwen/qwen3.8-27b",
+  "prompt_tokens": 366,
+  "completion_tokens": 359,
+  "latency_ms": 971.4965000166558,
+  "cached": false
+ }
+}

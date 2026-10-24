@@ -1,0 +1,12 @@
+{
+ "alias": "fallback",
+ "purpose": "judge",
+ "response": {
+  "text": "```json\n{\"sentences\": [{\"text\": \"Stock exchanges and depositories must carry out half‑yearly internal audits of their compliance with the beneficial‑ownership identification rules [1].\", \"supported\": true, \"cited_supports\": true}, {\"text\": \"For mutual funds, compliance is monitored by the Boards of the Asset Management Companies and the Trustees [1].\", \"supported\": true, \"cited_supports\": true}, {\"text\": \"For other registered intermediaries, compliance is monitored by their Board of Directors [1].\", \"supported\": true, \"cited_supports\": true}], \"relevancy\": 5}\n```",
+  "model": "qwen/qwen3.8-27b",
+  "prompt_tokens": 852,
+  "completion_tokens": 472,
+  "latency_ms": 1246.0646999825258,
+  "cached": false
+ }
+}

@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "gap_judge",
+ "response": {
+  "text": "{\"status\":\"partially_covered\",\"rationale\":\"The policy requires appointing a successor within three months of a vacancy, but does not explicitly mandate starting the appointment process three months before the incumbent's term ends or ensuring overlap.\",\"policy_refs\":[\"SB-POL-CS-007 §3.3\"],\"confidence\":0.87}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 752,
+  "completion_tokens": 181,
+  "latency_ms": 950.9167000069283,
+  "cached": false
+ }
+}

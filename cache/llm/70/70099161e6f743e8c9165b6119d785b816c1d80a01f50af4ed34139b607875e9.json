@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "gap_judge",
+ "response": {
+  "text": "{\"status\":\"partially_covered\",\"rationale\":\"Policy §5.3 provides automatic escalation but sets the deadline at 25 days, which is longer than the required 20 days, so it does not fully meet the obligation.\",\"policy_refs\":[\"SB-POL-CS-007 §5.3\"],\"confidence\":0.95}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 715,
+  "completion_tokens": 182,
+  "latency_ms": 1133.6492999980692,
+  "cached": false
+ }
+}

@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "answer",
+ "response": {
+  "text": "- Managers of AIFs or VCFs whose **aggregate corpus (including all schemes they manage) is Rs 3,000 crore or less** are eligible for exemption [1][2].  \n- The exemption also applies only when the manager is classified as a **self‑certification RE and has fewer than 100 clients** [1][2].",
+  "model": "reasoning-large",
+  "prompt_tokens": 0,
+  "completion_tokens": 0,
+  "latency_ms": 1488.346600002842,
+  "cached": false
+ }
+}

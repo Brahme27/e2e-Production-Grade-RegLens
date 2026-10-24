@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "answer",
+ "response": {
+  "text": "- **IT Governance** – strategic alignment, risk management, resource management, performance management, and Business Continuity/DR Management [1]\n- **Risk Management Policy** – must include IT and cybersecurity risks, reviewed and updated at least annually by the RMCB in consultation with the ITSC [8]\n- **Network Security** – controls for wireless LANs, access device configurations, patch levels, and secure configuration of VLAN/LAN/WAN interfaces and external interconnections [4][5]\n- **Cryptographic Controls** – strong key lengths, algorithms, cipher suites and protocols; adoption of internationally accepted, non-deprecated standards [6]\n- **Vulnerability Assessment / Penetration Testing (VA/PT)** – banks must review coverage and scope and ensure reasonable assurance is explicitly provided in audit reports [3]\n- **Metrics & Monitoring** – comprehensive KPIs and KRIs including anti-malware coverage, patch latency, user awareness training extent, and vulnerability-related metrics [2]\n- **Awareness & Training** – targeted training for key personnel in executive, operational, and security administration/management roles [7]",
+  "model": "reasoning-large",
+  "prompt_tokens": 0,
+  "completion_tokens": 0,
+  "latency_ms": 52723.206700000446,
+  "cached": false
+ }
+}

@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "obligations",
+ "response": {
+  "text": "{\n  \"obligations\": [\n    {\n      \"text\": \"A firm must ensure it can remain within its impact tolerance for each important business service in the event of a severe but plausible disruption to its operations.\",\n      \"actor\": \"firm\",\n      \"action\": \"ensure it can remain within its impact tolerance for each important business service during a severe but plausible disruption\",\n      \"condition\": \"in the event of a severe but plausible disruption to its operations\",\n      \"deadline\": \"\",\n      \"source_ref\": \"SYSC 15A.2.9R\",\n      \"severity\": \"high\"\n    },\n    {\n      \"text\": \"A firm must identify and document the people, processes, technology, facilities and information necessary to deliver each of its important business services, and the documentation must be sufficient to allow the firm to identify vulnerabilities and remedy these as appropriate.\",\n      \"actor\": \"firm\",\n      \"action\": \"identify and document the people, processes, technology, facilities and information needed to deliver each important business service, ensuring the documentation enables identification and remediation of vulnerabilities\",\n      \"condition\": \"\",\n      \"deadline\": \"\",\n      \"source_ref\": \"SYSC 15A.4.1R\",\n      \"severity\": \"high\"\n    },\n    {\n      \"text\": \"A firm must develop and keep up to date a testing plan that appropriately details how it will gain assurance that it can remain within the impact tolerances for each of its important business services.\",\n      \"actor\": \"firm\",\n      \"action\": \"develop and maintain a testing plan that details how to gain assurance of remaining within impact tolerances for each important business service\",\n      \"condition\": \"\",\n      \"deadline\": \"\",\n      \"source_ref\": \"SYSC 15A.5.1R\",\n      \"severity\": \"high\"\n    }\n  ]\n}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 453,
+  "completion_tokens": 417,
+  "latency_ms": 1357.5647000106983,
+  "cached": false
+ }
+}

@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "answer",
+ "response": {
+  "text": "**RBI (NBFC IT outsourcing):**\nAn NBFC must perform due diligence to assess the service provider's ongoing capability to comply with obligations [4], evaluate system compatibility and performance standards including customer service [1], and apply additional IT-specific criteria covering technology and infrastructural stability, data backup, disaster recovery, conflict of interest, data segregation, cyber security risk assessment, data protection controls, and enforceability of agreements [2]. The NBFC must also evaluate the need for outsourcing based on materiality, cost-benefit, and the outsourcing model [3], and guard against a defined set of risks including strategic, operational, legal, exit strategy, and concentration risks [5]. Senior management is responsible for prior and periodic evaluation, business continuity planning, and independent review [8].\n\n**FCA (general outsourcing):**\nA firm relying on a third party for critical operational functions must take reasonable steps to avoid undue additional operational risk and must not impair the quality of its internal control or the FCA's ability to monitor compliance [9]. The firm should notify the FCA when it intends to rely on a third party for critical or important functions [10].\n\n**Key difference:** The RBI's framework is highly prescriptive, enumerating specific IT evaluation criteria (e.g., data storage in India, cyber security risk assessment, disaster recovery) and detailed contractual requirements [2][6], whereas the FCA's approach is principle-based, requiring firms to avoid undue operational risk and preserve regulatory oversight without prescribing granular technical criteria [9].",
+  "model": "reasoning-large",
+  "prompt_tokens": 0,
+  "completion_tokens": 0,
+  "latency_ms": 49971.45559999626,
+  "cached": false
+ }
+}

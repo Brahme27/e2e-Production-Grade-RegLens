@@ -1,0 +1,12 @@
+{
+ "alias": "fallback",
+ "purpose": "judge",
+ "response": {
+  "text": "{\n  \"sentences\": [\n    {\n      \"text\": \"Regulated activities are subject to the requirements, including those defined by the FCA or PRA for CRR firms.\",\n      \"supported\": true,\n      \"cited_supports\": true\n    },\n    {\n      \"text\": \"Dealing in investments as principal is subject to the requirements, including where the Regulated Activities Order exclusion does not apply.\",\n      \"supported\": true,\n      \"cited_supports\": true\n    },\n    {\n      \"text\": \"Ancillary activities, such as services supporting regulated or MiFID business, are subject to the requirements.\",\n      \"supported\": true,\n      \"cited_supports\": true\n    },\n    {\n      \"text\": \"MiFID-related activities, including core business and ancillary services connected to MiFID or equivalent third-country business, are subject to the requirements.\",\n      \"supported\": true,\n      \"cited_supports\": true\n    },\n    {\n      \"text\": \"Collective portfolio management is subject to the requirements.\",\n      \"supported\": true,\n      \"cited_supports\": true\n    },\n    {\n      \"text\": \"Provision of payment services, issuance of electronic money, and related activities are subject to the requirements.\",\n      \"supported\": true,\n      \"cited_supports\": true\n    },\n    {\n      \"text\": \"Data-reporting services supplied by consolidated-tape providers are subject to the requirements.\",\n      \"supported\": true,\n      \"cited_supports\": true\n    },\n    {\n      \"text\": \"Unregulated activities in a prudential context are subject to the requirements.\",\n      \"supported\": true,\n      \"cited_supports\": true\n    },\n    {\n      \"text\": \"Complaints-handling obligations apply to firms carrying out the specified activities, including payment-service providers, electronic-money issuers, CBTL firms, credit reference agencies, finance platforms, and voluntary-jurisdiction participants.\",\n      \"supported\": true,\n      \"cited_supports\": true\n    },\n    {\n      \"text\": \"Bank-specific service-charge activities, such as calculation of service charges for commercial banks, are subject to board approval and reasonableness requirements.\",\n      \"supported\": true,\n      \"cited_supports\": true\n    }\n  ],\n  \"relevancy\": 4\n}",
+  "model": "qwen/qwen3.8-27b",
+  "prompt_tokens": 1654,
+  "completion_tokens": 532,
+  "latency_ms": 4262.215800001286,
+  "cached": false
+ }
+}

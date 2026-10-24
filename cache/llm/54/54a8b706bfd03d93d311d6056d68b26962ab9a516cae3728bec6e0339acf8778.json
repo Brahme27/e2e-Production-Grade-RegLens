@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "answer",
+ "response": {
+  "text": "“Other matters” means, in relation to a requirement under the MODR, matters that fall within the scope of the Part’s overall scope (as set out in paragraph 1.1) but are not covered by that specific requirement [1][2][3][4].",
+  "model": "reasoning-large",
+  "prompt_tokens": 0,
+  "completion_tokens": 0,
+  "latency_ms": 942.2192000201903,
+  "cached": false
+ }
+}

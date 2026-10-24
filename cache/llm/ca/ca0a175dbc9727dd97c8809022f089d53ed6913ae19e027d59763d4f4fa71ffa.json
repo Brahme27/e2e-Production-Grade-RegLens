@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "answer",
+ "response": {
+  "text": "If, after discussion, the FCA and the firm still do not agree, the FCA may resort to other tools – for example, exercising its powers under sections 55J and 55L of the Financial Services and Markets Act – to require the firm to take specific steps that the FCA considers necessary to comply with the chapter’s requirements【1】.",
+  "model": "reasoning-large",
+  "prompt_tokens": 0,
+  "completion_tokens": 0,
+  "latency_ms": 1032.7664999931585,
+  "cached": false
+ }
+}

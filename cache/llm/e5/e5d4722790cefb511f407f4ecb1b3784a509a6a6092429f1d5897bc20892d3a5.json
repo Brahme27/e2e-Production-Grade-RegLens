@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "gap_judge",
+ "response": {
+  "text": "{\"status\":\"not_covered\",\"rationale\":\"The policy clauses describe reporting lines, remuneration, audit scope, and reporting of complaints, but do not address the requirement that an IO decision can be overruled only with Competent Authority approval nor that overruled cases must be placed before the Customer Service Committee.\",\"policy_refs\":[],\"confidence\":0.97}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 697,
+  "completion_tokens": 156,
+  "latency_ms": 1003.5092000034638,
+  "cached": false
+ }
+}

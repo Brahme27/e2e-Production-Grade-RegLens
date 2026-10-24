@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "gap_judge",
+ "response": {
+  "text": "{\"status\":\"covered\",\"rationale\":\"Clause SB-POL-CS-007 §5.5 requires the bank to inform complainants of the option to approach the RBI Ombudsman and provides the CMS URL and CRPC address, matching the obligation.\",\"policy_refs\":[\"SB-POL-CS-007 §5.5\"],\"confidence\":0.99}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 725,
+  "completion_tokens": 150,
+  "latency_ms": 4127.265699993586,
+  "cached": false
+ }
+}

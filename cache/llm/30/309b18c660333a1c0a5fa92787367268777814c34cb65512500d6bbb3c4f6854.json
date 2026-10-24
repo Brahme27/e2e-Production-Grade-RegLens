@@ -1,0 +1,12 @@
+{
+ "alias": "fallback",
+ "purpose": "judge",
+ "response": {
+  "text": "```json\n{\n  \"sentences\": [\n    {\n      \"text\": \"Banks must establish a dedicated compliance function with a Chief Compliance Officer reporting directly to the Board or Audit Committee, independent of internal audit, and subject to quarterly Board/ACB reviews and annual policy refreshes.\",\n      \"supported\": false,\n      \"cited_supports\": false\n    },\n    {\n      \"text\": \"The compliance function must ensure adherence to all statutory, regulatory and self-regulatory codes, vet and disseminate regulatory guidelines, and monitor compliance with directions from other regulators (e.g., IRDAI, SEBI).\",\n      \"supported\": false,\n      \"cited_supports\": false\n    },\n    {\n      \"text\": \"Banks must develop mechanisms (performance indicators, metrics) to measure and assess compliance risk and use the results to enhance risk assessment.\",\n      \"supported\": false,\n      \"cited_supports\": false\n    },\n    {\n      \"text\": \"Banks must appoint qualified staff with knowledge of law, accountancy, IT and practical banking experience; provide regular training on new products, corporate governance, risk management and supervisory practices.\",\n      \"supported\": false,\n      \"cited_supports\": false\n    },\n    {\n      \"text\": \"The compliance function must be free to report irregularities to senior management and have direct access to the Board/ACB without fear of reprisal.\",\n      \"supported\": false,\n      \"cited_supports\": false\n    }\n  ],\n  \"relevancy\": 2\n}\n```",
+  "model": "qwen/qwen3.8-27b",
+  "prompt_tokens": 1115,
+  "completion_tokens": 345,
+  "latency_ms": 33846.26269998262,
+  "cached": false
+ }
+}

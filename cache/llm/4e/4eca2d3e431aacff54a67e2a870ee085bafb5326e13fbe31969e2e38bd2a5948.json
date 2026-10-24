@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "gap_judge",
+ "response": {
+  "text": "{\"status\":\"covered\",\"rationale\":\"Clause §4.2 requires the Internal Ombudsman to present a quarterly report with complaint analysis, meeting the quarterly requirement; thus the obligation is satisfied.\",\"policy_refs\":[\"SB-POL-CS-007 §4.2\"],\"confidence\":0.97}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 709,
+  "completion_tokens": 169,
+  "latency_ms": 1268.037900008494,
+  "cached": false
+ }
+}

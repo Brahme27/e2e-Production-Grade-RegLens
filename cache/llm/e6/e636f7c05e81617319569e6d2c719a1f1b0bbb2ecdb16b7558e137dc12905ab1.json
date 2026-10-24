@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "obligations",
+ "response": {
+  "text": "{\"obligations\":[{\"text\":\"A firm must retain each version of the records referred to in SYSC 15A.6.1R for at least 6 years and, on request, provide these to the FCA.\",\"actor\":\"firm\",\"action\":\"retain each version of the records for at least 6 years and provide them to the FCA on request\",\"condition\":\"\",\"deadline\":\"retain for at least 6 years\",\"source_ref\":\"SYSC 15A.6.2R\",\"severity\":\"high\"},{\"text\":\"The governing body must approve and regularly review the written records required under SYSC 15A.6 (Self-assessment and lessons learned exercise documentation).\",\"actor\":\"governing body\",\"action\":\"approve and regularly review the written records required under SYSC 15A.6\",\"condition\":\"\",\"deadline\":\"regularly\",\"source_ref\":\"SYSC 15A.7.1R\",\"severity\":\"medium\"},{\"text\":\"A firm must maintain an internal and external communication strategy to act quickly and effectively to reduce the anticipated harm caused by operational disruptions.\",\"actor\":\"firm\",\"action\":\"maintain an internal and external communication strategy to act quickly and effectively to reduce anticipated harm from operational disruptions\",\"condition\":\"\",\"deadline\":\"\",\"source_ref\":\"SYSC 15A.8.1R\",\"severity\":\"high\"}]}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 442,
+  "completion_tokens": 491,
+  "latency_ms": 1936.427900014678,
+  "cached": false
+ }
+}

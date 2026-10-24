@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "gap_judge",
+ "response": {
+  "text": "{\"status\":\"covered\",\"rationale\":\"Clause §4.2 requires quarterly reports on activities and complaint analysis to the Customer Service Committee, satisfying the obligation's preferred quarterly and minimum half‑yearly frequency.\",\"policy_refs\":[\"SB-POL-CS-007 §4.2\"],\"confidence\":0.99}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 681,
+  "completion_tokens": 128,
+  "latency_ms": 973.8574999792036,
+  "cached": false
+ }
+}

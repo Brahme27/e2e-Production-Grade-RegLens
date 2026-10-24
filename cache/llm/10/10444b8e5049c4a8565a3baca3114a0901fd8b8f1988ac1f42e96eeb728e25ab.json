@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "gap_judge",
+ "response": {
+  "text": "{\"status\":\"covered\",\"rationale\":\"Clause §3.1 requires the bank to set an impact tolerance for each important business service, directly meeting the obligation.\",\"policy_refs\":[\"NB-POL-OPR-020 §3.1\"],\"confidence\":0.99}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 648,
+  "completion_tokens": 103,
+  "latency_ms": 3112.1809000032954,
+  "cached": false
+ }
+}

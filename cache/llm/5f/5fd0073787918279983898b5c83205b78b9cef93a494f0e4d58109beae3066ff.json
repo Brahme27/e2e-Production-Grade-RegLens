@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "answer",
+ "response": {
+  "text": "- RBI (NBFC) requires a **Board‑approved IT outsourcing policy** that sets out roles and responsibilities of the Board, committees, senior management, IT and business functions, and oversight and assurance functions; it must include criteria for selecting services and providers, materiality parameters, delegation of authority, disaster recovery and business continuity plans, monitoring systems, and termination/exit strategies [1] .  \n- PRA (UK bank) expects a **Board‑approved outsourcing policy** that covers governance under the Senior Managers and Certification Regime, record‑keeping, materiality and risk assessment in the pre‑outsourcing phase, due diligence on third parties, and written agreements that address data security, access/audit rights, sub‑outsourcing, and business continuity/exit strategies [5] .",
+  "model": "reasoning-large",
+  "prompt_tokens": 0,
+  "completion_tokens": 0,
+  "latency_ms": 14563.854500011075,
+  "cached": false
+ }
+}

@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "gap_judge",
+ "response": {
+  "text": "{\"status\":\"partially_covered\",\"rationale\":\"The policy provides audit and access rights and mentions termination in remediation plans, but does not explicitly preserve instruction, information, and termination rights as required.\",\"policy_refs\":[\"NB-POL-OPR-012 §4.2\",\"NB-POL-OPR-012 §5.2\"],\"confidence\":0.87}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 645,
+  "completion_tokens": 187,
+  "latency_ms": 3441.1529999924824,
+  "cached": false
+ }
+}

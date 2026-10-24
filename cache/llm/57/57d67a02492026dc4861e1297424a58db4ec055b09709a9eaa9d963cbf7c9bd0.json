@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "gap_judge",
+ "response": {
+  "text": "{\"status\":\"partially_covered\",\"rationale\":\"The policy requires annual scenario testing but only for a selection of important business services, not for each service as the obligation mandates.\",\"policy_refs\":[\"NB-POL-OPR-020 §5.1\"],\"confidence\":0.93}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 661,
+  "completion_tokens": 140,
+  "latency_ms": 3074.0080999967176,
+  "cached": false
+ }
+}

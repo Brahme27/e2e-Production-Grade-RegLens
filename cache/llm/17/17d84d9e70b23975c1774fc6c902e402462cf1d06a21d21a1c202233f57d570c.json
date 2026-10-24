@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "gap_judge",
+ "response": {
+  "text": "{\"status\":\"covered\",\"rationale\":\"Clause SB-POL-CS-007 §5.4 requires communicating the final decision within 30 days, matching the obligation exactly.\",\"policy_refs\":[\"SB-POL-CS-007 §5.4\"],\"confidence\":0.99}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 685,
+  "completion_tokens": 99,
+  "latency_ms": 695.6893000169657,
+  "cached": false
+ }
+}

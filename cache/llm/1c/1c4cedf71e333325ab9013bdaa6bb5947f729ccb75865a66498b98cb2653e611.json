@@ -1,0 +1,12 @@
+{
+ "alias": "fallback",
+ "purpose": "judge",
+ "response": {
+  "text": "```json\n{\n  \"sentences\": [\n    {\n      \"text\": \"Under SEBI's digital KYC rules, clients must submit documents via electronic/digital signature, including Aadhaar e-Sign, which is accepted in lieu of a wet signature [4].\",\n      \"supported\": true,\n      \"cited_supports\": true\n    },\n    {\n      \"text\": \"The \\\"original seen and verified\\\" requirement for officially valid documents is met if the investor provides a clear photograph or scanned copy of the original, or a digitally signed document issued through DigiLocker [1].\",\n      \"supported\": true,\n      \"cited_supports\": true\n    },\n    {\n      \"text\": \"For bank details, clients must provide a photo or scan of a signed cancelled cheque, and the bank account details must be verified using the Penny Drop mechanism or a bank API [4].\",\n      \"supported\": false,\n      \"cited_supports\": false\n    },\n    {\n      \"text\": \"While the sources detail document and bank verification, they do not specify distinct submission or verification requirements for mobile numbers or email addresses in the context of digital KYC execution [1][2][4].\",\n      \"supported\": true,\n      \"cited_supports\": true\n    }\n  ],\n  \"relevancy\": 4\n}\n```",
+  "model": "qwen/qwen3.8-27b",
+  "prompt_tokens": 1734,
+  "completion_tokens": 298,
+  "latency_ms": 14850.470100005623,
+  "cached": false
+ }
+}

@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "gap_judge",
+ "response": {
+  "text": "{\"status\":\"partially_covered\",\"rationale\":\"The policy requires review of important business services every two years (or sooner on material change), which meets the material‑change trigger but does not satisfy the required at‑least‑annual review; mapping and impact‑tolerance review frequency are not specified.\",\"policy_refs\":[\"NB-POL-OPR-020 §2.2\",\"NB-POL-OPR-020 §6.1\"],\"confidence\":0.93}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 647,
+  "completion_tokens": 215,
+  "latency_ms": 4621.526400005678,
+  "cached": false
+ }
+}

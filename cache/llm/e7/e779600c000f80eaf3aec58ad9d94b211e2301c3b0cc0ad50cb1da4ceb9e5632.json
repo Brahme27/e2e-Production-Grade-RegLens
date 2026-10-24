@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "gap_judge",
+ "response": {
+  "text": "{\"status\":\"partially_covered\",\"rationale\":\"The policy requires a Deputy IO to act during temporary absence and mandates filling a vacancy within three months, but does not ensure the post is never vacant nor provide for a GM‑rank interim appointment for up to one month with CSC approval.\",\"policy_refs\":[\"SB-POL-CS-007 §2.4\",\"SB-POL-CS-007 §3.2\",\"SB-POL-CS-007 §3.3\"],\"confidence\":0.93}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 750,
+  "completion_tokens": 206,
+  "latency_ms": 1145.1116999960504,
+  "cached": false
+ }
+}

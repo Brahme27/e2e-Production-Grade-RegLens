@@ -1,0 +1,12 @@
+{
+ "alias": "fallback",
+ "purpose": "judge",
+ "response": {
+  "text": "```json\n{\n  \"sentences\": [\n    {\n      \"text\": \"The candidate shall not be over 70 years of age before the completion of the tenure [4].\",\n      \"supported\": true,\n      \"cited_supports\": true\n    },\n    {\n      \"text\": \"The candidate must be a retired or serving officer in the rank equivalent to a Deputy General Manager in a regulated entity or Financial Sector Regulatory Body, and if serving, must relinquish that position before assuming charge [4].\",\n      \"supported\": false,\n      \"cited_supports\": false\n    },\n    {\n      \"text\": \"The candidate must have necessary skills and a minimum of five years of working experience in areas such as banking, non-banking finance, regulation, supervision, payment and settlement systems, credit information, or consumer protection [4].\",\n      \"supported\": false,\n      \"cited_supports\": false\n    },\n    {\n      \"text\": \"The candidate shall not have been previously employed, nor presently be employed, by the bank or its holding, associate, or subsidiary companies [4].\",\n      \"supported\": true,\n      \"cited_supports\": true\n    }\n  ],\n  \"relevancy\": 2\n}\n```",
+  "model": "qwen/qwen3.8-27b",
+  "prompt_tokens": 1162,
+  "completion_tokens": 280,
+  "latency_ms": 10544.317299994873,
+  "cached": false
+ }
+}

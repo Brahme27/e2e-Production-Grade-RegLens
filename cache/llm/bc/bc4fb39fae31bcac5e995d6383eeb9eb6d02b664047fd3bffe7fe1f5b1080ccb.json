@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "answer",
+ "response": {
+  "text": "- **Regulated activities** – any activity that falls within the FCA‑defined regulated activities or the PRA‑defined regulated activities for CRR firms [1][6].  \n- **Dealing in investments as principal** (including where the Regulated Activities Order exclusion does not apply) [1][6].  \n- **Ancillary activities** – services supporting regulated or MiFID business, such as ancillary services to MiFID or other investment dealing [1][6].  \n- **MiFID‑related activities** – both the core MiFID business and ancillary services connected to MiFID or equivalent third‑country business [1][6].  \n- **Collective portfolio management** – activities involving the management of collective investment portfolios [1].  \n- **Payment services and electronic‑money issuance** – provision of payment services, issuance of electronic money, and related activities [1].  \n- **Data‑reporting services** supplied by consolidated‑tape providers [1].  \n- **Un‑regulated activities in a prudential context** – activities that are not regulated but are covered where a prudential assessment is required [1][6].  \n- **Complaints‑handling obligations** for firms that carry out any of the above activities (including payment‑service providers, electronic‑money issuers, CBTL firms, credit reference agencies, finance platforms, and voluntary‑jurisdiction participants) [2][5].  \n- **Bank‑specific service‑charge activities** – calculation of service charges (e.g., cheque‑collection fees) for commercial banks, subject to board approval and reasonableness requirements [8].",
+  "model": "reasoning-large",
+  "prompt_tokens": 0,
+  "completion_tokens": 0,
+  "latency_ms": 1437.677799985977,
+  "cached": false
+ }
+}

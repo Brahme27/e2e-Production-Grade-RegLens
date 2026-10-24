@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "answer",
+ "response": {
+  "text": "- Client‑issued documents (e.g., PAN, photograph, address proof) must be captured digitally and submitted as a photo/scan of the original using an electronic or digital signature (including Aadhaar e‑Sign) [2].  \n- The submitted documents must be verified by the intermediary through the same electronic/digital signature mechanism [1][2].  \n- The client’s mobile number and email address must be captured digitally, uploaded to the KRA system, and verified by the KRA using a One‑Time‑Password (OTP) or any other verifiable mechanism [1][5][97].",
+  "model": "reasoning-large",
+  "prompt_tokens": 0,
+  "completion_tokens": 0,
+  "latency_ms": 1021.223599993391,
+  "cached": false
+ }
+}

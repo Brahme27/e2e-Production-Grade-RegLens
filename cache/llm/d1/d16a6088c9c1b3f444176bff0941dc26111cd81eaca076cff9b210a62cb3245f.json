@@ -1,0 +1,12 @@
+{
+ "alias": "fallback",
+ "purpose": "judge",
+ "response": {
+  "text": "{\n  \"sentences\": [\n    {\n      \"text\": \"A bank must obtain prior regulatory approval for the proposed amendment to its Articles of Association through the Pravaah Portal before circulating the draft amendments to its shareholders or convening a shareholders’ meeting.\",\n      \"supported\": true,\n      \"cited_supports\": true\n    }\n  ],\n  \"relevancy\": 5\n}",
+  "model": "qwen/qwen3.8-27b",
+  "prompt_tokens": 1007,
+  "completion_tokens": 88,
+  "latency_ms": 825.3899000119418,
+  "cached": false
+ }
+}

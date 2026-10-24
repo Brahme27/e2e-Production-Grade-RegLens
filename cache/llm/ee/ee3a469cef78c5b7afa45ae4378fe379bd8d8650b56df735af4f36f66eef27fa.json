@@ -1,0 +1,12 @@
+{
+ "alias": "fallback",
+ "purpose": "judge",
+ "response": {
+  "text": "```json\n{\n  \"sentences\": [\n    {\n      \"text\": \"The client must submit a photo/scan of an officially valid document (or Aadhaar e‑Sign) through Digiocker or another electronic/digital signature platform [1].\",\n      \"supported",
+  "model": "qwen/qwen3.8-27b",
+  "prompt_tokens": 868,
+  "completion_tokens": 900,
+  "latency_ms": 70463.72329999576,
+  "cached": false
+ }
+}

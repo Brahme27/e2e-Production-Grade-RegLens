@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "gap_judge",
+ "response": {
+  "text": "{\"status\":\"covered\",\"rationale\":\"Clause §4.1 explicitly requires a written agreement that clearly sets out the rights and obligations of the firm and the service provider, meeting the obligation.\",\"policy_refs\":[\"NB-POL-OPR-012 §4.1\"],\"confidence\":0.99}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 658,
+  "completion_tokens": 142,
+  "latency_ms": 4606.194299994968,
+  "cached": false
+ }
+}

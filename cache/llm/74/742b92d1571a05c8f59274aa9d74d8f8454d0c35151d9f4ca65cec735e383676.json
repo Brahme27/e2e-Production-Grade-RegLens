@@ -1,0 +1,12 @@
+{
+ "alias": "fallback",
+ "purpose": "judge",
+ "response": {
+  "text": "```json\n{\n  \"sentences\": [\n    {\n      \"text\": \"Under the PRA's model risk management expectations, the board of directors is responsible for establishing a comprehensive firm-wide MRM framework that is part of the broader risk management framework and proportionate to the firm's size, complexity, and model usage [3].\",\n      \"supported\": true,\n      \"cited_supports\": true\n    },\n    {\n      \"text\": \"The board must also set a model risk appetite that articulates the level and types of model risk the firm is willing to accept [3].\",\n      \"supported\": true,\n      \"cited_supports\": true\n    },\n    {\n      \"text\": \"Senior management, specifically an accountable Senior Manager Function (SMF), is responsible for implementing the framework, which includes establishing policies and procedures to operationalise the MRM framework and ensure compliance [8].\",\n      \"supported\": true,\n      \"cited_supports\": true\n    },\n    {\n      \"text\": \"This SMF is also tasked with assigning roles and responsibilities, ensuring effective challenge and independent validation, and taking prompt remedial action to keep aggregate model risk within the board-approved risk appetite [8].\",\n      \"supported\": true,\n      \"cited_supports\": true\n    }\n  ],\n  \"relevancy\": 5\n}\n```",
+  "model": "qwen/qwen3.8-27b",
+  "prompt_tokens": 1218,
+  "completion_tokens": 300,
+  "latency_ms": 10368.495800008532,
+  "cached": false
+ }
+}

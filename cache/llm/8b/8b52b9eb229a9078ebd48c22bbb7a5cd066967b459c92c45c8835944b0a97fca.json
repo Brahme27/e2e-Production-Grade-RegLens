@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "answer",
+ "response": {
+  "text": "- Banks with ≥ 10 outlets and NBFCs that meet the thresholds in Clause 4 must **appoint an Internal Ombudsman** (and, where needed, a Deputy Internal Ombudsman) and put in place an internal grievance‑redress framework [1][2][6].  \n- The appointment must be of a retired or serving officer of at least General‑Manager rank (or Deputy General‑Manager for a Deputy) with ≥ 7 years (or ≥ 5 years for a Deputy) of relevant experience, who is not presently or previously employed by the entity or its related parties [2][8].  \n- The post of Internal Ombudsman must never be vacant; the entity must initiate a fresh appointment **at least three months before the incumbent’s term ends** and ensure a **minimum one‑month overlap** between outgoing and incoming ombudsmen [6].  \n- Entities that newly cross the thresholds must **establish the Internal Ombudsman framework within six months** of reaching the threshold [1].  \n- All covered entities are required to comply with the Direction **with immediate effect** as directed by the RBI under its statutory powers [5].",
+  "model": "reasoning-large",
+  "prompt_tokens": 0,
+  "completion_tokens": 0,
+  "latency_ms": 1775.7390000042506,
+  "cached": false
+ }
+}

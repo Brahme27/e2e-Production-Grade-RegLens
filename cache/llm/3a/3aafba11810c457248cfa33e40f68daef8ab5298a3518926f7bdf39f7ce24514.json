@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "answer",
+ "response": {
+  "text": "- The firm sets the monitoring frequency and the data it must collect **proportionately**, taking into account its role in the distribution chain, whether it has direct contact with retail customers, the nature of the product and the target market [1][6].  \n- It must gather information that enables it to assess outcomes for the products it manufactures or distributes, its communications and the support it provides, so that it can determine whether customers are sold suitable products, receive fair value, have the right information and receive appropriate support [4][2][3].  \n- Where the firm does not deal directly with customers, it must act reasonably to obtain outcome information from downstream firms in the chain [6].  \n- The monitoring schedule should be regular enough to identify any group‑level differences in outcomes, potential harm, or breaches of Principle 12 and other cross‑cutting obligations [3][8].",
+  "model": "reasoning-large",
+  "prompt_tokens": 0,
+  "completion_tokens": 0,
+  "latency_ms": 1229.5143000083044,
+  "cached": false
+ }
+}

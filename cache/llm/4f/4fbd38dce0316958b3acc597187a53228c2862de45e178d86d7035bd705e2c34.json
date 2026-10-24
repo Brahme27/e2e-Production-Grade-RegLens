@@ -1,0 +1,12 @@
+{
+ "alias": "fallback",
+ "purpose": "judge",
+ "response": {
+  "text": "{\n  \"sentences\": [\n    {\n      \"text\": \"The firm sets the monitoring frequency and the data it must collect proportionately, taking into account its role in the distribution chain, whether it has direct contact with retail customers, the nature of the product and its target market [1][6].\",\n      \"supported\": true,\n      \"cited_supports\": true\n    },\n    {\n      \"text\": \"It must gather information that enables it to assess the outcomes of the products it manufactures or distributes, the communications it sends, and the support it provides, so that it can determine if customers are receiving products that meet their needs, fair value, appropriate information and support [4][2][3].\",\n      \"supported\": true,\n      \"cited_supports\": true\n    },\n    {\n      \"text\": \"Where the firm does not deal directly with customers, it must act reasonably to obtain outcome information from downstream firms in the chain [6].\",\n      \"supported\": true,\n      \"cited_supports\": true\n    },\n    {\n      \"text\": \"The frequency and scope of monitoring should reflect factors such as the importance of the decision prompted by a communication, the volume of customers affected, vulnerability considerations, and the potential for significant harm [5].\",\n      \"supported\": false,\n      \"cited_supports\": false\n    }\n  ],\n  \"relevancy\": 4\n}",
+  "model": "qwen/qwen3.8-27b",
+  "prompt_tokens": 1248,
+  "completion_tokens": 311,
+  "latency_ms": 10502.518799999962,
+  "cached": false
+ }
+}

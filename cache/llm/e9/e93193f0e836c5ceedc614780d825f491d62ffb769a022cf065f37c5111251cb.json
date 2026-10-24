@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "answer",
+ "response": {
+  "text": "**RBI (commercial banks)** – The bank must carry out an **annual compliance risk assessment** to identify and assess its major compliance risks and then prepare a management plan [1].  An **Annual Review** must examine the previous year’s compliance failures, regulatory guidance issued, independence and scope of the compliance function, internal controls, fair‑practice and self‑regulatory standards, progress on audit/inspection deficiencies, and the strategy for the next year [1].\n\n**FCA (FCA‑regulated firms)** – The firm’s compliance function must conduct a **risk‑based monitoring programme** that is built on a compliance risk assessment covering all designated investment business and ancillary activities, including complaint‑handling information, and set monitoring priorities accordingly [9].\n\n**Key difference** – The RBI mandates a formal, year‑end review covering specific failure‑ and guideline‑tracking items, whereas the FCA requires an ongoing, risk‑based monitoring programme that prioritises monitoring activities throughout the year based on the risk assessment.",
+  "model": "reasoning-large",
+  "prompt_tokens": 0,
+  "completion_tokens": 0,
+  "latency_ms": 1282.5843000027817,
+  "cached": false
+ }
+}

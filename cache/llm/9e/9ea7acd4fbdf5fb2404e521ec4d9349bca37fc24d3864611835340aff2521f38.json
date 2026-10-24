@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "answer",
+ "response": {
+  "text": "- The client must submit a photo/scan of an officially valid document (or Aadhaar e‑Sign) through Digiocker or another electronic/digital signature platform [1][36].  \n- The PAN, name, photograph, address, mobile number and email ID are to be captured digitally and the same documents must be signed electronically [36].  \n- The mobile number and email address provided by the client must be verified by a One‑Time‑Password (OTP) or any other verifiable mechanism [37][39].  \n- Intermediaries must upload the verified mobile number and email address to the KRA system and ensure they belong to the client, not to employees or distributors [32][97].",
+  "model": "reasoning-large",
+  "prompt_tokens": 0,
+  "completion_tokens": 0,
+  "latency_ms": 1219.3826000147965,
+  "cached": false
+ }
+}

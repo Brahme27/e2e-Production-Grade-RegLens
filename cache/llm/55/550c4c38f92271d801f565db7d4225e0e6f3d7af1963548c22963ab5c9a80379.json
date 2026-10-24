@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "answer",
+ "response": {
+  "text": "- **SEBI (Intermediaries) – Liability & Investor Rights**  \n  * The intermediary remains liable to investors for losses caused by a third‑party failure and must redress investor grievances arising from the outsourced activity. [1]  \n  * The contract must set out mutual rights, obligations, indemnities and third‑party liability for unsatisfactory performance. [1]  \n\n- **FCA (SYSC 8 – Outsourcing) – Allocation of Rights & Obligations**  \n  * The firm must retain full responsibility for its regulatory obligations; outsourcing must not alter the firm‑to‑client relationship or undermine authorisation conditions. [8]  \n  * The agreement must allocate clear rights and duties to the service provider, including performance standards, supervision, and risk management, and the firm must monitor and review the provider continuously. [4]",
+  "model": "reasoning-large",
+  "prompt_tokens": 0,
+  "completion_tokens": 0,
+  "latency_ms": 12041.640500014182,
+  "cached": false
+ }
+}

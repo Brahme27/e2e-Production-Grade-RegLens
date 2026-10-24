@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "gap_judge",
+ "response": {
+  "text": "{\"status\":\"partially_covered\",\"rationale\":\"The policy requires Board approval of the self-assessment annually, satisfying the approval requirement, but does not explicitly mandate a regular review of the written records beyond the approval step.\",\"policy_refs\":[\"NB-POL-OPR-020 §6.3\",\"NB-POL-OPR-020 §6.1\"],\"confidence\":0.78}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 558,
+  "completion_tokens": 229,
+  "latency_ms": 2769.905100023607,
+  "cached": false
+ }
+}

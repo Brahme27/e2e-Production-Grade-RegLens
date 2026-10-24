@@ -1,0 +1,12 @@
+{
+ "alias": "fallback",
+ "purpose": "judge",
+ "response": {
+  "text": "```json\n{\n  \"sentences\": [\n    {\n      \"text\": \"Outsourcing arrangements must be set out in a written agreement vetted by the bank’s legal counsel, clearly defining the terms, risks, mitigation strategies and the legal relationship (e.g., agent‑principal) and must be flexible enough to allow the bank to retain control and intervene to meet regulatory obligations[8].\",\n      \"supported\": true,\n      \"cited_supports\": true\n    },\n    {\n      \"text\": \"The firm remains fully responsible for all regulatory obligations and must ensure that outsourcing does not delegate senior‑personnel responsibility, alter client‑relationship obligations, or undermine authorisation conditions[1].\",\n      \"supported\": true,\n      \"cited_supports\": true\n    },\n    {\n      \"text\": \"A written agreement must allocate rights and obligations, retain the firm’s instruction, termination, information and inspection rights, and require the service provider’s cooperation with the FCA and other competent authorities[5].\",\n      \"supported\": true,\n      \"cited_supports\": false\n    },\n    {\n      \"text\": \"The firm must have effective access to the provider’s data and premises, ensure the provider protects confidential information, maintain continuity and quality of services, and have a tested contingency plan for disaster recovery[4].\",\n      \"supported\": true,\n      \"cited_supports\": true\n    },\n    {\n      \"text\": \"RBI focuses primarily on the contractual definition, risk mitigation and retained control within the agreement, whereas the FCA places a broader set of supervisory and accountability requirements on the firm, including explicit retention of senior‑personnel responsibility, access rights, data protection, continuity planning and cooperation with the regulator.\",\n      \"supported\": true,\n      \"cited_supports\": false\n    }\n  ],\n  \"relevancy\": 5\n}\n```",
+  "model": "qwen/qwen3.8-27b",
+  "prompt_tokens": 1455,
+  "completion_tokens": 411,
+  "latency_ms": 12588.635299995076,
+  "cached": false
+ }
+}

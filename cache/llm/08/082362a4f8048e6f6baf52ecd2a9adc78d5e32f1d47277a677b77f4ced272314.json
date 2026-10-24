@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "answer",
+ "response": {
+  "text": "The sources do not support that statement. RBI Directions explicitly prohibit banks from outsourcing core management functions, including Internal Audit, compliance function, and decision-making functions such as KYC compliance determination, loan sanction, and investment portfolio management [1]. The same prohibition applies to NBFCs [2] and SEBI-regulated intermediaries [3]. I cannot confirm the premise of your question as it contradicts the regulatory text provided.",
+  "model": "reasoning-large",
+  "prompt_tokens": 0,
+  "completion_tokens": 0,
+  "latency_ms": 6114.422199985711,
+  "cached": false
+ }
+}

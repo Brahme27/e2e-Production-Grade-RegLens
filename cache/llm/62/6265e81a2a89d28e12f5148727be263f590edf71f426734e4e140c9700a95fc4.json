@@ -1,0 +1,12 @@
+{
+ "alias": "fallback",
+ "purpose": "judge",
+ "response": {
+  "text": "```json\n{\n  \"sentences\": [\n    {\n      \"text\": \"The PRA requires that a report on the effectiveness of the model‑risk‑management (MRM) framework for financial reporting be provided to the audit committee on a regular basis and at least annually.\",\n      \"supported\": true,\n      \"cited_supports\": true\n    },\n    {\n      \"text\": \"The report must be supplied in a timely manner so that the external auditor can use it when planning the statutory audit, enabling the auditor to assess and respond to the risk of material misstatement arising from model risk.\",\n      \"supported\": true,\n      \"cited_supports\": true\n    }\n  ],\n  \"relevancy\": 5\n}\n```",
+  "model": "qwen/qwen3.8-27b",
+  "prompt_tokens": 867,
+  "completion_tokens": 704,
+  "latency_ms": 1782.642499980284,
+  "cached": false
+ }
+}

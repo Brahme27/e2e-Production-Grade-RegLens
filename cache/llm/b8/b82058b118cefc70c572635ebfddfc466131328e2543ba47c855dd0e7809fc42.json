@@ -1,0 +1,12 @@
+{
+ "alias": "prompt-guard",
+ "purpose": "prompt_guard",
+ "response": {
+  "text": "0.00047629248001612723",
+  "model": "meta-llama/llama-prompt-guard-2-86m",
+  "prompt_tokens": 31,
+  "completion_tokens": 0,
+  "latency_ms": 262.57900000200607,
+  "cached": false
+ }
+}

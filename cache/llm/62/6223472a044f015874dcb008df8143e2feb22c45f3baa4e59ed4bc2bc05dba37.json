@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "gap_judge",
+ "response": {
+  "text": "{\"status\":\"covered\",\"rationale\":\"The policy explicitly requires the Internal Ombudsman to be a retired or serving General Manager‑rank officer with at least seven years of relevant experience and prohibits prior or concurrent employment with the bank or its group companies, satisfying the obligation.\",\"policy_refs\":[\"SB-POL-CS-007 §2.1\",\"SB-POL-CS-007 §2.2\"],\"confidence\":0.98}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 747,
+  "completion_tokens": 249,
+  "latency_ms": 2544.15600001812,
+  "cached": false
+ }
+}
