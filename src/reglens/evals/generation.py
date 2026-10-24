@@ -29,6 +29,7 @@ from reglens.llm.client import LLMClient, LLMUnavailableError, build_client
 from reglens.log import configure_logging, get_logger
 from reglens.obs.tracing import Tracer
 from reglens.qa import AskRequest, QAService
+from reglens.retrieve.pipeline import Retriever
 from reglens.services import build_answerer, build_retriever
 
 log = get_logger(__name__)
@@ -189,9 +190,10 @@ def summarise(rows: list[dict[str, Any]]) -> dict[str, Any]:
     }
 
 
-def calibrate_abstention(settings: Settings, items: list[GoldItem], today: date) -> dict[str, Any]:
+def calibrate_abstention(
+    settings: Settings, items: list[GoldItem], retriever: Retriever
+) -> dict[str, Any]:
     """Choose the reranker-score threshold that best separates answerable from unanswerable."""
-    retriever = build_retriever(settings, today=lambda: today)
     config = replace(_row("F").config, collection="reglens", top_k=8)
     scores = []
     for item in items:
@@ -216,8 +218,9 @@ def calibrate_abstention(settings: Settings, items: list[GoldItem], today: date)
     return result
 
 
-def build_service(settings: Settings, pipeline: str, llm: LLMClient) -> QAService:
-    retriever = build_retriever(settings, today=lambda: date(2026, 10, 24))
+def build_service(
+    settings: Settings, pipeline: str, llm: LLMClient, retriever: Retriever
+) -> QAService:
     config = replace(_row("F").config, collection="reglens", top_k=8)
     if pipeline == "naive":
         config = replace(BASE, top_k=8)
@@ -243,8 +246,10 @@ def main(argv: list[str] | None = None) -> None:
     settings = get_settings()
     configure_logging(settings.log_level, settings.log_json)
     golden = load(settings.evals_dir / "golden" / "golden_v1.jsonl")
+    # one retriever for everything: local-mode Qdrant allows a single client per process
+    retriever = build_retriever(settings, today=lambda: args.today)
     if args.calibrate:
-        log.info("abstention_calibrated", **calibrate_abstention(settings, golden, args.today))
+        log.info("abstention_calibrated", **calibrate_abstention(settings, golden, retriever))
     items = subset(golden, settings.random_seed)
     llm = build_client(settings)
     report: dict[str, Any] = {}
@@ -252,7 +257,7 @@ def main(argv: list[str] | None = None) -> None:
     if out.exists():
         report = json.loads(out.read_text(encoding="utf-8"))
     for pipeline in args.pipelines:
-        service = build_service(settings, pipeline, llm)
+        service = build_service(settings, pipeline, llm, retriever)
         chosen = items if pipeline == "final" else [i for i in items if i.expected == "answer"]
         result = evaluate(service, chosen, llm, args.today)
         report[pipeline] = result

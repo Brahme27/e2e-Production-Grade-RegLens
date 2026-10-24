@@ -12,6 +12,7 @@ from reglens.generate.answer import (
     Answerer,
     answer_text_without_markers,
     is_not_found,
+    normalise_markers,
     strip_invalid_markers,
 )
 from reglens.generate.prompts import answer_messages, format_sources, status_on
@@ -181,3 +182,15 @@ def test_stream_failure_after_text_was_shown_does_not_re_ask(tmp_path: Path) -> 
     assert isinstance(final, Answer) and final.text == UNAVAILABLE_TEXT  # ...it is replaced
     assert final.reason == "llm_interrupted" and len(final.citations) == 2
     assert backend.completions == 0  # no second, different answer is generated
+
+
+def test_native_gpt_oss_markers_are_normalised(tmp_path: Path) -> None:
+    assert normalise_markers("Review yearly【1】 and report【2†para 1.8】.") == (
+        "Review yearly[1] and report[2]."
+    )
+    ans, _ = answerer(
+        "The outsourcing policy must be reviewed at least once a year【1】.", tmp_path
+    )
+    result = ans.answer(retrieval())
+    assert [c.number for c in result.citations] == [1]
+    assert result.verification is not None and result.verification.ok

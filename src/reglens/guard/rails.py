@@ -39,11 +39,27 @@ INJECTION_PATTERNS = re.compile(
     r"|other users'? (?:questions|data)",
     re.I,
 )
+# Harmful = asking for help to DO something, not asking ABOUT it: "anti-money laundering",
+# "mule accounts" and "phishing" are everyday compliance topics, so a topic word alone never
+# refuses. A request phrase must come before the act, or the phrasing must be unambiguous.
+_ASK = (
+    r"\b(?:how (?:can|could|do) (?:i|we|you|one)\b|how to\b|help (?:me|us)\b|(?:best )?ways? to\b"
+    r"|tips? (?:on|for|to)\b|steps to\b|teach me\b|show me how\b)"
+)
+_ACT = (
+    r"(?:launder\w*|evade|evading|bypass\w*|get around|avoid (?:detection|triggering|reporting)"
+    r"|without (?:triggering|being (?:detected|flagged))|structure (?:deposits|transactions)"
+    r"|stay (?:just )?(?:below|under))"
+)
 HARMFUL_PATTERNS = re.compile(
-    r"\b(?:launder\w*|money mule|mule accounts?|evade|evading|bypass\w*|get around|avoid (?:detection|triggering|reporting))\b"
-    r"|\bfake (?:kyc|identity|id|document)|forg(?:e|ed|ery) (?:a |the )?(?:document|kyc|id)"
-    r"|\bphishing\b|stay (?:just )?below (?:the )?(?:reporting|threshold)|split transactions"
-    r"|hidden fees|customers won'?t notice|without authori[sz]ation|scrape customer data",
+    rf"{_ASK}[^.?!]{{0,80}}{_ACT}"
+    r"|split transactions[^.?!]{0,40}\b(?:below|under|avoid)"
+    r"|(?:template|give me|make|create|produce|generate|forge)[^.?!]{0,40}\b(?:fake|forged|counterfeit)"
+    r" (?:kyc|identity|id|document|passport)"
+    r"|(?:write|draft|create|compose|craft)[^.?!]{0,30}\bphishing"
+    r"|(?:design|add|introduce|hide|sneak)[^.?!]{0,20}\bhidden fees|customers won'?t notice"
+    r"|(?:extract|scrape|access|download|copy)\b[^.?!]{0,60}without authori[sz]ation"
+    r"|scrape customer data",
     re.I,
 )
 PROMPT_GUARD_ALIAS = "prompt-guard"

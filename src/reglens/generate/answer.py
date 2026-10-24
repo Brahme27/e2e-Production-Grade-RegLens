@@ -84,6 +84,14 @@ def is_not_found(text: str) -> bool:
     return NOT_FOUND in text.strip()[:40] or not text.strip()
 
 
+# gpt-oss sometimes falls back to its native citation style: 【1】 or 【2†para 1.8】
+FULLWIDTH_MARKER = re.compile(r"【(\d{1,2})(?:†[^】]*)?】")
+
+
+def normalise_markers(text: str) -> str:
+    return FULLWIDTH_MARKER.sub(r"[\1]", text)
+
+
 def strip_invalid_markers(text: str, sources: int) -> str:
     return MARKER.sub(lambda m: m.group(0) if 1 <= int(m.group(1)) <= sources else "", text)
 
@@ -124,7 +132,7 @@ class Answerer:
                 retrieval.as_of,
                 reason="model_not_found",
             )
-        text = strip_invalid_markers(text.strip(), len(retrieval.hits))
+        text = strip_invalid_markers(normalise_markers(text.strip()), len(retrieval.hits))
         used = sorted({int(m) for m in MARKER.findall(text)})
         citations = [citation_for(n, retrieval.hits[n - 1]) for n in used]
         return Answer(

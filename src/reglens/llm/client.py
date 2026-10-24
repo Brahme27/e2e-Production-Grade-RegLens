@@ -94,8 +94,9 @@ class LiteLLMBackend:
             "messages": messages,
             "temperature": 0.0,
             "max_tokens": max_tokens,
-            "reasoning_effort": "low",  # gpt-oss: keep hidden reasoning short (tokens = quota)
-            "drop_params": True,  # models without reasoning_effort just ignore it
+            # reasoning_effort is set per model in configs/litellm.yaml, so a fallback to another
+            # model family gets that model's setting; models without it just ignore it
+            "drop_params": True,
         }
         if json_mode:
             kwargs["response_format"] = {"type": "json_object"}
@@ -129,7 +130,6 @@ class LiteLLMBackend:
                 messages=messages,
                 temperature=0.0,
                 max_tokens=max_tokens,
-                reasoning_effort="low",
                 drop_params=True,
                 stream=True,
             )
@@ -221,11 +221,14 @@ class LLMClient:
         self._store(path, alias, purpose, response)
 
     def _store(self, path: Path, alias: str, purpose: str, response: LLMResponse) -> None:
+        self._log_usage(alias, purpose, response)
+        if not response.text.strip():  # a blank reply is a failure: never replay it from cache
+            log.warning("llm_empty_reply", alias=alias, purpose=purpose)
+            return
         path.parent.mkdir(parents=True, exist_ok=True)
         record = {"alias": alias, "purpose": purpose, "response": asdict(response)}
         text = json.dumps(record, ensure_ascii=False, indent=1) + "\n"
         path.write_text(text, encoding="utf-8")
-        self._log_usage(alias, purpose, response)
 
     def complete_json(
         self,

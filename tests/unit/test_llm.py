@@ -108,7 +108,12 @@ def test_backend_injects_key_and_reads_usage(monkeypatch: pytest.MonkeyPatch) ->
     assert reply.text == '{"x": 1}'
     assert reply.prompt_tokens == 12
     assert seen["response_format"] == {"type": "json_object"}
-    assert seen["reasoning_effort"] == "low"
+    assert "reasoning_effort" not in seen  # per model, from the config (a fallback gets its own)
+    efforts = {
+        m["model_name"]: m["litellm_params"].get("reasoning_effort")
+        for m in backend._router.model_list
+    }
+    assert efforts["reasoning-large"] == "low" and efforts["fallback"] == "none"
     assert all(m["litellm_params"]["api_key"] == "test-key" for m in backend._router.model_list)
 
 
@@ -142,3 +147,18 @@ def test_build_client_without_key_is_cache_only(tmp_path: Path) -> None:
     keyed = Settings(groq_api_key="k", llm_cache_dir=tmp_path, artifacts_dir=tmp_path)
     assert build_client(keyed).backend is not None
     assert build_client(keyed, cache_only=True).backend is None
+
+
+def test_blank_replies_are_not_cached(tmp_path: Path) -> None:
+    class Blank:
+        calls = 0
+
+        def __call__(self, *args: Any, **kwargs: Any) -> LLMResponse:
+            Blank.calls += 1
+            return LLMResponse("  ", model="m", completion_tokens=900)
+
+    client = LLMClient(Blank(), tmp_path)
+    msgs = [{"role": "user", "content": "judge this"}]
+    client.complete(msgs)
+    client.complete(msgs)
+    assert Blank.calls == 2 and not list(tmp_path.rglob("*.json"))

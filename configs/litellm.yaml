@@ -2,13 +2,15 @@
 # Free open-weight models on Groq; check current IDs: https://console.groq.com/docs/models
 # Free tier (Oct 2026): 1,000 requests/day and 8,000 tokens/minute PER MODEL, so fallbacks
 # to a different model also spread the load across separate quotas.
+# reasoning_effort: hidden reasoning costs quota. gpt-oss keeps it short ("low"); Qwen would
+# otherwise think until max_tokens and return nothing, so it is switched off ("none").
 model_list:
   - model_name: reasoning-large
-    litellm_params: {model: groq/openai/gpt-oss-120b}
+    litellm_params: {model: groq/openai/gpt-oss-120b, reasoning_effort: low}
   - model_name: fast-small
-    litellm_params: {model: groq/openai/gpt-oss-20b}
+    litellm_params: {model: groq/openai/gpt-oss-20b, reasoning_effort: low}
   - model_name: fallback
-    litellm_params: {model: groq/qwen/qwen3.8-27b}
+    litellm_params: {model: groq/qwen/qwen3.8-27b, reasoning_effort: none}
   # Meta's prompt-attack classifier: replies with a probability, 14,400 requests/day free
   - model_name: prompt-guard
     litellm_params: {model: groq/meta-llama/llama-prompt-guard-2-86m}
