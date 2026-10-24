@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_comparison",
+ "response": {
+  "text": "{\"question\":\"How do SEBI's requirements for intermediary outsourcing liability and investor rights compare with the FCA's requirements for allocating rights and obligations in outsourcing agreements for firms?\",\"answer\":\"SEBI mandates that any outsourcing arrangement must not affect investor rights and holds the intermediary liable for losses caused by a third‑party failure, requiring the intermediary to handle grievance redressal. In contrast, the FCA requires firms to clearly allocate rights and obligations in a written agreement, preserving the firm’s instruction, termination, information, inspection, and access rights, and ensuring outsourcing only proceeds with the firm’s written consent. Both regulators emphasize protection of stakeholder interests, but SEBI focuses on liability to investors, while the FCA focuses on contractual allocation of rights between the firm and service provider.\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 420,
+  "completion_tokens": 188,
+  "latency_ms": 5335.30140001676,
+  "cached": false
+ }
+}

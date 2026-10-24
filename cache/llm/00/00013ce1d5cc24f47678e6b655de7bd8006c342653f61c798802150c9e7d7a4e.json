@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_lookup",
+ "response": {
+  "text": "{\"question\":\"Who is responsible for reporting frauds involving forged or fake instruments, and what must the presenting bank do when the paying bank requests the instrument?\",\"answer\":\"The paying banker must report the fraud, and the presenting bank must promptly hand over the underlying instrument to the drawee/paying bank when asked, so it can notify law enforcement and the RBI.\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 359,
+  "completion_tokens": 96,
+  "latency_ms": 1184.2527000117116,
+  "cached": false
+ }
+}

@@ -1,0 +1,12 @@
+{
+ "alias": "fast-small",
+ "purpose": "doc_summary",
+ "response": {
+  "text": "{\"summary\":\"The PRA Rulebook – Outsourcing sets out the obligations of CRR firms, including UK banks, when outsourcing critical or important operational functions, requiring them to manage operational risk, maintain control, and ensure compliance with regulatory and MiFID II obligations. It applies to firms carrying out regulated activities, dealing in investments, ancillary services, and prudential activities from UK establishments, excluding benchmarking activities unless EU instruments are transposed.\"}",
+  "model": "openai/gpt-oss-20b",
+  "prompt_tokens": 1038,
+  "completion_tokens": 105,
+  "latency_ms": 9013.154400017811,
+  "cached": false
+ }
+}

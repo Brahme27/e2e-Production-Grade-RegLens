@@ -1,0 +1,12 @@
+{
+ "alias": "fast-small",
+ "purpose": "doc_summary",
+ "response": {
+  "text": "{\"summary\":\"DISP 1 sets out the FCA’s rules for how firms must treat complainants fairly, covering complaint handling, resolution, time limits, and specific requirements for insurance, payment services, electronic money issuers, UCITS managers, CBTL firms, credit reference agencies, finance platforms, and VJ participants. It applies to all FCA‑regulated firms and the specified non‑firm entities listed in the heading sections.\"}",
+  "model": "openai/gpt-oss-20b",
+  "prompt_tokens": 1486,
+  "completion_tokens": 102,
+  "latency_ms": 1089.4291000149678,
+  "cached": false
+ }
+}

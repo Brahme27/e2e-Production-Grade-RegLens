@@ -1,0 +1,12 @@
+{
+ "alias": "fast-small",
+ "purpose": "doc_summary",
+ "response": {
+  "text": "{\"summary\":\"This circular updates the SEBI Complaint Redressal (SCORES) platform, introducing auto‑routing, auto‑escalation, and a monitoring framework by designated bodies, and requires entities to submit Action Taken Reports within 21 days. It applies to all SEBI‑registered entities, including listed companies, registered intermediaries, market infrastructure institutions, and designated bodies such as stock exchanges, depositories, and industry associations.\"}",
+  "model": "openai/gpt-oss-20b",
+  "prompt_tokens": 1352,
+  "completion_tokens": 104,
+  "latency_ms": 10303.114899987122,
+  "cached": false
+ }
+}

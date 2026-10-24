@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_lookup",
+ "response": {
+  "text": "{\"question\":\"What contractual rights must a firm retain in material outsourcing arrangements concerning information requests and onsite audits?\",\"answer\":\"The firm must keep the right to ask for additional, appropriate, and proportionate information when justified by legal, regulatory, or risk reasons, and to carry out onsite audits, either individually or pooled, at its discretion.\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 328,
+  "completion_tokens": 124,
+  "latency_ms": 2549.1755999973975,
+  "cached": false
+ }
+}

@@ -1,0 +1,12 @@
+{
+ "alias": "fast-small",
+ "purpose": "doc_summary",
+ "response": {
+  "text": "{\"summary\":\"The RBI 2026 Directions mandate that all commercial banks, excluding small finance, payments, and local area banks, establish a robust compliance function aligned with Basel standards, detailing governance, staffing, and reporting requirements for the Chief Compliance Officer and board oversight. The directions apply to banking companies, corresponding new banks, and the State Bank of India, requiring annual policy reviews, quarterly board/ACB reviews, and independent compliance operations separate from internal audit.\"}",
+  "model": "openai/gpt-oss-20b",
+  "prompt_tokens": 1260,
+  "completion_tokens": 111,
+  "latency_ms": 10739.36199999298,
+  "cached": false
+ }
+}

@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_lookup",
+ "response": {
+  "text": "{\"question\":\"How does the policy assist the PRA in incorporating operational resilience into its prudential framework?\",\"answer\":\"The policy gives the PRA an objective basis to evaluate firms' operational resilience and enables supervisors to engage with firms and prompt necessary changes.\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 309,
+  "completion_tokens": 106,
+  "latency_ms": 2172.5644000107422,
+  "cached": false
+ }
+}

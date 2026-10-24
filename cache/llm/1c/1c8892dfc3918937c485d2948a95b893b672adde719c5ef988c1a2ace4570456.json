@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_comparison",
+ "response": {
+  "text": "{\"question\":\"How do the FCA's SYSC 8.1 outsourcing rules and the PRA's Part 2 outsourcing rules compare in allowing firms to consider group control when the service provider is within the same group?\",\"answer\":\"Both the FCA and the PRA permit a firm that outsources critical or important operational functions to a service provider within the same group to take into account the extent of the firm’s control or influence over that provider when meeting the respective outsourcing requirements. The FCA references specific SYSC clauses (8.1.6‑AR, 8.1.7‑R to 8.1.10‑R, 8.1.11‑BR and 8.1.11‑CG), while the PRA uses a more general reference to \\\"this Part\\\" of its outsourcing rules, but the substantive allowance is the same.\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 410,
+  "completion_tokens": 207,
+  "latency_ms": 4472.644199995557,
+  "cached": false
+ }
+}

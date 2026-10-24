@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_lookup",
+ "response": {
+  "text": "{\"question\":\"How does DISP 1.1.3R(5) affect the application of provisions to Gibraltar‑based firms after the IP completion day?\",\"answer\":\"It preserves the provisions that applied to Gibraltar‑based firms before the IP completion day and ensures that the provisions listed in DISP 1.1.3R(5)(a) and (b) continue to apply, as amended, to those firms after the IP completion day.\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 340,
+  "completion_tokens": 161,
+  "latency_ms": 4630.55670002359,
+  "cached": false
+ }
+}

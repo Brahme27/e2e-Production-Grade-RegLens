@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_lookup",
+ "response": {
+  "text": "{\"question\":\"Which categories must a commercial bank select from when reporting a fraud incident to the RBI via the Fraud Monitoring Returns portal?\",\"answer\":\"The bank must choose the most appropriate single category from the listed eleven options, ranging from misappropriation of funds to other types of fraudulent activity not covered elsewhere.\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 496,
+  "completion_tokens": 82,
+  "latency_ms": 1108.4128000074998,
+  "cached": false
+ }
+}

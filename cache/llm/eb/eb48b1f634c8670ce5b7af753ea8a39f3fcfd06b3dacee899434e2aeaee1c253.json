@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_temporal",
+ "response": {
+  "text": "{\"question\":\"As of 22 April 2024, how does the PRA define \\\"prudential context\\\" for UK banks?\",\"answer\":\"The PRA defines \\\"prudential context\\\" as the situation in which a firm’s activities could reasonably be expected to have a negative impact on either the safety and soundness of the firm, or its ability to meet the fit‑and‑proper test under threshold conditions 4E and 5E, or the regulatory requirements and standards relating to its financial resources.\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 435,
+  "completion_tokens": 130,
+  "latency_ms": 4079.37469999888,
+  "cached": false
+ }
+}

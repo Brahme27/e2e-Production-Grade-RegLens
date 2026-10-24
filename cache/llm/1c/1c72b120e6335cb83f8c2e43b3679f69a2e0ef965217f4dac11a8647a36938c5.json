@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_temporal",
+ "response": {
+  "text": "{\"question\":\"As of 03 August 2024, what must a commercial bank or NBFC’s outsourcing policy include regarding the exit strategy for IT services, and what data handling restrictions apply to the service provider during the transition?\",\"answer\":\"The policy must contain a clear exit strategy covering various termination scenarios, specify a minimum period to execute the plan, identify alternative arrangements, and require contractual clauses for safe removal or destruction of data, hardware, and records. During transition, the service provider is prohibited from erasing, purging, revoking, altering, or changing any data unless specifically directed by the regulator or the regulated entity.\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 497,
+  "completion_tokens": 158,
+  "latency_ms": 5076.639900013106,
+  "cached": false
+ }
+}

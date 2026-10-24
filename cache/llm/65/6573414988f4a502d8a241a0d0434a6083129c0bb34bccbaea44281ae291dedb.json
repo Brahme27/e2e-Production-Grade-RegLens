@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_lookup",
+ "response": {
+  "text": "{\"question\":\"What must the impact tolerance for an important business service identify regarding the point at which a disruption becomes a risk?\",\"answer\":\"It must identify the first point where a disruption would threaten either the stability of the UK financial system (if the firm is or is controlled by an O‑SII) or the firm’s own safety and soundness.\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 318,
+  "completion_tokens": 93,
+  "latency_ms": 3827.7142999868374,
+  "cached": false
+ }
+}

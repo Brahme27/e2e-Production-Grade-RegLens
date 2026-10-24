@@ -1,0 +1,12 @@
+{
+ "alias": "fast-small",
+ "purpose": "doc_summary",
+ "response": {
+  "text": "{\"summary\":\"The RBI Directions, 2025 set out comprehensive rules on customer service, guidance, protection, financial inclusion, payment services, deposit conduct, and responsible lending for commercial banks, excluding small finance, payment, and local area banks. They apply to all commercial banking companies, corresponding new banks, and the State Bank of India.\"}",
+  "model": "openai/gpt-oss-20b",
+  "prompt_tokens": 1559,
+  "completion_tokens": 87,
+  "latency_ms": 12163.188100006664,
+  "cached": false
+ }
+}

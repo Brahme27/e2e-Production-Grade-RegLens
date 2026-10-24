@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_lookup",
+ "response": {
+  "text": "{\"question\":\"What must a firm do if the PRA requests information to supervise an outsourced activity?\",\"answer\":\"The firm must provide all information needed for the PRA to assess compliance of the outsourced function with regulatory requirements.\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 296,
+  "completion_tokens": 77,
+  "latency_ms": 1961.4150999987032,
+  "cached": false
+ }
+}

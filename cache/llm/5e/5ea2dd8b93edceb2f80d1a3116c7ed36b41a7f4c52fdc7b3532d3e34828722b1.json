@@ -1,0 +1,12 @@
+{
+ "alias": "fast-small",
+ "purpose": "doc_summary",
+ "response": {
+  "text": "{\"summary\":\"The RBI issues the 2026 Commercial Banks – Internal Ombudsman Directions to strengthen grievance redressal by mandating an internal ombudsman and procedural guidelines for banks with 10+ outlets. It applies to all commercial banks (including State Bank of India and corresponding new banks) meeting the outlet threshold, excluding small finance, payment, and local area banks.\"}",
+  "model": "openai/gpt-oss-20b",
+  "prompt_tokens": 1205,
+  "completion_tokens": 94,
+  "latency_ms": 9176.871900010156,
+  "cached": false
+ }
+}

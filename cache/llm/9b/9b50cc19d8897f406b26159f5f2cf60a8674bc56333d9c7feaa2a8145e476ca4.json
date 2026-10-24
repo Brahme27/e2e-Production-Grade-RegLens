@@ -1,0 +1,12 @@
+{
+ "alias": "fast-small",
+ "purpose": "doc_summary",
+ "response": {
+  "text": "{\"summary\":\"SYSC 8 outlines outsourcing rules for FCA‑regulated firms, specifying general requirements, scope of critical and important operational functions, and detailed obligations for common platform firms, MiFID optional exemption firms, and third‑country firms. It applies to all FCA‑regulated firms, with particular emphasis on common platform firms and those outsourcing critical or important functions.\"}",
+  "model": "openai/gpt-oss-20b",
+  "prompt_tokens": 1228,
+  "completion_tokens": 91,
+  "latency_ms": 637.5254000013229,
+  "cached": false
+ }
+}

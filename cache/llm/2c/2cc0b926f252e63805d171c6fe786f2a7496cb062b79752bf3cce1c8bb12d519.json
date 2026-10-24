@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_temporal",
+ "response": {
+  "text": "{\"question\":\"As of 28 May 2023, what does the term “other matters” refer to in the PRA’s definitions for UK banks?\",\"answer\":\"It refers to, for a MODR requirement, any issues covered by section 1.1 that are not included within the scope of that specific requirement.\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 390,
+  "completion_tokens": 104,
+  "latency_ms": 4722.276700020302,
+  "cached": false
+ }
+}

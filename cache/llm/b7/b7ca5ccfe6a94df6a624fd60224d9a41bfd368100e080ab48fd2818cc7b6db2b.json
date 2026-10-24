@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_temporal",
+ "response": {
+  "text": "{\"question\":\"As of 05 January 2025, how often must the Internal Ombudsman report to the Board committee handling customer service and protection, and what is required if the regulated entity rejects the Ombudsman’s decision?\",\"answer\":\"The Internal Ombudsman must provide reports at least every six months, preferably quarterly, and any rejection of the Ombudsman’s decision must be approved by the Competent Authority.\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 517,
+  "completion_tokens": 112,
+  "latency_ms": 4912.503200001083,
+  "cached": false
+ }
+}

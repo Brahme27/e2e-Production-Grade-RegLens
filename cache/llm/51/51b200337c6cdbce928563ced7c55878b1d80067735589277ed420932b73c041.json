@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_lookup",
+ "response": {
+  "text": "{\"question\":\"How does SEBI determine the categorisation thresholds for managers of Alternate Investment Funds and Venture Capital Funds?\",\"answer\":\"SEBI categorises at the manager level, combining the assets of any AIF and VCF schemes managed by the same manager to assess the threshold limits, and presents the criteria in a single table.\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 435,
+  "completion_tokens": 125,
+  "latency_ms": 3194.897600013064,
+  "cached": false
+ }
+}

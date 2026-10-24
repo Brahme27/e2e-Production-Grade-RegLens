@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_lookup",
+ "response": {
+  "text": "{\"question\":\"What governance and decision‑making elements must a UK bank put in place to satisfy PRA requirements?\",\"answer\":\"The firm must have a documented organisational structure with clear responsibility lines, a documented decision‑making procedure outlining reporting and functional responsibilities, processes to identify, manage, monitor and report risks, and internal controls covering administration, accounting, information system safeguards, internal reporting, and record‑keeping.\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 440,
+  "completion_tokens": 100,
+  "latency_ms": 5189.648500003386,
+  "cached": false
+ }
+}

@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_lookup",
+ "response": {
+  "text": "{\"question\":\"Which commercial banks are required to follow these RBI Directions, and when does the requirement become effective for banks that meet the criteria after the specified date?\",\"answer\":\"All commercial banks that have ten or more branches in India as of 31 March 2025 must comply, regardless of where they are incorporated, except banks that are in resolution, winding up, or under other directions. Any bank that reaches the ten‑branch threshold after that date must wait six months before the Directions apply to it.\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 436,
+  "completion_tokens": 136,
+  "latency_ms": 954.8270000086632,
+  "cached": false
+ }
+}

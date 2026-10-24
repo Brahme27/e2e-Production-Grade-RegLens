@@ -1,0 +1,12 @@
+{
+ "alias": "fast-small",
+ "purpose": "doc_summary",
+ "response": {
+  "text": "{\"summary\":\"The FCA’s PRIN 2 document outlines the core principles that firms must follow, covering integrity, skill, management, financial prudence, market conduct, customer interests, communication, conflict management, trust, asset protection, regulator relations, and consumer duty. It applies to all FCA‑regulated firms.\"}",
+  "model": "openai/gpt-oss-20b",
+  "prompt_tokens": 488,
+  "completion_tokens": 79,
+  "latency_ms": 820.4850000038277,
+  "cached": false
+ }
+}

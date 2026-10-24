@@ -1,0 +1,12 @@
+{
+ "alias": "fast-small",
+ "purpose": "doc_summary",
+ "response": {
+  "text": "{\"summary\":\"The SEBI advisory addresses the risks of emerging AI tools for vulnerability detection, outlining mandatory patching, continuous vulnerability assessment, vendor engagement, change management, and API security measures. It applies to all SEBI‑regulated entities, including AIFs, banks, clearing corporations, CIS, CRAs, custodians, depositories, investment advisors, mutual funds, portfolio managers, stock exchanges, and venture capital funds.\"}",
+  "model": "openai/gpt-oss-20b",
+  "prompt_tokens": 1201,
+  "completion_tokens": 105,
+  "latency_ms": 9117.146500007948,
+  "cached": false
+ }
+}

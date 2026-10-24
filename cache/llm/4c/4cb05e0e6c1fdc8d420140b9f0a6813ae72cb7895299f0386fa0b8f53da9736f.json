@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_lookup",
+ "response": {
+  "text": "{\"question\":\"By what date must Designated Bodies obtain SCORES Authentication or API integration to comply with the circular?\",\"answer\":\"They must obtain it by December 04, 2023 and thereafter.\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 314,
+  "completion_tokens": 98,
+  "latency_ms": 2404.28850002354,
+  "cached": false
+ }
+}

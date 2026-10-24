@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_lookup",
+ "response": {
+  "text": "{\"question\":\"What actions must stock exchanges and depositories take to implement this SEBI circular?\",\"answer\":\"They must amend relevant byelaws, rules and regulations; notify their members and publish the circular on their websites; and report implementation status to SEBI in their Monthly Development Report.\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 331,
+  "completion_tokens": 79,
+  "latency_ms": 3518.8010999991093,
+  "cached": false
+ }
+}

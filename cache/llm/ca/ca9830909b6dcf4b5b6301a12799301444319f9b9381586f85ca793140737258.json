@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_lookup",
+ "response": {
+  "text": "{\"question\":\"How should a firm plan its communications to handle disruptions and operational incidents according to the FCA?\",\"answer\":\"The firm must pre‑plan rapid warnings or advice for clients and stakeholders, use communication to collect details on the incident’s cause, scope and impact, and select methods that consider the specific circumstances, needs and vulnerabilities of those affected.\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 354,
+  "completion_tokens": 91,
+  "latency_ms": 2877.8854999982286,
+  "cached": false
+ }
+}

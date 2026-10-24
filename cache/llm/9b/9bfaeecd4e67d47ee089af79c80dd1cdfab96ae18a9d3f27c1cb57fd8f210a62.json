@@ -1,0 +1,12 @@
+{
+ "alias": "fast-small",
+ "purpose": "doc_summary",
+ "response": {
+  "text": "{\"summary\":\"The PRA Rulebook – Operational Resilience sets out requirements for CRR firms and CRR consolidation entities to identify important business services, establish impact tolerances, and maintain strategies, processes, and systems to remain within those tolerances during severe disruptions. It applies to all UK banks that are CRR firms and to consolidation entities within those firms, with specific provisions for group arrangements and O-SII status.\"}",
+  "model": "openai/gpt-oss-20b",
+  "prompt_tokens": 1075,
+  "completion_tokens": 102,
+  "latency_ms": 8598.276400007308,
+  "cached": false
+ }
+}

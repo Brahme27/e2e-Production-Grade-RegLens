@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_lookup",
+ "response": {
+  "text": "{\"question\":\"What does the PRA mean by 'prudential context' when assessing a firm's activities?\",\"answer\":\"It refers to the situation where a firm's activities could reasonably be expected to negatively impact the firm's safety and soundness, or its ability to satisfy the fit‑and‑proper test and the regulatory requirements for its financial resources.\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 367,
+  "completion_tokens": 90,
+  "latency_ms": 2801.8217000062577,
+  "cached": false
+ }
+}

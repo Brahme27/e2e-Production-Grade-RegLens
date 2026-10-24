@@ -1,0 +1,12 @@
+{
+ "alias": "fast-small",
+ "purpose": "doc_summary",
+ "response": {
+  "text": "{\"summary\":\"PRIN 2A The Consumer Duty sets out the FCA’s expectations for firms’ conduct in the retail market, covering product governance, price and value, consumer understanding and support, and cross‑cutting obligations to act in good faith and avoid foreseeable harm. It applies to all FCA‑regulated firms that operate retail market businesses or communicate financial promotions to retail customers, including manufacturers, distributors, and other intermediaries in the product distribution chain.\"}",
+  "model": "openai/gpt-oss-20b",
+  "prompt_tokens": 1371,
+  "completion_tokens": 107,
+  "latency_ms": 771.9140000117477,
+  "cached": false
+ }
+}

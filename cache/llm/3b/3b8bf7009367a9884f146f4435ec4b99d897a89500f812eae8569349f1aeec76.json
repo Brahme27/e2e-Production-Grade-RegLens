@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_lookup",
+ "response": {
+  "text": "{\"question\":\"Who is required to submit the VAPT report and the accompanying MD/CEO declaration, and what determines the reporting authority for this submission?\",\"answer\":\"SEBI registered entities must submit the VAPT report together with a declaration from their MD/CEO, and the reporting authority for the VAPT report is specified in the attached Table 17.\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 338,
+  "completion_tokens": 110,
+  "latency_ms": 3516.893699998036,
+  "cached": false
+ }
+}

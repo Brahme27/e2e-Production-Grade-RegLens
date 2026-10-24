@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_lookup",
+ "response": {
+  "text": "{\"question\":\"What measures must be taken to secure APIs according to SEBI guidelines?\",\"answer\":\"The guidelines require maintaining an up‑to‑date inventory of APIs and their consuming applications, implementing strong authentication and authorization with least‑privilege access, applying rate limiting and throttling to detect abuse, and allowing API connections only via a whitelist.\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 334,
+  "completion_tokens": 98,
+  "latency_ms": 2779.108799993992,
+  "cached": false
+ }
+}

@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_lookup",
+ "response": {
+  "text": "{\"question\":\"How must a manufacturer evaluate the impact of a closed product on vulnerable retail customers in its target market?\",\"answer\":\"The manufacturer must assess and regularly review whether the closed product affects different groups of retail customers, especially checking if any vulnerable customers in the target market are adversely impacted by any aspect of the product.\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 318,
+  "completion_tokens": 87,
+  "latency_ms": 3184.8352999950293,
+  "cached": false
+ }
+}

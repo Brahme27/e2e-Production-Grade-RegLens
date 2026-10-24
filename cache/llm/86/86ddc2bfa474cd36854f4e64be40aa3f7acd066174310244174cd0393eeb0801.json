@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_lookup",
+ "response": {
+  "text": "{\"question\":\"What risk management and customer due‑diligence requirements must an NBFC implement under RBI guidelines?\",\"answer\":\"The NBFC must adopt a risk‑based approach for risk mitigation and management, have board‑approved policies, controls and procedures, implement a customer‑due‑diligence programme tailored to its money‑laundering/terrorist‑financing risks and business size, and continuously monitor and improve those controls.\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 348,
+  "completion_tokens": 163,
+  "latency_ms": 984.6946999896318,
+  "cached": false
+ }
+}

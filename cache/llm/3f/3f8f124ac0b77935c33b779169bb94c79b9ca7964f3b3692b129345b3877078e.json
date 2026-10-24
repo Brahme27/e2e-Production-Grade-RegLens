@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_lookup",
+ "response": {
+  "text": "{\"question\":\"What must a common platform firm ensure regarding senior management responsibility when outsourcing critical or important operational functions?\",\"answer\":\"The firm must ensure that outsourcing does not lead senior management to delegate their responsibility, meaning senior management remains fully accountable for the firm's obligations under the UK law on markets in financial instruments.\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 399,
+  "completion_tokens": 81,
+  "latency_ms": 3194.484600011492,
+  "cached": false
+ }
+}

@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_lookup",
+ "response": {
+  "text": "{\"question\":\"What specific actions can a bank perform using video-based customer identification (V-CIP) for individual and proprietorship customers?\",\"answer\":\"The bank can use V-CIP to conduct CDD for new individual customers, proprietors of proprietorship firms, authorised signatories and beneficial owners of legal entities, and must also obtain electronic activity proof documents for proprietorship firms; additionally, V-CIP can be used to convert existing non‑face‑to‑face accounts via Aadhaar OTP e‑KYC and to update or periodically refresh KYC for eligible customers.\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 424,
+  "completion_tokens": 138,
+  "latency_ms": 874.0744000242557,
+  "cached": false
+ }
+}

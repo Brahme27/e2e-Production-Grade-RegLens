@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_comparison",
+ "response": {
+  "text": "{\"question\":\"How do the RBI's specific requirements for outsourcing Security Operations Centre (SOC) functions by commercial banks compare with the FCA's general outsourcing risk management expectations for FCA‑regulated firms?\",\"answer\":\"The RBI mandates that banks explicitly identify asset owners, maintain oversight of rule definition and data, periodically assess SOC facilities, integrate SOC reporting with incident response, and review alert handling when outsourcing SOC operations. In contrast, the FCA requires firms to have effective processes to identify, manage, monitor, and report outsourcing risks, applying proportionate controls based on the outsourcing's nature, scale, and complexity, without prescribing the detailed technical controls the RBI outlines.\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 618,
+  "completion_tokens": 162,
+  "latency_ms": 6742.325200000778,
+  "cached": false
+ }
+}

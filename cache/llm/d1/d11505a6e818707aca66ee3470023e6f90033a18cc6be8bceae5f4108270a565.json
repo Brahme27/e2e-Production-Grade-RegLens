@@ -1,0 +1,12 @@
+{
+ "alias": "fast-small",
+ "purpose": "doc_summary",
+ "response": {
+  "text": "{\"summary\":\"The RBI Directions 2026 establish a comprehensive cybersecurity, technology risk, resilience and assurance framework for commercial banks, detailing governance, risk management, baseline security controls, and incident response requirements. They apply to all Indian commercial banks, including State Bank of India, and to foreign banks operating in India through branches under a comply‑or‑explain regime.\"}",
+  "model": "openai/gpt-oss-20b",
+  "prompt_tokens": 1516,
+  "completion_tokens": 92,
+  "latency_ms": 11647.504400025355,
+  "cached": false
+ }
+}

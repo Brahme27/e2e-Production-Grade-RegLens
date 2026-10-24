@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_lookup",
+ "response": {
+  "text": "{\"question\":\"What details does the FCA require firms to report in Table 2 of the DISP 1 complaints reporting for the relevant period?\",\"answer\":\"Firms must report (a) how many complaints were closed or upheld within each specified time frame, (b) the total redress paid for both upheld and not upheld complaints, and (c) any redress related to the claims‑management fee cap that the firm initiated rather than arising from a complaint about the fee.\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 389,
+  "completion_tokens": 165,
+  "latency_ms": 3176.808999996865,
+  "cached": false
+ }
+}

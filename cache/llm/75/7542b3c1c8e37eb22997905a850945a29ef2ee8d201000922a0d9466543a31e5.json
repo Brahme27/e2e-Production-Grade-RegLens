@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_lookup",
+ "response": {
+  "text": "{\"question\":\"What does SEBI require REs and their third‑party providers to do periodically to evaluate their cybersecurity risk posture?\",\"answer\":\"SEBI mandates that REs and their third‑party service providers conduct periodic risk assessments, including comprehensive scenario‑based testing of internal and external cyber risks, and may consider AI‑based model capabilities as a risk scenario.\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 347,
+  "completion_tokens": 93,
+  "latency_ms": 3119.4798999931663,
+  "cached": false
+ }
+}

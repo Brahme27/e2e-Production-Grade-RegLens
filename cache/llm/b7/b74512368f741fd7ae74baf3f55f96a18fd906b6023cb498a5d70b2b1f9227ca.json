@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_lookup",
+ "response": {
+  "text": "{\"question\":\"When does the FCA consider an operational function to be critical or important for a common platform firm?\",\"answer\":\"An operational function is deemed critical or important if a defect or failure would significantly affect the firm's ability to meet its authorisation conditions, UK market law obligations, financial performance, or the stability and continuity of its designated investment business.\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 338,
+  "completion_tokens": 93,
+  "latency_ms": 3512.8493000229355,
+  "cached": false
+ }
+}

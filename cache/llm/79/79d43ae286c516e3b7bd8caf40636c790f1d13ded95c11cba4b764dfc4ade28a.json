@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_lookup",
+ "response": {
+  "text": "{\"question\":\"Which entities are excluded from the definition of an electronic money issuer under the FCA sourcebook, and which types of entities are included?\",\"answer\":\"The definition excludes credit institutions, credit unions, and municipal banks, while it includes small electronic money institutions and persons that satisfy the conditions in regulation 75(1) or 76(1) of the Electronic Money Regulations.\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 358,
+  "completion_tokens": 128,
+  "latency_ms": 3362.4418000108562,
+  "cached": false
+ }
+}

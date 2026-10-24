@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_temporal",
+ "response": {
+  "text": "{\"question\":\"As of 28 May 2023, how does a MiFID investment firm interpret references to ‘authorisation’, ‘obligations’, ‘investment services and activities’, ‘client’, and ‘competent authority’ under the PRA’s outsourcing requirements?\",\"answer\":\"The firm treats ‘authorisation’ as authorisation under section 31(2) of the Act; ‘obligations’ as its obligations under the regulatory system; ‘investment services and activities’ as the relevant services and activities; ‘client’ as any client; and ‘competent authority’ as the PRA or FCA when they act outside their role as a competent authority for MiFID II or CRR.\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 463,
+  "completion_tokens": 170,
+  "latency_ms": 4635.74569998309,
+  "cached": false
+ }
+}

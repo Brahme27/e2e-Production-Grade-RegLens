@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_temporal",
+ "response": {
+  "text": "{\"question\":\"As of 28 May 2022, what must a UK bank do to protect the security, integrity and confidentiality of information under PRA requirements?\",\"answer\":\"The firm must set up, implement and keep up systems and procedures that are adequate to safeguard the security, integrity and confidentiality of information, including sound security mechanisms to ensure secure and authenticated transfer, minimise data corruption and unauthorised access, and prevent information leakage at all times.\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 414,
+  "completion_tokens": 114,
+  "latency_ms": 2537.0889000187162,
+  "cached": false
+ }
+}

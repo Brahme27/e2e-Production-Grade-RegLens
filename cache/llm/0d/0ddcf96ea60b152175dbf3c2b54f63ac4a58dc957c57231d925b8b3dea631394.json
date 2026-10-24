@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_lookup",
+ "response": {
+  "text": "{\"question\":\"Which types of activities are subject to the requirements set out in this chapter?\",\"answer\":\"The chapter’s requirements apply to regulated activities, principal dealing in investments, ancillary activities, ancillary services for MiFID or equivalent third‑country business, collective portfolio management, payment services and electronic‑money issuance (including related activities), any other unregulated activities in a prudential context, and data‑reporting services from a consolidated tape provider.\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 422,
+  "completion_tokens": 124,
+  "latency_ms": 4295.023400016362,
+  "cached": false
+ }
+}

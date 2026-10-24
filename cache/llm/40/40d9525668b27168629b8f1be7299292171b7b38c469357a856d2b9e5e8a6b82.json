@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_temporal",
+ "response": {
+  "text": "{\"question\":\"As of 01 July 2025, how does the PRA define a “material outsourcing” arrangement in relation to the terms “critical or important outsourcing” used in EU legislation?\",\"answer\":\"The PRA treats a material outsourcing arrangement as covering any critical or important outsourcing arrangement under the relevant EU rules, using the same identification criteria as the EBA Outsourcing Guidelines with limited exceptions for operational resilience requirements.\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 470,
+  "completion_tokens": 113,
+  "latency_ms": 4370.369000011124,
+  "cached": false
+ }
+}

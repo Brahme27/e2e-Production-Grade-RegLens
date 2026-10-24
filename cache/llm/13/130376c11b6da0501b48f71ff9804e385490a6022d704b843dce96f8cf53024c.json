@@ -1,0 +1,12 @@
+{
+ "alias": "fast-small",
+ "purpose": "doc_summary",
+ "response": {
+  "text": "{\"summary\":\"The RBI 2025 Directions mandate comprehensive Know‑Your‑Customer, customer identification, due diligence, risk management, record‑keeping and reporting procedures for all commercial banks, including their foreign branches and majority‑owned subsidiaries, to prevent money laundering and terrorist financing. These directives apply specifically to banking companies (excluding small finance, payment, and local area banks) and the State Bank of India, requiring adherence to the most stringent KYC/AML standards between RBI and host‑country regulators.\"}",
+  "model": "openai/gpt-oss-20b",
+  "prompt_tokens": 1399,
+  "completion_tokens": 119,
+  "latency_ms": 11196.376400010195,
+  "cached": false
+ }
+}

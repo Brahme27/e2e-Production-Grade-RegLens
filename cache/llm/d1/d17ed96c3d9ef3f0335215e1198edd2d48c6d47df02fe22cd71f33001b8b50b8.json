@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_lookup",
+ "response": {
+  "text": "{\"question\":\"When can a common platform firm be exempt from SYSC 6.1.3‑CR(4) and (5), and what ongoing assessment must it perform?\",\"answer\":\"If the firm can show that, given its business size, complexity and the type of investment activities it conducts, those rules would be disproportionate and its compliance function remains effective, it may be exempt. The firm must then regularly assess and review whether the compliance function’s effectiveness is being compromised.\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 371,
+  "completion_tokens": 118,
+  "latency_ms": 4262.867499986896,
+  "cached": false
+ }
+}

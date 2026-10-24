@@ -1,0 +1,12 @@
+{
+ "alias": "fast-small",
+ "purpose": "doc_summary",
+ "response": {
+  "text": "{\"summary\":\"The RBI (Commercial Banks – Governance) Directions, 2025 establish detailed governance, board composition, and appointment requirements for all commercial banks, including public, private, and foreign banks, with specific exclusions for non‑scheduled banks. It applies to all commercial banks (excluding small finance, payment, and local area banks) and mandates roles such as Chief Risk Officer, Chief Vigilance Officer, and committee structures, as well as fit‑and‑proper criteria for directors.\"}",
+  "model": "openai/gpt-oss-20b",
+  "prompt_tokens": 1502,
+  "completion_tokens": 113,
+  "latency_ms": 12251.3534000027,
+  "cached": false
+ }
+}

@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_lookup",
+ "response": {
+  "text": "{\"question\":\"How must a complaint be transmitted to the Designated Body and what is the deadline for the entity to provide its ATRs?\",\"answer\":\"The complaint must be sent simultaneously through SCORES to the relevant Designated Body, which must ensure the entity submits the ATRs within 21 calendar days.\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 301,
+  "completion_tokens": 130,
+  "latency_ms": 4160.584299999755,
+  "cached": false
+ }
+}

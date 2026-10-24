@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_lookup",
+ "response": {
+  "text": "{\"question\":\"What must a consolidation or sub‑consolidation group ensure about its arrangements, processes, mechanisms and data for supervisory purposes?\",\"answer\":\"The group must have consistent, well‑integrated arrangements, processes and mechanisms, and be able to produce any data needed for supervision.\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 312,
+  "completion_tokens": 118,
+  "latency_ms": 3467.824899998959,
+  "cached": false
+ }
+}

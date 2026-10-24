@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_lookup",
+ "response": {
+  "text": "{\"question\":\"Does this Part apply to a CRR firm for both regulated and certain unregulated activities carried out from its UK establishment, as well as for prudential activities performed anywhere, taking group activities into account?\",\"answer\":\"Yes. The Part applies to a CRR firm for regulated activities, principal dealing in investments, ancillary activities, MiFID ancillary services, and unregulated activities in a prudential context when carried out from a UK establishment, and it also covers prudential activities wherever they occur, considering the activities of other group members.\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 389,
+  "completion_tokens": 174,
+  "latency_ms": 4882.312400004594,
+  "cached": false
+ }
+}

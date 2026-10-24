@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_comparison",
+ "response": {
+  "text": "{\"question\":\"How do the RBI's board responsibilities for IT outsourcing in commercial banks compare with the FCA's due skill and care requirements for a common platform firm when outsourcing critical or important operational functions?\",\"answer\":\"The RBI requires the board of a commercial bank to establish a risk‑based approval framework, adopt policies for evaluating outsourcing risks and materiality, set up senior‑management oversight, prevent conflicts of interest, and monitor adverse developments. In contrast, the FCA expects a common platform firm to exercise due skill, care and diligence throughout the lifecycle of any outsourcing arrangement for critical or important functions, focusing on the firm's overall conduct rather than specific board‑level governance steps. Both regulators emphasize risk awareness and oversight, but the RBI details board‑level governance actions, while the FCA stresses the firm's general duty of care.\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 480,
+  "completion_tokens": 197,
+  "latency_ms": 4343.850100005511,
+  "cached": false
+ }
+}

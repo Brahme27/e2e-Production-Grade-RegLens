@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_temporal",
+ "response": {
+  "text": "{\"question\":\"As of 30 April 2026, what must a bank do if it has not yet installed technology to extract CTR or STR from live transaction data, according to RBI reporting requirements?\",\"answer\":\"The bank must use the editable electronic utilities for Cash Transaction Reports (CTR) and Suspicious Transaction Reports (STR) provided on the FIU‑IND website to prepare and file electronic reports, and the Principal Officer must arrange to collect transaction details from non‑computerised branches and input them into these electronic files.\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 472,
+  "completion_tokens": 129,
+  "latency_ms": 941.273700009333,
+  "cached": false
+ }
+}

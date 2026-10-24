@@ -1,0 +1,12 @@
+{
+ "alias": "fast-small",
+ "purpose": "doc_summary",
+ "response": {
+  "text": "{\"summary\":\"The PRA Supervisory Statement SS2/21 sets out expectations for PRA‑regulated firms on outsourcing and third‑party risk management, covering governance, due diligence, materiality assessment, written agreements, data security, audit rights, sub‑outsourcing, and business continuity plans. It applies to UK banks, building societies, PRA‑designated investment firms, Solvency II insurers (including Lloyd’s societies and managing agents), and UK branches of overseas banks and insurers.\"}",
+  "model": "openai/gpt-oss-20b",
+  "prompt_tokens": 1422,
+  "completion_tokens": 117,
+  "latency_ms": 10861.287399980938,
+  "cached": false
+ }
+}

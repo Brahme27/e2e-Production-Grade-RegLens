@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_lookup",
+ "response": {
+  "text": "{\"question\":\"Which additional references must a commercial bank consider to meet government orders under section 51A of the UAPA and section 12A of the WMD Act?\",\"answer\":\"The bank must take into account other United Nations Security Council Resolutions and the lists contained in the first and fourth schedules of the UAPA, 1967, including any amendments to those schedules.\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 337,
+  "completion_tokens": 155,
+  "latency_ms": 883.2860999973491,
+  "cached": false
+ }
+}

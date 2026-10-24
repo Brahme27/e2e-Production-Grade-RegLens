@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_lookup",
+ "response": {
+  "text": "{\"question\":\"What factors must a SEBI‑registered intermediary consider when creating its outsourcing policy, and who is authorized to approve such outsourcing?\",\"answer\":\"The policy must address which activities can be outsourced, identify the approving authorities, and set criteria for selecting third‑party providers, ensuring that outsourcing does not hinder the regulator’s supervisory rights and is based on risk concentration assessments, overall outsourcing limits, and the risk of concentrating multiple activities with one provider.\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 374,
+  "completion_tokens": 113,
+  "latency_ms": 3198.483699990902,
+  "cached": false
+ }
+}

@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_lookup",
+ "response": {
+  "text": "{\"question\":\"Where does the FCA publish guidance on steps a firm can take to lower its risk of being used for financial crime?\",\"answer\":\"The FCA provides such guidance in the Financial Crime Guide (FCG) and the Financial Crime Thematic Reviews (FCTR).\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 312,
+  "completion_tokens": 124,
+  "latency_ms": 2880.440000008093,
+  "cached": false
+ }
+}

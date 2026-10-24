@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_lookup",
+ "response": {
+  "text": "{\"question\":\"How often must stock exchanges and depositories audit their compliance with the beneficial ownership identification rules, and who is responsible for monitoring this compliance for mutual funds and other intermediaries?\",\"answer\":\"They must conduct internal audits twice a year, while mutual fund compliance is overseen by the AMCs' and Trustees' Boards, and other intermediaries' compliance is overseen by their Board of Directors.\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 337,
+  "completion_tokens": 110,
+  "latency_ms": 4255.166599992663,
+  "cached": false
+ }
+}

@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_comparison",
+ "response": {
+  "text": "{\"question\":\"How do SEBI's requirements for regular internal or external auditor reviews of outsourcing policies and third‑party capability assessments compare with the PRA's approach of referencing and aligning outsourcing obligations with other regulatory sources and requirements?\",\"answer\":\"SEBI mandates that a board‑mandated regular review by internal or external auditors be conducted of outsourcing policies, risk management systems, and regulator requirements, and it requires intermediaries to assess the financial and operational capabilities of third parties. In contrast, the PRA does not prescribe a specific review process but instead requires firms to comply with outsourcing obligations by reading them alongside other regulatory requirements and ensuring consistency with the broader regulatory framework, as outlined in its supervisory statements and related rulebooks.\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 469,
+  "completion_tokens": 175,
+  "latency_ms": 4152.241000003414,
+  "cached": false
+ }
+}

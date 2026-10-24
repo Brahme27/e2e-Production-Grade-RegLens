@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_lookup",
+ "response": {
+  "text": "{\"question\":\"How often must a firm provide its audit committee with a report on the effectiveness of its MRM for financial reporting, and why must it be timely for the external auditor?\",\"answer\":\"The firm must supply the report at least annually and on a regular basis, ensuring it is available promptly so the external auditor can assess and respond to the risk of material misstatement during the statutory audit.\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 340,
+  "completion_tokens": 109,
+  "latency_ms": 3198.819299985189,
+  "cached": false
+ }
+}

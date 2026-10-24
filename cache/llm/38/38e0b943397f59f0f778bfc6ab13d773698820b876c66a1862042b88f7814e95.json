@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_lookup",
+ "response": {
+  "text": "{\"question\":\"How does SEBI require the effectiveness of vulnerability mitigation to be calculated?\",\"answer\":\"The effectiveness is measured by dividing the number of vulnerabilities mitigated by the number identified and multiplying by 100 percent.\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 316,
+  "completion_tokens": 107,
+  "latency_ms": 3511.3477999984752,
+  "cached": false
+ }
+}

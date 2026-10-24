@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_lookup",
+ "response": {
+  "text": "{\"question\":\"How must a common platform firm manage outsourcing of critical operational functions to prevent excessive operational risk and ensure internal controls and regulator monitoring are not materially impaired?\",\"answer\":\"The firm must take reasonable steps to avoid undue additional operational risk when relying on third parties for critical functions, and must not outsource important operational functions in a way that materially harms its internal control quality or the FCA's (or a competent authority's) ability to monitor compliance with regulatory obligations.\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 412,
+  "completion_tokens": 113,
+  "latency_ms": 3037.573399982648,
+  "cached": false
+ }
+}

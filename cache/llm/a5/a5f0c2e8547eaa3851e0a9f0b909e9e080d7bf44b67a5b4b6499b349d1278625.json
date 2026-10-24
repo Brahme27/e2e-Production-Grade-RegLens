@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_temporal",
+ "response": {
+  "text": "{\"question\":\"As of 28 September 2021, what does the PRA expect firms to do regarding important group business services and impact tolerances?\",\"answer\":\"The PRA expects firms to identify a proportionate number of important group business services and set corresponding impact tolerances at the group level, ensuring a group‑wide view of operational resilience that includes parts of the group not covered by individual requirements.\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 362,
+  "completion_tokens": 110,
+  "latency_ms": 4222.00179999345,
+  "cached": false
+ }
+}

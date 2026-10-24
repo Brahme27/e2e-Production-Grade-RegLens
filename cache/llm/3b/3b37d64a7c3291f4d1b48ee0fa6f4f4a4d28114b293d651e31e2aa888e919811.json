@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_lookup",
+ "response": {
+  "text": "{\"question\":\"What must an NBFC include in its outsourcing contracts to protect data and hardware when ending the service, and what restrictions are placed on the provider during the transition?\",\"answer\":\"The NBFC must require clauses that ensure safe removal or destruction of data, hardware, and all records, and must prohibit the provider from erasing, purging, revoking, altering, or changing any data during the transition unless directed by the regulator or the NBFC.\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 347,
+  "completion_tokens": 122,
+  "latency_ms": 959.8845000145957,
+  "cached": false
+ }
+}

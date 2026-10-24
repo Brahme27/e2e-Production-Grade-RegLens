@@ -1,0 +1,12 @@
+{
+ "alias": "fast-small",
+ "purpose": "doc_summary",
+ "response": {
+  "text": "{\"summary\":\"The SEBI circular provides detailed principles and restrictions on outsourcing activities by registered intermediaries, emphasizing that core business and compliance functions must not be outsourced and outlining risk management, reporting, and self‑assessment requirements. It applies to all SEBI‑registered intermediaries, including merchant bankers, registrars, issue and share transfer agents, debenture trustees, bankers, underwriters, credit rating agencies, mutual funds, portfolio managers, venture capital funds, collective investment schemes, custodians, stock brokers, and depository participants.\"}",
+  "model": "openai/gpt-oss-20b",
+  "prompt_tokens": 1144,
+  "completion_tokens": 125,
+  "latency_ms": 9932.021399989026,
+  "cached": false
+ }
+}

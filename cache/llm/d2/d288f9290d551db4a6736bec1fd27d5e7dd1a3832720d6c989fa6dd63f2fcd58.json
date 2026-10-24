@@ -1,0 +1,12 @@
+{
+ "alias": "fast-small",
+ "purpose": "doc_summary",
+ "response": {
+  "text": "{\"summary\":\"The circular clarifies and extends the Cybersecurity and Cyber Resilience Framework (CSCRF) for SEBI‑regulated entities, revising thresholds and categorisation for stock brokers, depository participants, investment advisers, research analysts, KYC registration agencies, portfolio managers, and other listed entities. It applies to all SEBI‑regulated entities, including AIFs, depositories, depository participants, investment advisers, research analysts, KYC registration agencies, merchant bankers, portfolio managers, registrars, stock brokers, stock exchanges, venture capital funds, and industry associations such as the Association of Investment Bankers of India and the Association of Portfolio Managers in India.\"}",
+  "model": "openai/gpt-oss-20b",
+  "prompt_tokens": 1348,
+  "completion_tokens": 155,
+  "latency_ms": 10444.788699998753,
+  "cached": false
+ }
+}

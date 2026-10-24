@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_temporal",
+ "response": {
+  "text": "{\"question\":\"As of 28 May 2022, how must a MiFID investment firm interpret references to ‘Directive 2014/56/EU’, ‘investment services and activities’, ‘relevant persons’, and ‘Article 25(2) of this Regulation’ in the Article 22 Compliance Requirements?\",\"answer\":\"The firm must treat ‘Directive 2014/56/EU’ as ‘the regulatory system’; ‘investment services and activities’ (or ‘investment services, activities’) as ‘financial services and activities’; ‘relevant persons’ remain ‘relevant persons’; and ‘Article 25(2) of this Regulation’ as ‘General Organisational Requirements 4.1A’.\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 421,
+  "completion_tokens": 180,
+  "latency_ms": 4474.388800008455,
+  "cached": false
+ }
+}

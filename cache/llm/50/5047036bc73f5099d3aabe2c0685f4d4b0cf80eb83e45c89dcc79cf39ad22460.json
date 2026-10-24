@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_lookup",
+ "response": {
+  "text": "{\"question\":\"What factors must a firm consider when identifying its money‑laundering risk and establishing appropriate systems and controls?\",\"answer\":\"The firm should take into account its customer, product and activity profiles; its distribution channels; the complexity and volume of its transactions; its processes and systems; and its operating environment.\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 327,
+  "completion_tokens": 120,
+  "latency_ms": 3211.5046000108123,
+  "cached": false
+ }
+}

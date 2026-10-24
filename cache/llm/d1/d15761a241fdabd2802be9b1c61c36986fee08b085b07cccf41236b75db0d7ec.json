@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_lookup",
+ "response": {
+  "text": "{\"question\":\"What immediate action must SEBI‑regulated entities take to address known software vulnerabilities, and what temporary solution is allowed if a patch is unavailable?\",\"answer\":\"They must promptly apply the latest patches to all operating systems and applications, and if a patch is not yet available, they may use virtual patching as an interim safeguard.\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 297,
+  "completion_tokens": 94,
+  "latency_ms": 3344.6724000095855,
+  "cached": false
+ }
+}

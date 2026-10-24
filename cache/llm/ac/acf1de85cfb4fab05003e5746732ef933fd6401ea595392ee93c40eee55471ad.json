@@ -1,0 +1,12 @@
+{
+ "alias": "fast-small",
+ "purpose": "doc_summary",
+ "response": {
+  "text": "{\"summary\":\"The PRA Rulebook – General Organisational Requirements sets out mandatory governance, decision‑making, risk management, internal control, whistleblowing, and senior personnel responsibilities for UK banks, covering all regulated activities, MiFID business, ancillary services, and prudential activities. It applies specifically to firms classified as CRR firms operating in the UK, including those within a group structure.\"}",
+  "model": "openai/gpt-oss-20b",
+  "prompt_tokens": 1142,
+  "completion_tokens": 98,
+  "latency_ms": 9626.140000007581,
+  "cached": false
+ }
+}

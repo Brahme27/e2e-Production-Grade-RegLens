@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_lookup",
+ "response": {
+  "text": "{\"question\":\"What key elements must a firm consider when developing its scenario testing plan under FCA SYSC 15A.5?\",\"answer\":\"The firm must consider the type of scenario testing (e.g., paper based, simulations, live systems), which scenarios are within impact tolerances, testing frequency, number of critical business services tested, availability and integrity of supporting assets, and communication with internal and external stakeholders to mitigate disruption harm.\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 388,
+  "completion_tokens": 121,
+  "latency_ms": 3188.3518999966327,
+  "cached": false
+ }
+}

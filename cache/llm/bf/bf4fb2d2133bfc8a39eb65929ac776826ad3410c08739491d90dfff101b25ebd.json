@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_lookup",
+ "response": {
+  "text": "{\"question\":\"What verification and record‑keeping requirements must an NBFC follow when selling third‑party products to walk‑in customers for transactions of ₹50,000 or more?\",\"answer\":\"The NBFC must verify the walk‑in customer's identity and address, maintain transaction and related records as prescribed, use AML software to generate alerts for CTR/STR filing, and ensure transactions of ₹50,000 or more are done via debit or cheque with PAN verification. This also applies to its own products and other specified services.\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 493,
+  "completion_tokens": 124,
+  "latency_ms": 712.4837999872398,
+  "cached": false
+ }
+}

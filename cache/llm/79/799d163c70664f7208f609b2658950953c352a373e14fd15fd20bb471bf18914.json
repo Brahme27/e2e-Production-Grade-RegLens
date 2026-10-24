@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_comparison",
+ "response": {
+  "text": "{\"question\":\"How do the FCA's SYSC 6.1 compliance function requirements for management companies or electronic lending system operators compare with the PRA's Section 2 compliance function requirements for UK banks?\",\"answer\":\"Both regulators require the compliance function to have sufficient authority, resources, expertise and access to information, and they both mandate that compliance officers be appointed and be responsible for reporting. The FCA adds a specific note about remuneration not compromising objectivity, while the PRA explicitly requires the compliance function to report directly to the management body on significant risks and also includes a similar remuneration safeguard. Both prohibit individuals in the compliance function from also performing the activities they monitor.\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 608,
+  "completion_tokens": 166,
+  "latency_ms": 5521.211899991613,
+  "cached": false
+ }
+}

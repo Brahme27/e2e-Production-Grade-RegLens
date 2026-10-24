@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_lookup",
+ "response": {
+  "text": "{\"question\":\"When must a PRA‑regulated UK bank reassess the risks of an outsourcing arrangement beyond the standard triggers?\",\"answer\":\"The firm must reassess if it believes there has been a significant change to the arrangement’s risks, such as a serious or ongoing breach of the agreement or a crystallised risk, in addition to the situations listed in paragraph 5.6.\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 328,
+  "completion_tokens": 99,
+  "latency_ms": 3101.7317000078037,
+  "cached": false
+ }
+}

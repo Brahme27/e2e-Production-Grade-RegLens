@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_temporal",
+ "response": {
+  "text": "{\"question\":\"As of 06 November 2024, what verification and record‑keeping steps must RBI‑regulated REs follow when selling third‑party products worth fifty thousand rupees or more?\",\"answer\":\"They must verify the walk‑in customer’s identity and address, maintain transaction details as prescribed, have AML software to generate alerts for CTR/STR filing, conduct the transaction only by debit or cheque and verify the customer’s PAN, and apply the same rules to their own products and related services for amounts of fifty thousand rupees or above.\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 541,
+  "completion_tokens": 142,
+  "latency_ms": 5498.283399996581,
+  "cached": false
+ }
+}

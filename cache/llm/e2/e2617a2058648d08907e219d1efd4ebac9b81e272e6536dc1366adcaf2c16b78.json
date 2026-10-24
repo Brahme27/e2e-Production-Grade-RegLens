@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_lookup",
+ "response": {
+  "text": "{\"question\":\"How often must an intermediary review its outsourcing policy and who is responsible for ensuring outsourcing decisions align with that policy?\",\"answer\":\"The Board must require a regular review of the outsourcing policy as the business environment changes and is ultimately responsible for confirming that all outsourcing decisions and third‑party activities comply with the policy.\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 324,
+  "completion_tokens": 87,
+  "latency_ms": 856.5948999894317,
+  "cached": false
+ }
+}

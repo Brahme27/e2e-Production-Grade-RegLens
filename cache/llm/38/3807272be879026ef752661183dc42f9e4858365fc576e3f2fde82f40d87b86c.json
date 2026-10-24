@@ -1,0 +1,12 @@
+{
+ "alias": "fast-small",
+ "purpose": "doc_summary",
+ "response": {
+  "text": "{\"summary\":\"The RBI 2025 Directions mandate comprehensive Know‑Your‑Customer, customer identification, due diligence, risk management, record‑keeping and reporting procedures for all Non‑Banking Financial Companies (NBFCs) with customer interfaces, including their foreign branches and subsidiaries, to prevent money laundering and terrorist financing. The directions apply to every NBFC category, except those without customer interfaces, and require adherence to the most stringent local or RBI KYC/AML standards.\"}",
+  "model": "openai/gpt-oss-20b",
+  "prompt_tokens": 1437,
+  "completion_tokens": 114,
+  "latency_ms": 11522.631599975284,
+  "cached": false
+ }
+}

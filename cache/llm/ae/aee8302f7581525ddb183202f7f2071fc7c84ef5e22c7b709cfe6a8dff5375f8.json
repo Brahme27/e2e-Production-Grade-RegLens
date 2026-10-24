@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_lookup",
+ "response": {
+  "text": "{\"question\":\"What quarterly responsibility does the Technology Committee have regarding the KRAs' cyber security policy?\",\"answer\":\"The Technology Committee must review the implementation of the approved cyber security and resilience policy each quarter, assess current capabilities, set target resilience goals, and propose an improvement plan for Board action.\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 366,
+  "completion_tokens": 88,
+  "latency_ms": 2242.6646999956574,
+  "cached": false
+ }
+}

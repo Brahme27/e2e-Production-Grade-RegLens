@@ -1,0 +1,12 @@
+{
+ "alias": "fast-small",
+ "purpose": "doc_summary",
+ "response": {
+  "text": "{\"summary\":\"The SEBI Master Circular on KYC norms compiles all SEBI directives up to 30 September 2023, detailing KYC requirements for securities intermediaries, including PAN, PoA, beneficial ownership, digital KYC, IPV, and cyber‑security reporting, and applies to all intermediaries registered under SEBI Section 12.\"}",
+  "model": "openai/gpt-oss-20b",
+  "prompt_tokens": 1727,
+  "completion_tokens": 85,
+  "latency_ms": 14390.732800005935,
+  "cached": false
+ }
+}

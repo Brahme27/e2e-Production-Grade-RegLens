@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_lookup",
+ "response": {
+  "text": "{\"question\":\"What action can the FCA take if it and a firm cannot reach agreement after discussion?\",\"answer\":\"The FCA may use its powers under sections 55J and 55L of the Act to require the firm to take specific steps that align with the FCA’s view to meet the chapter’s requirements.\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 325,
+  "completion_tokens": 86,
+  "latency_ms": 3517.1131000097375,
+  "cached": false
+ }
+}

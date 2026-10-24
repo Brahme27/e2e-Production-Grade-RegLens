@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_lookup",
+ "response": {
+  "text": "{\"question\":\"What specific requirements must a bank meet when outsourcing services to satisfy RBI oversight and control standards?\",\"answer\":\"The bank must consider all applicable laws and regulations during due‑diligence, ensure outsourcing does not hinder RBI supervision or the bank’s own oversight, protect internal controls and reputation, require the provider to apply the same care as the bank would, and ensure the provider is not owned or controlled by the bank’s directors, officers, employees or their relatives unless it is a subsidiary.\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 510,
+  "completion_tokens": 143,
+  "latency_ms": 941.3198999827728,
+  "cached": false
+ }
+}

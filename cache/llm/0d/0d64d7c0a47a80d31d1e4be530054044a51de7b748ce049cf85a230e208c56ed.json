@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_comparison",
+ "response": {
+  "text": "{\"question\":\"How do the RBI's guidelines for pooled audits of shared IT service providers for NBFCs compare with the PRA's approach to pooled audits for UK banks?\",\"answer\":\"Both regulators permit pooled audits to improve efficiency and reduce costs when multiple entities use the same service provider. The RBI requires each regulated entity (RE) to ensure that audit requirements specific to its contract are met, even when audits are shared, whereas the PRA emphasizes that pooled audits can be organized by the firms or the service provider and may be carried out by firm representatives or appointed specialists, focusing on cost‑effectiveness and best practice sharing. Both frameworks allow shared auditing but differ in the emphasis on contractual responsibility (RBI) versus collaborative organization and execution (PRA).\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 482,
+  "completion_tokens": 186,
+  "latency_ms": 5398.7438999756705,
+  "cached": false
+ }
+}

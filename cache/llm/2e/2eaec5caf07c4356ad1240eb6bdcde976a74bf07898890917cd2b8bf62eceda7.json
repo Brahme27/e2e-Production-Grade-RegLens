@@ -1,0 +1,12 @@
+{
+ "alias": "fast-small",
+ "purpose": "doc_summary",
+ "response": {
+  "text": "{\"summary\":\"The RBI Directions, 2025 mandate that Non‑Banking Financial Companies (NBFCs) across various categories must manage outsourcing risks through board‑approved policies, risk assessment, confidentiality, monitoring, and business continuity plans, with specific provisions for IT and offshore arrangements. These requirements apply to all listed NBFC types (e.g., NBFC‑D, NBFC‑ICC, NBFC‑Factor, NBFC‑MFI, NBFC‑IFC, IDF‑NBFC, HFC, SPD, CIC, NBFC‑P2P, NBFC‑AA) except NOFHCs, with additional IT‑specific rules for middle‑layer and above entities.\"}",
+  "model": "openai/gpt-oss-20b",
+  "prompt_tokens": 1468,
+  "completion_tokens": 161,
+  "latency_ms": 11842.284299986204,
+  "cached": false
+ }
+}

@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_temporal",
+ "response": {
+  "text": "{\"question\":\"As of 28 May 2022, what does the term “reportable concern” mean under the PRA’s definitions for UK banks?\",\"answer\":\"It refers to any concern held by any person about a firm’s activities, including matters that would be a protected disclosure, failures to follow the firm’s policies and procedures, or behaviour that could damage the firm’s reputation or financial health.\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 587,
+  "completion_tokens": 115,
+  "latency_ms": 7061.877900006948,
+  "cached": false
+ }
+}

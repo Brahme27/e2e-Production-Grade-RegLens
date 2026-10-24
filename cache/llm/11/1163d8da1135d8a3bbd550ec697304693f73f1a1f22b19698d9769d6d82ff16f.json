@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_lookup",
+ "response": {
+  "text": "{\"question\":\"How must an intermediary handle records of outsourced activities for board and senior management review?\",\"answer\":\"The intermediary must keep all outsourced activity records in a central location, keep them regularly updated, and ensure they are easily accessible for the board or senior management and may be included in corporate governance reviews.\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 330,
+  "completion_tokens": 84,
+  "latency_ms": 3520.1409999863245,
+  "cached": false
+ }
+}

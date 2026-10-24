@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_comparison",
+ "response": {
+  "text": "{\"question\":\"How do the RBI's requirements for vulnerability assessment and penetration testing in commercial banks compare to SEBI's requirements for cybersecurity audits and VAPT for SEBI entities?\",\"answer\":\"The RBI mandates that commercial banks establish a documented approach for VA/PT that defines scope, coverage, and a vulnerability scoring mechanism such as CVSS, and this must also cover cloud‑hosted systems. SEBI, on the other hand, requires all SEBI‑registered entities to regularly conduct cybersecurity audits and VAPT in line with the CSCRF, including in‑depth attack simulations, and provides an indicative scope in Annexure‑L. Both regulators emphasize regular testing, but RBI focuses on a documented scoring methodology, while SEBI stresses broader audit activities and simulated attacks.\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 397,
+  "completion_tokens": 189,
+  "latency_ms": 3183.891399996355,
+  "cached": false
+ }
+}

@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_lookup",
+ "response": {
+  "text": "{\"question\":\"When a bank outsources a critical function to a service provider within the same corporate group, how may it factor its control or influence over that provider into compliance with the outsourcing rules?\",\"answer\":\"The firm may take into account the extent to which it controls the service provider or can influence its actions when assessing compliance with the outsourcing requirements.\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 302,
+  "completion_tokens": 129,
+  "latency_ms": 3587.8168000199366,
+  "cached": false
+ }
+}

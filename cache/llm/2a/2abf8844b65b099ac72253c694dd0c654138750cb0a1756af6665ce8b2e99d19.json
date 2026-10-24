@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_lookup",
+ "response": {
+  "text": "{\"question\":\"Who are the only legal heirs entitled to inherit the deceased's estate under intestate succession according to this paragraph?\",\"answer\":\"The surviving persons listed in the table (by name, age and relationship) are the only legal heirs entitled to succeed to the estate under the applicable law.\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 320,
+  "completion_tokens": 125,
+  "latency_ms": 962.4459999904502,
+  "cached": false
+ }
+}

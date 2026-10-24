@@ -1,0 +1,12 @@
+{
+ "alias": "fast-small",
+ "purpose": "doc_summary",
+ "response": {
+  "text": "{\"summary\":\"The RBI Master Direction – Know Your Customer (KYC) Direction, 2016 prescribes detailed customer identification, due diligence, risk management, record‑keeping, and reporting requirements for regulated entities, including procedures for individuals, sole proprietorships, legal entities, and beneficial owners. It applies to all RBI‑regulated commercial banks and non‑bank financial companies (NBFCs) and their branches and majority‑owned subsidiaries abroad, subject to local laws.\"}",
+  "model": "openai/gpt-oss-20b",
+  "prompt_tokens": 1726,
+  "completion_tokens": 114,
+  "latency_ms": 13892.64470001217,
+  "cached": false
+ }
+}

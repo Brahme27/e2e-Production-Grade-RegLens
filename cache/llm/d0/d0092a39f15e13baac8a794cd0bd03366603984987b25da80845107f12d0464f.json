@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_temporal",
+ "response": {
+  "text": "{\"question\":\"As of 01 July 2025, to which types of arrangements do the PRA's expectations in this supervisory statement apply, and what international standards were considered in developing those expectations?\",\"answer\":\"The expectations apply to all forms of outsourcing and, where indicated, other non‑outsourcing third‑party arrangements, including cloud usage. The PRA considered standards such as the BCBS draft Operational Resilience Principles, the FSB Effective Practices for Cyber Incident Response and Recovery, the G‑7 Fundamental Elements for Third‑Party Cyber Risk Management, and the IOSCO draft Principles on Outsourcing.\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 531,
+  "completion_tokens": 183,
+  "latency_ms": 4408.5061000077985,
+  "cached": false
+ }
+}

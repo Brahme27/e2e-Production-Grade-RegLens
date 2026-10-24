@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_temporal",
+ "response": {
+  "text": "{\"question\":\"As of 28 May 2022, how must a MiFID investment firm extend the Article 24 audit requirements to other matters?\",\"answer\":\"It must treat references to “investment services and activities” as financial services and activities, keep “relevant persons” unchanged, and interpret references to “Article 25(2)” as references to General Organisational Requirements 4.1A.\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 384,
+  "completion_tokens": 160,
+  "latency_ms": 3587.132799992105,
+  "cached": false
+ }
+}

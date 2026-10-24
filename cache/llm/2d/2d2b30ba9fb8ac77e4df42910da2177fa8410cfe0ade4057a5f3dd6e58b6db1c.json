@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_comparison",
+ "response": {
+  "text": "{\"question\":\"How do the RBI's requirements for cyber risk evaluation and oversight in commercial banks compare with SEBI's mandated cybersecurity policy processes for all SEBI entities?\",\"answer\":\"The RBI requires banks to consider a broad range of factors when evaluating controls, including board oversight, policies, cyber risk architecture, resource expertise, training, threat intelligence sharing with peers, IDRBT, RBI and CERT‑In, as well as preventive, detective, corrective controls, vendor and incident management. In contrast, SEBI’s CSCRF guidelines prescribe a structured ‘identify‑protect‑detect‑respond‑recover’ process for all SEBI entities, focusing on identifying critical IT assets, deploying protective controls, monitoring for incidents, responding promptly, and recovering through incident management. While both emphasize comprehensive risk management and incident handling, RBI’s approach is more detailed on governance and information sharing, whereas SEBI outlines a high‑level procedural framework.\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 509,
+  "completion_tokens": 221,
+  "latency_ms": 5981.590999988839,
+  "cached": false
+ }
+}

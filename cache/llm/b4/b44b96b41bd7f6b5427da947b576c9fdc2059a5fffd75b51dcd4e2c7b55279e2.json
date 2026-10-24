@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_comparison",
+ "response": {
+  "text": "{\"question\":\"How do SEBI's requirements for assessing outsourcing risk and materiality for intermediaries compare with the PRA's expectations for UK banks when determining the materiality of third‑party arrangements?\",\"answer\":\"SEBI mandates that intermediaries assess outsourcing risk by considering factors such as the impact of a third‑party failure on financial, reputational and operational performance, backup arrangements, the third party’s regulatory status, and potential conflicts of interest. The PRA similarly requires banks to develop their own materiality assessment processes for outsourcing, but adds that firms must apply specific criteria set by the regulator to ensure consistency, with certain factors automatically rendering an arrangement material. Both regulators emphasize a risk‑based, case‑by‑case approach, though SEBI lists detailed qualitative factors while the PRA focuses on standardized criteria for uniformity across firms.\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 527,
+  "completion_tokens": 201,
+  "latency_ms": 5590.084099996602,
+  "cached": false
+ }
+}

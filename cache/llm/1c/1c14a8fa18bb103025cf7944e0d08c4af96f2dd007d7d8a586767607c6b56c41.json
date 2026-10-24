@@ -1,0 +1,12 @@
+{
+ "alias": "fast-small",
+ "purpose": "doc_summary",
+ "response": {
+  "text": "{\"summary\":\"The PRA Rulebook – Risk Control sets out the risk management obligations for UK banks, requiring them to establish policies, procedures, and an independent risk function, and to report to senior management and a risk committee. It applies to all CRR firms carrying out regulated, MiFID, ancillary, or prudential activities from a UK establishment.\"}",
+  "model": "openai/gpt-oss-20b",
+  "prompt_tokens": 1094,
+  "completion_tokens": 89,
+  "latency_ms": 8259.288999979617,
+  "cached": false
+ }
+}

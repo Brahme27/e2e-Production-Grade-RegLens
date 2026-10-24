@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_temporal",
+ "response": {
+  "text": "{\"question\":\"As of 06 October 2025, what must a commercial bank or NBFC do if it suspects money laundering or terrorist financing and believes that continuing customer due diligence would alert the customer, according to the RBI's Customer Acceptance Policy?\",\"answer\":\"The institution must stop the CDD process and file a Suspicious Transaction Report with FIU-IND instead of proceeding with due diligence.\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 424,
+  "completion_tokens": 109,
+  "latency_ms": 2248.532800003886,
+  "cached": false
+ }
+}

@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_comparison",
+ "response": {
+  "text": "{\"question\":\"How do the RBI's requirements for an annual compliance risk assessment and review in commercial banks compare with the FCA's requirements for a risk‑based monitoring programme under SYSC 6.1 for FCA‑regulated firms?\",\"answer\":\"The RBI mandates that banks conduct an annual compliance risk assessment covering items such as past compliance failures, regulatory guideline adherence, independence of the compliance function, internal controls, and plans for the next year. In contrast, the FCA requires firms to perform a risk‑based assessment that underpins a monitoring programme, focusing on all areas of the firm's designated investment business and related ancillary services, with priorities set by the assessment to ensure comprehensive compliance monitoring. Both regulators emphasize risk assessment, but the RBI specifies a broader annual review scope, while the FCA ties the assessment directly to an ongoing monitoring programme.\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 590,
+  "completion_tokens": 197,
+  "latency_ms": 6256.417299999157,
+  "cached": false
+ }
+}

@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_lookup",
+ "response": {
+  "text": "{\"question\":\"What limits are placed on a Chief Risk Officer's involvement in the credit sanction process for high‑value loans at a public sector bank?\",\"answer\":\"The CRO may only act as an adviser and have no voting rights when the bank does not use a committee approach, and if the bank uses a committee, the CRO can be a decision‑maker with voting power only if all committee members accept joint liability; otherwise the CRO must remain an adviser without voting rights.\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 505,
+  "completion_tokens": 132,
+  "latency_ms": 985.0867999775801,
+  "cached": false
+ }
+}

@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_temporal",
+ "response": {
+  "text": "{\"question\":\"As of 28 May 2022, how does the PRA define \\\"other matters\\\" in relation to a requirement under the MODR?\",\"answer\":\"\\\"Other matters\\\" are defined as, with respect to a requirement under the MODR, any matters that fall within the scope of clause 1.1 but are not covered by that specific requirement.\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 365,
+  "completion_tokens": 155,
+  "latency_ms": 2240.91550000594,
+  "cached": false
+ }
+}

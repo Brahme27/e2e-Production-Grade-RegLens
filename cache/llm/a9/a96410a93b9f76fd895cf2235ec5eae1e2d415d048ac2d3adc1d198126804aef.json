@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_lookup",
+ "response": {
+  "text": "{\"question\":\"What characteristics must a firm's arrangements, processes and mechanisms have according to the PRA's general requirements?\",\"answer\":\"They must be comprehensive and proportionate to the firm's risk profile, scale, complexity and activity range, and must consider the specific technical criteria set out in section 2.6, as well as skills, knowledge, expertise, risk control and remuneration requirements.\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 354,
+  "completion_tokens": 127,
+  "latency_ms": 4866.720099991653,
+  "cached": false
+ }
+}

@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_lookup",
+ "response": {
+  "text": "{\"question\":\"How does SEBI determine the appropriate categorisation for a stockbroker that meets more than one of the listed parameters?\",\"answer\":\"A stockbroker is classified according to each parameter independently, and if it qualifies under multiple parameters, the higher of the resulting categories is applied.\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 313,
+  "completion_tokens": 111,
+  "latency_ms": 3688.53690000833,
+  "cached": false
+ }
+}

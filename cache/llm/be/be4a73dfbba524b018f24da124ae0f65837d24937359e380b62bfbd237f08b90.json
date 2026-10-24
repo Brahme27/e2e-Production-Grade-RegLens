@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_comparison",
+ "response": {
+  "text": "{\"question\":\"How do the RBI's requirements for banks opening client accounts through professional intermediaries compare with SEBI's rules for registered intermediaries regarding anonymous or unverifiable accounts?\",\"answer\":\"The RBI mandates that banks must identify clients and beneficial owners when accounts are opened via professional intermediaries, may rely on the intermediary's CDD only if it is a regulated entity, and retains ultimate responsibility for knowing the customer. In contrast, SEBI explicitly prohibits registered intermediaries from opening or maintaining anonymous or fictitious accounts and requires verification of all client identities, reinforcing anti‑money‑laundering safeguards. Both regulators emphasize client identification, but RBI allows limited reliance on intermediary CDD under supervision, whereas SEBI imposes an outright ban on unverifiable accounts.\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 603,
+  "completion_tokens": 187,
+  "latency_ms": 7024.959600006696,
+  "cached": false
+ }
+}

@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_temporal",
+ "response": {
+  "text": "{\"question\":\"As of 03 August 2024, what factors must a commercial bank or NBFC consider when developing an exit strategy for cloud services according to RBI guidance?\",\"answer\":\"The RBI requires that the exit strategy and SLA include agreed processes and turnaround times for returning service collaterals and data, ensure data completeness and portability, securely purge the bank’s information from the CSP, facilitate a smooth service transition, clearly define liabilities and penalties, monitor application design alignment, specify minimal‑impact data migration, and promptly retrieve and purge transaction and operational records with independent assurance before sign‑off.\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 505,
+  "completion_tokens": 143,
+  "latency_ms": 5039.645200013183,
+  "cached": false
+ }
+}

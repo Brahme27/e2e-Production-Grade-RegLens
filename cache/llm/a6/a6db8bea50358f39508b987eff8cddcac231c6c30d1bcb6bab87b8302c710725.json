@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_lookup",
+ "response": {
+  "text": "{\"question\":\"Who within a firm must be given overall responsibility for anti‑money laundering systems, and can that person also hold another approved overall responsibility role?\",\"answer\":\"A director or senior manager, who may also be the money‑laundering reporting officer, must be assigned overall responsibility for AML systems, and the firm cannot assign this responsibility to someone already approved for another overall responsibility function.\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 324,
+  "completion_tokens": 124,
+  "latency_ms": 3520.1391000009608,
+  "cached": false
+ }
+}

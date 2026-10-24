@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_lookup",
+ "response": {
+  "text": "{\"question\":\"What are the board and senior management ultimately responsible for establishing under the PRA's model risk management expectations?\",\"answer\":\"They must establish a sound model risk management framework that ensures key business decisions affecting the firm’s safety and soundness are based on reliable model output and align with the board’s defined model risk appetite.\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 351,
+  "completion_tokens": 85,
+  "latency_ms": 4327.65739999013,
+  "cached": false
+ }
+}

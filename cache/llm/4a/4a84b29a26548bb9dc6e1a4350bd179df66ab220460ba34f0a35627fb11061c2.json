@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_lookup",
+ "response": {
+  "text": "{\"question\":\"What corpus size and client‑base criteria exempt managers of AIFs or VCFs from the mandatory Market‑SOC requirement?\",\"answer\":\"Managers whose total corpus is up to Rs 3,000 crore and who have fewer than 100 clients are exempt from the mandatory Market‑SOC (M‑SOC) requirement.\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 394,
+  "completion_tokens": 158,
+  "latency_ms": 4799.120399984531,
+  "cached": false
+ }
+}

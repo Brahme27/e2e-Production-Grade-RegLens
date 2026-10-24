@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_lookup",
+ "response": {
+  "text": "{\"question\":\"How must a CRR consolidation entity evaluate the ability of each member providing an important group business service to stay within the impact tolerance during a severe but plausible operational disruption?\",\"answer\":\"It must assess whether each member can remain within the set impact tolerance for that service if a severe but plausible disruption occurs.\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 300,
+  "completion_tokens": 86,
+  "latency_ms": 4128.2037000055425,
+  "cached": false
+ }
+}

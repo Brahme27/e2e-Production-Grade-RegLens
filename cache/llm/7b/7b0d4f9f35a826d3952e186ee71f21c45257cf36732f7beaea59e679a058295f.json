@@ -1,0 +1,12 @@
+{
+ "alias": "fast-small",
+ "purpose": "doc_summary",
+ "response": {
+  "text": "{\"summary\":\"The RBI issued the 2026 Commercial Banks – Fraud Risk Management Directions to establish a framework for preventing, detecting, and reporting fraud, requiring a board‑approved policy, early warning signals, red‑flagged account procedures, and mandatory reporting to the Central Fraud Registry and law enforcement. The directions apply to all commercial banks, including banking companies, corresponding new banks, and the State Bank of India, excluding small finance banks, payment banks, and local area banks.\"}",
+  "model": "openai/gpt-oss-20b",
+  "prompt_tokens": 1416,
+  "completion_tokens": 113,
+  "latency_ms": 11509.578400000464,
+  "cached": false
+ }
+}

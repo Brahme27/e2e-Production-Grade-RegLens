@@ -1,0 +1,12 @@
+{
+ "alias": "fast-small",
+ "purpose": "doc_summary",
+ "response": {
+  "text": "{\"summary\":\"The PRA Rulebook – Compliance and Internal Audit sets out the obligations for UK banks to establish, implement and maintain robust compliance and internal audit functions, covering regulated activities, MiFID-related services, ancillary and unregulated prudential activities. It applies to all UK banks (CRR firms) operating within the UK, requiring them to maintain independent compliance functions, risk-based monitoring, and regular reporting to management.\"}",
+  "model": "openai/gpt-oss-20b",
+  "prompt_tokens": 1059,
+  "completion_tokens": 102,
+  "latency_ms": 2247.7807000104804,
+  "cached": false
+ }
+}

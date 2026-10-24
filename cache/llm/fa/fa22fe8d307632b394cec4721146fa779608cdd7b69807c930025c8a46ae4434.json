@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_temporal",
+ "response": {
+  "text": "{\"question\":\"As of 22 May 2023, what steps must a stock exchange take if a listed company still has more than 20 unresolved complaints or complaints involving amounts over Rs 10 lakhs after exhausting all other actions?\",\"answer\":\"The exchange must forward the details of the listed company to SEBI for possible further action.\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 487,
+  "completion_tokens": 93,
+  "latency_ms": 4167.1633000078145,
+  "cached": false
+ }
+}

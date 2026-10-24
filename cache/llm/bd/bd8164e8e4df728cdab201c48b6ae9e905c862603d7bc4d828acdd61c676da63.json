@@ -1,0 +1,12 @@
+{
+ "alias": "fast-small",
+ "purpose": "doc_summary",
+ "response": {
+  "text": "{\"summary\":\"SYSC 15A Operational Resilience sets out operational resilience requirements for enhanced‑scope SMCR firms, banks, designated investment firms, building societies, Solvency II firms, UK RIEs, electronic money institutions, payment institutions, registered account information service providers and consolidated tape providers, covering regulated activities, investment dealing, ancillary services, MiFID services, collective portfolio management, payment and electronic money services, and data reporting services, and requires identification of important business services, scenario testing, governance, and supervisory review.\"}",
+  "model": "openai/gpt-oss-20b",
+  "prompt_tokens": 1213,
+  "completion_tokens": 123,
+  "latency_ms": 816.3562999980059,
+  "cached": false
+ }
+}

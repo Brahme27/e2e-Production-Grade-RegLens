@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_lookup",
+ "response": {
+  "text": "{\"question\":\"What are the three core responsibilities that a firm’s internal audit function must fulfil under the PRA rules?\",\"answer\":\"The internal audit function must (1) create, implement and maintain an audit plan to assess the firm’s systems and controls; (2) issue recommendations from that work and ensure they are followed; and (3) report on internal audit matters as required by General Organisational Requirements 4.7.\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 343,
+  "completion_tokens": 135,
+  "latency_ms": 2167.42960002739,
+  "cached": false
+ }
+}

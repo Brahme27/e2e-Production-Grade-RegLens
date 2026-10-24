@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_lookup",
+ "response": {
+  "text": "{\"question\":\"Does SEBI consider voice‑to‑text and chatbot systems that analyze unstructured text as AI/ML systems subject to the Annexure B requirements?\",\"answer\":\"Yes, SEBI includes voice‑to‑text, text‑to‑intelligence, robo‑chat bots and big‑data intelligence‑gathering tools that process unstructured data under the AI/ML systems definition in Annexure B.\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 318,
+  "completion_tokens": 109,
+  "latency_ms": 4259.344499994768,
+  "cached": false
+ }
+}

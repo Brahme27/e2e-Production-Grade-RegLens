@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_lookup",
+ "response": {
+  "text": "{\"question\":\"If a firm deals with products that would fall under PROD chapters after those chapters became effective, can it decide whether to follow the PROD processes or the PRIN 2A.3 processes?\",\"answer\":\"Yes. When a firm either handles such products or is subject to PROD 1.3.2R, it may elect to apply either the relevant PROD chapter procedures (PROD 3 for financial instruments and structured deposits, PROD 4 for insurance) or the procedures set out in PRIN 2A.3.\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 420,
+  "completion_tokens": 206,
+  "latency_ms": 3830.9529999969527,
+  "cached": false
+ }
+}

@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_lookup",
+ "response": {
+  "text": "{\"question\":\"When must a firm communicate information to retail customers to meet the FCA's timely communication requirement?\",\"answer\":\"The firm must provide information before a product is purchased and at appropriate times during the product’s lifecycle.\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 336,
+  "completion_tokens": 63,
+  "latency_ms": 3520.0461999920662,
+  "cached": false
+ }
+}

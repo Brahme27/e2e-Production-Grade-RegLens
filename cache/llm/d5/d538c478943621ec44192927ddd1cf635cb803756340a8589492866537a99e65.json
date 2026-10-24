@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_lookup",
+ "response": {
+  "text": "{\"question\":\"What are the minimum composition and expertise requirements for the IT Strategy Committee of the Board at a commercial bank?\",\"answer\":\"The committee must have at least three directors, including a chairperson who is an independent director with at least seven years of IT management or cybersecurity experience and a broad understanding of business processes, and all members must be technically competent to assess IT and cyber risks.\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 456,
+  "completion_tokens": 114,
+  "latency_ms": 957.8969000140205,
+  "cached": false
+ }
+}

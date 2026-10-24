@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_comparison",
+ "response": {
+  "text": "{\"question\":\"How do the RBI's guidance on cloud deployment and service models for commercial banks compare with the PRA's expectations for a shared responsibility model in cloud outsourcing for UK banks?\",\"answer\":\"The RBI outlines the types of cloud services (IaaS, PaaS, SaaS) and deployment models (private, public, hybrid, community) that commercial banks may use, focusing on describing the technology stack and service categories. In contrast, the PRA emphasizes governance, requiring firms to define and document responsibilities under a shared responsibility model, stating that banks remain accountable for data classification, configuration, and monitoring while the cloud provider handles the underlying infrastructure, and both share duties depending on the service model (IaaS, PaaS, SaaS).\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 774,
+  "completion_tokens": 187,
+  "latency_ms": 6507.467999996152,
+  "cached": false
+ }
+}

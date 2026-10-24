@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_lookup",
+ "response": {
+  "text": "{\"question\":\"How must a group‑wide compliance programme support senior management and the board in monitoring legal and reputational risks?\",\"answer\":\"It must give them insight into the concentration, magnitude and trends of those risks and point out control processes that need strengthening, while ensuring that controls and procedures collect the data needed for group‑level risk management.\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 381,
+  "completion_tokens": 153,
+  "latency_ms": 891.9167999993078,
+  "cached": false
+ }
+}

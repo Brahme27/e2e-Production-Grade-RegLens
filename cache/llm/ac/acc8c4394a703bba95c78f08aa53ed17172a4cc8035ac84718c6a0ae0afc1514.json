@@ -1,0 +1,12 @@
+{
+ "alias": "fast-small",
+ "purpose": "doc_summary",
+ "response": {
+  "text": "{\"summary\":\"The Master Direction – Reserve Bank of India (Internal Ombudsman for Regulated Entities) Directions, 2023 establishes a unified Internal Ombudsman mechanism for all regulated entities, detailing the appointment, role, responsibilities, procedural guidelines, and supervisory oversight to strengthen grievance redressal. It applies specifically to commercial banks and non‑banking financial companies (NBFCs) across India.\"}",
+  "model": "openai/gpt-oss-20b",
+  "prompt_tokens": 1229,
+  "completion_tokens": 98,
+  "latency_ms": 10232.141200016486,
+  "cached": false
+ }
+}

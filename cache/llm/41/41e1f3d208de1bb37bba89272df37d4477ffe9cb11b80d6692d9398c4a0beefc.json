@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_temporal",
+ "response": {
+  "text": "{\"question\":\"As of 19 March 2025, what requirements does the RBI impose on commercial banks and NBFCs to prevent unauthorized data modification during transfer between processes or applications in critical applications?\",\"answer\":\"The RBI requires that there be no manual intervention or manual modification of data during transfer, and that the data transfer mechanism be securely automated, properly tested, include necessary checks and balances, use appropriate authentication, and maintain audit trails through Straight Through Processing.\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 398,
+  "completion_tokens": 123,
+  "latency_ms": 4049.5507000014186,
+  "cached": false
+ }
+}

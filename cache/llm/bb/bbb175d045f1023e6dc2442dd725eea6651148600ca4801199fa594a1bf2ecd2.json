@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_temporal",
+ "response": {
+  "text": "{\"question\":\"As of 30 April 2026, what actions must the State Nodal Officer take when they become aware of transactions or attempts by a third party that could benefit individuals or entities on the designated list under the Prevention of Money‑Laundering Act?\",\"answer\":\"The State Nodal Officer must promptly notify the Central Nodal Officer and the DGP/Commissioner of Police of the State/UT to initiate appropriate action.\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 419,
+  "completion_tokens": 120,
+  "latency_ms": 4478.254999994533,
+  "cached": false
+ }
+}

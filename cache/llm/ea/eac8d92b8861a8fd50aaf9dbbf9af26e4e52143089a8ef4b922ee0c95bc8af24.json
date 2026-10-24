@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_lookup",
+ "response": {
+  "text": "{\"question\":\"What must an Article 109 undertaking do regarding risk management and internal controls when it belongs to a consolidation or sub‑consolidation group?\",\"answer\":\"It must ensure that the group’s risk management processes and internal control mechanisms meet the obligations in sections 2.3, 2.7 and Chapter 3 on a consolidated or sub‑consolidated basis.\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 333,
+  "completion_tokens": 102,
+  "latency_ms": 3445.7748999993782,
+  "cached": false
+ }
+}

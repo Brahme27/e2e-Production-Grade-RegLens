@@ -1,0 +1,12 @@
+{
+ "alias": "fast-small",
+ "purpose": "doc_summary",
+ "response": {
+  "text": "{\"summary\":\"The RBI Master Direction on Information Technology Governance, Risk, Controls and Assurance Practices sets out comprehensive IT governance, risk management, security, business continuity, and audit requirements for all commercial banks, non‑banking financial companies (NBFCs), credit information companies, and specified development banks. It applies to these entities from April 1, 2024, consolidating and updating prior RBI IT guidelines.\"}",
+  "model": "openai/gpt-oss-20b",
+  "prompt_tokens": 1392,
+  "completion_tokens": 102,
+  "latency_ms": 11841.453800007002,
+  "cached": false
+ }
+}

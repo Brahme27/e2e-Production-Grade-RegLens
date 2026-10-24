@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_lookup",
+ "response": {
+  "text": "{\"question\":\"What information must a common platform firm supply to the FCA when the regulator requests it about outsourced activities?\",\"answer\":\"The firm must make available, upon request, all information needed for the FCA to supervise that the outsourced activities comply with UK law on markets in financial instruments.\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 305,
+  "completion_tokens": 114,
+  "latency_ms": 3218.7143999908585,
+  "cached": false
+ }
+}

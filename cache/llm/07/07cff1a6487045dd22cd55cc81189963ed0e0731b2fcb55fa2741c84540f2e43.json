@@ -1,0 +1,12 @@
+{
+ "alias": "fast-small",
+ "purpose": "doc_summary",
+ "response": {
+  "text": "{\"summary\":\"The circular mandates that all registered stock brokers and depository participants offering or using AI/ML applications or systems—whether for investor-facing services, advisory, compliance, or other functions—must report quarterly on such systems, with stock exchanges and depositories consolidating the data and submitting it to SEBI within specified deadlines.\"}",
+  "model": "openai/gpt-oss-20b",
+  "prompt_tokens": 1175,
+  "completion_tokens": 81,
+  "latency_ms": 9302.114400023129,
+  "cached": false
+ }
+}

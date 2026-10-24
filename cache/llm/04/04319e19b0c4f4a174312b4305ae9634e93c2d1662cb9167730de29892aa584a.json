@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_comparison",
+ "response": {
+  "text": "{\"question\":\"How do the RBI's requirements for an NBFC's board‑approved IT outsourcing policy compare with the PRA's expectations for a UK bank's board‑approved outsourcing policy?\",\"answer\":\"The RBI mandates that an NBFC’s board‑approved IT outsourcing policy must detail roles and responsibilities, selection criteria, materiality parameters, delegation of authority, disaster recovery, monitoring systems, and exit strategies. In contrast, the PRA requires a broader written outsourcing policy approved by the board that aligns with overall firm policies and covers areas such as business continuity, data protection, ICT, cyber security, operational resilience, and risk management, but it does not prescribe the same granular IT‑specific elements. Both regulators emphasize board approval and ongoing review, yet the RBI focuses specifically on IT service outsourcing details, while the PRA adopts a more holistic, firm‑wide approach.\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 597,
+  "completion_tokens": 203,
+  "latency_ms": 5929.308399994625,
+  "cached": false
+ }
+}

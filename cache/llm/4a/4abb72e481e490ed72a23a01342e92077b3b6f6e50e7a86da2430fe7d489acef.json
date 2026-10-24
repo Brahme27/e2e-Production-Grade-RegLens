@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_temporal",
+ "response": {
+  "text": "{\"question\":\"As of 28 May 2022, how must a MiFID investment firm interpret the terms ‘relevant persons’, ‘investment services and activities’, ‘policies and procedures’, and ‘provision of reports and advice to senior management’ under the PRA’s Risk Control Requirements?\",\"answer\":\"The firm must treat ‘relevant persons’ as the defined relevant persons, ‘investment services and activities’ as the regulated activities, ‘policies and procedures’ as those set out in the relevant Part, and ‘provision of reports and advice to senior management’ as reports and advice to senior personnel per General Organisational Requirements 4.1A.\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 415,
+  "completion_tokens": 167,
+  "latency_ms": 4517.241299996385,
+  "cached": false
+ }
+}

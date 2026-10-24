@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_temporal",
+ "response": {
+  "text": "{\"question\":\"As of 15 June 2022, what steps must the Central designated nodal officer for the UAPA take when verification shows assets belong to designated individuals or entities?\",\"answer\":\"The officer must promptly issue a freeze order under Section 51A, electronically notify the relevant bank branch, depository and insurer, inform the regulators and FIU‑IND, and send copies to state Home Department secretaries, all UAPA nodal officers, and the Directors General or Commissioners of Police in every State/UT, without giving prior notice to the designated party.\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 580,
+  "completion_tokens": 145,
+  "latency_ms": 5230.480099999113,
+  "cached": false
+ }
+}

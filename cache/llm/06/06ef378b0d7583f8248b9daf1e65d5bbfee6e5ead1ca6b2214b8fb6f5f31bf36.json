@@ -1,0 +1,12 @@
+{
+ "alias": "fast-small",
+ "purpose": "doc_summary",
+ "response": {
+  "text": "{\"summary\":\"The FCA SYSC 6 document sets out compliance, internal audit and financial crime requirements for common platform firms, MiFID optional exemption firms, third‑country firms, management companies and electronic lending operators, detailing mandatory policies, procedures and a permanent compliance function. It applies to all FCA‑regulated firms under the fca_firms tag, including those operating investment platforms, lending systems and other regulated activities.\"}",
+  "model": "openai/gpt-oss-20b",
+  "prompt_tokens": 1214,
+  "completion_tokens": 102,
+  "latency_ms": 957.2003000066616,
+  "cached": false
+ }
+}

@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_lookup",
+ "response": {
+  "text": "{\"question\":\"Under what conditions may a firm be exempt from the requirements in 2.1D(4) or (5), and what obligations does it have if it relies on 2.1E(1)?\",\"answer\":\"A firm may be exempt when, given its business’s nature, scale, complexity and the services it provides, complying with 2.1D(4) or (5) would be disproportionate, provided its compliance function remains effective. If the firm relies on 2.1E(1), it must be able to show the PRA that its compliance function stays effective and regularly assess whether that effectiveness is being compromised by the reliance.\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 415,
+  "completion_tokens": 194,
+  "latency_ms": 2566.878399986308,
+  "cached": false
+ }
+}

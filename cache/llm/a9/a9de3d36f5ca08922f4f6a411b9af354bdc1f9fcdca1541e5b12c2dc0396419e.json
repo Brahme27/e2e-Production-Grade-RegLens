@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_temporal",
+ "response": {
+  "text": "{\"question\":\"As of 22 May 2023, what recourse does a complainant have if they are dissatisfied with the redressal provided through SCORES, and within what time frame must they exercise it?\",\"answer\":\"The complainant can request a one‑time review of the redressal decision within 15 days of the complaint’s closure on SCORES; if still unsatisfied, the matter is then escalated to the supervising official of the dealing officer of SEBI.\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 393,
+  "completion_tokens": 130,
+  "latency_ms": 4452.456099999836,
+  "cached": false
+ }
+}

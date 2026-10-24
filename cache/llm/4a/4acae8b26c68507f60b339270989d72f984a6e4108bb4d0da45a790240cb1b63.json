@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_lookup",
+ "response": {
+  "text": "{\"question\":\"What steps must a commercial bank take to publicise its grievance redressal mechanism and officer, and what recourse does a complainant have if the bank does not resolve a complaint within 30 days?\",\"answer\":\"The bank must set up grievance redressal machinery as per the 2025 RBI directions, widely publicise it through electronic and print media, and disclose the name and contact number of the designated grievance officer. It must also display the 30‑day response timeframe on its website, and if a complaint is rejected or not answered within 30 days, the complainant can approach the RBI’s Integrated Ombudsman Scheme, 2021.\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 498,
+  "completion_tokens": 169,
+  "latency_ms": 870.1209999853745,
+  "cached": false
+ }
+}

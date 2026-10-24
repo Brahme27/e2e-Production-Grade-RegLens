@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_temporal",
+ "response": {
+  "text": "{\"question\":\"As of 28 May 2023, to which types of activities does this Part apply for a CRR firm operating from a UK establishment under the PRA?\",\"answer\":\"It applies to regulated activities, principal dealing in investments (ignoring the exclusion in article 15 of the Regulated Activities Order), ancillary activities, ancillary services related to MiFID business, and unregulated activities in a prudential context, as well as any prudential‑context activities wherever carried out and activities of group members.\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 434,
+  "completion_tokens": 133,
+  "latency_ms": 4366.06010000105,
+  "cached": false
+ }
+}

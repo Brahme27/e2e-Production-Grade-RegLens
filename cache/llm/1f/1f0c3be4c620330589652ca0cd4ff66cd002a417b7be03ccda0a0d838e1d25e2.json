@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_lookup",
+ "response": {
+  "text": "{\"question\":\"Do the listed Fundamental Rules also apply when a bank engages in unregulated activities and must consider the activities of other group members?\",\"answer\":\"Yes, the specified Fundamental Rules apply to unregulated activities (with prudential context for Rules 5, 6 and 8) and must take into account any activity of other members of the firm’s group.\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 347,
+  "completion_tokens": 138,
+  "latency_ms": 3006.434899987653,
+  "cached": false
+ }
+}

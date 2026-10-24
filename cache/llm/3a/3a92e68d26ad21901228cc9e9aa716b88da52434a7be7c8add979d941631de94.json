@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_lookup",
+ "response": {
+  "text": "{\"question\":\"How does a firm decide the monitoring frequency and the type of data it must gather to assess retail customer outcomes?\",\"answer\":\"The firm must set the monitoring frequency and choose the information to collect based on its own type and role in the distribution chain, the nature of the product, and the target market.\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 307,
+  "completion_tokens": 125,
+  "latency_ms": 4164.1468000016175,
+  "cached": false
+ }
+}

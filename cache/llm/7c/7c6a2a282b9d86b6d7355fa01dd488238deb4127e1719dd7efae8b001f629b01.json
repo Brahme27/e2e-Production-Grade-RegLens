@@ -1,0 +1,12 @@
+{
+ "alias": "fast-small",
+ "purpose": "doc_summary",
+ "response": {
+  "text": "{\"summary\":\"The RBI Directions, 2025 set out comprehensive rules for commercial banks on managing risks in outsourcing, covering governance, risk management, service provider evaluation, and monitoring of outsourced financial and IT services, with specific provisions for group, offshore, and foreign banks. They apply to all scheduled commercial banks, including State Bank of India and foreign banks operating in India, but exclude non‑banking services such as courier, catering, and audit assignments.\"}",
+  "model": "openai/gpt-oss-20b",
+  "prompt_tokens": 1394,
+  "completion_tokens": 107,
+  "latency_ms": 11834.775499999523,
+  "cached": false
+ }
+}

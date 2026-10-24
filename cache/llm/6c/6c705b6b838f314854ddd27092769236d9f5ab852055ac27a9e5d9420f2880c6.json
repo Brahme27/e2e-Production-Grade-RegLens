@@ -1,0 +1,12 @@
+{
+ "alias": "fast-small",
+ "purpose": "doc_summary",
+ "response": {
+  "text": "{\"summary\":\"The PRA Rulebook – Fundamental Rules sets out eight core obligations for UK banks, covering all regulated and certain unregulated activities, requiring integrity, prudence, risk management, adequate resources, cooperation with regulators, and resolution planning.\"}",
+  "model": "openai/gpt-oss-20b",
+  "prompt_tokens": 798,
+  "completion_tokens": 64,
+  "latency_ms": 7031.179399986286,
+  "cached": false
+ }
+}

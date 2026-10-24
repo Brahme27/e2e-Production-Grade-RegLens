@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_comparison",
+ "response": {
+  "text": "{\"question\":\"How do SEBI's requirements for an outsourcing policy for intermediaries differ from the PRA's guidance for UK banks on sharing internal policies with third‑party providers?\",\"answer\":\"SEBI mandates that an outsourcing policy must define which activities can be outsourced, who can approve them, and include risk‑based limits such as concentration and overall outsourcing levels, ensuring the regulator can still supervise the intermediary. In contrast, the PRA focuses on the need for firms to share relevant internal policies—like outsourcing, ICT, and information security—with third‑party providers, while allowing redaction of confidential details, emphasizing transparency to help providers understand regulatory obligations without reducing the firm's own responsibility.\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 501,
+  "completion_tokens": 171,
+  "latency_ms": 5594.759800005704,
+  "cached": false
+ }
+}

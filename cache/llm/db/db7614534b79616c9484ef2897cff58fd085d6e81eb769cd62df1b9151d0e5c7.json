@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_lookup",
+ "response": {
+  "text": "{\"question\":\"What specific complaint metrics must a firm report for each reporting period under DISP 1 Annex 1R?\",\"answer\":\"The firm must report the total complaints received, total complaints closed, the number upheld during the period, the number outstanding at the period start, and the total redress paid for complaints in that period.\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 358,
+  "completion_tokens": 88,
+  "latency_ms": 3518.553100002464,
+  "cached": false
+ }
+}

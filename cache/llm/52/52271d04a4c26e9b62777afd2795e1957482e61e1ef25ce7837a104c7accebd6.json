@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_comparison",
+ "response": {
+  "text": "{\"question\":\"How do the RBI's service provider evaluation criteria for NBFC IT outsourcing compare with the FCA's general outsourcing requirements for firms relying on third‑party providers?\",\"answer\":\"The RBI requires NBFCs to assess service providers on specific technical and data‑security factors such as infrastructure stability, disaster recovery, data segregation, cyber‑risk assessment and contractual controls for data protection. In contrast, the FCA focuses on broader operational risk, requiring firms to take reasonable steps to avoid undue risk and ensure outsourcing does not materially impair internal controls or the regulator’s ability to monitor compliance. Both regulators emphasize risk mitigation, but RBI provides detailed technical checkpoints while the FCA stresses overall control and monitoring integrity.\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 632,
+  "completion_tokens": 173,
+  "latency_ms": 4633.362799999304,
+  "cached": false
+ }
+}

@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_comparison",
+ "response": {
+  "text": "{\"question\":\"How do the RBI's requirements for outsourcing agreements in commercial banks compare with the FCA's conditions for outsourcing critical or important operational functions by firms?\",\"answer\":\"The RBI mandates that banks must have written outsourcing agreements vetted by legal counsel, clearly defining risks, control mechanisms, and the legal relationship between parties, ensuring flexibility to retain control and meet regulatory obligations. In contrast, the FCA requires that firms outsourcing critical functions remain fully responsible for all regulatory obligations, prohibiting delegation of senior management responsibility, preserving client relationship obligations, and ensuring that authorisation conditions are not undermined. Both regulators emphasize retaining control and responsibility, but the RBI focuses on agreement specifics and risk mitigation, while the FCA stresses overall accountability and unchanged regulatory conditions.\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 525,
+  "completion_tokens": 181,
+  "latency_ms": 5188.458999997238,
+  "cached": false
+ }
+}

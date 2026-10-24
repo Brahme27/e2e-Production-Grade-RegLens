@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_lookup",
+ "response": {
+  "text": "{\"question\":\"What policies and capabilities must a regulated entity establish to satisfy SEBI's critical severity requirements for incident response?\",\"answer\":\"The entity must implement an effective incident response policy, a response plan or strategy, communication procedures, and proper documentation, along with secure systems, networks, and applications to prevent incidents.\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 312,
+  "completion_tokens": 123,
+  "latency_ms": 3837.0262999960687,
+  "cached": false
+ }
+}

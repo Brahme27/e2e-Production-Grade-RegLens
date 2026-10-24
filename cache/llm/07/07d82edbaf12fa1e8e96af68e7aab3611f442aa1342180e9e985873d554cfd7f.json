@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_lookup",
+ "response": {
+  "text": "{\"question\":\"How are actions taken under the Principles for Businesses module treated after this Part comes into force?\",\"answer\":\"They are considered to have the same effect as if they were done under a substantially similar rule in this Part, even though they were originally done under the Principles for Businesses rules.\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 305,
+  "completion_tokens": 126,
+  "latency_ms": 3525.487700011581,
+  "cached": false
+ }
+}

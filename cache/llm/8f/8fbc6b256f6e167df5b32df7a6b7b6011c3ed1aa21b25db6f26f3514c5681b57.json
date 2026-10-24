@@ -1,0 +1,12 @@
+{
+ "alias": "fast-small",
+ "purpose": "doc_summary",
+ "response": {
+  "text": "{\"summary\":\"The PRA supervisory statement SS1/23 sets out model risk management expectations for UK banks, building societies and PRA‑designated investment firms that use internal models for regulatory capital. It requires these firms to implement a robust MRM framework covering the entire model lifecycle, conduct self‑assessments, and prepare remediation plans in line with five high‑level principles.\"}",
+  "model": "openai/gpt-oss-20b",
+  "prompt_tokens": 1153,
+  "completion_tokens": 91,
+  "latency_ms": 9930.60580000747,
+  "cached": false
+ }
+}

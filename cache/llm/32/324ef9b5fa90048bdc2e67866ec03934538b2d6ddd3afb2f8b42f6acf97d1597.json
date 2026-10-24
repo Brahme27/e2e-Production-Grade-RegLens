@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_lookup",
+ "response": {
+  "text": "{\"question\":\"What must a bank do before appointing, transferring, or removing its Chief Compliance Officer according to RBI requirements?\",\"answer\":\"The bank must give prior notice to the RBI's Senior Supervisory Manager, include a detailed candidate profile, a fit‑and‑proper certification from the MD & CEO, and explain the reasons for any change.\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 333,
+  "completion_tokens": 99,
+  "latency_ms": 675.6840000161901,
+  "cached": false
+ }
+}

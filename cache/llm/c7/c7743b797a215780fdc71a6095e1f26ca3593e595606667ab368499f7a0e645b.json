@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_lookup",
+ "response": {
+  "text": "{\"question\":\"What are the submission and verification requirements for client documents, mobile numbers, and email addresses under SEBI's digital KYC rules?\",\"answer\":\"Non‑Aadhaar documents must be submitted through Digiocker using an electronic/digital signature (including Aadhaar e‑Sign). The client’s mobile number should preferably be the one linked to Aadhaar, and both mobile and email must be verified via OTP or another verifiable method.\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 344,
+  "completion_tokens": 175,
+  "latency_ms": 3585.316699987743,
+  "cached": false
+ }
+}

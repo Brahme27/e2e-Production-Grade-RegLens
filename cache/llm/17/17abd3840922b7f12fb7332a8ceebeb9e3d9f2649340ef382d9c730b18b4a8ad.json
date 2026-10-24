@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_lookup",
+ "response": {
+  "text": "{\"question\":\"Can an investor still use the Online Dispute Resolution mechanism or other civil remedies while their complaint is pending on SCORES, and what happens to the SCORES complaint if they do?\",\"answer\":\"Yes, an investor may pursue ODR or other civil remedies at any time; if they do so while the complaint is pending on SCORES, the SCORES complaint will be marked as disposed.\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 317,
+  "completion_tokens": 104,
+  "latency_ms": 3677.745599998161,
+  "cached": false
+ }
+}

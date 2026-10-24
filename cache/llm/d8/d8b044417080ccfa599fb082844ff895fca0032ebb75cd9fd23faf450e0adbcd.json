@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_comparison",
+ "response": {
+  "text": "{\"question\":\"How do SEBI's requirements for a comprehensive Cybersecurity and Cyber Resilience policy (including justification for any deviations) compare with the PRA's requirement for a proportionate minimum standard of operational resilience to prepare for disruptions?\",\"answer\":\"SEBI mandates that regulated entities create a detailed Cybersecurity and Cyber Resilience policy covering the CSCRF and explicitly document reasons for any deviations. In contrast, the PRA focuses on a broader operational resilience standard, requiring firms and their groups to maintain a proportionate minimum level of resilience to anticipate and invest against disruptions that could affect safety, soundness, and financial stability. While both aim to manage risk, SEBI is specific to cyber‑risk policy documentation, whereas the PRA emphasizes overall resilience to systemic disruptions.\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 412,
+  "completion_tokens": 184,
+  "latency_ms": 4862.256799999159,
+  "cached": false
+ }
+}

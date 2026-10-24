@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_lookup",
+ "response": {
+  "text": "{\"question\":\"What must a bank do before sharing draft amendments to its Articles of Association with shareholders?\",\"answer\":\"It must first obtain regulatory approval under Section 35B of the Banking Regulation Act via the RBI's Pravaah Portal before circulating drafts or calling a shareholders' meeting.\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 329,
+  "completion_tokens": 86,
+  "latency_ms": 577.631799998926,
+  "cached": false
+ }
+}

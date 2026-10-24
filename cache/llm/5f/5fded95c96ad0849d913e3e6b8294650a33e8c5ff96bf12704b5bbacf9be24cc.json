@@ -1,0 +1,12 @@
+{
+ "alias": "fast-small",
+ "purpose": "doc_summary",
+ "response": {
+  "text": "{\"summary\":\"The CSCRF provides standards, guidelines, and reporting formats for cybersecurity and cyber resilience for all SEBI‑regulated entities, including stock brokers, depository participants, mutual funds, asset managers, KYC agencies, registrars, portfolio managers, custodians, depositories, and other market participants. It applies to every SEBI‑regulated entity (tagged all_sebi_entities) and supersedes prior SEBI cybersecurity circulars, requiring graded compliance based on operational thresholds.\"}",
+  "model": "openai/gpt-oss-20b",
+  "prompt_tokens": 1560,
+  "completion_tokens": 117,
+  "latency_ms": 13352.707899990492,
+  "cached": false
+ }
+}

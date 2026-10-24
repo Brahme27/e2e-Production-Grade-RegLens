@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_temporal",
+ "response": {
+  "text": "{\"question\":\"As of 05 January 2025, what does the RBI require commercial banks and NBFCs to do under the Master Direction for Internal Ombudsman for Regulated Entities?\",\"answer\":\"The RBI directs that all regulated entities listed in Clause 4 of the Master Direction must comply with the direction immediately, as it is deemed necessary and expedient in the public interest.\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 447,
+  "completion_tokens": 117,
+  "latency_ms": 3420.9967000060715,
+  "cached": false
+ }
+}

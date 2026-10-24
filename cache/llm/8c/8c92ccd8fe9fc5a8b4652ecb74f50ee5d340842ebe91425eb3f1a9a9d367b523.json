@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_lookup",
+ "response": {
+  "text": "{\"question\":\"What must a commercial bank establish to maintain ongoing monitoring of cyber threats according to RBI guidelines?\",\"answer\":\"The bank must set up a Cyber Security Operations Centre (CSOC) to ensure continuous surveillance and stay updated on emerging cyber threats.\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 310,
+  "completion_tokens": 69,
+  "latency_ms": 3836.2900000065565,
+  "cached": false
+ }
+}

@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_lookup",
+ "response": {
+  "text": "{\"question\":\"What must be present during the discharge of locker contents to ensure no other lockers are affected and only the locker hirer sees the items?\",\"answer\":\"The discharge must be carried out in the presence of the customer and an authorised bank official, ensuring adjacent lockers are unaffected and the contents are not shown to anyone other than the locker hirer.\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 358,
+  "completion_tokens": 96,
+  "latency_ms": 622.2020999994129,
+  "cached": false
+ }
+}

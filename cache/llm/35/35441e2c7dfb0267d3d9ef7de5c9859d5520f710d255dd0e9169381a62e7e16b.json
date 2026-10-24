@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_lookup",
+ "response": {
+  "text": "{\"question\":\"What are the eligibility criteria regarding age, employment history, and prior experience for someone to be appointed as Deputy Internal Ombudsman at a commercial bank?\",\"answer\":\"The Deputy Internal Ombudsman must have at least five years of relevant experience, cannot be over 70 years old during the tenure, must not have been or be currently employed by the bank or its related entities, and cannot hold a position in more than one regulated entity at the same time.\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 448,
+  "completion_tokens": 127,
+  "latency_ms": 952.7114999946207,
+  "cached": false
+ }
+}

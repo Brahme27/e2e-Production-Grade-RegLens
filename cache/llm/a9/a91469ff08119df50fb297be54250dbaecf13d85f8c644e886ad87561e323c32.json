@@ -1,0 +1,12 @@
+{
+ "alias": "fast-small",
+ "purpose": "doc_summary",
+ "response": {
+  "text": "{\"summary\":\"The PRA Supervisory Statement SS1/21 sets expectations for UK banks, building societies, PRA‑designated investment firms, CRR consolidation entities, UK Solvency II insurers, the Society of Lloyd’s and its managing agents to establish impact tolerances for their important business services to enhance operational resilience. It requires these firms to identify, measure, and test the resilience of key services, ensuring they can prevent, adapt to, respond to, recover from, and learn from operational disruptions.\"}",
+  "model": "openai/gpt-oss-20b",
+  "prompt_tokens": 1112,
+  "completion_tokens": 121,
+  "latency_ms": 9601.688399998238,
+  "cached": false
+ }
+}

@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_temporal",
+ "response": {
+  "text": "{\"question\":\"As of 03 August 2024, what must a commercial bank or NBFC consider when evaluating the adoption of cloud computing services according to RBI guidance?\",\"answer\":\"They must assess their business strategy, goals, current IT application footprint, and associated costs, and base the decision on a business technology risk assessment that determines which workloads—ranging from non‑critical to critical applications—can be moved to the cloud.\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 372,
+  "completion_tokens": 112,
+  "latency_ms": 3617.8307999798562,
+  "cached": false
+ }
+}

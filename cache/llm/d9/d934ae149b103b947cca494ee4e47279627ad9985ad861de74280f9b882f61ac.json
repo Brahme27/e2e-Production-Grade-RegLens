@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_temporal",
+ "response": {
+  "text": "{\"question\":\"As of 01 July 2025, which specific PRA rules and external guidelines are referenced in the Notification Part for UK banks?\",\"answer\":\"The paragraph lists PRA Rule 2.3(1)(e) of the Insurance‑Notification Part and references multiple other PRA rules (e.g., 2.2, 3.3, 3.2, 3.4, 2.5, 4.1) as well as EIOPA and EBA guidelines, but does not provide substantive details beyond the citations.\",\"answerable\":false}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 590,
+  "completion_tokens": 162,
+  "latency_ms": 4683.451800025068,
+  "cached": false
+ }
+}

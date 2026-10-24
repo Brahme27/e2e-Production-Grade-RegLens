@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_comparison",
+ "response": {
+  "text": "{\"question\":\"How do the FCA's and PRA's requirements for firms outsourcing critical or important operational functions compare, and what similarities do they share?\",\"answer\":\"Both the FCA (in SYSC 8.1) and the PRA (in Section 2) require that a firm remains fully responsible for meeting all regulatory obligations when outsourcing critical or important functions. They each list four identical conditions: senior personnel must not delegate responsibility, client relationships must not be altered, authorisation conditions must not be undermined, and existing authorisation conditions must not be removed or modified.\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 512,
+  "completion_tokens": 150,
+  "latency_ms": 5104.528500000015,
+  "cached": false
+ }
+}

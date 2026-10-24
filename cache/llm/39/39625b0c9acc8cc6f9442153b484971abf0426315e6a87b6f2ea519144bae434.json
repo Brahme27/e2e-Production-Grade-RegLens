@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_temporal",
+ "response": {
+  "text": "{\"question\":\"As of 19 March 2025, what are the required focus areas that a commercial bank or NBFC must include in its IT Governance Framework according to the RBI guidelines?\",\"answer\":\"The framework must cover strategic alignment, risk management, resource management, performance management, and Business Continuity/Disaster Recovery Management.\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 450,
+  "completion_tokens": 98,
+  "latency_ms": 4561.34009998641,
+  "cached": false
+ }
+}

@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_lookup",
+ "response": {
+  "text": "{\"question\":\"How should dual‑regulated firms assess and act on scenarios that could cause them to breach PRA impact tolerances?\",\"answer\":\"They must determine if the scenarios that could lead to exceeding PRA and FCA tolerances differ, regardless of alignment, and take appropriate steps to stay within PRA tolerances.\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 310,
+  "completion_tokens": 82,
+  "latency_ms": 3527.223100012634,
+  "cached": false
+ }
+}

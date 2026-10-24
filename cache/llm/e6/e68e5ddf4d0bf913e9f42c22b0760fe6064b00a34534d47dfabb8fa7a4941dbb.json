@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_lookup",
+ "response": {
+  "text": "{\"question\":\"What steps must an NBFC take to inform customers when an outsourcing agreement is terminated?\",\"answer\":\"The NBFC must publicly announce the termination by displaying a notice prominently in its branch, posting the information on its website, and directly informing customers to prevent them from continuing to deal with the service provider.\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 325,
+  "completion_tokens": 85,
+  "latency_ms": 1034.7903000074439,
+  "cached": false
+ }
+}

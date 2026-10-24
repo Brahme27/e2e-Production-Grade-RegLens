@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_comparison",
+ "response": {
+  "text": "{\"question\":\"How do the RBI's outsourcing due‑diligence and oversight requirements for commercial banks compare with SEBI's contract‑specific outsourcing principle for intermediaries?\",\"answer\":\"The RBI mandates that banks consider all relevant laws, ensure outsourcing does not hinder RBI supervision, preserve internal controls, and require service providers to meet the bank’s own standards of care, including ownership restrictions. In contrast, SEBI focuses on the need for a clearly defined, legally binding written contract tailored to the materiality of the outsourced activity, without explicitly addressing supervisory interference or internal control standards.\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 573,
+  "completion_tokens": 148,
+  "latency_ms": 5041.973200015491,
+  "cached": false
+ }
+}

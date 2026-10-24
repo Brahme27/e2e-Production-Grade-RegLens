@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_temporal",
+ "response": {
+  "text": "{\"question\":\"As of 28 September 2021, what must a PRA‑regulated UK bank identify and assess regarding a group business service that, if disrupted, could threaten the safety and soundness of the UK group or UK financial stability?\",\"answer\":\"The bank must identify the service as an important group business service and assess whether it could stay within the impact tolerance during a severe but plausible disruption.\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 466,
+  "completion_tokens": 112,
+  "latency_ms": 4797.364500002004,
+  "cached": false
+ }
+}

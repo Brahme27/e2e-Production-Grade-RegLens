@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "golden_temporal",
+ "response": {
+  "text": "{\"question\":\"As of 28 May 2022, how does the PRA define \\\"control\\\" for UK banks?\",\"answer\":\"The PRA defines \\\"control\\\" as the meaning given in Article 1 of the Seventh Council Directive 83/349/EEC (The Seventh Company Law Directive).\",\"answerable\":true}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 449,
+  "completion_tokens": 97,
+  "latency_ms": 4474.39350001514,
+  "cached": false
+ }
+}

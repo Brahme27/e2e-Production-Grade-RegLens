@@ -1,0 +1,12 @@
+{
+ "alias": "fast-small",
+ "purpose": "doc_summary",
+ "response": {
+  "text": "{\"summary\":\"The circular establishes the SEBI Complaints Redress System (SCORES) as a mandatory platform for investors to file grievances against listed companies, registered intermediaries, and market infrastructure institutions, requiring initial redress attempts within 30 days before escalation. It applies to all SEBI‑registered entities, including listed companies, stock brokers, depositories, mutual funds, AMFI, recognized stock exchanges, and investor associations.\"}",
+  "model": "openai/gpt-oss-20b",
+  "prompt_tokens": 1260,
+  "completion_tokens": 106,
+  "latency_ms": 10157.024999993155,
+  "cached": false
+ }
+}
