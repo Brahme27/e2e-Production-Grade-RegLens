@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "gap_judge",
+ "response": {
+  "text": "{\"status\":\"covered\",\"rationale\":\"The due‑diligence clause explicitly requires assessment of the provider's ability, capacity, resources, organisational structure and required authorisations before a material outsourcing arrangement, meeting the obligation's requirements.\",\"policy_refs\":[\"NB-POL-OPR-012 §3.1\"],\"confidence\":0.97}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 685,
+  "completion_tokens": 134,
+  "latency_ms": 63227.9884080001,
+  "cached": false
+ }
+}

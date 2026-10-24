@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "gap_judge",
+ "response": {
+  "text": "{\"status\":\"covered\",\"rationale\":\"The policy explicitly states that outsourcing never transfers the Bank's regulatory responsibilities and that senior managers cannot delegate accountability, ensuring client obligations remain unchanged.\",\"policy_refs\":[\"NB-POL-OPR-012 §2.1\"],\"confidence\":0.99}",
+  "model": "openai/gpt-oss-20b",
+  "prompt_tokens": 676,
+  "completion_tokens": 117,
+  "latency_ms": 11231.893717000048,
+  "cached": false
+ }
+}

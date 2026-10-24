@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "gap_judge",
+ "response": {
+  "text": "{\"status\":\"covered\",\"rationale\":\"The policy mandates proportionate due diligence, executive approval, ongoing oversight, and remediation/termination procedures for material arrangements, satisfying the obligation to exercise due skill, care and diligence in all phases.\",\"policy_refs\":[\"NB-POL-OPR-012 §3.1\",\"NB-POL-OPR-012 §3.2\",\"NB-POL-OPR-012 §2.3\",\"NB-POL-OPR-012 §5.2\"],\"confidence\":0.95}",
+  "model": "openai/gpt-oss-20b",
+  "prompt_tokens": 695,
+  "completion_tokens": 168,
+  "latency_ms": 12781.206225000005,
+  "cached": false
+ }
+}

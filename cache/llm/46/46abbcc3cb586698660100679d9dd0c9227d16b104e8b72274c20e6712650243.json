@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "gap_judge",
+ "response": {
+  "text": "{\"status\":\"covered\",\"rationale\":\"The policy requires annual review of each material arrangement against agreed service levels (5.1) and mandates escalation and remediation for failures (5.2), satisfying the obligation to assess performance and review services on an ongoing basis.\",\"policy_refs\":[\"NB-POL-OPR-012 §5.1\",\"NB-POL-OPR-012 §5.2\"],\"confidence\":0.95}",
+  "model": "openai/gpt-oss-20b",
+  "prompt_tokens": 683,
+  "completion_tokens": 158,
+  "latency_ms": 12377.724442000044,
+  "cached": false
+ }
+}

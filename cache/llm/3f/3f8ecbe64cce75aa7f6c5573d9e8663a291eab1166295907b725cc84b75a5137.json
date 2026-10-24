@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "gap_judge",
+ "response": {
+  "text": "{\"status\":\"covered\",\"rationale\":\"The policy clauses collectively require ongoing oversight, due diligence, accountability, audit rights, and sub‑outsourcing controls that ensure the provider performs services effectively and in compliance with applicable law and regulatory requirements.\",\"policy_refs\":[\"NB-POL-OPR-012 §5.2\",\"NB-POL-OPR-012 §3.1\",\"NB-POL-OPR-012 §2.1\",\"NB-POL-OPR-012 §4.2\",\"NB-POL-OPR-012 §4.3\"],\"confidence\":0.95}",
+  "model": "openai/gpt-oss-20b",
+  "prompt_tokens": 663,
+  "completion_tokens": 183,
+  "latency_ms": 13982.641427999852,
+  "cached": false
+ }
+}

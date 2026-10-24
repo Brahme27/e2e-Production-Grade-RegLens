@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "gap_judge",
+ "response": {
+  "text": "{\"status\":\"not_covered\",\"rationale\":\"None of the cited clauses explicitly state that the firm must ensure that none of the conditions of its authorisation are removed or modified by outsourcing.\",\"policy_refs\":[],\"confidence\":0.9}",
+  "model": "openai/gpt-oss-20b",
+  "prompt_tokens": 691,
+  "completion_tokens": 78,
+  "latency_ms": 13028.899191000164,
+  "cached": false
+ }
+}

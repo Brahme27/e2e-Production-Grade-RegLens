@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "obligations",
+ "response": {
+  "text": "{\n  \"obligations\": [\n    {\n      \"text\": \"Ensure that the rights and obligations of the firm and the service provider are clearly allocated and set out in a written agreement.\",\n      \"actor\": \"Firm\",\n      \"action\": \"Ensure clear allocation of rights and obligations in a written agreement\",\n      \"condition\": \"Outsourcing critical or important operational functions\",\n      \"deadline\": \"\",\n      \"source_ref\": \"2.1E(1)\",\n      \"severity\": \"high\"\n    },\n    {\n      \"text\": \"Preserve instruction and termination rights, rights of information, and the right to inspections and access to books and premises.\",\n      \"actor\": \"Firm\",\n      \"action\": \"Preserve specific rights (instruction, termination, information, inspection, access)\",\n      \"condition\": \"Outsourcing critical or important operational functions\",\n      \"deadline\": \"\",\n      \"source_ref\": \"2.1E(2)\",\n      \"severity\": \"high\"\n    },\n    {\n      \"text\": \"Ensure that the written agreement with the service provider only permits sub-outsourcing with the prior written consent of the firm.\",\n      \"actor\": \"Firm\",\n      \"action\": \"Ensure sub-outsourcing requires prior written consent\",\n      \"condition\": \"Outsourcing critical or important operational functions\",\n      \"deadline\": \"\",\n      \"source_ref\": \"2.1E(3)\",\n      \"severity\": \"high\"\n    },\n    {\n      \"text\": \"Be able to make available to the PRA all information necessary to enable the PRA to supervise the compliance of the performance of the outsourced function, service or activity with the requirements of the regulatory system.\",\n      \"actor\": \"Firm\",\n      \"action\": \"Make available all necessary information to the PRA\",\n      \"condition\": \"Upon request by the PRA\",\n      \"deadline\": \"\",\n      \"source_ref\": \"2.1G\",\n      \"severity\": \"high\"\n    }\n  ]\n}",
+  "model": "qwen/qwen3.8-27b",
+  "prompt_tokens": 468,
+  "completion_tokens": 452,
+  "latency_ms": 7540.330936000146,
+  "cached": false
+ }
+}

@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "answer",
+ "response": {
+  "text": "Under the RBI Directions for Commercial Banks, the Board (or a delegated Committee) must approve a framework to evaluate the risks and materiality of all existing and prospective outsourcing arrangements, along with the applicable policies [6]. The Board is specifically responsible for deciding on business activities of a material nature to be outsourced and approving such arrangements [6]. Additionally, the Board must approve a comprehensive outsourcing policy that incorporates criteria for selection, parameters for defining material outsourcing, delegation of authority, and monitoring systems [1][5].",
+  "model": "reasoning-large",
+  "prompt_tokens": 0,
+  "completion_tokens": 0,
+  "latency_ms": 8056.609118000097,
+  "cached": false
+ }
+}

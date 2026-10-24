@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "gap_judge",
+ "response": {
+  "text": "{\"status\":\"partially_covered\",\"rationale\":\"The policy includes an exit plan (NB-POL-OPR-012 §6.1) that addresses continuity of service during termination, but it does not explicitly require maintenance of service quality during the transition period.\",\"policy_refs\":[\"NB-POL-OPR-012 §6.1\"],\"confidence\":0.8}",
+  "model": "openai/gpt-oss-20b",
+  "prompt_tokens": 713,
+  "completion_tokens": 147,
+  "latency_ms": 11467.543305999925,
+  "cached": false
+ }
+}

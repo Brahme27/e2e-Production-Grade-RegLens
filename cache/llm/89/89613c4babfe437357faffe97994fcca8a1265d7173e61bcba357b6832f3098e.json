@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "gap_judge",
+ "response": {
+  "text": "{\"status\":\"not_covered\",\"rationale\":\"None of the cited clauses explicitly require the firm to establish, implement and maintain a contingency plan for disaster recovery and periodic testing of backup facilities for outsourced functions.\",\"policy_refs\":[],\"confidence\":0.9}",
+  "model": "openai/gpt-oss-20b",
+  "prompt_tokens": 712,
+  "completion_tokens": 130,
+  "latency_ms": 11608.525766999946,
+  "cached": false
+ }
+}

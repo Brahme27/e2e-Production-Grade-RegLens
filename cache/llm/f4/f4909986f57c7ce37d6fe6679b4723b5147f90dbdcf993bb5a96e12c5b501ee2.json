@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "gap_judge",
+ "response": {
+  "text": "{\"status\":\"covered\",\"rationale\":\"The policy mandates board accountability, ongoing oversight, escalation procedures, due diligence, and contractual requirements that collectively ensure the service provider properly oversees outsourced functions and manages associated risks.\",\"policy_refs\":[\"NB-POL-OPR-012 §2.1\",\"NB-POL-OPR-012 §5.2\",\"NB-POL-OPR-012 §3.1\",\"NB-POL-OPR-012 §4.3\"],\"confidence\":0.95}",
+  "model": "openai/gpt-oss-20b",
+  "prompt_tokens": 685,
+  "completion_tokens": 175,
+  "latency_ms": 11894.05845400006,
+  "cached": false
+ }
+}

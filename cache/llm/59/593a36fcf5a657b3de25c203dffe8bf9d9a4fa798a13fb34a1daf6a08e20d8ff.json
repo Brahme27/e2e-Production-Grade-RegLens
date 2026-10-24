@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "gap_judge",
+ "response": {
+  "text": "{\"status\":\"covered\",\"rationale\":\"The policy requires escalation to the Executive Risk Committee and a remediation plan (or termination) when a provider fails to meet service levels or regulatory requirements, which satisfies the obligation to take appropriate action when effectiveness or compliance is in doubt.\",\"policy_refs\":[\"NB-POL-OPR-012 §5.2\"],\"confidence\":0.95}",
+  "model": "openai/gpt-oss-20b",
+  "prompt_tokens": 699,
+  "completion_tokens": 143,
+  "latency_ms": 12010.060973999998,
+  "cached": false
+ }
+}

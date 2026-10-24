@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "gap_judge",
+ "response": {
+  "text": "{\n  \"status\": \"partially_covered\",\n  \"rationale\": \"The policy mentions termination as a potential remediation step for service level failures, but it does not explicitly require the ability to terminate with immediate effect in the interests of clients or guarantee that termination occurs without detriment to service continuity and quality.\",\n  \"policy_refs\": [\n    \"NB-POL-OPR-012 §5.2\"\n  ],\n  \"confidence\": 0.9\n}",
+  "model": "qwen/qwen3.8-27b",
+  "prompt_tokens": 682,
+  "completion_tokens": 105,
+  "latency_ms": 17683.077794999917,
+  "cached": false
+ }
+}

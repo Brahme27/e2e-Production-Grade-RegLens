@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "answer",
+ "response": {
+  "text": "- **Product governance** – firms must design, market, sell and support products so they meet retail customers’ objectives and do not frustrate their interests [3][7]  \n- **Price and value** – products must offer fair value and be priced appropriately for retail customers [2]  \n- **Consumer understanding** – firms must provide clear information and support when needed to enable informed decisions [2][7]  \n- **Support and empowerment** – firms must enable customers to pursue their financial objectives, switch or exit products without unreasonable barriers, and take account of behavioural biases and vulnerability [6][7]  \n- **Cross‑cutting obligations** – act in good faith, avoid foreseeable harm, embed the Duty in strategy, governance, risk controls and internal audit, and monitor customer outcomes [1][2][4][8]",
+  "model": "reasoning-large",
+  "prompt_tokens": 0,
+  "completion_tokens": 0,
+  "latency_ms": 2534.911347000161,
+  "cached": false
+ }
+}

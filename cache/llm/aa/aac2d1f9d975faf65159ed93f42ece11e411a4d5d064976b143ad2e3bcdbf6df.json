@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "gap_judge",
+ "response": {
+  "text": "{\"status\":\"covered\",\"rationale\":\"The policy clauses establish accountability, ongoing oversight, annual reviews, and due diligence, ensuring effective oversight and risk management of outsourced functions, meeting the obligation’s requirements.\",\"policy_refs\":[\"NB-POL-OPR-012 §2.1\",\"NB-POL-OPR-012 §5.1\",\"NB-POL-OPR-012 §5.2\",\"NB-POL-OPR-012 §3.1\"],\"confidence\":0.95}",
+  "model": "openai/gpt-oss-20b",
+  "prompt_tokens": 693,
+  "completion_tokens": 166,
+  "latency_ms": 14046.923863999837,
+  "cached": false
+ }
+}

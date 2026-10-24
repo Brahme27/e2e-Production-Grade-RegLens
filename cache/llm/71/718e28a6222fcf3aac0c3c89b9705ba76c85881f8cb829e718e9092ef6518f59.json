@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "gap_judge",
+ "response": {
+  "text": "{\"status\":\"covered\",\"rationale\":\"Clause NB-POL-OPR-012 §4.1 explicitly requires confidentiality terms in the written agreement, satisfying the obligation to protect confidential information.\",\"policy_refs\":[\"NB-POL-OPR-012 §4.1\"],\"confidence\":0.95}",
+  "model": "openai/gpt-oss-20b",
+  "prompt_tokens": 654,
+  "completion_tokens": 118,
+  "latency_ms": 13473.255773999881,
+  "cached": false
+ }
+}

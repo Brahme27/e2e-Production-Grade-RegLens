@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "gap_judge",
+ "response": {
+  "text": "{\"status\":\"not_covered\",\"rationale\":\"No policy clause requires the service provider to disclose any development that may materially impact the firm's ability to carry out outsourced functions; the closest clause (4.3) only addresses material sub‑outsourcing, not general developments.\",\"policy_refs\":[],\"confidence\":0.95}",
+  "model": "openai/gpt-oss-20b",
+  "prompt_tokens": 688,
+  "completion_tokens": 126,
+  "latency_ms": 100437.42394799984,
+  "cached": false
+ }
+}

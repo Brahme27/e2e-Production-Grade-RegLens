@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "gap_judge",
+ "response": {
+  "text": "{\"status\":\"covered\",\"rationale\":\"Clause NB-POL-OPR-012 §2.1 explicitly states that senior managers may not delegate accountability for outsourced functions, satisfying the obligation to prevent delegation of responsibility.\",\"policy_refs\":[\"NB-POL-OPR-012 §2.1\"],\"confidence\":0.99}",
+  "model": "openai/gpt-oss-20b",
+  "prompt_tokens": 680,
+  "completion_tokens": 144,
+  "latency_ms": 12520.426435000218,
+  "cached": false
+ }
+}

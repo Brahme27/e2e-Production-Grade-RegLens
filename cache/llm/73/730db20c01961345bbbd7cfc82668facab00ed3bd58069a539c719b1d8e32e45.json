@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "gap_judge",
+ "response": {
+  "text": "{\"status\":\"not_covered\",\"rationale\":\"None of the cited policy clauses address cooperation with the PRA or other competent authorities, so the obligation is not met.\",\"policy_refs\":[],\"confidence\":0.95}",
+  "model": "openai/gpt-oss-20b",
+  "prompt_tokens": 660,
+  "completion_tokens": 74,
+  "latency_ms": 11130.56845999995,
+  "cached": false
+ }
+}

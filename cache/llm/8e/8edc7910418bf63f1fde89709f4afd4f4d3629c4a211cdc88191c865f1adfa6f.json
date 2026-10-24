@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "gap_judge",
+ "response": {
+  "text": "{\"status\":\"not_covered\",\"rationale\":\"None of the cited policy clauses require the firm to provide the PRA with all information necessary for supervisory purposes; the clauses focus on accountability, due diligence, and ongoing oversight but do not address information disclosure to regulators.\",\"policy_refs\":[],\"confidence\":0.95}",
+  "model": "openai/gpt-oss-20b",
+  "prompt_tokens": 695,
+  "completion_tokens": 98,
+  "latency_ms": 10989.247678999845,
+  "cached": false
+ }
+}

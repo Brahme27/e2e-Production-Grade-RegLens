@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "gap_judge",
+ "response": {
+  "text": "{\"status\":\"covered\",\"rationale\":\"The policy requires due diligence, accountability, ongoing oversight, and remediation for material outsourcing arrangements, ensuring that outsourcing does not undermine regulatory compliance and authorisation conditions.\",\"policy_refs\":[\"NB-POL-OPR-012 §3.1\",\"NB-POL-OPR-012 §2.3\",\"NB-POL-OPR-012 §5.1\",\"NB-POL-OPR-012 §5.2\"],\"confidence\":0.95}",
+  "model": "openai/gpt-oss-20b",
+  "prompt_tokens": 695,
+  "completion_tokens": 160,
+  "latency_ms": 11329.116010999996,
+  "cached": false
+ }
+}

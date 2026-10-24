@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "gap_judge",
+ "response": {
+  "text": "{\"status\":\"covered\",\"rationale\":\"The policy clause grants the firm, its auditors and regulators (including the PRA) rights of audit and access to the provider’s books, records and relevant premises, satisfying the obligation for effective access.\",\"policy_refs\":[\"NB-POL-OPR-012 §4.2\"],\"confidence\":0.95}",
+  "model": "openai/gpt-oss-20b",
+  "prompt_tokens": 663,
+  "completion_tokens": 188,
+  "latency_ms": 11370.441890000166,
+  "cached": false
+ }
+}
