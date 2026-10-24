@@ -61,6 +61,13 @@ def parse_fca_section(content: bytes) -> list[Paragraph]:
     return paragraphs
 
 
+def pra_version_dates(content: bytes, part: str) -> list[date]:
+    """Every version date the page links to: /pra-rules/<part>/<dd-mm-yyyy>."""
+    pattern = re.compile(rf"/pra-rules/{re.escape(part)}/(\d{{2}}-\d{{2}}-\d{{4}})")
+    found = {parse_day_first(m) for m in pattern.findall(content.decode("utf-8", "replace"))}
+    return sorted(d for d in found if d is not None)
+
+
 def parse_pra_part(content: bytes) -> tuple[str, list[Paragraph]]:
     """A PRA Rulebook part page at a point in time -> (part title, rules)."""
     tree = parse_html(content)

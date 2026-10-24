@@ -27,6 +27,8 @@ class Settings(BaseSettings):
     artifacts_dir: Path = Field(default=PROJECT_ROOT / "artifacts")
     configs_dir: Path = Field(default=PROJECT_ROOT / "configs")
     llm_config_path: Path = Field(default=PROJECT_ROOT / "configs" / "litellm.yaml")
+    # every LLM answer is cached here (committed, so evals and CI replay without a key)
+    llm_cache_dir: Path = Field(default=PROJECT_ROOT / "cache" / "llm")
 
     # storage: local files by default, real services in docker compose / cloud
     database_url: str | None = None  # None -> SQLite file under artifacts/
@@ -51,6 +53,14 @@ class Settings(BaseSettings):
     langfuse_public_key: SecretStr | None = None
     langfuse_secret_key: SecretStr | None = None
     langfuse_host: str = "https://cloud.langfuse.com"
+
+    @property
+    def evals_dir(self) -> Path:
+        return PROJECT_ROOT / "evals"
+
+    @property
+    def reports_dir(self) -> Path:
+        return self.artifacts_dir / "reports"
 
     @property
     def raw_dir(self) -> Path:

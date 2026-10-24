@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "supersession",
+ "response": {
+  "text": "{\"repealed\":[\"rbi-md-kyc-2016\"],\"reason\":\"The clause repeals all existing KYC directions applicable to NBFCs, which matches the 2016 KYC Master Direction.\"}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 481,
+  "completion_tokens": 113,
+  "latency_ms": 856.1637999955565,
+  "cached": false
+ }
+}

@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "supersession",
+ "response": {
+  "text": "{\"repealed\":[\"rbi-md-it-outsourcing-2023\"],\"reason\":\"The clause repeals all existing directions on outsourcing of financial and IT services for NBFCs, which includes the 2023 Master Direction on Outsourcing of Information Technology Services that applies to NBFCs.\"}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 485,
+  "completion_tokens": 237,
+  "latency_ms": 1353.3279999974184,
+  "cached": false
+ }
+}

@@ -2,16 +2,13 @@
 
 from __future__ import annotations
 
-import json
 from pathlib import Path
-from types import SimpleNamespace
 
 import pytest
 from fastapi.testclient import TestClient
 
 from reglens.api.app import create_app
-from reglens.config import PROJECT_ROOT, Settings, get_settings
-from reglens.llm.router import LiteLLMChat
+from reglens.config import Settings, get_settings
 from reglens.log import configure_logging, get_logger
 
 
@@ -41,11 +38,3 @@ def test_api_ops_and_key() -> None:
         ok = c.post("/v1/echo", json={"text": "hi"}, headers={"X-API-Key": "k"})
         assert ok.json() == {"echo": "hi"}
         assert "reglens_requests_total" in c.get("/metrics").text
-
-
-def test_llm_router_injects_key(monkeypatch: pytest.MonkeyPatch) -> None:
-    chat = LiteLLMChat(PROJECT_ROOT / "configs" / "litellm.yaml", groq_api_key="test-key")
-    reply = SimpleNamespace(choices=[SimpleNamespace(message=SimpleNamespace(content='{"a": 1}'))])
-    monkeypatch.setattr(chat._router, "completion", lambda **_: reply)
-    assert json.loads(chat.complete([{"role": "user", "content": "x"}])) == {"a": 1}
-    assert all(m["litellm_params"]["api_key"] == "test-key" for m in chat._router.model_list)

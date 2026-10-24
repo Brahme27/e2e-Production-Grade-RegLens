@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "supersession",
+ "response": {
+  "text": "{\"repealed\":[\"rbi-md-it-outsourcing-2023\"],\"reason\":\"The clause repeals all outsourcing directions for NBFCs, which matches the IT outsourcing direction applicable to NBFCs.\"}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 514,
+  "completion_tokens": 136,
+  "latency_ms": 2559.115499985637,
+  "cached": false
+ }
+}

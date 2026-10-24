@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "supersession",
+ "response": {
+  "text": "{\"repealed\":[\"rbi-md-it-governance-2023\"],\"reason\":\"The clause repeals all governance-related directions for commercial banks, which includes the IT Governance Master Direction.\"}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 471,
+  "completion_tokens": 137,
+  "latency_ms": 945.0708000222221,
+  "cached": false
+ }
+}

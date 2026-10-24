@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "supersession",
+ "response": {
+  "text": "{\"repealed\":[],\"reason\":\"No older candidate documents pertain to the compliance function for commercial banks, so none are covered by the repeal clause.\"}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 839,
+  "completion_tokens": 67,
+  "latency_ms": 1505.3388999949675,
+  "cached": false
+ }
+}

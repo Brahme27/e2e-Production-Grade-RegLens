@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "supersession",
+ "response": {
+  "text": "{\"repealed\":[\"rbi-md-kyc-2016\"],\"reason\":\"The clause repeals existing KYC directions for NBFCs, matching the KYC subject of candidate rbi-md-kyc-2016\"}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 510,
+  "completion_tokens": 104,
+  "latency_ms": 835.7282000069972,
+  "cached": false
+ }
+}

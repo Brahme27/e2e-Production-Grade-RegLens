@@ -31,8 +31,16 @@ MAX_PLAIN_HEADING_WORDS = 10
 PLAIN_HEADING_LEVEL = 2
 MAX_NUMBERED_HEADING_CHARS = 70
 DOTTED_SHARE = 0.4
+DEVANAGARI_SHARE = 0.3
 REPEAT_SHARE = 0.3  # a line on >=30% of pages is a running header/footer
 MIN_PAGES_FOR_REPEATS = 3
+
+
+def _mostly_devanagari(line: str) -> bool:
+    """SEBI circulars are bilingual (Hindi + English); v1 indexes the English text only."""
+    letters = [ch for ch in line if ch.isalpha()]
+    hindi = sum(1 for ch in letters if "ऀ" <= ch <= "ॿ")  # Devanagari block
+    return bool(letters) and hindi > DEVANAGARI_SHARE * len(letters)
 
 
 def pdf_lines(content: bytes) -> list[list[str]]:
@@ -41,7 +49,8 @@ def pdf_lines(content: bytes) -> list[list[str]]:
     pages = []
     for index in range(len(pdf)):
         text = pdf[index].get_textpage().get_text_range()
-        pages.append([one_line(line) for line in text.replace("\r", "\n").split("\n")])
+        lines = [one_line(line) for line in text.replace("\r", "\n").split("\n")]
+        pages.append([line for line in lines if not _mostly_devanagari(line)])
     pdf.close()
     return pages
 

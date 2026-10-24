@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "supersession",
+ "response": {
+  "text": "{\"repealed\":[\"rbi-md-kyc-2016\"],\"reason\":\"The clause repeals all KYC directions applicable to commercial banks, which matches the 2016 KYC Master Direction.\"}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 504,
+  "completion_tokens": 137,
+  "latency_ms": 953.4806000010576,
+  "cached": false
+ }
+}

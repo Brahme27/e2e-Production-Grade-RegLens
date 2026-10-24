@@ -1,0 +1,85 @@
+# Hand-labelled supersession edges, read from the source documents (not from extractor output).
+# Scope: every document listed in `labelled_sources` has ALL its repeal/amend edges listed here,
+# both to documents in our corpus and to numbered circulars/letters we do not hold ("ext:").
+# Predictions from other sources are not scored. Labelled 2026-10-24.
+labelled_sources:
+  - rbi-cb-internal-ombudsman-2026
+  - rbi-cb-kyc-2025
+  - rbi-nbfc-kyc-2025
+  - rbi-cb-outsourcing-2025
+  - rbi-nbfc-outsourcing-2025
+  - rbi-cb-cyber-tech-2026
+  - rbi-cb-compliance-2026     # repeals compliance-function circulars: none in our corpus
+  - rbi-cb-fraud-2026          # repeals fraud circulars: none in our corpus
+  - rbi-cb-governance-2025     # repeals governance circulars: none in our corpus
+  - rbi-cb-rbc-2025            # repeals conduct circulars: none in our corpus
+  - sebi-scores-2023
+  - sebi-scores-master-2022
+  - sebi-cscrf-2024
+  - sebi-cscrf-clarifications-2025
+
+edges:
+  # ---- inside the corpus (these drive "as of" filtering) ----
+  - {source: rbi-cb-internal-ombudsman-2026, target: rbi-md-internal-ombudsman-2023, type: SUPERSEDES}  # para 17, names it
+  - {source: rbi-cb-kyc-2025, target: rbi-md-kyc-2016, type: SUPERSEDES}            # para 80, generic: "existing directions ... KYC ... Commercial Banks"
+  - {source: rbi-nbfc-kyc-2025, target: rbi-md-kyc-2016, type: SUPERSEDES}          # para 73, generic, for NBFCs
+  - {source: rbi-cb-outsourcing-2025, target: rbi-md-it-outsourcing-2023, type: SUPERSEDES}   # para 95, generic: "outsourcing of ... IT services"
+  - {source: rbi-nbfc-outsourcing-2025, target: rbi-md-it-outsourcing-2023, type: SUPERSEDES} # para 100, generic, for NBFCs
+  - {source: rbi-cb-cyber-tech-2026, target: rbi-md-it-governance-2023, type: SUPERSEDES}     # para 230, generic: "IT Governance"
+  - {source: sebi-scores-2023, target: sebi-scores-master-2022, type: SUPERSEDES}   # para 6, by number, w.e.f. Dec 04, 2023
+  - {source: sebi-cscrf-clarifications-2025, target: sebi-cscrf-2024, type: AMENDS}  # title "Clarifications to CSCRF"
+
+  # ---- SCORES master circular 2022, para 52: rescinds six circulars ----
+  - {source: sebi-scores-master-2022, target: "ext:CIR/OIAE/1/2014", type: SUPERSEDES}
+  - {source: sebi-scores-master-2022, target: "ext:SEBI/HO/OIAE/IGRD/CIR/P/2018/58", type: SUPERSEDES}
+  - {source: sebi-scores-master-2022, target: "ext:SEBI/HO/OIAE/IGRD/CIR/P/2019/86", type: SUPERSEDES}
+  - {source: sebi-scores-master-2022, target: "ext:SEBI/HO/OIAE/IGRD/CIR/P/2020/152", type: SUPERSEDES}
+  - {source: sebi-scores-master-2022, target: "ext:SEBI/HO/OIAE/IGRD/CIR/P/2020/208", type: SUPERSEDES}
+  - {source: sebi-scores-master-2022, target: "ext:SEBI/HO/OIAE/IGRD/CIR/P/2021/542", type: SUPERSEDES}
+
+  # ---- CSCRF 2024, Table 1: cybersecurity circulars superseded (21) ----
+  - {source: sebi-cscrf-2024, target: "ext:CIR/MRD/DP/13/2015", type: SUPERSEDES}
+  - {source: sebi-cscrf-2024, target: "ext:SEBI/HO/MRD1/MRD1_DTCS/P/CIR/2022/68", type: SUPERSEDES}
+  - {source: sebi-cscrf-2024, target: "ext:SEBI/HO/MRD/TPD/P/CIR/2023/147", type: SUPERSEDES}
+  - {source: sebi-cscrf-2024, target: "ext:SEBI/HO/MRD/TPD/P/CIR/2023/146", type: SUPERSEDES}
+  - {source: sebi-cscrf-2024, target: "ext:SEBI/HO/MIRSD/CIR/PB/2018/147", type: SUPERSEDES}
+  - {source: sebi-cscrf-2024, target: "ext:CIR/HO/MIRSD/DOS2/CIR/PB/2019/038", type: SUPERSEDES}
+  - {source: sebi-cscrf-2024, target: "ext:SEBI/HO/MIRSD/DOP/CIR/P/2019/109", type: SUPERSEDES}
+  - {source: sebi-cscrf-2024, target: "ext:SEBI/HO/MIRSD/TPD/P/CIR/2022/80", type: SUPERSEDES}
+  - {source: sebi-cscrf-2024, target: "ext:SEBI/HO/MIRSD/TPD/P/CIR/2022/93", type: SUPERSEDES}
+  - {source: sebi-cscrf-2024, target: "ext:SEBI/HO/IMD/DF2/CIR/P/2019/12", type: SUPERSEDES}
+  - {source: sebi-cscrf-2024, target: "ext:SEBI/HO/IMD/IMD-I/DOF2/P/CIR/2022/81", type: SUPERSEDES}
+  - {source: sebi-cscrf-2024, target: "ext:SEBI/HO/MIRSD/DOP/CIR/P/2019/111", type: SUPERSEDES}
+  - {source: sebi-cscrf-2024, target: "ext:SEBI/HO/MIRSD/DOP/P/CIR/2022/74", type: SUPERSEDES}
+  - {source: sebi-cscrf-2024, target: "ext:SEBI/HO/MIRSD/TPD/P/CIR/2022/95", type: SUPERSEDES}
+  - {source: sebi-cscrf-2024, target: "ext:SEBI/HO/MIRSD/CIR/P/2017/100", type: SUPERSEDES}
+  - {source: sebi-cscrf-2024, target: "ext:SEBI/HO/MIRSD/DOP/CIR/P/2019/110", type: SUPERSEDES}
+  - {source: sebi-cscrf-2024, target: "ext:SEBI/HO/MIRSD/MIRSD_RTAMB/P/CIR/2022/73", type: SUPERSEDES}
+  - {source: sebi-cscrf-2024, target: "ext:SEBI/HO/MIRSD/TPD/P/CIR/2022/96", type: SUPERSEDES}
+  - {source: sebi-cscrf-2024, target: "ext:SEBI/HO/IMD/IMD-POD-1/P/CIR/2023/046", type: SUPERSEDES}
+  - {source: sebi-cscrf-2024, target: "ext:SEBI/HO/ITD/ITD_VAPT/P/CIR/2023/032", type: SUPERSEDES}
+  - {source: sebi-cscrf-2024, target: "ext:CIR/MRD/CSC/151/2018", type: SUPERSEDES}
+
+  # ---- CSCRF 2024, Table 2: letters / advisories superseded (22) ----
+  - {source: sebi-cscrf-2024, target: "ext:SEBI/HO/ITD/ITD_INSADT_D/P/OW/2022/0000063905/1", type: SUPERSEDES}
+  - {source: sebi-cscrf-2024, target: "ext:SEBI/HO/ITD/ITD_INSADT_D/P/OW/2022/0000063956/1", type: SUPERSEDES}
+  - {source: sebi-cscrf-2024, target: "ext:SEBI/HO/ITD/ITD_INSADT_D/P/OW/2022/0000063931/1", type: SUPERSEDES}
+  - {source: sebi-cscrf-2024, target: "ext:SEBI/HO/ITD/ITD_INSADT_D/P/OW/2022/0000063935/1", type: SUPERSEDES}
+  - {source: sebi-cscrf-2024, target: "ext:SEBI/HO/ITD/ITD_INSADT_D/P/OW/2022/0000063943/1", type: SUPERSEDES}
+  - {source: sebi-cscrf-2024, target: "ext:SEBI/HO/ITD/ITD_INSADT_D/P/OW/2022/0000063947/1", type: SUPERSEDES}
+  - {source: sebi-cscrf-2024, target: "ext:SEBI/HO/ITD/ITD_INSADT_D/P/OW/2022/0000063939/1", type: SUPERSEDES}
+  - {source: sebi-cscrf-2024, target: "ext:SEBI/HO/ITD/ITD_INSADT_D/P/OW/2022/0000063950/1", type: SUPERSEDES}
+  - {source: sebi-cscrf-2024, target: "ext:SEBI/HO/ITD/ITD_INSADT_D/P/OW/2022/0000063944/1", type: SUPERSEDES}
+  - {source: sebi-cscrf-2024, target: "ext:SEBI/HO/ITD/ITD_INSADT_D/P/OW/2022/0000063951/1", type: SUPERSEDES}
+  - {source: sebi-cscrf-2024, target: "ext:SEBI/HO/ITD/ITD_INSADT_D/P/OW/2022/0000063954/1", type: SUPERSEDES}
+  - {source: sebi-cscrf-2024, target: "ext:SEBI/HO/MRD/CSC/OW/P/2019/10055/5", type: SUPERSEDES}
+  - {source: sebi-cscrf-2024, target: "ext:SEBI/HO/IMD/IMD-TPD-1/P/OW/2023/16538", type: SUPERSEDES}
+  - {source: sebi-cscrf-2024, target: "ext:SEBI/HO/IMD/IMD-SEC-3/P/OW/2023/22970/1", type: SUPERSEDES}
+  - {source: sebi-cscrf-2024, target: "ext:SEBI/HO/MRD/CSC/OW/P/2019/28528/1", type: SUPERSEDES}
+  - {source: sebi-cscrf-2024, target: "ext:SEBI/HO/MRD/CSC/OW/P/2019/28516/1", type: SUPERSEDES}
+  - {source: sebi-cscrf-2024, target: "ext:SEBI/HO/MRD/CSC/OW/P/2019/28517/1", type: SUPERSEDES}
+  - {source: sebi-cscrf-2024, target: "ext:SEBI/HO/MRD/CSC/OW/P/2019/28523/1", type: SUPERSEDES}
+  - {source: sebi-cscrf-2024, target: "ext:SEBI/HO/MRD/CSC/OW/P/2019/28525/1", type: SUPERSEDES}
+  - {source: sebi-cscrf-2024, target: "ext:SEBI/HO/MRD/CSC/OW/P/2019/28524/1", type: SUPERSEDES}
+  - {source: sebi-cscrf-2024, target: "ext:SEBI/HO/MRD/CSC/OW/P/2019/28526/1", type: SUPERSEDES}
+  - {source: sebi-cscrf-2024, target: "ext:SEBI/HO/MRD/CSC/OW/P/2019/28527/1", type: SUPERSEDES}

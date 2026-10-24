@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "supersession",
+ "response": {
+  "text": "{\"repealed\":[\"rbi-md-it-governance-2023\"],\"reason\":\"The clause repeals all existing directions on Cybersecurity Framework and IT Governance for commercial banks, which includes the Master Direction on IT Governance, Risk, Controls and Assurance Practices.\"}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 853,
+  "completion_tokens": 195,
+  "latency_ms": 947.9287999856751,
+  "cached": false
+ }
+}

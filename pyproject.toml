@@ -62,6 +62,7 @@ test = { cmd = "pytest", help = "Run tests with coverage" }
 check = { sequence = ["lint", "typecheck", "test"], help = "Everything CI runs" }
 crawl = { cmd = "python -m reglens.corpus.crawl", help = "Download the curated regulatory corpus (cached)" }
 parse = { cmd = "python -m reglens.parse.run", help = "Parse raw documents into numbered paragraphs" }
+temporal = { cmd = "python -m reglens.temporal.run", help = "Supersession graph + validity intervals -> DB" }
 api = { cmd = "uvicorn reglens.api.app:create_app --factory --reload --port 8000", help = "Run the API" }
 up = { cmd = "docker compose up -d --build", help = "Build and start the stack" }
 down = { cmd = "docker compose down", help = "Stop the stack" }
@@ -86,7 +87,7 @@ plugins = ["pydantic.mypy"]
 mypy_path = "src"
 
 [[tool.mypy.overrides]]
-module = ["litellm.*", "sklearn.*", "fastembed.*", "pypdfium2.*", "selectolax.*"]
+module = ["litellm.*", "sklearn.*", "fastembed.*", "pypdfium2.*", "selectolax.*", "langgraph.*"]
 ignore_missing_imports = true
 
 [tool.pytest.ini_options]

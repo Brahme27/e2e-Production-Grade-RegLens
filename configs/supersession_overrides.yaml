@@ -1,0 +1,12 @@
+# Human review of extracted supersession edges ("the LLM proposes, a reviewer disposes").
+# Applied after extraction, before validity intervals are computed. Evaluation scores in
+# docs/RESULTS.md are for the RAW extractor, before these overrides.
+reject:
+  - source: rbi-cb-governance-2025
+    target: rbi-md-it-governance-2023
+    type: SUPERSEDES
+    reason: >-
+      The clause repeals instructions on (corporate) governance. IT governance was repealed
+      separately by rbi-cb-cyber-tech-2026 para 230 ("Cybersecurity Framework and IT
+      Governance"), effective July 31, 2026. Reviewed 2026-10-24.
+add: []

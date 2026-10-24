@@ -11,7 +11,7 @@ from reglens.config import get_settings
 from reglens.corpus.crawl import RawVersion, read_manifest
 from reglens.corpus.sources import SourceDoc, load_sources
 from reglens.log import configure_logging, get_logger
-from reglens.parse.handbooks import parse_fca_section, parse_pra_part
+from reglens.parse.handbooks import parse_fca_section, parse_pra_part, pra_version_dates
 from reglens.parse.model import ParsedDocument, save_documents
 from reglens.parse.pdf import parse_pdf
 from reglens.parse.rbi import parse_rbi_html
@@ -30,6 +30,7 @@ MIN_PARAGRAPHS = 1
 
 
 def _doc_number(text: str) -> str | None:
+    text = re.sub(r"/\s+", "/", text)  # "SEBI/HO/ ITD-1/..." -> "SEBI/HO/ITD-1/..."
     for pattern in DOC_NUMBERS:
         match = pattern.search(text)
         if match:
@@ -70,10 +71,13 @@ def parse_version(source: SourceDoc, raw: RawVersion, raw_dir: Path) -> ParsedDo
         doc.doc_number = code.group(1) if code else None
         doc.url = raw.parts[0].url.rsplit("/", 1)[0]  # the chapter, not its first section
     elif source.kind == "pra_part":
-        _, doc.paragraphs = parse_pra_part(first.read_bytes())
+        content = first.read_bytes()
+        _, doc.paragraphs = parse_pra_part(content)
         as_at = _version_label_date(raw.version)
-        dates = [p.effective_from for p in doc.paragraphs if p.effective_from]
-        # the version in force on the as-at date started at the latest rule change before it
+        # the page lists every version date of the part; ours is the latest on/before as-at
+        dates = pra_version_dates(content, source.part or "") or [
+            p.effective_from for p in doc.paragraphs if p.effective_from
+        ]
         doc.version_date = max((d for d in dates if as_at is None or d <= as_at), default=None)
         doc.doc_number = f"PRA Rulebook: {source.title.split(' - ')[-1]}"
     elif first.suffix == ".pdf":

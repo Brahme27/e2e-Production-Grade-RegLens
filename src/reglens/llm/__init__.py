@@ -1,1 +1,1 @@
-"""LLM access (LiteLLM router with aliases and fallbacks)."""
+"""LLM access: cached LiteLLM router over free open-weight models."""

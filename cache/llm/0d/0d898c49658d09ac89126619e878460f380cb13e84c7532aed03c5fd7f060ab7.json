@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "supersession",
+ "response": {
+  "text": "{\"repealed\":[],\"reason\":\"No older candidate documents pertain to Responsible Business Conduct for commercial banks\"}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 504,
+  "completion_tokens": 63,
+  "latency_ms": 736.834799987264,
+  "cached": false
+ }
+}

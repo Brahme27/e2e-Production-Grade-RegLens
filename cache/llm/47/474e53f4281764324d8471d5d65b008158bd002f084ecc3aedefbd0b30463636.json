@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "supersession",
+ "response": {
+  "text": "{\"repealed\":[],\"reason\":\"No older candidate documents pertain to Fraud Risk Management for commercial banks.\"}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 841,
+  "completion_tokens": 59,
+  "latency_ms": 647.7406999911182,
+  "cached": false
+ }
+}

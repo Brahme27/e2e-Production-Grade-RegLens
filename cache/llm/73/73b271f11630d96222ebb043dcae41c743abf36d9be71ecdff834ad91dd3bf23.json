@@ -1,0 +1,12 @@
+{
+ "alias": "reasoning-large",
+ "purpose": "supersession",
+ "response": {
+  "text": "{\"repealed\":[\"rbi-md-it-outsourcing-2023\"],\"reason\":\"The clause repeals existing outsourcing directions for financial and IT services applicable to commercial banks, matching the IT outsourcing direction.\"}",
+  "model": "openai/gpt-oss-120b",
+  "prompt_tokens": 510,
+  "completion_tokens": 183,
+  "latency_ms": 971.7988999909721,
+  "cached": false
+ }
+}
