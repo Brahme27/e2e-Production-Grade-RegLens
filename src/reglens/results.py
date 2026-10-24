@@ -94,14 +94,17 @@ def generation_section(
         ("faithfulness", "Faithfulness (sentences supported by the sources)"),
         ("citation_precision", "Citation precision (cited source supports the sentence)"),
         ("answer_relevancy", "Answer relevancy"),
+        ("judged", "Answers the judge scored (the n behind the three rows above)"),
+        ("verifier_pass_rate", "Built-in citation verifier pass rate"),
         ("temporal_correctness", "Temporal correctness (all citations valid on the date)"),
         ("abstention_accuracy", "Abstention on unanswerable questions"),
         ("refusal_accuracy", "Refusal on adversarial prompts"),
         ("false_abstention_rate", "False abstention on answerable questions"),
+        ("latency_p50_ms", "p50 end-to-end latency (ms, uncached)"),
         ("latency_p95_ms", "p95 end-to-end latency (ms, uncached)"),
         ("n", "Questions"),
     ]:
-        digits = 0 if key in ("latency_p95_ms", "n") else 3
+        digits = 0 if key in ("latency_p50_ms", "latency_p95_ms", "n", "judged") else 3
         lines.append(f"| {label} | {_f(final.get(key), digits)} | {_f(naive.get(key), digits)} |")
     if abstention:
         lines += [

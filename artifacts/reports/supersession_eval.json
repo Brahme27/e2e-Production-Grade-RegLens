@@ -1,0 +1,64 @@
+{
+ "gold_edges": 57,
+ "labelled_sources": 14,
+ "rules": {
+  "precision": 1.0,
+  "recall": 0.895,
+  "f1": 0.944,
+  "true_positives": 51,
+  "predicted": 51,
+  "gold": 57,
+  "false_positives": [],
+  "missed": [
+   "rbi-cb-cyber-tech-2026|rbi-md-it-governance-2023|SUPERSEDES",
+   "rbi-cb-kyc-2025|rbi-md-kyc-2016|SUPERSEDES",
+   "rbi-cb-outsourcing-2025|rbi-md-it-outsourcing-2023|SUPERSEDES",
+   "rbi-nbfc-kyc-2025|rbi-md-kyc-2016|SUPERSEDES",
+   "rbi-nbfc-outsourcing-2025|rbi-md-it-outsourcing-2023|SUPERSEDES",
+   "sebi-cscrf-2024|ext:SEBIHOMIRSDMIRSDRTAMBPCIR202273|SUPERSEDES"
+  ]
+ },
+ "rules_internal": {
+  "precision": 1.0,
+  "recall": 0.375,
+  "f1": 0.545,
+  "true_positives": 3,
+  "predicted": 3,
+  "gold": 8,
+  "false_positives": [],
+  "missed": [
+   "rbi-cb-cyber-tech-2026|rbi-md-it-governance-2023|SUPERSEDES",
+   "rbi-cb-kyc-2025|rbi-md-kyc-2016|SUPERSEDES",
+   "rbi-cb-outsourcing-2025|rbi-md-it-outsourcing-2023|SUPERSEDES",
+   "rbi-nbfc-kyc-2025|rbi-md-kyc-2016|SUPERSEDES",
+   "rbi-nbfc-outsourcing-2025|rbi-md-it-outsourcing-2023|SUPERSEDES"
+  ]
+ },
+ "rules_plus_llm": {
+  "precision": 0.982,
+  "recall": 0.982,
+  "f1": 0.982,
+  "true_positives": 56,
+  "predicted": 57,
+  "gold": 57,
+  "false_positives": [
+   "rbi-cb-governance-2025|rbi-md-it-governance-2023|SUPERSEDES"
+  ],
+  "missed": [
+   "sebi-cscrf-2024|ext:SEBIHOMIRSDMIRSDRTAMBPCIR202273|SUPERSEDES"
+  ]
+ },
+ "rules_plus_llm_internal": {
+  "precision": 0.889,
+  "recall": 1.0,
+  "f1": 0.941,
+  "true_positives": 8,
+  "predicted": 9,
+  "gold": 8,
+  "false_positives": [
+   "rbi-cb-governance-2025|rbi-md-it-governance-2023|SUPERSEDES"
+  ],
+  "missed": []
+ },
+ "documents": 37
+}

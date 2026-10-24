@@ -1,0 +1,507 @@
+{
+ "gaps": {
+  "n": 41,
+  "accuracy": 0.78,
+  "gap_detection_accuracy": 0.927,
+  "cohen_kappa": 0.646,
+  "confusion": {
+   "covered": {
+    "covered": 19,
+    "partially_covered": 1,
+    "not_covered": 0
+   },
+   "partially_covered": {
+    "covered": 2,
+    "partially_covered": 8,
+    "not_covered": 3
+   },
+   "not_covered": {
+    "covered": 0,
+    "partially_covered": 3,
+    "not_covered": 5
+   }
+  },
+  "rows": [
+   {
+    "id": "IO-01",
+    "gold": "covered",
+    "predicted": "covered",
+    "rationale": "The policy explicitly requires the Internal Ombudsman to be a retired or serving General Manager\u2011rank officer with at least seven years of relevant experience and prohibits prior or concurrent employment with the bank or its group companies, satisfying the obligation.",
+    "evidence": [
+     "SB-POL-CS-007 \u00a72.1",
+     "SB-POL-CS-007 \u00a72.4",
+     "SB-POL-CS-007 \u00a72.2"
+    ]
+   },
+   {
+    "id": "IO-02",
+    "gold": "partially_covered",
+    "predicted": "not_covered",
+    "rationale": "The policy caps age at appointment (65) but does not restrict the Ombudsman from exceeding 70 during the tenure, so it does not satisfy the obligation.",
+    "evidence": [
+     "SB-POL-CS-007 \u00a72.3",
+     "SB-POL-CS-007 \u00a73.3",
+     "SB-POL-CS-007 \u00a73.1"
+    ]
+   },
+   {
+    "id": "IO-03",
+    "gold": "covered",
+    "predicted": "covered",
+    "rationale": "The policy explicitly requires the bank to appoint at least one Internal Ombudsman, matching the obligation.",
+    "evidence": [
+     "SB-POL-CS-007 \u00a72.1",
+     "SB-POL-CS-007 \u00a72.4",
+     "SB-POL-CS-007 \u00a76.1"
+    ]
+   },
+   {
+    "id": "IO-04",
+    "gold": "not_covered",
+    "predicted": "not_covered",
+    "rationale": "The policy does not contain any clause requiring the Committee to determine the number of Internal Ombudsmen and Deputy IOs annually based on complaint volume and complexity.",
+    "evidence": [
+     "SB-POL-CS-007 \u00a77.1",
+     "SB-POL-CS-007 \u00a74.2",
+     "SB-POL-CS-007 \u00a73.4"
+    ]
+   },
+   {
+    "id": "IO-05",
+    "gold": "partially_covered",
+    "predicted": "partially_covered",
+    "rationale": "The policy requires a Deputy IO to act during temporary absence and mandates filling a vacancy within three months, but does not ensure the post is never vacant nor provide for a GM\u2011rank interim appointment for up to one month with CSC approval.",
+    "evidence": [
+     "SB-POL-CS-007 \u00a72.4",
+     "SB-POL-CS-007 \u00a73.2",
+     "SB-POL-CS-007 \u00a73.3"
+    ]
+   },
+   {
+    "id": "IO-06",
+    "gold": "covered",
+    "predicted": "covered",
+    "rationale": "Clause \u00a73.1 explicitly requires a fixed three\u2011year term with a possible one\u2011time extension, limiting total tenure to five years, which satisfies the obligation.",
+    "evidence": [
+     "SB-POL-CS-007 \u00a73.1",
+     "SB-POL-CS-007 \u00a72.4",
+     "SB-POL-CS-007 \u00a73.2"
+    ]
+   },
+   {
+    "id": "IO-07",
+    "gold": "not_covered",
+    "predicted": "partially_covered",
+    "rationale": "The policy requires appointing a successor within three months of a vacancy, but does not explicitly mandate starting the appointment process three months before the incumbent's term ends or ensuring overlap.",
+    "evidence": [
+     "SB-POL-CS-007 \u00a73.3",
+     "SB-POL-CS-007 \u00a72.4",
+     "SB-POL-CS-007 \u00a73.1"
+    ]
+   },
+   {
+    "id": "IO-08",
+    "gold": "partially_covered",
+    "predicted": "partially_covered",
+    "rationale": "The policy mandates appointing a successor within three months, matching the appointment deadline, but only requires RBI notification of the appointment within 15 days, not vacancy reporting within 10 working days as required.",
+    "evidence": [
+     "SB-POL-CS-007 \u00a73.3",
+     "SB-POL-CS-007 \u00a76.1",
+     "SB-POL-CS-007 \u00a72.4"
+    ]
+   },
+   {
+    "id": "IO-09",
+    "gold": "covered",
+    "predicted": "covered",
+    "rationale": "Clause SB-POL-CS-007 \u00a74.1 explicitly requires the Internal Ombudsman to report administratively to the Competent Authority and functionally to the Customer Service Committee, matching the obligation.",
+    "evidence": [
+     "SB-POL-CS-007 \u00a74.1",
+     "SB-POL-CS-007 \u00a73.4",
+     "SB-POL-CS-007 \u00a74.2"
+    ]
+   },
+   {
+    "id": "IO-10",
+    "gold": "covered",
+    "predicted": "covered",
+    "rationale": "Clause \u00a74.4 requires an annual audit of the policy implementation and explicitly states that the audit shall not assess the correctness of the Internal Ombudsman's decisions, matching the obligation.",
+    "evidence": [
+     "SB-POL-CS-007 \u00a74.4",
+     "SB-POL-CS-007 \u00a71.1",
+     "SB-POL-CS-007 \u00a73.1"
+    ]
+   },
+   {
+    "id": "IO-11",
+    "gold": "partially_covered",
+    "predicted": "covered",
+    "rationale": "Clause \u00a74.2 requires the Internal Ombudsman to present a quarterly report with complaint analysis, meeting the quarterly requirement; thus the obligation is satisfied.",
+    "evidence": [
+     "SB-POL-CS-007 \u00a74.3",
+     "SB-POL-CS-007 \u00a71.1",
+     "SB-POL-CS-007 \u00a74.5"
+    ]
+   },
+   {
+    "id": "IO-12",
+    "gold": "covered",
+    "predicted": "covered",
+    "rationale": "Clause \u00a74.2 requires quarterly reports on activities and complaint analysis to the Customer Service Committee, satisfying the obligation's preferred quarterly and minimum half\u2011yearly frequency.",
+    "evidence": [
+     "SB-POL-CS-007 \u00a74.2",
+     "SB-POL-CS-007 \u00a74.5",
+     "SB-POL-CS-007 \u00a73.4"
+    ]
+   },
+   {
+    "id": "IO-13",
+    "gold": "not_covered",
+    "predicted": "not_covered",
+    "rationale": "The policy clauses describe reporting lines, remuneration, audit scope, and reporting of complaints, but do not address the requirement that an IO decision can be overruled only with Competent Authority approval nor that overruled cases must be placed before the Customer Service Committee.",
+    "evidence": [
+     "SB-POL-CS-007 \u00a73.4",
+     "SB-POL-CS-007 \u00a74.1",
+     "SB-POL-CS-007 \u00a74.5"
+    ]
+   },
+   {
+    "id": "IO-14",
+    "gold": "partially_covered",
+    "predicted": "partially_covered",
+    "rationale": "Policy \u00a75.3 provides automatic escalation but sets the deadline at 25 days, which is longer than the required 20 days, so it does not fully meet the obligation.",
+    "evidence": [
+     "SB-POL-CS-007 \u00a75.5",
+     "SB-POL-CS-007 \u00a75.2",
+     "SB-POL-CS-007 \u00a75.3"
+    ]
+   },
+   {
+    "id": "IO-15",
+    "gold": "covered",
+    "predicted": "covered",
+    "rationale": "Clause SB-POL-CS-007 \u00a75.4 requires communicating the final decision within 30 days, matching the obligation exactly.",
+    "evidence": [
+     "SB-POL-CS-007 \u00a75.4",
+     "SB-POL-CS-007 \u00a75.5",
+     "SB-POL-CS-007 \u00a75.1"
+    ]
+   },
+   {
+    "id": "IO-16",
+    "gold": "covered",
+    "predicted": "covered",
+    "rationale": "Clause SB-POL-CS-007 \u00a75.5 requires the bank to inform complainants of the option to approach the RBI Ombudsman and provides the CMS URL and CRPC address, matching the obligation.",
+    "evidence": [
+     "SB-POL-CS-007 \u00a75.5",
+     "SB-POL-CS-007 \u00a75.2",
+     "SB-POL-CS-007 \u00a75.3"
+    ]
+   },
+   {
+    "id": "IO-17",
+    "gold": "not_covered",
+    "predicted": "not_covered",
+    "rationale": "No policy clause restricts publishing the IO/Deputy IO contact details in the public domain; the provided clauses only address appointment, reporting, and audit matters.",
+    "evidence": [
+     "SB-POL-CS-007 \u00a72.4",
+     "SB-POL-CS-007 \u00a76.1",
+     "SB-POL-CS-007 \u00a71.1"
+    ]
+   },
+   {
+    "id": "IO-18",
+    "gold": "partially_covered",
+    "predicted": "partially_covered",
+    "rationale": "The policy requires reporting the appointment within 15 days, which is longer than the required five working days, so it does not fully meet the obligation.",
+    "evidence": [
+     "SB-POL-CS-007 \u00a76.1",
+     "SB-POL-CS-007 \u00a76.2",
+     "SB-POL-CS-007 \u00a72.4"
+    ]
+   },
+   {
+    "id": "IO-19",
+    "gold": "covered",
+    "predicted": "covered",
+    "rationale": "Clause \u00a76.2 requires the quarterly report on the Internal Ombudsman's functioning to be submitted on or before the 15th day of the month following each quarter, matching the obligation.",
+    "evidence": [
+     "SB-POL-CS-007 \u00a76.2",
+     "SB-POL-CS-007 \u00a76.1",
+     "SB-POL-CS-007 \u00a74.5"
+    ]
+   },
+   {
+    "id": "PO-01",
+    "gold": "covered",
+    "predicted": "covered",
+    "rationale": "The policy explicitly requires documenting how a third\u2011party arrangement avoids undue additional operational risk before entering a material arrangement, meeting the obligation's requirement.",
+    "evidence": [
+     "NB-POL-OPR-012 \u00a72.3",
+     "NB-POL-OPR-012 \u00a75.2",
+     "NB-POL-OPR-012 \u00a75.1"
+    ]
+   },
+   {
+    "id": "PO-02",
+    "gold": "covered",
+    "predicted": "covered",
+    "rationale": "The policy explicitly requires documentation that outsourcing will not materially impair internal control or regulator monitoring, directly meeting the obligation.",
+    "evidence": [
+     "NB-POL-OPR-012 \u00a72.3",
+     "NB-POL-OPR-012 \u00a71.2",
+     "NB-POL-OPR-012 \u00a72.1"
+    ]
+   },
+   {
+    "id": "PO-03",
+    "gold": "covered",
+    "predicted": "covered",
+    "rationale": "Clause \u00a72.1 explicitly states that the Board retains ultimate responsibility and senior managers may not delegate accountability for outsourced functions, matching the obligation.",
+    "evidence": [
+     "NB-POL-OPR-012 \u00a72.1",
+     "NB-POL-OPR-012 \u00a75.2",
+     "NB-POL-OPR-012 \u00a71.2"
+    ]
+   },
+   {
+    "id": "PO-04",
+    "gold": "covered",
+    "predicted": "covered",
+    "rationale": "Clause \u00a73.1 requires due diligence on the provider's ability, capacity, resources, organisational structure and required authorisations, directly meeting the obligation.",
+    "evidence": [
+     "NB-POL-OPR-012 \u00a73.1",
+     "NB-POL-OPR-012 \u00a74.3",
+     "NB-POL-OPR-012 \u00a72.1"
+    ]
+   },
+   {
+    "id": "PO-05",
+    "gold": "partially_covered",
+    "predicted": "covered",
+    "rationale": "The policy requires annual reviews of each material arrangement against service levels and includes escalation and remediation procedures, satisfying the obligation for ongoing performance assessment and review.",
+    "evidence": [
+     "NB-POL-OPR-012 \u00a75.2",
+     "NB-POL-OPR-012 \u00a75.1",
+     "NB-POL-OPR-012 \u00a73.1"
+    ]
+   },
+   {
+    "id": "PO-06",
+    "gold": "covered",
+    "predicted": "covered",
+    "rationale": "Clause \u00a75.2 requires escalation and a remediation plan, including possible termination, which meets the obligation to take appropriate action when a provider is underperforming or non\u2011compliant.",
+    "evidence": [
+     "NB-POL-OPR-012 \u00a75.2",
+     "NB-POL-OPR-012 \u00a72.1",
+     "NB-POL-OPR-012 \u00a73.1"
+    ]
+   },
+   {
+    "id": "PO-07",
+    "gold": "not_covered",
+    "predicted": "not_covered",
+    "rationale": "The policy clauses focus on accountability, oversight, due diligence, and exit planning but do not require the firm to retain in\u2011house expertise and resources to oversee outsourced functions as mandated by the obligation.",
+    "evidence": [
+     "NB-POL-OPR-012 \u00a72.1",
+     "NB-POL-OPR-012 \u00a75.1",
+     "NB-POL-OPR-012 \u00a75.2"
+    ]
+   },
+   {
+    "id": "PO-08",
+    "gold": "covered",
+    "predicted": "covered",
+    "rationale": "Clause \u00a74.1 explicitly requires a written agreement that clearly sets out the rights and obligations of the firm and the service provider, meeting the obligation.",
+    "evidence": [
+     "NB-POL-OPR-012 \u00a74.1",
+     "NB-POL-OPR-012 \u00a74.2",
+     "NB-POL-OPR-012 \u00a74.3"
+    ]
+   },
+   {
+    "id": "PO-09",
+    "gold": "partially_covered",
+    "predicted": "partially_covered",
+    "rationale": "The policy provides audit and access rights and mentions termination in remediation plans, but does not explicitly preserve instruction, information, and termination rights as required.",
+    "evidence": [
+     "NB-POL-OPR-012 \u00a74.2",
+     "NB-POL-OPR-012 \u00a74.1",
+     "NB-POL-OPR-012 \u00a75.2"
+    ]
+   },
+   {
+    "id": "PO-10",
+    "gold": "partially_covered",
+    "predicted": "partially_covered",
+    "rationale": "The policy requires the provider to inform the Bank of material sub\u2011outsourcing but does not mandate the firm's prior written consent, so the obligation is not fully met.",
+    "evidence": [
+     "NB-POL-OPR-012 \u00a74.1",
+     "NB-POL-OPR-012 \u00a74.3",
+     "NB-POL-OPR-012 \u00a74.2"
+    ]
+   },
+   {
+    "id": "PO-11",
+    "gold": "partially_covered",
+    "predicted": "not_covered",
+    "rationale": "The policy clauses address accountability, due diligence, and oversight but do not require the firm to provide information to the PRA on request, so the obligation is not met.",
+    "evidence": [
+     "NB-POL-OPR-012 \u00a72.1",
+     "NB-POL-OPR-012 \u00a74.3",
+     "NB-POL-OPR-012 \u00a73.1"
+    ]
+   },
+   {
+    "id": "OR-01",
+    "gold": "covered",
+    "predicted": "covered",
+    "rationale": "The policy explicitly requires the bank to identify its important business services, directly satisfying the obligation.",
+    "evidence": [
+     "NB-POL-OPR-020 \u00a72.1",
+     "NB-POL-OPR-020 \u00a72.2",
+     "NB-POL-OPR-020 \u00a74.1"
+    ]
+   },
+   {
+    "id": "OR-02",
+    "gold": "partially_covered",
+    "predicted": "partially_covered",
+    "rationale": "The policy requires review of important business services every two years (or sooner on material change), which meets the material\u2011change trigger but does not satisfy the required at\u2011least\u2011annual review; mapping and impact\u2011tolerance review frequency are not specified.",
+    "evidence": [
+     "NB-POL-OPR-020 \u00a76.1",
+     "NB-POL-OPR-020 \u00a72.2",
+     "NB-POL-OPR-020 \u00a73.2"
+    ]
+   },
+   {
+    "id": "OR-03",
+    "gold": "covered",
+    "predicted": "covered",
+    "rationale": "Clause \u00a73.1 requires the bank to set an impact tolerance for each important business service, directly meeting the obligation.",
+    "evidence": [
+     "NB-POL-OPR-020 \u00a73.1",
+     "NB-POL-OPR-020 \u00a73.2",
+     "NB-POL-OPR-020 \u00a75.1"
+    ]
+   },
+   {
+    "id": "OR-04",
+    "gold": "covered",
+    "predicted": "covered",
+    "rationale": "The policy explicitly requires the firm to remain within impact tolerances for each important business service during severe but plausible disruptions, matching the obligation.",
+    "evidence": [
+     "NB-POL-OPR-020 \u00a73.2",
+     "NB-POL-OPR-020 \u00a75.1",
+     "NB-POL-OPR-020 \u00a73.1"
+    ]
+   },
+   {
+    "id": "OR-05",
+    "gold": "covered",
+    "predicted": "covered",
+    "rationale": "Clause \u00a74.1 explicitly requires identifying and documenting people, processes, technology, facilities and information for each important business service, satisfying the mapping requirement.",
+    "evidence": [
+     "NB-POL-OPR-020 \u00a74.1",
+     "NB-POL-OPR-020 \u00a72.1",
+     "NB-POL-OPR-020 \u00a76.1"
+    ]
+   },
+   {
+    "id": "OR-06",
+    "gold": "not_covered",
+    "predicted": "partially_covered",
+    "rationale": "The policy mandates annual scenario testing and self\u2011assessment documentation, but does not explicitly require a maintained testing plan as specified by the obligation.",
+    "evidence": [
+     "NB-POL-OPR-020 \u00a73.2",
+     "NB-POL-OPR-020 \u00a75.1",
+     "NB-POL-OPR-020 \u00a76.1"
+    ]
+   },
+   {
+    "id": "OR-07",
+    "gold": "partially_covered",
+    "predicted": "partially_covered",
+    "rationale": "The policy requires annual scenario testing but only for a selection of important business services, not for each service as the obligation mandates.",
+    "evidence": [
+     "NB-POL-OPR-020 \u00a75.1",
+     "NB-POL-OPR-020 \u00a73.2",
+     "NB-POL-OPR-020 \u00a73.1"
+    ]
+   },
+   {
+    "id": "OR-08",
+    "gold": "not_covered",
+    "predicted": "partially_covered",
+    "rationale": "The policy mentions learning from disruptions in its purpose and mandates scenario testing, but it does not explicitly require a post\u2011test lessons\u2011learned exercise or specific improvement actions as the obligation does.",
+    "evidence": [
+     "NB-POL-OPR-020 \u00a75.1",
+     "NB-POL-OPR-020 \u00a73.2",
+     "NB-POL-OPR-020 \u00a73.1"
+    ]
+   },
+   {
+    "id": "OR-09",
+    "gold": "partially_covered",
+    "predicted": "not_covered",
+    "rationale": "The policy requires retaining each self-assessment version for only three years, which is shorter than the six-year requirement, so the obligation is not met.",
+    "evidence": [
+     "NB-POL-OPR-020 \u00a76.2",
+     "NB-POL-OPR-020 \u00a76.1",
+     "NB-POL-OPR-020 \u00a76.3"
+    ]
+   },
+   {
+    "id": "OR-10",
+    "gold": "covered",
+    "predicted": "partially_covered",
+    "rationale": "The policy requires Board approval of the self-assessment annually, satisfying the approval requirement, but does not explicitly mandate a regular review of the written records beyond the approval step.",
+    "evidence": [
+     "NB-POL-OPR-020 \u00a76.3",
+     "NB-POL-OPR-020 \u00a76.1",
+     "NB-POL-OPR-020 \u00a76.2"
+    ]
+   },
+   {
+    "id": "OR-11",
+    "gold": "not_covered",
+    "predicted": "not_covered",
+    "rationale": "The policy clauses focus on identifying important services, impact tolerances, and self-assessment, but do not address maintaining an internal and external communication strategy for operational disruptions.",
+    "evidence": [
+     "NB-POL-OPR-020 \u00a72.1",
+     "NB-POL-OPR-020 \u00a73.2",
+     "NB-POL-OPR-020 \u00a71.1"
+    ]
+   }
+  ]
+ },
+ "extraction": {
+  "recall": 0.634,
+  "precision": 1.0,
+  "f1": 0.776,
+  "extracted": 62,
+  "by_target": {
+   "io-2026": {
+    "gold": 19,
+    "extracted": 24,
+    "gold_found": 9,
+    "recall": 0.474,
+    "judged_precision": 1.0
+   },
+   "pra-outsourcing-2025": {
+    "gold": 11,
+    "extracted": 14,
+    "gold_found": 8,
+    "recall": 0.727,
+    "judged_precision": 1.0
+   },
+   "sysc-15a": {
+    "gold": 11,
+    "extracted": 24,
+    "gold_found": 9,
+    "recall": 0.818,
+    "judged_precision": 1.0
+   }
+  }
+ }
+}

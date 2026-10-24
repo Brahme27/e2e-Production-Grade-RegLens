@@ -1,0 +1,2183 @@
+{
+ "final": {
+  "rows": [
+   {
+    "id": "lookup-050",
+    "category": "lookup",
+    "expected": "answer",
+    "abstained": false,
+    "refused": false,
+    "route": "lookup",
+    "latency_ms": 3391,
+    "temporal_ok": true,
+    "verifier_ok": true,
+    "faithfulness": 1.0,
+    "citation_precision": 1.0,
+    "relevancy": 1.0,
+    "judged_sentences": [
+     {
+      "text": "The firm must allocate overall responsibility for establishing and maintaining effective anti\u2011money\u2011laundering systems and controls to a director or senior manager (who may also be the Money Laundering Reporting Officer) [1].",
+      "supported": true,
+      "cited_supports": true
+     },
+     {
+      "text": "That individual may not be someone who is already approved to perform another overall\u2011responsibility function within the firm [1].",
+      "supported": true,
+      "cited_supports": true
+     }
+    ]
+   },
+   {
+    "id": "lookup-064",
+    "category": "lookup",
+    "expected": "answer",
+    "abstained": false,
+    "refused": false,
+    "route": "lookup",
+    "latency_ms": 1437,
+    "temporal_ok": true,
+    "verifier_ok": true,
+    "faithfulness": 1.0,
+    "citation_precision": 1.0,
+    "relevancy": 1.0,
+    "judged_sentences": [
+     {
+      "text": "The board of directors and senior management are ultimately responsible for establishing a sound model\u2011risk\u2011management (MRM) framework that ensures key business decisions affecting the firm\u2019s safety and soundness are supported by reliable and appropriate model output and are aligned with the board\u2011defined model\u2011risk appetite[1].",
+      "supported": true,
+      "cited_supports": true
+     }
+    ]
+   },
+   {
+    "id": "lookup-024",
+    "category": "lookup",
+    "expected": "answer",
+    "abstained": false,
+    "refused": false,
+    "route": "lookup",
+    "latency_ms": 1976,
+    "temporal_ok": true,
+    "verifier_ok": true,
+    "faithfulness": 0.3333333333333333,
+    "citation_precision": 0.3333333333333333,
+    "relevancy": 0.8,
+    "judged_sentences": [
+     {
+      "text": "Client\u2011issued documents (e.g., PAN, photograph, address proof) must be captured digitally and submitted as a photo/scan of the original using an electronic or digital signature (including Aadhaar e\u2011Sign) [2].",
+      "supported": true,
+      "cited_supports": true
+     },
+     {
+      "text": "The submitted documents must be verified by the intermediary through the same electronic/digital signature mechanism [1][2].",
+      "supported": false,
+      "cited_supports": false
+     },
+     {
+      "text": "The client\u2019s mobile number and email address must be captured digitally, uploaded to the KRA system, and verified by the KRA using a One\u2011Time\u2011Password (OTP) or any other verifiable mechanism [1][5].",
+      "supported": false,
+      "cited_supports": false
+     }
+    ]
+   },
+   {
+    "id": "lookup-051",
+    "category": "lookup",
+    "expected": "answer",
+    "abstained": false,
+    "refused": false,
+    "route": "lookup",
+    "latency_ms": 1836,
+    "temporal_ok": true,
+    "verifier_ok": true,
+    "faithfulness": 1.0,
+    "citation_precision": 1.0,
+    "relevancy": 1.0,
+    "judged_sentences": [
+     {
+      "text": "If, after discussion, the FCA and the firm still do not agree, the FCA may resort to other tools, including exercising its powers under sections 55J and 55L of the Financial Services and Markets Act, to require the firm to take specific steps that align with the FCA's view of compliance [1].",
+      "supported": true,
+      "cited_supports": true
+     }
+    ]
+   },
+   {
+    "id": "lookup-031",
+    "category": "lookup",
+    "expected": "answer",
+    "abstained": false,
+    "refused": false,
+    "route": "lookup",
+    "latency_ms": 1747,
+    "temporal_ok": true,
+    "verifier_ok": true,
+    "faithfulness": 1.0,
+    "citation_precision": 1.0,
+    "relevancy": 1.0,
+    "judged_sentences": [
+     {
+      "text": "Stock exchanges and depositories must carry out half\u2011yearly internal audits of their compliance with the beneficial\u2011ownership identification rules [1].",
+      "supported": true,
+      "cited_supports": true
+     },
+     {
+      "text": "For mutual funds, compliance is monitored by the Boards of the Asset Management Companies and the Trustees [1].",
+      "supported": true,
+      "cited_supports": true
+     },
+     {
+      "text": "For other registered intermediaries, compliance is monitored by their Board of Directors [1].",
+      "supported": true,
+      "cited_supports": true
+     }
+    ]
+   },
+   {
+    "id": "lookup-056",
+    "category": "lookup",
+    "expected": "answer",
+    "abstained": false,
+    "refused": false,
+    "route": "global",
+    "latency_ms": 1528,
+    "temporal_ok": true,
+    "verifier_ok": true,
+    "faithfulness": 1.0,
+    "citation_precision": 1.0,
+    "relevancy": 0.8,
+    "judged_sentences": [
+     {
+      "text": "Regulated activities are subject to the requirements, including those defined by the FCA or PRA for CRR firms.",
+      "supported": true,
+      "cited_supports": true
+     },
+     {
+      "text": "Dealing in investments as principal is subject to the requirements, including where the Regulated Activities Order exclusion does not apply.",
+      "supported": true,
+      "cited_supports": true
+     },
+     {
+      "text": "Ancillary activities, such as services supporting regulated or MiFID business, are subject to the requirements.",
+      "supported": true,
+      "cited_supports": true
+     },
+     {
+      "text": "MiFID-related activities, including core business and ancillary services connected to MiFID or equivalent third-country business, are subject to the requirements.",
+      "supported": true,
+      "cited_supports": true
+     },
+     {
+      "text": "Collective portfolio management is subject to the requirements.",
+      "supported": true,
+      "cited_supports": true
+     },
+     {
+      "text": "Provision of payment services, issuance of electronic money, and related activities are subject to the requirements.",
+      "supported": true,
+      "cited_supports": true
+     },
+     {
+      "text": "Data-reporting services supplied by consolidated-tape providers are subject to the requirements.",
+      "supported": true,
+      "cited_supports": true
+     },
+     {
+      "text": "Unregulated activities in a prudential context are subject to the requirements.",
+      "supported": true,
+      "cited_supports": true
+     },
+     {
+      "text": "Complaints-handling obligations apply to firms carrying out the specified activities, including payment-service providers, electronic-money issuers, CBTL firms, credit reference agencies, finance platforms, and voluntary-jurisdiction participants.",
+      "supported": true,
+      "cited_supports": true
+     },
+     {
+      "text": "Bank-specific service-charge activities, such as calculation of service charges for commercial banks, are subject to board approval and reasonableness requirements.",
+      "supported": true,
+      "cited_supports": true
+     }
+    ]
+   },
+   {
+    "id": "lookup-009",
+    "category": "lookup",
+    "expected": "answer",
+    "abstained": false,
+    "refused": false,
+    "route": "lookup",
+    "latency_ms": 1592,
+    "temporal_ok": true,
+    "verifier_ok": true,
+    "faithfulness": 1.0,
+    "citation_precision": 1.0,
+    "relevancy": 1.0,
+    "judged_sentences": [
+     {
+      "text": "The Deputy Internal Ombudsman must have at least five years of relevant experience in banking, non\u2011banking finance, regulation, supervision, payment\u2011and\u2011settlement systems, credit information or consumer\u2011protection, and must be a retired or serving officer of a rank equivalent to Deputy General Manager in the RBI or another financial\u2011sector regulator [1].",
+      "supported": true,
+      "cited_supports": true
+     },
+     {
+      "text": "The candidate must not have been employed, nor be currently employed, by the bank or any of its holding, associate or subsidiary companies [1].",
+      "supported": true,
+      "cited_supports": true
+     },
+     {
+      "text": "The appointee must be under 70 years of age at the end of the tenure [1].",
+      "supported": true,
+      "cited_supports": true
+     }
+    ]
+   },
+   {
+    "id": "lookup-047",
+    "category": "lookup",
+    "expected": "answer",
+    "abstained": false,
+    "refused": false,
+    "route": "lookup",
+    "latency_ms": 1140,
+    "temporal_ok": true,
+    "verifier_ok": true,
+    "faithfulness": 0.75,
+    "citation_precision": 0.75,
+    "relevancy": 0.8,
+    "judged_sentences": [
+     {
+      "text": "The firm sets the monitoring frequency and the data it must collect proportionately, taking into account its role in the distribution chain, whether it has direct contact with retail customers, the nature of the product and its target market [1][6].",
+      "supported": true,
+      "cited_supports": true
+     },
+     {
+      "text": "It must gather information that enables it to assess the outcomes of the products it manufactures or distributes, the communications it sends, and the support it provides, so that it can determine if customers are receiving products that meet their needs, fair value, appropriate information and support [4][2][3].",
+      "supported": true,
+      "cited_supports": true
+     },
+     {
+      "text": "Where the firm does not deal directly with customers, it must act reasonably to obtain outcome information from downstream firms in the chain [6].",
+      "supported": true,
+      "cited_supports": true
+     },
+     {
+      "text": "The frequency and scope of monitoring should reflect factors such as the importance of the decision prompted by a communication, the volume of customers affected, vulnerability considerations, and the potential for significant harm [5].",
+      "supported": false,
+      "cited_supports": false
+     }
+    ]
+   },
+   {
+    "id": "lookup-058",
+    "category": "lookup",
+    "expected": "answer",
+    "abstained": false,
+    "refused": false,
+    "route": "lookup",
+    "latency_ms": 1229,
+    "temporal_ok": true,
+    "verifier_ok": true,
+    "faithfulness": 1.0,
+    "citation_precision": 1.0,
+    "relevancy": 1.0,
+    "judged_sentences": [
+     {
+      "text": "A common\u2011platform firm must, on the FCA\u2019s request, provide all information that enables the FCA to supervise whether the outsourced activities are being performed in compliance with the UK law on markets in financial instruments[1].",
+      "supported": true,
+      "cited_supports": true
+     }
+    ]
+   },
+   {
+    "id": "lookup-040",
+    "category": "lookup",
+    "expected": "answer",
+    "abstained": true,
+    "refused": false,
+    "route": "lookup",
+    "latency_ms": 1810
+   },
+   {
+    "id": "lookup-016",
+    "category": "lookup",
+    "expected": "answer",
+    "abstained": false,
+    "refused": false,
+    "route": "temporal",
+    "latency_ms": 1711,
+    "temporal_ok": true,
+    "verifier_ok": true,
+    "faithfulness": 1.0,
+    "citation_precision": 1.0,
+    "relevancy": 1.0,
+    "judged_sentences": [
+     {
+      "text": "A bank must first obtain prior regulatory approval for the amendment under Section 35B of the Banking Regulation Act, 1949 by submitting the proposal through the RBI's Pravaah Portal, and only after that approval may it circulate the draft amendments to shareholders or convene a shareholders' meeting [1].",
+      "supported": true,
+      "cited_supports": true
+     }
+    ]
+   },
+   {
+    "id": "lookup-073",
+    "category": "lookup",
+    "expected": "answer",
+    "abstained": false,
+    "refused": false,
+    "route": "lookup",
+    "latency_ms": 1527,
+    "temporal_ok": true,
+    "verifier_ok": true,
+    "faithfulness": 1.0,
+    "citation_precision": 1.0,
+    "relevancy": 1.0,
+    "judged_sentences": [
+     {
+      "text": "The PRA requires that a report on the effectiveness of the model\u2011risk\u2011management (MRM) framework for financial reporting be provided to the audit committee on a regular basis and at least annually.",
+      "supported": true,
+      "cited_supports": true
+     },
+     {
+      "text": "The report must be supplied in a timely manner so that the external auditor can use it when planning the statutory audit, enabling the auditor to assess and respond to the risk of material misstatement arising from model risk.",
+      "supported": true,
+      "cited_supports": true
+     }
+    ]
+   },
+   {
+    "id": "lookup-060",
+    "category": "lookup",
+    "expected": "answer",
+    "abstained": false,
+    "refused": false,
+    "route": "lookup",
+    "latency_ms": 1437,
+    "temporal_ok": true,
+    "verifier_ok": true,
+    "faithfulness": 1.0,
+    "citation_precision": 1.0,
+    "relevancy": 1.0,
+    "judged_sentences": [
+     {
+      "text": "A common\u2011platform firm may be exempt from SYSC 6.1.3\u2011CR(4) and (5) where it can demonstrate that, given the nature, scale and complexity of its business and the range of its designated investment business, the requirements of those rules would not be proportionate and that its compliance function remains effective [1].",
+      "supported": true,
+      "cited_supports": true
+     },
+     {
+      "text": "In that circumstance the firm must continuously assess whether the effectiveness of its compliance function is being compromised and must review that assessment on a regular basis [1].",
+      "supported": true,
+      "cited_supports": true
+     }
+    ]
+   },
+   {
+    "id": "lookup-039",
+    "category": "lookup",
+    "expected": "answer",
+    "abstained": false,
+    "refused": false,
+    "route": "lookup",
+    "latency_ms": 2197,
+    "temporal_ok": true,
+    "verifier_ok": false,
+    "faithfulness": 1.0,
+    "citation_precision": 1.0,
+    "relevancy": 1.0,
+    "judged_sentences": [
+     {
+      "text": "Managers of AIFs or VCFs that are classified as self\u2011certification REs and whose client base is fewer than 100 clients are exempt from the mandatory Market\u2011SOC (M\u2011SOC) requirement [1][2].",
+      "supported": true,
+      "cited_supports": true
+     },
+     {
+      "text": "The exemption also applies when the aggregate corpus of all AIFs, VCFs and their schemes managed by the manager is Rs 3,000 crores or less [1][2].",
+      "supported": true,
+      "cited_supports": true
+     }
+    ]
+   },
+   {
+    "id": "lookup-043",
+    "category": "lookup",
+    "expected": "answer",
+    "abstained": false,
+    "refused": false,
+    "route": "lookup",
+    "latency_ms": 1409,
+    "temporal_ok": true,
+    "verifier_ok": true,
+    "faithfulness": 1.0,
+    "citation_precision": 1.0,
+    "relevancy": 1.0,
+    "judged_sentences": [
+     {
+      "text": "A common platform firm must ensure that outsourcing critical or important operational functions does not result in the delegation of responsibility by senior management.",
+      "supported": true,
+      "cited_supports": true
+     }
+    ]
+   },
+   {
+    "id": "temporal-003",
+    "category": "temporal",
+    "expected": "answer",
+    "abstained": false,
+    "refused": false,
+    "route": "temporal",
+    "latency_ms": 1785,
+    "temporal_ok": true,
+    "verifier_ok": true,
+    "faithfulness": 1.0,
+    "citation_precision": 1.0,
+    "relevancy": 1.0,
+    "judged_sentences": [
+     {
+      "text": "The PRA defines \u201cprudential context\u201d as the situation in which a firm\u2019s activities have, or could reasonably be expected to have, a negative effect on (1) the safety and soundness of the firm, or (2) the firm\u2019s ability to meet either the \u201cfit and proper\u201d test in threshold conditions 4E and 5E (Suitability) or the applicable regulatory requirements and standards relating to its financial resources[1].",
+      "supported": true,
+      "cited_supports": true
+     }
+    ]
+   },
+   {
+    "id": "temporal-019",
+    "category": "temporal",
+    "expected": "answer",
+    "abstained": false,
+    "refused": false,
+    "route": "temporal",
+    "latency_ms": 1347,
+    "temporal_ok": true,
+    "verifier_ok": true,
+    "faithfulness": 1.0,
+    "citation_precision": 1.0,
+    "relevancy": 1.0,
+    "judged_sentences": [
+     {
+      "text": "\"Other matters\" means, in relation to a requirement under the MODR, matters that fall within the scope of the Part's overall scope (as set out in paragraph 1.1) but are not covered by that specific requirement [1][2][3][4].",
+      "supported": true,
+      "cited_supports": true
+     }
+    ]
+   },
+   {
+    "id": "temporal-001",
+    "category": "temporal",
+    "expected": "answer",
+    "abstained": false,
+    "refused": false,
+    "route": "temporal",
+    "latency_ms": 1779,
+    "temporal_ok": true,
+    "verifier_ok": true,
+    "faithfulness": 1.0,
+    "citation_precision": 0.6666666666666666,
+    "relevancy": 1.0,
+    "judged_sentences": [
+     {
+      "text": "The PRA uses the term \u201cmaterial outsourcing\u201d to capture any outsourcing arrangement that, if weak or failed, would seriously jeopardise a firm\u2019s ability to meet the Threshold Conditions or comply with the Fundamental Rules [2].",
+      "supported": true,
+      "cited_supports": true
+     },
+     {
+      "text": "For PRA purposes, a \u201cmaterial outsourcing\u201d arrangement encompasses any \u201ccritical or important outsourcing\u201d arrangement defined in the retained EU legislation (e.g., the EBA Outsourcing Guidelines) [1].",
+      "supported": true,
+      "cited_supports": true
+     },
+     {
+      "text": "The PRA\u2019s materiality test therefore incorporates the EU concept of a \u201ccritical or important operational function\u201d, applying the same criteria used for critical/important outsourcing under EU rules, with only limited PRA\u2011specific exceptions [8].",
+      "supported": true,
+      "cited_supports": false
+     }
+    ]
+   },
+   {
+    "id": "temporal-012",
+    "category": "temporal",
+    "expected": "answer",
+    "abstained": false,
+    "refused": false,
+    "route": "temporal",
+    "latency_ms": 1724,
+    "temporal_ok": true,
+    "verifier_ok": false,
+    "faithfulness": 1.0,
+    "citation_precision": 1.0,
+    "relevancy": 1.0,
+    "judged_sentences": [
+     {
+      "text": "Banks with \u2265 10 outlets and NBFCs that meet the thresholds in Clause 4 must appoint an Internal Ombudsman (and, where needed, a Deputy Internal Ombudsman) and put in place an internal grievance\u2011redress framework [1][2][6].",
+      "supported": true,
+      "cited_supports": true
+     },
+     {
+      "text": "The appointment must be of a retired or serving officer of at least General\u2011Manager rank (or Deputy General\u2011Manager for a Deputy) with \u2265 7 years (or \u2265 5 years for a Deputy) of relevant experience, who is not presently or previously employed by the entity or its related parties [2][8].",
+      "supported": true,
+      "cited_supports": true
+     },
+     {
+      "text": "The post of Internal Ombudsman must never be vacant; the entity must initiate a fresh appointment at least three months before the incumbent\u2019s term ends and ensure a minimum one\u2011month overlap between outgoing and incoming ombudsmen [6].",
+      "supported": true,
+      "cited_supports": true
+     },
+     {
+      "text": "Entities that newly cross the thresholds must establish the Internal Ombudsman framework within six months of reaching the threshold [1].",
+      "supported": true,
+      "cited_supports": true
+     },
+     {
+      "text": "All covered entities are required to comply with the Direction with immediate effect as directed by the RBI under its statutory powers [5].",
+      "supported": true,
+      "cited_supports": true
+     }
+    ]
+   },
+   {
+    "id": "temporal-025",
+    "category": "temporal",
+    "expected": "answer",
+    "abstained": true,
+    "refused": false,
+    "route": "temporal",
+    "latency_ms": 1232
+   },
+   {
+    "id": "temporal-017",
+    "category": "temporal",
+    "expected": "answer",
+    "abstained": false,
+    "refused": false,
+    "route": "temporal",
+    "latency_ms": 1483,
+    "temporal_ok": true,
+    "verifier_ok": true,
+    "faithfulness": 1.0,
+    "citation_precision": 1.0,
+    "relevancy": 1.0,
+    "judged_sentences": [
+     {
+      "text": "The outsourcing policy must contain a clear exit strategy that sets out the minimum period to execute the plan, identifies alternative arrangements (e.g., a different provider or the RE itself), and includes clauses for the safe removal or destruction of data, hardware and all records (digital and physical) [1][5].",
+      "supported": true,
+      "cited_supports": true
+     },
+     {
+      "text": "The agreement must prohibit the service provider from erasing, purging, revoking, altering or changing any data during the transition period unless specifically directed by the regulator or the RE, and the provider must fully cooperate with the RE and any new provider to ensure a smooth hand-over [1][3].",
+      "supported": true,
+      "cited_supports": true
+     }
+    ]
+   },
+   {
+    "id": "temporal-023",
+    "category": "temporal",
+    "expected": "answer",
+    "abstained": true,
+    "refused": false,
+    "route": "temporal",
+    "latency_ms": 1949
+   },
+   {
+    "id": "temporal-010",
+    "category": "temporal",
+    "expected": "answer",
+    "abstained": true,
+    "refused": false,
+    "route": "temporal",
+    "latency_ms": 1314
+   },
+   {
+    "id": "temporal-014",
+    "category": "temporal",
+    "expected": "answer",
+    "abstained": false,
+    "refused": false,
+    "route": "temporal",
+    "latency_ms": 1411,
+    "temporal_ok": true,
+    "verifier_ok": false,
+    "faithfulness": 1.0,
+    "citation_precision": 1.0,
+    "relevancy": 1.0,
+    "judged_sentences": [
+     {
+      "text": "The expectations in the PRA\u2019s Supervisory Statement apply to all forms of outsourcing and, where indicated, other non\u2011outsourcing third\u2011party arrangements entered into by PRA\u2011regulated firms[2].",
+      "supported": true,
+      "cited_supports": true
+     },
+     {
+      "text": "In developing those expectations the PRA took account of a range of international standards, including: the Basel Committee on Banking Supervision\u2019s draft \u201cPrinciples for Operational Resilience\u201d; the Financial Stability Board\u2019s \u201cEffective Practices for Cyber Incident Response and Recovery\u201d; the G\u20117 \u201cFundamental Elements for Third\u2011Party Cyber Risk Management in the Financial Sector\u201d; and the International Organisation of Securities Commissions\u2019 draft \u201cPrinciples on Outsourcing\u201d[2].",
+      "supported": true,
+      "cited_supports": true
+     }
+    ]
+   },
+   {
+    "id": "temporal-004",
+    "category": "temporal",
+    "expected": "answer",
+    "abstained": false,
+    "refused": false,
+    "route": "temporal",
+    "latency_ms": 1371,
+    "temporal_ok": true,
+    "verifier_ok": false,
+    "faithfulness": 0.3333333333333333,
+    "citation_precision": 0.3333333333333333,
+    "relevancy": 0.4,
+    "judged_sentences": [
+     {
+      "text": "Verify the walk\u2011in customer\u2019s identity and address for any sale of third\u2011party products of \u20b9 50,000 or more [1(a)].",
+      "supported": false,
+      "cited_supports": false
+     },
+     {
+      "text": "Obtain and verify the customer\u2019s PAN (for both account\u2011based and walk\u2011in customers) and ensure the transaction is executed only by debit to the customer\u2019s account or against a cheque [1(d)].",
+      "supported": false,
+      "cited_supports": false
+     },
+     {
+      "text": "Maintain the transaction details and related records as prescribed in paragraph 46, i.e., keep identification, address and full transaction information (nature, amount, currency, date and parties) for at least five years and make them readily available to authorities [1(b)][5].",
+      "supported": true,
+      "cited_supports": true
+     }
+    ]
+   },
+   {
+    "id": "comparison-011",
+    "category": "comparison",
+    "expected": "answer",
+    "abstained": false,
+    "refused": false,
+    "route": "comparison",
+    "latency_ms": 1583,
+    "temporal_ok": true,
+    "verifier_ok": false,
+    "faithfulness": 1.0,
+    "citation_precision": 0.6,
+    "relevancy": 1.0,
+    "judged_sentences": [
+     {
+      "text": "Outsourcing arrangements must be set out in a written agreement vetted by the bank\u2019s legal counsel, clearly defining the terms, risks, mitigation strategies and the legal relationship (e.g., agent\u2011principal) and must be flexible enough to allow the bank to retain control and intervene to meet regulatory obligations[8].",
+      "supported": true,
+      "cited_supports": true
+     },
+     {
+      "text": "The firm remains fully responsible for all regulatory obligations and must ensure that outsourcing does not delegate senior\u2011personnel responsibility, alter client\u2011relationship obligations, or undermine authorisation conditions[1].",
+      "supported": true,
+      "cited_supports": true
+     },
+     {
+      "text": "A written agreement must allocate rights and obligations, retain the firm\u2019s instruction, termination, information and inspection rights, and require the service provider\u2019s cooperation with the FCA and other competent authorities[5].",
+      "supported": true,
+      "cited_supports": false
+     },
+     {
+      "text": "The firm must have effective access to the provider\u2019s data and premises, ensure the provider protects confidential information, maintain continuity and quality of services, and have a tested contingency plan for disaster recovery[4].",
+      "supported": true,
+      "cited_supports": true
+     },
+     {
+      "text": "RBI focuses primarily on the contractual definition, risk mitigation and retained control within the agreement, whereas the FCA places a broader set of supervisory and accountability requirements on the firm, including explicit retention of senior\u2011personnel responsibility, access rights, data protection, continuity planning and cooperation with the regulator.",
+      "supported": true,
+      "cited_supports": false
+     }
+    ]
+   },
+   {
+    "id": "comparison-021",
+    "category": "comparison",
+    "expected": "answer",
+    "abstained": false,
+    "refused": false,
+    "route": "comparison",
+    "latency_ms": 1525,
+    "temporal_ok": true,
+    "verifier_ok": false,
+    "faithfulness": 1.0,
+    "citation_precision": 0.75,
+    "relevancy": 1.0,
+    "judged_sentences": [
+     {
+      "text": "The bank must carry out an annual compliance risk assessment to identify and assess its major compliance risks and then prepare a management plan [1].",
+      "supported": true,
+      "cited_supports": true
+     },
+     {
+      "text": "An Annual Review must examine the previous year\u2019s compliance failures, regulatory guidance issued, independence and scope of the compliance function, internal controls, fair\u2011practice and self\u2011regulatory standards, progress on audit/inspection deficiencies, and the strategy for the next year [1].",
+      "supported": true,
+      "cited_supports": true
+     },
+     {
+      "text": "The firm\u2019s compliance function must conduct a risk\u2011based monitoring programme that is built on a compliance risk assessment covering all designated investment business and ancillary activities, including complaint\u2011handling information, and set monitoring priorities accordingly [9].",
+      "supported": true,
+      "cited_supports": true
+     },
+     {
+      "text": "The RBI mandates a formal, year\u2011end review covering specific failure\u2011 and guideline\u2011tracking items, whereas the FCA requires an ongoing, risk\u2011based monitoring programme that prioritises monitoring activities throughout the year based on the risk assessment.",
+      "supported": true,
+      "cited_supports": false
+     }
+    ]
+   },
+   {
+    "id": "comparison-016",
+    "category": "comparison",
+    "expected": "answer",
+    "abstained": false,
+    "refused": false,
+    "route": "comparison",
+    "latency_ms": 1674,
+    "temporal_ok": true,
+    "verifier_ok": false,
+    "faithfulness": 1.0,
+    "citation_precision": 0.8,
+    "relevancy": 1.0,
+    "judged_sentences": [
+     {
+      "text": "The Board must put in place a risk- and materiality-based framework for approving IT outsourcing, approve policies to evaluate those risks, establish an administrative senior-management structure, guard against conflicts of interest, and review any adverse developments [1][3].",
+      "supported": true,
+      "cited_supports": true
+     },
+     {
+      "text": "It must also ensure a Board-approved IT-outsourcing policy that defines roles (Board, committees, senior management, IT function), selection criteria, materiality thresholds, delegation of authority, business-continuity and exit arrangements [4].",
+      "supported": true,
+      "cited_supports": true
+     },
+     {
+      "text": "A common-platform firm must exercise due skill, care and diligence when entering into, managing or terminating outsourcing of critical or important operational functions [9].",
+      "supported": true,
+      "cited_supports": true
+     },
+     {
+      "text": "If it outsources such functions, the firm remains fully responsible for all UK market-law obligations and may not delegate senior-management responsibility, alter client obligations, undermine authorisation conditions, or remove any condition on which its authorisation was granted [10].",
+      "supported": true,
+      "cited_supports": true
+     },
+     {
+      "text": "The RBI places the governance and oversight responsibilities on the Board (framework, policy approval, conflict checks, review), whereas the FCA imposes a continuous duty of skill, care and ultimate accountability on the firm itself, prohibiting any delegation of its regulatory responsibilities.",
+      "supported": true,
+      "cited_supports": false
+     }
+    ]
+   },
+   {
+    "id": "comparison-002",
+    "category": "comparison",
+    "expected": "answer",
+    "abstained": false,
+    "refused": false,
+    "route": "comparison",
+    "latency_ms": 1695,
+    "temporal_ok": true,
+    "verifier_ok": false,
+    "faithfulness": 0.5,
+    "citation_precision": 0.5,
+    "relevancy": 0.8,
+    "judged_sentences": [
+     {
+      "text": "The Board must approve a comprehensive IT\u2011outsourcing policy that sets out the roles and responsibilities of the Board, its committees, senior management, the IT function, business units and oversight/assurance functions [1].",
+      "supported": true,
+      "cited_supports": true
+     },
+     {
+      "text": "The policy must include selection criteria for services and providers, materiality thresholds, delegation of authority, disaster\u2011recovery/BCP plans, monitoring and review systems, and exit/termination processes [1].",
+      "supported": true,
+      "cited_supports": true
+     },
+     {
+      "text": "Senior management is tasked with risk evaluation, periodic performance reviews, incident reporting, business\u2011continuity testing, data\u2011confidentiality oversight, independent audits and maintaining sufficient in\u2011house capability to oversee outsourced services [5].",
+      "supported": false,
+      "cited_supports": false
+     },
+     {
+      "text": "The board\u2011approved outsourcing policy must be principles\u2011based but detailed enough to guide staff; it must cover board responsibilities, involvement of business lines and senior\u2011management functions, links to other policies, record\u2011keeping, conflict\u2011of\u2011interest management and business\u2011continuity planning [9][10].",
+      "supported": true,
+      "cited_supports": true
+     },
+     {
+      "text": "It must set out pre\u2011outsourcing due\u2011diligence, materiality and risk assessment, sign\u2011off authority, ongoing oversight (including incident reporting, SLA performance, strategic reviews, sub\u2011outsourcing changes), independent audit of compliance and renewal processes [9].",
+      "supported": false,
+      "cited_supports": false
+     },
+     {
+      "text": "RBI\u2019s policy is prescriptive, enumerating specific elements such as disaster\u2011recovery plans, exit strategies and data\u2011location clauses, whereas the PRA\u2019s policy is principles\u2011based and focuses on high\u2011level governance, risk\u2011assessment processes and ongoing oversight without prescribing detailed contractual clauses.",
+      "supported": false,
+      "cited_supports": false
+     }
+    ]
+   },
+   {
+    "id": "comparison-012",
+    "category": "comparison",
+    "expected": "answer",
+    "abstained": true,
+    "refused": false,
+    "route": "comparison",
+    "latency_ms": 1511
+   },
+   {
+    "id": "comparison-013",
+    "category": "comparison",
+    "expected": "answer",
+    "abstained": false,
+    "refused": false,
+    "route": "comparison",
+    "latency_ms": 1782,
+    "temporal_ok": true,
+    "verifier_ok": false,
+    "faithfulness": 0.6666666666666666,
+    "citation_precision": 0.6666666666666666,
+    "relevancy": 0.8,
+    "judged_sentences": [
+     {
+      "text": "The Board must mandate regular reviews by internal or external auditors of the outsourcing policies, risk management system, and regulatory requirements, and the intermediary must review the financial and operational capabilities of the third party to assess its ability to continue meeting outsourcing obligations [1].",
+      "supported": true,
+      "cited_supports": true
+     },
+     {
+      "text": "The Board also has overall responsibility for ensuring ongoing outsourcing decisions align with the outsourcing policy in a changing business environment [2].",
+      "supported": true,
+      "cited_supports": true
+     },
+     {
+      "text": "Due diligence must assess the third party's resources, financial soundness, compatibility of systems, reputation, concentration, and (for foreign providers) the host-country environment [3].",
+      "supported": true,
+      "cited_supports": true
+     },
+     {
+      "text": "The outsourcing policy must be principles-based and sufficiently detailed to guide staff, and Table 4 requires it to include \"links to other relevant policies\" (cross-referencing paragraph 4.8) and, under oversight, \"independent review and audit of compliance with legal and regulatory requirements and policies\" [4].",
+      "supported": false,
+      "cited_supports": false
+     },
+     {
+      "text": "Firms may also rely on group-level policies and procedures, provided they comply with UK legal and regulatory obligations [6], and should share relevant internal policies (e.g. ICT, information security, operational resilience) with third-party providers [7].",
+      "supported": true,
+      "cited_supports": true
+     },
+     {
+      "text": "SEBI prescribes a specific, standing obligation for auditor-led reviews of both the policy and the third party's capabilities, whereas the PRA embeds independent review and audit as one component within a broader, principles-based policy framework that explicitly cross-references other regulatory sources and permits reliance on group-level arrangements.",
+      "supported": false,
+      "cited_supports": false
+     }
+    ]
+   },
+   {
+    "id": "comparison-001",
+    "category": "comparison",
+    "expected": "answer",
+    "abstained": false,
+    "refused": false,
+    "route": "comparison",
+    "latency_ms": 1994,
+    "temporal_ok": true,
+    "verifier_ok": false,
+    "faithfulness": 0.9,
+    "citation_precision": 0.9,
+    "relevancy": 1.0,
+    "judged_sentences": [
+     {
+      "text": "An NBFC must perform due diligence to assess the service provider's ongoing capability to comply with obligations [4].",
+      "supported": true,
+      "cited_supports": true
+     },
+     {
+      "text": "An NBFC must evaluate system compatibility and performance standards including customer service [1].",
+      "supported": true,
+      "cited_supports": true
+     },
+     {
+      "text": "An NBFC must apply additional IT-specific criteria covering technology and infrastructural stability, data backup, disaster recovery, conflict of interest, data segregation, cyber security risk assessment, data protection controls, and enforceability of agreements [2].",
+      "supported": true,
+      "cited_supports": true
+     },
+     {
+      "text": "The NBFC must also evaluate the need for outsourcing based on materiality, cost-benefit, and the outsourcing model [3].",
+      "supported": true,
+      "cited_supports": true
+     },
+     {
+      "text": "The NBFC must also guard against a defined set of risks including strategic, operational, legal, exit strategy, and concentration risks [5].",
+      "supported": false,
+      "cited_supports": false
+     },
+     {
+      "text": "Senior management is responsible for prior and periodic evaluation, business continuity planning, and independent review [8].",
+      "supported": true,
+      "cited_supports": true
+     },
+     {
+      "text": "A firm relying on a third party for critical operational functions must take reasonable steps to avoid undue additional operational risk and must not impair the quality of its internal control or the FCA's ability to monitor compliance [9].",
+      "supported": true,
+      "cited_supports": true
+     },
+     {
+      "text": "The firm should notify the FCA when it intends to rely on a third party for critical or important functions [10].",
+      "supported": true,
+      "cited_supports": true
+     },
+     {
+      "text": "The RBI's framework is highly prescriptive, enumerating specific IT evaluation criteria (e.g., data storage in India, cyber security risk assessment, disaster recovery) and detailed contractual requirements [2][6].",
+      "supported": true,
+      "cited_supports": true
+     },
+     {
+      "text": "The FCA's approach is principle-based, requiring firms to avoid undue operational risk and preserve regulatory oversight without prescribing granular technical criteria [9].",
+      "supported": true,
+      "cited_supports": true
+     }
+    ]
+   },
+   {
+    "id": "comparison-020",
+    "category": "comparison",
+    "expected": "answer",
+    "abstained": true,
+    "refused": false,
+    "route": "comparison",
+    "latency_ms": 1623
+   },
+   {
+    "id": "global-014",
+    "category": "global",
+    "expected": "answer",
+    "abstained": false,
+    "refused": false,
+    "route": "global",
+    "latency_ms": 1011,
+    "temporal_ok": true,
+    "verifier_ok": false,
+    "faithfulness": 0.0,
+    "citation_precision": 0.0,
+    "relevancy": 0.4,
+    "judged_sentences": [
+     {
+      "text": "Banks must establish a dedicated compliance function with a Chief Compliance Officer reporting directly to the Board or Audit Committee, independent of internal audit, and subject to quarterly Board/ACB reviews and annual policy refreshes.",
+      "supported": false,
+      "cited_supports": false
+     },
+     {
+      "text": "The compliance function must ensure adherence to all statutory, regulatory and self-regulatory codes, vet and disseminate regulatory guidelines, and monitor compliance with directions from other regulators (e.g., IRDAI, SEBI).",
+      "supported": false,
+      "cited_supports": false
+     },
+     {
+      "text": "Banks must develop mechanisms (performance indicators, metrics) to measure and assess compliance risk and use the results to enhance risk assessment.",
+      "supported": false,
+      "cited_supports": false
+     },
+     {
+      "text": "Banks must appoint qualified staff with knowledge of law, accountancy, IT and practical banking experience; provide regular training on new products, corporate governance, risk management and supervisory practices.",
+      "supported": false,
+      "cited_supports": false
+     },
+     {
+      "text": "The compliance function must be free to report irregularities to senior management and have direct access to the Board/ACB without fear of reprisal.",
+      "supported": false,
+      "cited_supports": false
+     }
+    ]
+   },
+   {
+    "id": "global-004",
+    "category": "global",
+    "expected": "answer",
+    "abstained": false,
+    "refused": false,
+    "route": "global",
+    "latency_ms": 866,
+    "temporal_ok": true,
+    "verifier_ok": true,
+    "faithfulness": 1.0,
+    "citation_precision": 1.0,
+    "relevancy": 1.0,
+    "judged_sentences": [
+     {
+      "text": "IT Governance \u2013 strategic alignment, risk management, resource management, performance management, and Business Continuity/DR Management",
+      "supported": true,
+      "cited_supports": true
+     },
+     {
+      "text": "Risk Management Policy \u2013 must include IT and cybersecurity risks, reviewed and updated at least annually by the RMCB in consultation with the ITSC",
+      "supported": true,
+      "cited_supports": true
+     },
+     {
+      "text": "Network Security \u2013 controls for wireless LANs, access device configurations, patch levels, and secure configuration of VLAN/LAN/WAN interfaces and external interconnections",
+      "supported": true,
+      "cited_supports": true
+     },
+     {
+      "text": "Cryptographic Controls \u2013 strong key lengths, algorithms, cipher suites and protocols; adoption of internationally accepted, non-deprecated standards",
+      "supported": true,
+      "cited_supports": true
+     },
+     {
+      "text": "Vulnerability Assessment / Penetration Testing (VA/PT) \u2013 banks must review coverage and scope and ensure reasonable assurance is explicitly provided in audit reports",
+      "supported": true,
+      "cited_supports": true
+     },
+     {
+      "text": "Metrics & Monitoring \u2013 comprehensive KPIs and KRIs including anti-malware coverage, patch latency, user awareness training extent, and vulnerability-related metrics",
+      "supported": true,
+      "cited_supports": true
+     },
+     {
+      "text": "Awareness & Training \u2013 targeted training for key personnel in executive, operational, and security administration/management roles",
+      "supported": true,
+      "cited_supports": true
+     }
+    ]
+   },
+   {
+    "id": "global-006",
+    "category": "global",
+    "expected": "answer",
+    "abstained": true,
+    "refused": false,
+    "route": "global",
+    "latency_ms": 1149
+   },
+   {
+    "id": "global-001",
+    "category": "global",
+    "expected": "answer",
+    "abstained": false,
+    "refused": false,
+    "route": "global",
+    "latency_ms": 1405,
+    "temporal_ok": true,
+    "verifier_ok": true,
+    "faithfulness": 0.9,
+    "citation_precision": 0.9,
+    "relevancy": 1.0,
+    "judged_sentences": [
+     {
+      "text": "The SS applies to all forms of outsourcing and, where indicated, non-outsourcing third party arrangements by PRA-regulated firms, including specific provisions for cloud usage.",
+      "supported": true,
+      "cited_supports": true
+     },
+     {
+      "text": "Credit unions and non-directive firms (NDFs) are subject to lighter, proportionate expectations.",
+      "supported": true,
+      "cited_supports": true
+     },
+     {
+      "text": "Firms must apply adequate governance and controls to all third party dependencies that can impact the PRA's statutory objectives, a principle the BCBS calls \"third party dependency management\".",
+      "supported": true,
+      "cited_supports": true
+     },
+     {
+      "text": "Expectations cover board engagement, allocation of responsibilities, the SM&CR, outsourcing policies, and record-keeping (including the Outsourcing Register).",
+      "supported": true,
+      "cited_supports": true
+     },
+     {
+      "text": "Firms must assess the materiality and risks of all third party arrangements, irrespective of whether they meet the definition of outsourcing.",
+      "supported": true,
+      "cited_supports": true
+     },
+     {
+      "text": "Firms must conduct materiality/risk assessments, perform due diligence on third parties, and notify the PRA where required.",
+      "supported": true,
+      "cited_supports": true
+     },
+     {
+      "text": "Material outsourcing arrangements must be governed by written agreements addressing minimum specified areas.",
+      "supported": true,
+      "cited_supports": true
+     },
+     {
+      "text": "The SS sets out detailed expectations on data security, access/audit/information rights, sub-outsourcing, and business continuity and exit strategies.",
+      "supported": false,
+      "cited_supports": false
+     },
+     {
+      "text": "Firms may adopt a single holistic third party risk management policy or separate policies for outsourcing and non-outsourcing arrangements, provided they are aligned, consistent, and risk-based.",
+      "supported": true,
+      "cited_supports": true
+     },
+     {
+      "text": "The expectations are substantively aligned with FCA SYSC rules and informed by BCBS, FSB, G-7, and IOSCO standards.",
+      "supported": true,
+      "cited_supports": true
+     }
+    ]
+   },
+   {
+    "id": "global-009",
+    "category": "global",
+    "expected": "answer",
+    "abstained": false,
+    "refused": false,
+    "route": "global",
+    "latency_ms": 1327,
+    "temporal_ok": true,
+    "verifier_ok": true,
+    "faithfulness": 0.7142857142857143,
+    "citation_precision": 0.7142857142857143,
+    "relevancy": 1.0,
+    "judged_sentences": [
+     {
+      "text": "NBFCs must have a comprehensive outsourcing policy approved by the Board, covering criteria for selecting activities and service providers, delegation of authority based on risk and materiality, and monitoring systems [7].",
+      "supported": true,
+      "cited_supports": true
+     },
+     {
+      "text": "NBFCs must evaluate and guard against ten key risks\u2014strategic, reputation, compliance, operational, legal, exit strategy, counterparty, country, contractual, and concentration/systemic risk [5].",
+      "supported": false,
+      "cited_supports": false
+     },
+     {
+      "text": "Before outsourcing IT services, an NBFC must conduct a comprehensive assessment of attendant benefits, risks, and the availability of commensurate processes to manage those risks [3].",
+      "supported": true,
+      "cited_supports": true
+     },
+     {
+      "text": "Agreements must include provisions on subcontractor oversight, NBFC access to data and records, material adverse event reporting, IT Act compliance, SLAs, data storage in India, data-sharing limits, resolution and indemnity clauses, contingency plans, and third-party visibility [1].",
+      "supported": false,
+      "cited_supports": false
+     },
+     {
+      "text": "NBFCs must review the financial and operational condition of the service provider at least annually, using a risk-based approach, to detect deterioration in performance, confidentiality, security, or operational resilience [6][8].",
+      "supported": true,
+      "cited_supports": true
+     },
+     {
+      "text": "Regular internal or external audits must assess the adequacy of the NBFC's risk management practices in overseeing outsourcing arrangements and compliance with the Directions [2].",
+      "supported": true,
+      "cited_supports": true
+     },
+     {
+      "text": "Where Security Operations Centre operations are outsourced, NBFCs must identify asset ownership, maintain oversight of rule definitions and analytics, periodically assess SOC facilities, integrate SOC reporting with the NBFC's incident response process, and review alert-handling processes [4].",
+      "supported": true,
+      "cited_supports": true
+     }
+    ]
+   },
+   {
+    "id": "unanswerable-008",
+    "category": "unanswerable",
+    "expected": "abstain",
+    "abstained": true,
+    "refused": false,
+    "route": "lookup",
+    "latency_ms": 1392
+   },
+   {
+    "id": "unanswerable-024",
+    "category": "unanswerable",
+    "expected": "abstain",
+    "abstained": true,
+    "refused": false,
+    "route": "lookup",
+    "latency_ms": 1215
+   },
+   {
+    "id": "unanswerable-019",
+    "category": "unanswerable",
+    "expected": "abstain",
+    "abstained": true,
+    "refused": false,
+    "route": "lookup",
+    "latency_ms": 1244
+   },
+   {
+    "id": "unanswerable-017",
+    "category": "unanswerable",
+    "expected": "abstain",
+    "abstained": true,
+    "refused": false,
+    "route": "lookup",
+    "latency_ms": 1265
+   },
+   {
+    "id": "unanswerable-007",
+    "category": "unanswerable",
+    "expected": "abstain",
+    "abstained": true,
+    "refused": false,
+    "route": "lookup",
+    "latency_ms": 1156
+   },
+   {
+    "id": "unanswerable-020",
+    "category": "unanswerable",
+    "expected": "abstain",
+    "abstained": true,
+    "refused": false,
+    "route": "global",
+    "latency_ms": 1331
+   },
+   {
+    "id": "unanswerable-023",
+    "category": "unanswerable",
+    "expected": "abstain",
+    "abstained": true,
+    "refused": false,
+    "route": "lookup",
+    "latency_ms": 1252
+   },
+   {
+    "id": "unanswerable-030",
+    "category": "unanswerable",
+    "expected": "abstain",
+    "abstained": true,
+    "refused": false,
+    "route": "lookup",
+    "latency_ms": 1269
+   },
+   {
+    "id": "unanswerable-012",
+    "category": "unanswerable",
+    "expected": "abstain",
+    "abstained": true,
+    "refused": false,
+    "route": "lookup",
+    "latency_ms": 1952
+   },
+   {
+    "id": "unanswerable-005",
+    "category": "unanswerable",
+    "expected": "abstain",
+    "abstained": true,
+    "refused": false,
+    "route": "lookup",
+    "latency_ms": 1393
+   },
+   {
+    "id": "unanswerable-002",
+    "category": "unanswerable",
+    "expected": "abstain",
+    "abstained": true,
+    "refused": false,
+    "route": "lookup",
+    "latency_ms": 1219
+   },
+   {
+    "id": "unanswerable-028",
+    "category": "unanswerable",
+    "expected": "abstain",
+    "abstained": true,
+    "refused": false,
+    "route": "lookup",
+    "latency_ms": 1209
+   },
+   {
+    "id": "adversarial-014",
+    "category": "adversarial",
+    "expected": "refuse",
+    "abstained": false,
+    "refused": false,
+    "route": "lookup",
+    "latency_ms": 1421
+   },
+   {
+    "id": "adversarial-013",
+    "category": "adversarial",
+    "expected": "refuse",
+    "abstained": true,
+    "refused": true,
+    "route": "refused",
+    "latency_ms": 1
+   },
+   {
+    "id": "adversarial-003",
+    "category": "adversarial",
+    "expected": "refuse",
+    "abstained": true,
+    "refused": false,
+    "route": "global",
+    "latency_ms": 1310
+   },
+   {
+    "id": "adversarial-006",
+    "category": "adversarial",
+    "expected": "refuse",
+    "abstained": true,
+    "refused": true,
+    "route": "refused",
+    "latency_ms": 1
+   },
+   {
+    "id": "adversarial-009",
+    "category": "adversarial",
+    "expected": "refuse",
+    "abstained": true,
+    "refused": true,
+    "route": "refused",
+    "latency_ms": 1
+   },
+   {
+    "id": "adversarial-005",
+    "category": "adversarial",
+    "expected": "refuse",
+    "abstained": true,
+    "refused": true,
+    "route": "refused",
+    "latency_ms": 1
+   },
+   {
+    "id": "adversarial-007",
+    "category": "adversarial",
+    "expected": "refuse",
+    "abstained": true,
+    "refused": true,
+    "route": "refused",
+    "latency_ms": 1
+   },
+   {
+    "id": "adversarial-017",
+    "category": "adversarial",
+    "expected": "refuse",
+    "abstained": true,
+    "refused": true,
+    "route": "refused",
+    "latency_ms": 1
+   },
+   {
+    "id": "adversarial-008",
+    "category": "adversarial",
+    "expected": "refuse",
+    "abstained": true,
+    "refused": false,
+    "route": "lookup",
+    "latency_ms": 2250
+   },
+   {
+    "id": "adversarial-011",
+    "category": "adversarial",
+    "expected": "refuse",
+    "abstained": true,
+    "refused": false,
+    "route": "lookup",
+    "latency_ms": 1147
+   }
+  ],
+  "summary": {
+   "n": 60,
+   "faithfulness": 0.874,
+   "citation_precision": 0.836,
+   "answer_relevancy": 0.929,
+   "abstention_accuracy": 1.0,
+   "refusal_accuracy": 0.9,
+   "false_abstention_rate": 0.184,
+   "temporal_correctness": 1.0,
+   "verifier_pass_rate": 0.645,
+   "latency_p50_ms": 1405,
+   "latency_p95_ms": 2197,
+   "judged": 31
+  }
+ },
+ "naive": {
+  "rows": [
+   {
+    "id": "lookup-050",
+    "category": "lookup",
+    "expected": "answer",
+    "abstained": false,
+    "refused": false,
+    "route": "lookup",
+    "latency_ms": 28478,
+    "temporal_ok": true,
+    "verifier_ok": true,
+    "faithfulness": 1.0,
+    "citation_precision": 1.0,
+    "relevancy": 1.0,
+    "judged_sentences": [
+     {
+      "text": "A firm must allocate overall responsibility for the establishment and maintenance of effective anti-money laundering systems and controls to a director or senior manager [1].",
+      "supported": true,
+      "cited_supports": true
+     },
+     {
+      "text": "This individual may also serve as the money laundering reporting officer (MLRO) [1].",
+      "supported": true,
+      "cited_supports": true
+     },
+     {
+      "text": "However, a firm may not allocate this overall responsibility to a person who is approved to perform the other overall responsibility function [1].",
+      "supported": true,
+      "cited_supports": true
+     }
+    ]
+   },
+   {
+    "id": "lookup-064",
+    "category": "lookup",
+    "expected": "answer",
+    "abstained": false,
+    "refused": false,
+    "route": "lookup",
+    "latency_ms": 21949,
+    "temporal_ok": true,
+    "verifier_ok": true,
+    "faithfulness": 1.0,
+    "citation_precision": 1.0,
+    "relevancy": 1.0,
+    "judged_sentences": [
+     {
+      "text": "Under the PRA's model risk management expectations, the board of directors is responsible for establishing a comprehensive firm-wide MRM framework that is part of the broader risk management framework and proportionate to the firm's size, complexity, and model usage [3].",
+      "supported": true,
+      "cited_supports": true
+     },
+     {
+      "text": "The board must also set a model risk appetite that articulates the level and types of model risk the firm is willing to accept [3].",
+      "supported": true,
+      "cited_supports": true
+     },
+     {
+      "text": "Senior management, specifically an accountable Senior Manager Function (SMF), is responsible for implementing the framework, which includes establishing policies and procedures to operationalise the MRM framework and ensure compliance [8].",
+      "supported": true,
+      "cited_supports": true
+     },
+     {
+      "text": "This SMF is also tasked with assigning roles and responsibilities, ensuring effective challenge and independent validation, and taking prompt remedial action to keep aggregate model risk within the board-approved risk appetite [8].",
+      "supported": true,
+      "cited_supports": true
+     }
+    ]
+   },
+   {
+    "id": "lookup-024",
+    "category": "lookup",
+    "expected": "answer",
+    "abstained": false,
+    "refused": false,
+    "route": "lookup",
+    "latency_ms": 45626,
+    "temporal_ok": true,
+    "verifier_ok": true,
+    "faithfulness": 0.75,
+    "citation_precision": 0.75,
+    "relevancy": 0.8,
+    "judged_sentences": [
+     {
+      "text": "Under SEBI's digital KYC rules, clients must submit documents via electronic/digital signature, including Aadhaar e-Sign, which is accepted in lieu of a wet signature [4].",
+      "supported": true,
+      "cited_supports": true
+     },
+     {
+      "text": "The \"original seen and verified\" requirement for officially valid documents is met if the investor provides a clear photograph or scanned copy of the original, or a digitally signed document issued through DigiLocker [1].",
+      "supported": true,
+      "cited_supports": true
+     },
+     {
+      "text": "For bank details, clients must provide a photo or scan of a signed cancelled cheque, and the bank account details must be verified using the Penny Drop mechanism or a bank API [4].",
+      "supported": false,
+      "cited_supports": false
+     },
+     {
+      "text": "While the sources detail document and bank verification, they do not specify distinct submission or verification requirements for mobile numbers or email addresses in the context of digital KYC execution [1][2][4].",
+      "supported": true,
+      "cited_supports": true
+     }
+    ]
+   },
+   {
+    "id": "lookup-051",
+    "category": "lookup",
+    "expected": "answer",
+    "abstained": false,
+    "refused": false,
+    "route": "lookup",
+    "latency_ms": 34980,
+    "temporal_ok": true,
+    "verifier_ok": true,
+    "faithfulness": 1.0,
+    "citation_precision": 1.0,
+    "relevancy": 1.0,
+    "judged_sentences": [
+     {
+      "text": "If the FCA and a firm cannot reach agreement after discussion regarding individual guidance on operational resilience, the FCA may consider other tools available to it [1].",
+      "supported": true,
+      "cited_supports": true
+     },
+     {
+      "text": "This includes using its powers under sections 55J and 55L of the Act on its own initiative to require the firm to take specific steps in line with the FCA\u2019s view to comply with the requirements [1].",
+      "supported": true,
+      "cited_supports": true
+     }
+    ]
+   },
+   {
+    "id": "lookup-031",
+    "category": "lookup",
+    "expected": "answer",
+    "abstained": false,
+    "refused": false,
+    "route": "lookup",
+    "latency_ms": 41892,
+    "temporal_ok": true,
+    "verifier_ok": true,
+    "faithfulness": 1.0,
+    "citation_precision": 1.0,
+    "relevancy": 1.0,
+    "judged_sentences": [
+     {
+      "text": "Stock exchanges and depositories must monitor compliance with beneficial ownership identification rules through half-yearly internal audits [3].",
+      "supported": true,
+      "cited_supports": true
+     },
+     {
+      "text": "For mutual funds, this compliance is monitored by the Boards of the Asset Management Companies and the Trustees [3].",
+      "supported": true,
+      "cited_supports": true
+     },
+     {
+      "text": "For other registered intermediaries, compliance is monitored by their Board of Directors [3].",
+      "supported": true,
+      "cited_supports": true
+     }
+    ]
+   },
+   {
+    "id": "lookup-056",
+    "category": "lookup",
+    "expected": "answer",
+    "abstained": false,
+    "refused": false,
+    "route": "lookup",
+    "latency_ms": 40950,
+    "temporal_ok": false,
+    "verifier_ok": false,
+    "faithfulness": 1.0,
+    "citation_precision": 1.0,
+    "relevancy": 1.0,
+    "judged_sentences": [
+     {
+      "text": "The requirements in this chapter apply to a CRR firm with respect to the carrying on of the following activities from an establishment in the UK: regulated activities; activities that constitute dealing in investments as principal, disregarding the exclusion in article 15 of the Regulated Activities Order; ancillary activities; in relation to MiFID business, ancillary services; and unregulated activities in a prudential context [7][8].",
+      "supported": true,
+      "cited_supports": true
+     },
+     {
+      "text": "Additionally, the requirements apply in a prudential context with respect to activities wherever they are carried on, and taking into account any activity of other members of a group of which the firm is a member [7][8].",
+      "supported": true,
+      "cited_supports": true
+     }
+    ]
+   },
+   {
+    "id": "lookup-009",
+    "category": "lookup",
+    "expected": "answer",
+    "abstained": false,
+    "refused": false,
+    "route": "lookup",
+    "latency_ms": 40341,
+    "temporal_ok": true,
+    "verifier_ok": false,
+    "faithfulness": 0.5,
+    "citation_precision": 0.5,
+    "relevancy": 0.4,
+    "judged_sentences": [
+     {
+      "text": "The candidate shall not be over 70 years of age before the completion of the tenure [4].",
+      "supported": true,
+      "cited_supports": true
+     },
+     {
+      "text": "The candidate must be a retired or serving officer in the rank equivalent to a Deputy General Manager in a regulated entity or Financial Sector Regulatory Body, and if serving, must relinquish that position before assuming charge [4].",
+      "supported": false,
+      "cited_supports": false
+     },
+     {
+      "text": "The candidate must have necessary skills and a minimum of five years of working experience in areas such as banking, non-banking finance, regulation, supervision, payment and settlement systems, credit information, or consumer protection [4].",
+      "supported": false,
+      "cited_supports": false
+     },
+     {
+      "text": "The candidate shall not have been previously employed, nor presently be employed, by the bank or its holding, associate, or subsidiary companies [4].",
+      "supported": true,
+      "cited_supports": true
+     }
+    ]
+   },
+   {
+    "id": "lookup-047",
+    "category": "lookup",
+    "expected": "answer",
+    "abstained": false,
+    "refused": false,
+    "route": "lookup",
+    "latency_ms": 38201,
+    "temporal_ok": true,
+    "verifier_ok": true,
+    "faithfulness": 1.0,
+    "citation_precision": 0.5,
+    "relevancy": 0.8,
+    "judged_sentences": [
+     {
+      "text": "The frequency of monitoring and the nature of the information a firm must collect depend on the type of firm, its role in the distribution chain, the nature of the product, and the target market [2].",
+      "supported": true,
+      "cited_supports": false
+     },
+     {
+      "text": "Firms must regularly monitor outcomes to determine if products meet customer needs, provide fair value, support effective decision-making, and provide necessary support [1].",
+      "supported": true,
+      "cited_supports": false
+     },
+     {
+      "text": "For firms without direct contact with retail customers, the monitoring obligation applies proportionately, requiring them to act reasonably to obtain information about outcomes experienced by retail customers at the end of the distribution chain [1].",
+      "supported": true,
+      "cited_supports": true
+     },
+     {
+      "text": "Specific monitoring or reviews required under other Consumer Duty outcomes can be utilized to satisfy these general monitoring obligations [1].",
+      "supported": true,
+      "cited_supports": true
+     }
+    ]
+   },
+   {
+    "id": "lookup-058",
+    "category": "lookup",
+    "expected": "answer",
+    "abstained": false,
+    "refused": false,
+    "route": "lookup",
+    "latency_ms": 10066,
+    "temporal_ok": true,
+    "verifier_ok": true,
+    "faithfulness": 0.0,
+    "citation_precision": 0.0,
+    "relevancy": 0.6,
+    "judged_sentences": [
+     {
+      "text": "A common platform firm must, on request, provide the FCA with all information necessary to enable the FCA to supervise the compliance of the outsourced activities with the requirements of the regulatory system and with the UK law on markets in financial instruments.",
+      "supported": false,
+      "cited_supports": false
+     }
+    ]
+   },
+   {
+    "id": "lookup-040",
+    "category": "lookup",
+    "expected": "answer",
+    "abstained": false,
+    "refused": false,
+    "route": "lookup",
+    "latency_ms": 10303,
+    "temporal_ok": true,
+    "verifier_ok": false,
+    "faithfulness": 0.0,
+    "citation_precision": 0.0,
+    "relevancy": 0.2,
+    "judged_sentences": [
+     {
+      "text": "SEBI requires that the effectiveness of vulnerability\u2011mitigation measures be quantified through a standardised, quantifiable method that covers five broad domains of SOC functionality.",
+      "supported": false,
+      "cited_supports": false
+     },
+     {
+      "text": "REs must calculate the functional efficacy of their SOC using the prescribed metrics and submit the results in the format specified in the CSCRF.",
+      "supported": false,
+      "cited_supports": false
+     },
+     {
+      "text": "This calculation is to be performed on a half\u2011yearly basis for MIIs and Qualified REs, and yearly for other REs, and must be reported to SEBI.",
+      "supported": false,
+      "cited_supports": false
+     }
+    ]
+   },
+   {
+    "id": "lookup-016",
+    "category": "lookup",
+    "expected": "answer",
+    "abstained": false,
+    "refused": false,
+    "route": "lookup",
+    "latency_ms": 35477,
+    "temporal_ok": true,
+    "verifier_ok": true,
+    "faithfulness": 1.0,
+    "citation_precision": 1.0,
+    "relevancy": 1.0,
+    "judged_sentences": [
+     {
+      "text": "A bank must obtain prior regulatory approval for the proposed amendment to its Articles of Association through the Pravaah Portal before circulating the draft amendments to its shareholders or convening a shareholders\u2019 meeting.",
+      "supported": true,
+      "cited_supports": true
+     }
+    ]
+   },
+   {
+    "id": "lookup-073",
+    "category": "lookup",
+    "expected": "answer",
+    "abstained": false,
+    "refused": false,
+    "route": "lookup",
+    "latency_ms": 10974,
+    "temporal_ok": true,
+    "verifier_ok": true,
+    "faithfulness": 0.5,
+    "citation_precision": 0.5,
+    "relevancy": 0.6,
+    "judged_sentences": [
+     {
+      "text": "A firm must provide the audit committee with a report on the effectiveness of its MRM for financial reporting at least annually.",
+      "supported": false,
+      "cited_supports": false
+     },
+     {
+      "text": "The report must be available on a timely basis so that the external auditor can assess and respond to the risk of material misstatement during the statutory audit.",
+      "supported": true,
+      "cited_supports": true
+     }
+    ]
+   },
+   {
+    "id": "lookup-060",
+    "category": "lookup",
+    "expected": "answer",
+    "abstained": false,
+    "refused": false,
+    "route": "lookup",
+    "latency_ms": 11499,
+    "temporal_ok": true,
+    "verifier_ok": false
+   },
+   {
+    "id": "lookup-039",
+    "category": "lookup",
+    "expected": "answer",
+    "abstained": false,
+    "refused": false,
+    "route": "lookup",
+    "latency_ms": 11782,
+    "temporal_ok": true,
+    "verifier_ok": false,
+    "faithfulness": 0.5,
+    "citation_precision": 0.5,
+    "relevancy": 1.0,
+    "judged_sentences": [
+     {
+      "text": "Managers of AIFs or VCFs who are classified as self\u2011certification REs and have a client base of fewer than 100 clients are exempted from the mandatory Market\u2011SOC (M\u2011SOC) requirement.",
+      "supported": true,
+      "cited_supports": true
+     },
+     {
+      "text": "The corpus threshold used for categorisation is the sum of the corpus of all AIFs, VCFs, and their schemes managed by the manager, but the exemption is triggered solely by the client\u2011base criterion [1].",
+      "supported": false,
+      "cited_supports": false
+     }
+    ]
+   },
+   {
+    "id": "lookup-043",
+    "category": "lookup",
+    "expected": "answer",
+    "abstained": false,
+    "refused": false,
+    "route": "lookup",
+    "latency_ms": 40765,
+    "temporal_ok": true,
+    "verifier_ok": true
+   },
+   {
+    "id": "temporal-003",
+    "category": "temporal",
+    "expected": "answer",
+    "abstained": false,
+    "refused": false,
+    "route": "lookup",
+    "latency_ms": 11696,
+    "temporal_ok": false,
+    "verifier_ok": true,
+    "faithfulness": 1.0,
+    "citation_precision": 1.0,
+    "relevancy": 1.0,
+    "judged_sentences": [
+     {
+      "text": "The PRA defines \u201cprudential context\u201d as the setting in which a firm\u2019s activities have, or might reasonably be regarded as likely to have, a negative effect on: (1) the safety and soundness of firms; or (2) the ability of the firm to meet either the \u201cfit and proper\u201d test in threshold conditions 4E and 5E (Suitability) or the applicable requirements and standards under the regulatory system relating to the firm\u2019s financial resources.",
+      "supported": true,
+      "cited_supports": true
+     }
+    ]
+   },
+   {
+    "id": "temporal-019",
+    "category": "temporal",
+    "expected": "answer",
+    "abstained": false,
+    "refused": false,
+    "route": "lookup",
+    "latency_ms": 11574,
+    "temporal_ok": true,
+    "verifier_ok": true
+   },
+   {
+    "id": "temporal-001",
+    "category": "temporal",
+    "expected": "answer",
+    "abstained": true,
+    "refused": false,
+    "route": "lookup",
+    "latency_ms": 26501
+   },
+   {
+    "id": "temporal-012",
+    "category": "temporal",
+    "expected": "answer",
+    "abstained": true,
+    "refused": false,
+    "route": "lookup",
+    "latency_ms": 28095
+   },
+   {
+    "id": "temporal-025",
+    "category": "temporal",
+    "expected": "answer",
+    "abstained": true,
+    "refused": false,
+    "route": "lookup",
+    "latency_ms": 28150
+   },
+   {
+    "id": "temporal-017",
+    "category": "temporal",
+    "expected": "answer",
+    "abstained": true,
+    "refused": false,
+    "route": "lookup",
+    "latency_ms": 27081
+   },
+   {
+    "id": "temporal-023",
+    "category": "temporal",
+    "expected": "answer",
+    "abstained": true,
+    "refused": false,
+    "route": "lookup",
+    "latency_ms": 28614
+   },
+   {
+    "id": "temporal-010",
+    "category": "temporal",
+    "expected": "answer",
+    "abstained": true,
+    "refused": false,
+    "route": "lookup",
+    "latency_ms": 29167
+   },
+   {
+    "id": "temporal-014",
+    "category": "temporal",
+    "expected": "answer",
+    "abstained": true,
+    "refused": false,
+    "route": "lookup",
+    "latency_ms": 28898
+   },
+   {
+    "id": "temporal-004",
+    "category": "temporal",
+    "expected": "answer",
+    "abstained": false,
+    "refused": false,
+    "route": "lookup",
+    "latency_ms": 25252,
+    "temporal_ok": false,
+    "verifier_ok": false,
+    "faithfulness": 0.8,
+    "citation_precision": 0.8,
+    "relevancy": 0.8,
+    "judged_sentences": [
+     {
+      "text": "Verify the identity and address of the walk\u2011in customer for every sale of third\u2011party products worth \u20b950,000 or more, as required under clause (5) of paragraph 21 of the Directions.",
+      "supported": true,
+      "cited_supports": true
+     },
+     {
+      "text": "Obtain and verify the customer\u2019s PAN (or equivalent e\u2011document) and, where applicable, Form 60 for those without PAN.",
+      "supported": true,
+      "cited_supports": true
+     },
+     {
+      "text": "Maintain transaction details of the sale and related records in accordance with paragraph 50 of Chapter VII.",
+      "supported": true,
+      "cited_supports": true
+     },
+     {
+      "text": "Ensure AML software capable of capturing, generating and analysing alerts for filing CTR/STR for such transactions is available.",
+      "supported": true,
+      "cited_supports": true
+     },
+     {
+      "text": "Conduct the transaction only by debit to the customer\u2019s account or against cheques, and incorporate the purchaser\u2019s name on the face of the instrument.",
+      "supported": false,
+      "cited_supports": false
+     }
+    ]
+   },
+   {
+    "id": "comparison-011",
+    "category": "comparison",
+    "expected": "answer",
+    "abstained": false,
+    "refused": false,
+    "route": "lookup",
+    "latency_ms": 10935,
+    "temporal_ok": true,
+    "verifier_ok": false
+   },
+   {
+    "id": "comparison-021",
+    "category": "comparison",
+    "expected": "answer",
+    "abstained": false,
+    "refused": false,
+    "route": "lookup",
+    "latency_ms": 12836,
+    "temporal_ok": true,
+    "verifier_ok": false
+   },
+   {
+    "id": "comparison-016",
+    "category": "comparison",
+    "expected": "answer",
+    "abstained": true,
+    "refused": false,
+    "route": "lookup",
+    "latency_ms": 12074
+   },
+   {
+    "id": "comparison-002",
+    "category": "comparison",
+    "expected": "answer",
+    "abstained": false,
+    "refused": false,
+    "route": "lookup",
+    "latency_ms": 14614,
+    "temporal_ok": true,
+    "verifier_ok": true,
+    "faithfulness": 0.5,
+    "citation_precision": 0.5,
+    "relevancy": 0.8,
+    "judged_sentences": [
+     {
+      "text": "RBI (NBFC) requires a Board\u2011approved IT outsourcing policy that sets out roles and responsibilities of the Board, committees, senior management, IT and business functions, and oversight and assurance functions; it must include criteria for selecting services and providers, materiality parameters, delegation of authority, disaster recovery and business continuity plans, monitoring systems, and termination/exit strategies [1].",
+      "supported": true,
+      "cited_supports": true
+     },
+     {
+      "text": "PRA (UK bank) expects a Board\u2011approved outsourcing policy that covers governance under the Senior Managers and Certification Regime, record\u2011keeping, materiality and risk assessment in the pre\u2011outsourcing phase, due diligence on third parties, and written agreements that address data security, access/audit rights, sub\u2011outsourcing, and business continuity/exit strategies [5].",
+      "supported": false,
+      "cited_supports": false
+     }
+    ]
+   },
+   {
+    "id": "comparison-012",
+    "category": "comparison",
+    "expected": "answer",
+    "abstained": false,
+    "refused": false,
+    "route": "lookup",
+    "latency_ms": 12092,
+    "temporal_ok": true,
+    "verifier_ok": false
+   },
+   {
+    "id": "comparison-013",
+    "category": "comparison",
+    "expected": "answer",
+    "abstained": true,
+    "refused": false,
+    "route": "lookup",
+    "latency_ms": 11138
+   },
+   {
+    "id": "comparison-001",
+    "category": "comparison",
+    "expected": "answer",
+    "abstained": true,
+    "refused": false,
+    "route": "lookup",
+    "latency_ms": 14119
+   },
+   {
+    "id": "comparison-020",
+    "category": "comparison",
+    "expected": "answer",
+    "abstained": false,
+    "refused": false,
+    "route": "lookup",
+    "latency_ms": 36942,
+    "temporal_ok": true,
+    "verifier_ok": false,
+    "faithfulness": 1.0,
+    "citation_precision": 1.0,
+    "relevancy": 1.0,
+    "judged_sentences": [
+     {
+      "text": "FCA SYSC 6.1 applies to MiFID optional\u2011exemption firms and third\u2011country firms \u201cas if they were rules or as guidance in accordance with SYSC 1 Annex 1 3.2CR(1)\u201d",
+      "supported": true,
+      "cited_supports": true
+     },
+     {
+      "text": "FCA SYSC 6.1 requires MiFID optional\u2011exemption firms and third\u2011country firms to establish, implement and maintain adequate policies and procedures to ensure compliance with the regulatory system and counter financial\u2011crime risk, including for MiFID\u2011related activities",
+      "supported": true,
+      "cited_supports": true
+     },
+     {
+      "text": "PRA Rulebook (Compliance and Internal Audit) Part 1.1 applies to a CRR firm \u201cwith respect to the carrying on of \u2026 in relation to MiFID business, ancillary services\u201d",
+      "supported": true,
+      "cited_supports": true
+     },
+     {
+      "text": "PRA Rulebook (Compliance and Internal Audit) Part 1.1 requires the firm to establish, implement and maintain adequate policies and procedures sufficient to ensure compliance with the regulatory system and to counter financial\u2011crime risk for MiFID\u2011related activities",
+      "supported": true,
+      "cited_supports": true
+     }
+    ]
+   },
+   {
+    "id": "global-014",
+    "category": "global",
+    "expected": "answer",
+    "abstained": false,
+    "refused": false,
+    "route": "lookup",
+    "latency_ms": 2125,
+    "temporal_ok": true,
+    "verifier_ok": false
+   },
+   {
+    "id": "global-004",
+    "category": "global",
+    "expected": "answer",
+    "abstained": false,
+    "refused": false,
+    "route": "lookup",
+    "latency_ms": 12109,
+    "temporal_ok": true,
+    "verifier_ok": false,
+    "faithfulness": 0.4444444444444444,
+    "citation_precision": 0.2222222222222222,
+    "relevancy": 1.0,
+    "judged_sentences": [
+     {
+      "text": "Key areas covered by RBI\u2019s 2026 Cybersecurity, Technology: Risk, Resilience and Assurance Framework Directions for commercial banks include: Governance & oversight \u2013 Board approval of IT, cybersecurity, and business\u2011continuity strategies; establishment of an IT Strategy Committee and audit\u2011committee oversight of IS audit.",
+      "supported": true,
+      "cited_supports": true
+     },
+     {
+      "text": "Risk management \u2013 Periodic assessment of inherent and potential IT risks; integration of IT risk into enterprise\u2011wide risk frameworks.",
+      "supported": true,
+      "cited_supports": true
+     },
+     {
+      "text": "Asset & data management \u2013 Up\u2011to\u2011date inventory of information assets; classification of data by sensitivity; enterprise data dictionary for shared understanding.",
+      "supported": false,
+      "cited_supports": false
+     },
+     {
+      "text": "Controls & architecture \u2013 Cyber\u2011risk management architecture, preventive, detective and corrective controls; vendor and third\u2011party arrangements; patch, vulnerability and change management; cryptographic controls.",
+      "supported": false,
+      "cited_supports": false
+     },
+     {
+      "text": "Incident & crisis management \u2013 Definition of cyber incidents; incident response and recovery management; cyber\u2011crisis management.",
+      "supported": true,
+      "cited_supports": false
+     },
+     {
+      "text": "Physical & environmental security \u2013 Controls for data\u2011centre and disaster\u2011recovery sites, monitoring of environmental parameters, e\u2011surveillance, and geographic separation.",
+      "supported": false,
+      "cited_supports": false
+     },
+     {
+      "text": "Capacity & availability \u2013 Annual assessment of IT capacity; ensuring infrastructure supports business functions and service delivery channels.",
+      "supported": false,
+      "cited_supports": false
+     },
+     {
+      "text": "Business continuity & disaster recovery \u2013 BCP and DR policies, testing, and alignment with IT strategy.",
+      "supported": true,
+      "cited_supports": false
+     },
+     {
+      "text": "Monitoring & audit \u2013 Maintenance of network architecture diagrams; periodic review of critical devices and configurations; audit trail and log monitoring.",
+      "supported": false,
+      "cited_supports": false
+     }
+    ]
+   },
+   {
+    "id": "global-006",
+    "category": "global",
+    "expected": "answer",
+    "abstained": false,
+    "refused": false,
+    "route": "lookup",
+    "latency_ms": 11877,
+    "temporal_ok": false,
+    "verifier_ok": true
+   },
+   {
+    "id": "global-001",
+    "category": "global",
+    "expected": "answer",
+    "abstained": false,
+    "refused": false,
+    "route": "lookup",
+    "latency_ms": 12496,
+    "temporal_ok": true,
+    "verifier_ok": false,
+    "faithfulness": 0.6,
+    "citation_precision": 0.6,
+    "relevancy": 1.0,
+    "judged_sentences": [
+     {
+      "text": "The PRA\u2019s Supervisory Statement SS2/21 (March 2026) sets out the regulator\u2019s expectations for PRA\u2011regulated firms on outsourcing and third\u2011party risk management.",
+      "supported": true,
+      "cited_supports": true
+     },
+     {
+      "text": "It defines \u201coutsourcing\u201d and \u201cthird\u2011party arrangement\u201d in the PRA Rulebook, applies a principle of proportionality to intragroup outsourcing and to non\u2011significant firms, and requires governance under the Senior Managers and Certification Regime (SM&CR) and record\u2011keeping.",
+      "supported": true,
+      "cited_supports": true
+     },
+     {
+      "text": "Firms must conduct materiality and risk assessments in the pre\u2011outsourcing phase, perform due diligence on third parties, and notify the PRA of material arrangements before entry.",
+      "supported": true,
+      "cited_supports": true
+     },
+     {
+      "text": "Written agreements for material outsourcing must cover data security, access/audit rights, sub\u2011outsourcing, and business continuity/exit strategies.",
+      "supported": false,
+      "cited_supports": false
+     },
+     {
+      "text": "The statement also aligns with existing PRA requirements and international standards such as BCBS Operational Resilience Principles and IOSCO principles on outsourcing.",
+      "supported": false,
+      "cited_supports": false
+     }
+    ]
+   },
+   {
+    "id": "global-009",
+    "category": "global",
+    "expected": "answer",
+    "abstained": false,
+    "refused": false,
+    "route": "lookup",
+    "latency_ms": 12145,
+    "temporal_ok": true,
+    "verifier_ok": true
+   }
+  ],
+  "summary": {
+   "n": 38,
+   "faithfulness": 0.715,
+   "citation_precision": 0.677,
+   "answer_relevancy": 0.842,
+   "abstention_accuracy": null,
+   "refusal_accuracy": null,
+   "false_abstention_rate": 0.263,
+   "temporal_correctness": 0.857,
+   "verifier_pass_rate": 0.536,
+   "latency_p50_ms": 14614,
+   "latency_p95_ms": 41892,
+   "judged": 19
+  }
+ }
+}

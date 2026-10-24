@@ -1,0 +1,30 @@
+{
+ "train_examples": 164,
+ "cv_accuracy": 0.976,
+ "golden_accuracy": 0.903,
+ "golden_n": 175,
+ "classes": [
+  "comparison",
+  "global",
+  "lookup",
+  "temporal"
+ ],
+ "confusion": {
+  "lookup": {
+   "lookup": 95,
+   "temporal": 4,
+   "global": 11
+  },
+  "temporal": {
+   "temporal": 28,
+   "global": 1
+  },
+  "comparison": {
+   "comparison": 21
+  },
+  "global": {
+   "global": 14,
+   "lookup": 1
+  }
+ }
+}

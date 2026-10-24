@@ -19,7 +19,8 @@ kaggle.json
 data/raw/
 data/interim/
 data/processed/
-artifacts/
+artifacts/*
+!artifacts/reports/
 mlruns/
 mlartifacts/
 reports/generated/
