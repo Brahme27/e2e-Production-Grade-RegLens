@@ -89,8 +89,8 @@ jobs:
           uv run poe router
       - name: Retrieval quality gate (production row vs committed baseline)
         run: |
-          uv run python -m reglens.evals.ablation --rows G
-          uv run python -m reglens.evals.gate --row G
+          uv run python -m reglens.evals.ablation --rows F
+          uv run python -m reglens.evals.gate --row F
       - uses: docker/setup-buildx-action@v3
       - name: Build images
         run: docker compose build

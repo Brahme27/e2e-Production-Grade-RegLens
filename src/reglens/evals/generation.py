@@ -54,6 +54,10 @@ Then rate "relevancy" 1-5: does the answer address what was asked?
 Reply as JSON: {"sentences": [{"text": "...", "supported": true, "cited_supports": true}], "relevancy": 1-5}"""
 
 
+def _row(key: str) -> Any:
+    return next(r for r in ROWS if r.key == key)
+
+
 def subset(items: list[GoldItem], seed: int, sizes: dict[str, int] = SUBSET) -> list[GoldItem]:
     rng = random.Random(seed)
     by_cat: dict[str, list[GoldItem]] = defaultdict(list)
@@ -188,7 +192,7 @@ def summarise(rows: list[dict[str, Any]]) -> dict[str, Any]:
 def calibrate_abstention(settings: Settings, items: list[GoldItem], today: date) -> dict[str, Any]:
     """Choose the reranker-score threshold that best separates answerable from unanswerable."""
     retriever = build_retriever(settings, today=lambda: today)
-    config = replace(ROWS[-1].config, collection="reglens", top_k=8)
+    config = replace(_row("F").config, collection="reglens", top_k=8)
     scores = []
     for item in items:
         if item.category not in ("lookup", "temporal", "unanswerable"):
@@ -214,7 +218,7 @@ def calibrate_abstention(settings: Settings, items: list[GoldItem], today: date)
 
 def build_service(settings: Settings, pipeline: str, llm: LLMClient) -> QAService:
     retriever = build_retriever(settings, today=lambda: date(2026, 10, 24))
-    config = replace(ROWS[-1].config, collection="reglens", top_k=8)
+    config = replace(_row("F").config, collection="reglens", top_k=8)
     if pipeline == "naive":
         config = replace(BASE, top_k=8)
     tracer = Tracer(settings.artifacts_dir / f"eval-traces-{pipeline}.jsonl")

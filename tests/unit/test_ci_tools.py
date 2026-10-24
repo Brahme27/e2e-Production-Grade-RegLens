@@ -27,13 +27,13 @@ def test_gate_main_writes_then_checks_baseline(
     settings = Settings(artifacts_dir=tmp_path / "art", evals_dir=tmp_path / "evals")
     settings.reports_dir.mkdir(parents=True)
     settings.evals_dir.mkdir()
-    report = [{"key": "G", "overall": BASE}]
+    report = [{"key": "F", "overall": BASE}]
     (settings.reports_dir / "ablation.json").write_text(json.dumps(report))
     monkeypatch.setattr(gate, "get_settings", lambda: settings)
     assert gate.main([]) == 0  # no baseline yet: written
-    assert json.loads((settings.evals_dir / "baseline.json").read_text())["row"] == "G"
+    assert json.loads((settings.evals_dir / "baseline.json").read_text())["row"] == "F"
     assert gate.main([]) == 0
-    worse = [{"key": "G", "overall": {**BASE, "recall@10": 0.70}}]
+    worse = [{"key": "F", "overall": {**BASE, "recall@10": 0.70}}]
     (settings.reports_dir / "ablation.json").write_text(json.dumps(worse))
     assert gate.main([]) == 1
     with pytest.raises(KeyError):

@@ -41,7 +41,7 @@ def row(report: list[dict[str, Any]], key: str) -> dict[str, Any]:
 
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description="Retrieval quality gate")
-    parser.add_argument("--row", default="G")
+    parser.add_argument("--row", default="F")
     parser.add_argument(
         "--update", action="store_true", help="accept current numbers as the new baseline"
     )

@@ -81,7 +81,7 @@ ROWS = [
     ),
     Row(
         "G",
-        "+ document-diverse retrieval for global questions",
+        "+ document-diverse retrieval for global questions (not shipped)",
         replace(
             BASE,
             collection="reglens_para_ctx",

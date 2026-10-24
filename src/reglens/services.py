@@ -84,7 +84,9 @@ def build_answerer(settings: Settings, llm: LLMClient | None = None) -> Answerer
     )
 
 
-SERVING_CONFIG = RetrievalConfig()  # hybrid + reranker + filters + router, via alias "reglens"
+# hybrid + MiniLM reranker + router + as-of/regulator filters, via alias "reglens" (ablation row F;
+# row G's document diversification did not improve retrieval, so it is off)
+SERVING_CONFIG = RetrievalConfig(diversify_global=False)
 
 
 class Services:
