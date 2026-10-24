@@ -60,6 +60,8 @@ lint = { cmd = "ruff check src tests", help = "Static lint checks" }
 typecheck = { cmd = "mypy src", help = "Static type checks" }
 test = { cmd = "pytest", help = "Run tests with coverage" }
 check = { sequence = ["lint", "typecheck", "test"], help = "Everything CI runs" }
+crawl = { cmd = "python -m reglens.corpus.crawl", help = "Download the curated regulatory corpus (cached)" }
+parse = { cmd = "python -m reglens.parse.run", help = "Parse raw documents into numbered paragraphs" }
 api = { cmd = "uvicorn reglens.api.app:create_app --factory --reload --port 8000", help = "Run the API" }
 up = { cmd = "docker compose up -d --build", help = "Build and start the stack" }
 down = { cmd = "docker compose down", help = "Stop the stack" }
@@ -71,7 +73,8 @@ src = ["src", "tests"]
 
 [tool.ruff.lint]
 select = ["E", "F", "W", "I", "B", "UP", "S", "N", "SIM", "RUF", "PL"]
-ignore = ["PLR0913"]
+# RUF001-003: regulatory text is full of typographic quotes and dashes we must match
+ignore = ["PLR0913", "RUF001", "RUF002", "RUF003"]
 
 [tool.ruff.lint.per-file-ignores]
 "tests/**" = ["S101", "PLR2004"]

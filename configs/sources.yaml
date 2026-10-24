@@ -1,0 +1,361 @@
+# RegLens curated corpus: 37 documents from RBI, SEBI, FCA and PRA on six shared themes:
+# KYC, outsourcing, cyber/IT and operational resilience, grievance redressal / complaints,
+# governance and compliance, model risk and AI.
+#
+# Older versions come from each regulator's own archive (PRA Rulebook point-in-time
+# pages, Bank of England PDF editions) or, where the regulator's PDF server blocks
+# automated downloads (rbidocs.rbi.org.in), from the Internet Archive's Wayback Machine.
+#
+# applies_to vocabulary: commercial_banks, nbfcs, uk_banks (PRA-authorised banks and building
+# societies), fca_firms, sebi_intermediaries, market_infrastructure, all_sebi_entities.
+
+documents:
+  # ------------------------------------------------------------------ RBI (HTML)
+  - id: rbi-cb-kyc-2025
+    regulator: RBI
+    kind: html
+    doc_type: directions
+    title: Reserve Bank of India (Commercial Banks - Know Your Customer) Directions, 2025
+    url: https://www.rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=13141
+    topics: [kyc]
+    applies_to: [commercial_banks]
+    issue_date: 2025-11-28
+    snapshots:
+      - label: 2025-11-28
+        url: https://web.archive.org/web/20251130041311id_/https://rbidocs.rbi.org.in/rdocs/notification/PDFs/169MD.PDF
+        effective_from: 2025-11-28
+  - id: rbi-md-kyc-2016
+    regulator: RBI
+    kind: html
+    doc_type: master_direction
+    title: Master Direction - Know Your Customer (KYC) Direction, 2016
+    url: https://www.rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=11566
+    topics: [kyc]
+    applies_to: [commercial_banks, nbfcs]
+    issue_date: 2016-02-25
+  - id: rbi-cb-outsourcing-2025
+    regulator: RBI
+    kind: html
+    doc_type: directions
+    title: Reserve Bank of India (Commercial Banks - Managing Risks in Outsourcing) Directions, 2025
+    url: https://www.rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=13139
+    topics: [outsourcing, cyber_it]
+    applies_to: [commercial_banks]
+    issue_date: 2025-11-28
+  - id: rbi-md-it-outsourcing-2023
+    regulator: RBI
+    kind: html
+    doc_type: master_direction
+    title: Master Direction on Outsourcing of Information Technology Services
+    url: https://www.rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=12486
+    topics: [outsourcing, cyber_it]
+    applies_to: [commercial_banks, nbfcs]
+    issue_date: 2023-04-10
+  - id: rbi-cb-cyber-tech-2026
+    regulator: RBI
+    kind: html
+    doc_type: directions
+    title: Reserve Bank of India (Commercial Banks - Cybersecurity, Technology - Risk, Resilience and Assurance Framework) Directions, 2026
+    url: https://www.rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=13643
+    topics: [cyber_it, operational_resilience]
+    applies_to: [commercial_banks]
+    issue_date: 2026-07-31
+  - id: rbi-md-it-governance-2023
+    regulator: RBI
+    kind: html
+    doc_type: master_direction
+    title: Master Direction on Information Technology Governance, Risk, Controls and Assurance Practices
+    url: https://www.rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=12562
+    topics: [cyber_it, governance]
+    applies_to: [commercial_banks, nbfcs]
+    issue_date: 2023-11-07
+  - id: rbi-cb-internal-ombudsman-2026
+    regulator: RBI
+    kind: html
+    doc_type: directions
+    title: Reserve Bank of India (Commercial Banks - Internal Ombudsman) Directions, 2026
+    url: https://www.rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=13271
+    topics: [grievance_redressal]
+    applies_to: [commercial_banks]
+  - id: rbi-md-internal-ombudsman-2023
+    regulator: RBI
+    kind: html
+    doc_type: master_direction
+    title: Master Direction - Reserve Bank of India (Internal Ombudsman for Regulated Entities) Directions, 2023
+    url: https://www.rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=12586
+    topics: [grievance_redressal]
+    applies_to: [commercial_banks, nbfcs]
+    issue_date: 2023-12-29
+  - id: rbi-cb-compliance-2026
+    regulator: RBI
+    kind: html
+    doc_type: directions
+    title: Reserve Bank of India (Commercial Banks - Compliance Function) Directions, 2026
+    url: https://www.rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=13645
+    topics: [compliance, governance]
+    applies_to: [commercial_banks]
+  - id: rbi-cb-fraud-2026
+    regulator: RBI
+    kind: html
+    doc_type: directions
+    title: Reserve Bank of India (Commercial Banks - Fraud Risk Management) Directions, 2026
+    url: https://www.rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=13641
+    topics: [fraud]
+    applies_to: [commercial_banks]
+  - id: rbi-cb-governance-2025
+    regulator: RBI
+    kind: html
+    doc_type: directions
+    title: Reserve Bank of India (Commercial Banks - Governance) Directions, 2025
+    url: https://www.rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=13161
+    topics: [governance]
+    applies_to: [commercial_banks]
+  - id: rbi-nbfc-outsourcing-2025
+    regulator: RBI
+    kind: html
+    doc_type: directions
+    title: Reserve Bank of India (Non-Banking Financial Companies - Managing Risks in Outsourcing) Directions, 2025
+    url: https://www.rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=12941
+    topics: [outsourcing]
+    applies_to: [nbfcs]
+  - id: rbi-nbfc-kyc-2025
+    regulator: RBI
+    kind: html
+    doc_type: directions
+    title: Reserve Bank of India (Non-Banking Financial Companies - Know Your Customer) Directions, 2025
+    url: https://www.rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=12943
+    topics: [kyc]
+    applies_to: [nbfcs]
+  - id: rbi-cb-rbc-2025
+    regulator: RBI
+    kind: pdf
+    doc_type: directions
+    title: Reserve Bank of India (Commercial Banks - Responsible Business Conduct) Directions, 2025
+    # published as PDF only; rbidocs blocks automated downloads, so we use the archived copy
+    url: https://web.archive.org/web/20260309101315id_/https://rbidocs.rbi.org.in/rdocs/notification/PDFs/170MD.PDF
+    topics: [consumer_protection, grievance_redressal]
+    applies_to: [commercial_banks]
+    issue_date: 2025-11-28
+
+  # ------------------------------------------------------------------ SEBI (PDF behind an HTML page)
+  - id: sebi-cscrf-2024
+    regulator: SEBI
+    kind: sebi_circular
+    doc_type: circular
+    title: Cybersecurity and Cyber Resilience Framework (CSCRF) for SEBI Regulated Entities (REs)
+    url: https://www.sebi.gov.in/legal/circulars/aug-2024/cybersecurity-and-cyber-resilience-framework-cscrf-for-sebi-regulated-entities-res-_85964.html
+    topics: [cyber_it, operational_resilience]
+    applies_to: [all_sebi_entities]
+    issue_date: 2024-08-20
+  - id: sebi-cscrf-clarifications-2025
+    regulator: SEBI
+    kind: sebi_circular
+    doc_type: circular
+    title: Clarifications to Cybersecurity and Cyber Resilience Framework (CSCRF) for SEBI Regulated Entities (REs)
+    url: https://www.sebi.gov.in/legal/circulars/apr-2025/clarifications-to-cybersecurity-and-cyber-resilience-framework-cscrf-for-sebi-regulated-entities-res-_93734.html
+    topics: [cyber_it]
+    applies_to: [all_sebi_entities]
+    issue_date: 2025-04-30
+  - id: sebi-outsourcing-2011
+    regulator: SEBI
+    kind: sebi_circular
+    doc_type: circular
+    title: Guidelines on Outsourcing of Activities by Intermediaries
+    url: https://www.sebi.gov.in/legal/circulars/dec-2011/guidelines-on-outsourcing-of-activities-by-intermediaries_21752.html
+    topics: [outsourcing]
+    applies_to: [sebi_intermediaries]
+    issue_date: 2011-12-15
+  - id: sebi-scores-2023
+    regulator: SEBI
+    kind: sebi_circular
+    doc_type: circular
+    title: Redressal of investor grievances through the SEBI Complaint Redressal (SCORES) Platform and linking it to Online Dispute Resolution platform
+    url: https://www.sebi.gov.in/legal/circulars/sep-2023/redressal-of-investor-grievances-through-the-sebi-complaint-redressal-scores-platform-and-linking-it-to-online-dispute-resolution-platform_77159.html
+    topics: [grievance_redressal]
+    applies_to: [all_sebi_entities]
+    issue_date: 2023-09-20
+  - id: sebi-scores-master-2022
+    regulator: SEBI
+    kind: sebi_circular
+    doc_type: master_circular
+    title: Master Circular on the redressal of investor grievances through the SEBI Complaints Redress System (SCORES) platform
+    url: https://www.sebi.gov.in/legal/master-circulars/nov-2022/master-circular-on-the-redressal-of-investor-grievances-through-the-sebi-complaints-redress-system-scores-platform_64742.html
+    topics: [grievance_redressal]
+    applies_to: [all_sebi_entities]
+    issue_date: 2022-11-07
+  - id: sebi-ai-ml-reporting-2019
+    regulator: SEBI
+    kind: sebi_circular
+    doc_type: circular
+    title: Reporting for Artificial Intelligence (AI) and Machine Learning (ML) applications and systems offered and used by market intermediaries
+    url: https://www.sebi.gov.in/legal/circulars/jan-2019/reporting-for-artificial-intelligence-ai-and-machine-learning-ml-applications-and-systems-offered-and-used-by-market-intermediaries_41546.html
+    topics: [ai, model_risk]
+    applies_to: [sebi_intermediaries]
+    issue_date: 2019-01-04
+  - id: sebi-ai-vulnerability-2026
+    regulator: SEBI
+    kind: sebi_circular
+    doc_type: circular
+    title: Advisory on Emerging Advanced Artificial Intelligence (AI) Tools for Vulnerability Detection
+    url: https://www.sebi.gov.in/legal/circulars/may-2026/advisory-on-emerging-advanced-artificial-intelligence-ai-tools-for-vulnerability-detection_101270.html
+    topics: [ai, cyber_it]
+    applies_to: [all_sebi_entities]
+    issue_date: 2026-05-05
+  - id: sebi-kyc-master-2023
+    regulator: SEBI
+    kind: sebi_circular
+    doc_type: master_circular
+    title: Master Circular on Know Your Client (KYC) norms for the securities market
+    url: https://www.sebi.gov.in/legal/master-circulars/oct-2023/master-circular-on-know-your-client-kyc-norms-for-the-securities-market_77945.html
+    topics: [kyc]
+    applies_to: [sebi_intermediaries]
+    issue_date: 2023-10-12
+
+  # ------------------------------------------------------------------ FCA Handbook (one page per section)
+  - id: fca-prin-2a
+    regulator: FCA
+    kind: fca_chapter
+    doc_type: handbook_chapter
+    title: PRIN 2A The Consumer Duty
+    chapter: prin2a
+    topics: [consumer_protection]
+    applies_to: [fca_firms]
+  - id: fca-prin-2
+    regulator: FCA
+    kind: fca_chapter
+    doc_type: handbook_chapter
+    title: PRIN 2 The Principles
+    chapter: prin2
+    topics: [governance, consumer_protection]
+    applies_to: [fca_firms]
+  - id: fca-sysc-8
+    regulator: FCA
+    kind: fca_chapter
+    doc_type: handbook_chapter
+    title: SYSC 8 Outsourcing
+    chapter: sysc8
+    topics: [outsourcing]
+    applies_to: [fca_firms]
+  - id: fca-sysc-15a
+    regulator: FCA
+    kind: fca_chapter
+    doc_type: handbook_chapter
+    title: SYSC 15A Operational Resilience
+    chapter: sysc15a
+    topics: [operational_resilience]
+    applies_to: [fca_firms]
+  - id: fca-sysc-6
+    regulator: FCA
+    kind: fca_chapter
+    doc_type: handbook_chapter
+    title: SYSC 6 Compliance, internal audit and financial crime
+    chapter: sysc6
+    topics: [compliance, kyc]
+    applies_to: [fca_firms]
+  - id: fca-disp-1
+    regulator: FCA
+    kind: fca_chapter
+    doc_type: handbook_chapter
+    title: DISP 1 Treating complainants fairly
+    chapter: disp1
+    topics: [grievance_redressal, consumer_protection]
+    applies_to: [fca_firms]
+
+  # ------------------------------------------------------------------ PRA Rulebook (point-in-time pages)
+  - id: pra-outsourcing
+    regulator: PRA
+    kind: pra_part
+    doc_type: rulebook_part
+    title: PRA Rulebook - Outsourcing
+    part: outsourcing
+    as_of: [2026-10-24, 2025-06-30]
+    topics: [outsourcing]
+    applies_to: [uk_banks]
+  - id: pra-operational-resilience
+    regulator: PRA
+    kind: pra_part
+    doc_type: rulebook_part
+    title: PRA Rulebook - Operational Resilience
+    part: operational-resilience
+    as_of: [2026-10-24]
+    topics: [operational_resilience]
+    applies_to: [uk_banks]
+  - id: pra-fundamental-rules
+    regulator: PRA
+    kind: pra_part
+    doc_type: rulebook_part
+    title: PRA Rulebook - Fundamental Rules
+    part: fundamental-rules
+    as_of: [2026-10-24, 2025-06-30]
+    topics: [governance]
+    applies_to: [uk_banks]
+  - id: pra-risk-control
+    regulator: PRA
+    kind: pra_part
+    doc_type: rulebook_part
+    title: PRA Rulebook - Risk Control
+    part: risk-control
+    as_of: [2027-01-02, 2026-10-24, 2025-06-30]
+    topics: [governance, model_risk]
+    applies_to: [uk_banks]
+  - id: pra-general-organisational-requirements
+    regulator: PRA
+    kind: pra_part
+    doc_type: rulebook_part
+    title: PRA Rulebook - General Organisational Requirements
+    part: general-organisational-requirements
+    as_of: [2027-01-02, 2026-10-24, 2025-06-30]
+    topics: [governance, operational_resilience]
+    applies_to: [uk_banks]
+  - id: pra-compliance-and-internal-audit
+    regulator: PRA
+    kind: pra_part
+    doc_type: rulebook_part
+    title: PRA Rulebook - Compliance and Internal Audit
+    part: compliance-and-internal-audit
+    as_of: [2026-10-24, 2025-06-30]
+    topics: [compliance]
+    applies_to: [uk_banks]
+
+  # ------------------------------------------------------------------ PRA supervisory statements (PDF editions)
+  - id: pra-ss1-23
+    regulator: PRA
+    kind: pdf
+    doc_type: supervisory_statement
+    title: SS1/23 Model risk management principles for banks
+    url: https://www.bankofengland.co.uk/-/media/boe/files/prudential-regulation/supervisory-statement/2023/ss123.pdf
+    topics: [model_risk, ai]
+    applies_to: [uk_banks]
+    issue_date: 2023-05-17
+    effective_from: 2024-05-17
+  - id: pra-ss2-21
+    regulator: PRA
+    kind: pdf
+    doc_type: supervisory_statement
+    title: SS2/21 Outsourcing and third party risk management
+    url: https://www.bankofengland.co.uk/-/media/boe/files/prudential-regulation/supervisory-statement/2026/ss221-march-2026-update.pdf
+    topics: [outsourcing]
+    applies_to: [uk_banks]
+    issue_date: 2021-03-29
+    effective_from: 2026-03-01
+    snapshots:
+      - label: 2021-03-29
+        url: https://www.bankofengland.co.uk/-/media/boe/files/prudential-regulation/supervisory-statement/2021/ss221-march-21.pdf
+        effective_from: 2022-03-31
+      - label: 2024-11-01
+        url: https://www.bankofengland.co.uk/-/media/boe/files/prudential-regulation/supervisory-statement/2024/ss221-november-2024-update.pdf
+        effective_from: 2024-11-01
+  - id: pra-ss1-21
+    regulator: PRA
+    kind: pdf
+    doc_type: supervisory_statement
+    title: SS1/21 Operational resilience - Impact tolerances for important business services
+    url: https://www.bankofengland.co.uk/-/media/boe/files/prudential-regulation/supervisory-statement/2021/ss121-march-22.pdf
+    topics: [operational_resilience]
+    applies_to: [uk_banks]
+    issue_date: 2021-03-29
+    effective_from: 2022-03-31
+    snapshots:
+      - label: 2021-03-29
+        url: https://www.bankofengland.co.uk/-/media/boe/files/prudential-regulation/supervisory-statement/2021/ss121-march-21.pdf
+        effective_from: 2021-03-29
