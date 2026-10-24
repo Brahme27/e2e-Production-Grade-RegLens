@@ -216,3 +216,25 @@ def test_vector_store_local_path_connect(tmp_path: Path) -> None:
     store.recreate("c", 4)
     assert store.count("c") == 0
     client.close()
+
+
+def test_worker_cycle_reports_new_and_changed(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    from reglens import worker  # noqa: PLC0415
+
+    settings = Settings(data_dir=tmp_path / "data", artifacts_dir=tmp_path / "art")
+    snapshots = iter([{"a@1": "x", "b@1": "y"}, {"a@1": "x", "b@1": "z", "c@1": "w"}])
+    calls: list[str] = []
+    monkeypatch.setattr(worker, "fingerprints", lambda s: next(snapshots))
+    monkeypatch.setattr(worker.crawl, "main", lambda argv: calls.append("crawl"))
+    monkeypatch.setattr(worker.parse_run, "main", lambda: calls.append("parse"))
+    monkeypatch.setattr(worker.temporal_run, "main", lambda argv: calls.append("temporal"))
+    monkeypatch.setattr(worker, "build", lambda *a, **k: calls.append("index"))
+    changes = worker.cycle(settings, do_crawl=True)
+    assert calls == ["crawl", "parse", "temporal", "index"]
+    assert changes == {"new": ["c@1"], "changed": ["b@1"], "gone": []}
+    monkeypatch.setattr(worker, "get_settings", lambda: settings)
+    monkeypatch.setattr(worker, "cycle", lambda s, do_crawl: calls.append(f"cycle:{do_crawl}"))
+    worker.main(["--once", "--no-crawl"])
+    assert calls[-1] == "cycle:False"

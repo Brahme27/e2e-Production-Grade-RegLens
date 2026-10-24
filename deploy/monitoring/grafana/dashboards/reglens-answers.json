@@ -1,0 +1,45 @@
+{
+  "title": "RegLens - Answers",
+  "uid": "reglens-answers",
+  "schemaVersion": 39,
+  "time": {"from": "now-6h", "to": "now"},
+  "refresh": "30s",
+  "panels": [
+    {
+      "id": 1, "type": "timeseries", "title": "Questions per minute by outcome",
+      "gridPos": {"x": 0, "y": 0, "w": 12, "h": 8},
+      "datasource": {"type": "prometheus", "uid": "prometheus"},
+      "targets": [{"expr": "sum by (outcome) (rate(reglens_ask_outcomes_total[5m])) * 60", "legendFormat": "{{outcome}}"}]
+    },
+    {
+      "id": 2, "type": "stat", "title": "Abstention rate (1h)",
+      "gridPos": {"x": 12, "y": 0, "w": 6, "h": 8},
+      "datasource": {"type": "prometheus", "uid": "prometheus"},
+      "fieldConfig": {"defaults": {"unit": "percentunit"}},
+      "targets": [{"expr": "sum(rate(reglens_ask_outcomes_total{outcome=\"abstained\"}[1h])) / sum(rate(reglens_ask_outcomes_total[1h]))"}]
+    },
+    {
+      "id": 3, "type": "stat", "title": "Cache hit rate (1h)",
+      "gridPos": {"x": 18, "y": 0, "w": 6, "h": 8},
+      "datasource": {"type": "prometheus", "uid": "prometheus"},
+      "fieldConfig": {"defaults": {"unit": "percentunit"}},
+      "targets": [{"expr": "sum(rate(reglens_ask_outcomes_total{outcome=\"cached\"}[1h])) / sum(rate(reglens_ask_outcomes_total[1h]))"}]
+    },
+    {
+      "id": 4, "type": "timeseries", "title": "Answer latency p50 / p95",
+      "gridPos": {"x": 0, "y": 8, "w": 12, "h": 8},
+      "datasource": {"type": "prometheus", "uid": "prometheus"},
+      "fieldConfig": {"defaults": {"unit": "s"}},
+      "targets": [
+        {"expr": "histogram_quantile(0.5, sum(rate(reglens_ask_seconds_bucket[5m])) by (le))", "legendFormat": "p50"},
+        {"expr": "histogram_quantile(0.95, sum(rate(reglens_ask_seconds_bucket[5m])) by (le))", "legendFormat": "p95"}
+      ]
+    },
+    {
+      "id": 5, "type": "timeseries", "title": "User feedback per hour",
+      "gridPos": {"x": 12, "y": 8, "w": 12, "h": 8},
+      "datasource": {"type": "prometheus", "uid": "prometheus"},
+      "targets": [{"expr": "sum by (score) (increase(reglens_feedback_total[1h]))", "legendFormat": "{{score}}"}]
+    }
+  ]
+}

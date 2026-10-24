@@ -70,6 +70,10 @@ ablation = { cmd = "python -m reglens.evals.ablation", help = "Retrieval ablatio
 eval-answers = { cmd = "python -m reglens.evals.generation --calibrate", help = "End-to-end answer evaluation with LLM judge" }
 eval-impact = { cmd = "python -m reglens.evals.impact_eval", help = "Obligation extraction + gap judgement evaluation" }
 api = { cmd = "uvicorn reglens.api.app:create_app --factory --reload --port 8000", help = "Run the API" }
+pipeline = { sequence = ["crawl", "parse", "temporal", "index", "router"], help = "Corpus -> parsed -> time model -> indexes -> router" }
+worker = { cmd = "python -m reglens.worker --once", help = "One scheduled-worker cycle (crawl, parse, temporal, re-index)" }
+web = { cmd = "pnpm --dir frontend dev", help = "Run the console in dev mode" }
+e2e = { cmd = "pnpm --dir frontend exec playwright test", help = "Playwright E2E against a running stack" }
 up = { cmd = "docker compose up -d --build", help = "Build and start the stack" }
 down = { cmd = "docker compose down", help = "Stop the stack" }
 

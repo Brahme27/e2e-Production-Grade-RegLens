@@ -1,0 +1,13 @@
+# Prometheus scrapes the RegLens API's /metrics every 15 seconds (docker compose setup).
+global:
+  scrape_interval: 15s
+  evaluation_interval: 30s
+
+rule_files:
+  - /etc/prometheus/alert-rules.yml
+
+scrape_configs:
+  - job_name: reglens-api
+    metrics_path: /metrics
+    static_configs:
+      - targets: ["api:8000"]

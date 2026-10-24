@@ -1,7 +1,26 @@
+# Only what the Dockerfile COPYs is needed; keep the build context small.
 .git
 .venv
 .env
+.env.*
 **/__pycache__
+.mypy_cache
+.ruff_cache
+.pytest_cache
+.coverage
 tests
 walkthrough
 docs
+frontend
+infra
+deploy
+data/raw
+data/interim
+data/processed/chunks
+artifacts/qdrant
+artifacts/tickets
+artifacts/*.jsonl
+artifacts/reglens.db
+.cache/fastembed/models--onnx-community--bge-reranker-v2-m3-ONNX
+.cache/fastembed/models--Snowflake--snowflake-arctic-embed-xs
+.cache/fastembed/models--Qdrant--all-MiniLM-L6-v2-onnx

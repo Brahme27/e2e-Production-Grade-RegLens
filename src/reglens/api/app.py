@@ -12,7 +12,7 @@ from prometheus_client import CONTENT_TYPE_LATEST, generate_latest
 
 from reglens import __version__
 from reglens.api.deps import RateLimiter
-from reglens.api.routes import ask, documents, impact
+from reglens.api.routes import ask, documents, impact, meta
 from reglens.config import Settings, get_settings
 from reglens.log import configure_logging, get_logger
 from reglens.services import Services
@@ -66,4 +66,5 @@ def create_app(settings: Settings | None = None, services: Services | None = Non
     app.include_router(ask.router)
     app.include_router(documents.router)
     app.include_router(impact.router)
+    app.include_router(meta.router)
     return app

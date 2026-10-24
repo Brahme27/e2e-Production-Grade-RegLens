@@ -212,3 +212,21 @@ def test_graph_and_change_feed(client: tuple[TestClient, FakeQA]) -> None:
     assert feed[0]["date"] >= feed[-1]["date"]
     assert {e["event"] for e in feed} >= {"in_force", "superseded"}
     json.dumps(feed)  # serialisable
+
+
+def test_meta_entities_and_reports(client: tuple[TestClient, FakeQA]) -> None:
+    c, _ = client
+    meta = c.get("/v1/meta", headers=KEY).json()
+    assert meta["documents"] == 2 and meta["by_regulator"]["PRA"]["current"] == 2
+    assert {e["id"] for e in c.get("/v1/entities", headers=KEY).json()} == {
+        "sahyadri-bank",
+        "northbridge-bank",
+    }
+    assert c.get("/v1/reports/../../etc", headers=KEY).status_code == 404
+    assert (
+        c.get("/v1/reports/ablation", headers=KEY).status_code == 404
+    )  # not generated in this temp dir
+    reports = c.app.state.settings.reports_dir  # type: ignore[attr-defined]
+    reports.mkdir(parents=True, exist_ok=True)
+    (reports / "ablation.json").write_text('[{"key": "A"}]')
+    assert c.get("/v1/reports/ablation", headers=KEY).json() == [{"key": "A"}]

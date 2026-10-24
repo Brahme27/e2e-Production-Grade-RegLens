@@ -71,7 +71,7 @@ ROWS = [
         "+ router, as-of and regulator filters",
         replace(
             BASE,
-            collection="reglens_para_ctx_sum",
+            collection="reglens_para_ctx",
             mode="hybrid",
             reranker="minilm",
             temporal_filter=True,
@@ -84,7 +84,7 @@ ROWS = [
         "+ document-diverse retrieval for global questions",
         replace(
             BASE,
-            collection="reglens_para_ctx_sum",
+            collection="reglens_para_ctx",
             mode="hybrid",
             reranker="minilm",
             temporal_filter=True,

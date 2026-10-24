@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f5f6f8;
+  --foreground: #18212f;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-brand: #23395d;
+  --color-brand-light: #e9eef6;
+  --color-accent: #0f766e;
+  --font-sans: ui-sans-serif, system-ui, "Segoe UI", Roboto, "Noto Sans", sans-serif;
+  --font-mono: ui-monospace, "Cascadia Code", Consolas, monospace;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}
+
+/* a cited paragraph scrolled into view in the document viewer */
+.highlight {
+  animation: flash 2.5s ease-out;
+}
+@keyframes flash {
+  from { background-color: #fde68a; }
+  to { background-color: transparent; }
+}

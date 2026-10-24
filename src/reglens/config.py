@@ -26,6 +26,7 @@ class Settings(BaseSettings):
     data_dir: Path = Field(default=PROJECT_ROOT / "data")
     artifacts_dir: Path = Field(default=PROJECT_ROOT / "artifacts")
     configs_dir: Path = Field(default=PROJECT_ROOT / "configs")
+    evals_dir: Path = Field(default=PROJECT_ROOT / "evals")
     llm_config_path: Path = Field(default=PROJECT_ROOT / "configs" / "litellm.yaml")
     # every LLM answer is cached here (committed, so evals and CI replay without a key)
     llm_cache_dir: Path = Field(default=PROJECT_ROOT / "cache" / "llm")
@@ -46,7 +47,8 @@ class Settings(BaseSettings):
     sparse_model: str = "Qdrant/bm25"
     rerank_model: str = "BAAI/bge-reranker-v2-m3-int8"
     models_cache_dir: Path | None = Field(default=PROJECT_ROOT / ".cache" / "fastembed")
-    serving_variant: str = "para_ctx_sum"  # which index variant the alias "reglens" serves
+    # which index variant the alias "reglens" serves: E1 won the ablation (E2 summaries hurt)
+    serving_variant: str = "para_ctx"
 
     # secrets
     groq_api_key: SecretStr | None = None
@@ -56,10 +58,6 @@ class Settings(BaseSettings):
     langfuse_public_key: SecretStr | None = None
     langfuse_secret_key: SecretStr | None = None
     langfuse_host: str = "https://cloud.langfuse.com"
-
-    @property
-    def evals_dir(self) -> Path:
-        return PROJECT_ROOT / "evals"
 
     @property
     def reports_dir(self) -> Path:

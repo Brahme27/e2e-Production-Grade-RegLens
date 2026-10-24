@@ -1,11 +1,140 @@
+# RegLens local stack.
+#   docker compose up -d --build              # postgres, qdrant, redis, indexer (one-shot), api, frontend
+#   docker compose --profile monitoring up -d # + prometheus + grafana
+#   docker compose --profile worker up -d     # + scheduled crawler / re-indexer
+# Host ports are configurable (API_PORT, WEB_PORT, ...) in case one is busy.
 name: reglens
+
+x-app-env: &app-env
+  REGLENS_DATABASE_URL: postgresql+psycopg://reglens:${POSTGRES_PASSWORD:-reglens-local}@postgres:5432/reglens
+  REGLENS_QDRANT_URL: http://qdrant:6333
+  REGLENS_REDIS_URL: redis://redis:6379/0
+  REGLENS_GROQ_API_KEY: ${REGLENS_GROQ_API_KEY:-}
+  REGLENS_LANGFUSE_PUBLIC_KEY: ${REGLENS_LANGFUSE_PUBLIC_KEY:-}
+  REGLENS_LANGFUSE_SECRET_KEY: ${REGLENS_LANGFUSE_SECRET_KEY:-}
+  REGLENS_LANGFUSE_HOST: ${REGLENS_LANGFUSE_HOST:-https://cloud.langfuse.com}
+
 services:
-  api:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: reglens
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-reglens-local}
+      POSTGRES_DB: reglens
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U reglens -d reglens"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+    mem_limit: 256m
+
+  qdrant:
+    image: qdrant/qdrant:v1.16.2
+    volumes:
+      - qdrant:/qdrant/storage
+    ports:
+      - "${QDRANT_PORT:-6333}:6333"
+    healthcheck:
+      test: ["CMD-SHELL", "bash -c ':> /dev/tcp/127.0.0.1/6333' || exit 1"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+    mem_limit: 512m
+
+  redis:
+    image: redis:7-alpine
+    command: ["redis-server", "--maxmemory", "64mb", "--maxmemory-policy", "allkeys-lru"]
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+    mem_limit: 96m
+
+  # One-shot: load versions + supersession edges into Postgres and the serving index into
+  # Qdrant, from the baked-in corpus and embedding cache (no re-embedding, no LLM key needed).
+  indexer:
     build: .
     image: reglens-api:local
+    command: ["sh", "-c", "python -m reglens.temporal.run && python -m reglens.index.build --variants para_ctx --no-llm"]
+    environment: *app-env
+    depends_on:
+      postgres:
+        condition: service_healthy
+      qdrant:
+        condition: service_healthy
+    restart: "no"
+    mem_limit: 1g
+
+  api:
+    image: reglens-api:local
     environment:
+      <<: *app-env
       REGLENS_API_KEY: ${REGLENS_API_KEY:-local-dev-key}
-      REGLENS_GROQ_API_KEY: ${REGLENS_GROQ_API_KEY:-}
+      REGLENS_CORS_ORIGINS: '["http://localhost:${WEB_PORT:-3000}"]'
+    volumes:
+      - tickets:/app/artifacts/tickets
     ports:
       - "${API_PORT:-8000}:8000"
-    mem_limit: 512m
+    depends_on:
+      indexer:
+        condition: service_completed_successfully
+      redis:
+        condition: service_healthy
+    mem_limit: 1536m
+
+  frontend:
+    build: ./frontend
+    image: reglens-frontend:local
+    environment:
+      API_URL: http://api:8000
+      API_KEY: ${REGLENS_API_KEY:-local-dev-key}
+    ports:
+      - "${WEB_PORT:-3000}:3000"
+    depends_on:
+      api:
+        condition: service_healthy
+    mem_limit: 256m
+
+  worker:
+    image: reglens-api:local
+    profiles: [worker]
+    command: ["python", "-m", "reglens.worker", "--every-hours", "24"]
+    environment: *app-env
+    volumes:
+      - raw:/app/data/raw
+    depends_on:
+      indexer:
+        condition: service_completed_successfully
+    mem_limit: 1536m
+
+  prometheus:
+    image: prom/prometheus:v3.5.0
+    profiles: [monitoring]
+    volumes:
+      - ./deploy/monitoring/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - ./deploy/monitoring/alert-rules.yml:/etc/prometheus/alert-rules.yml:ro
+    ports:
+      - "${PROMETHEUS_PORT:-9090}:9090"
+    mem_limit: 256m
+
+  grafana:
+    image: grafana/grafana:12.1.0
+    profiles: [monitoring]
+    environment:
+      GF_AUTH_ANONYMOUS_ENABLED: "true"
+      GF_AUTH_ANONYMOUS_ORG_ROLE: Viewer
+    volumes:
+      - ./deploy/monitoring/grafana/provisioning:/etc/grafana/provisioning:ro
+      - ./deploy/monitoring/grafana/dashboards:/var/lib/grafana/dashboards:ro
+    ports:
+      - "${GRAFANA_PORT:-3001}:3000"
+    mem_limit: 256m
+
+volumes:
+  pgdata:
+  qdrant:
+  tickets:
+  raw:
