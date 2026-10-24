@@ -1,7 +1,7 @@
 # 05: What we learned (including what didn't work)
 
-Measuring everything means some ideas lose. These four did, and the project is better for
-admitting it.
+Measuring everything means some ideas lose, and some bugs only show up in the numbers. Here are
+four ideas that lost and one evaluation run that exposed three bugs.
 
 ## 1. LLM document summaries made retrieval *worse* (ablation row E2)
 **Idea:** add a 2-sentence LLM summary of each document to every chunk's context (contextual
@@ -30,6 +30,25 @@ Asked which older documents a generic RBI repeal clause covered, the model linke
 prompt didn't change its mind. **Decision:** LLM-proposed edges go through human review
 (`configs/supersession_overrides.yaml`, ADR 0003); we reported the raw error instead of tuning
 the prompt on one example.
+
+## 5. The first answer evaluation found three bugs the unit tests didn't
+Reading the per-question output of the first full run (not just the averages) showed:
+- **The judge returned nothing for most answers.** Qwen spent its whole 900-token budget on
+  hidden "thinking" and never wrote the JSON verdict; only 7 of ~30 answers were judged. The
+  "1.0 faithfulness" average looked perfect only because it covered 7 answers. **Fix:** the
+  reasoning setting is now per model in `configs/litellm.yaml` (off for Qwen), and blank
+  replies are never cached.
+- **The safety rail refused a core compliance question.** "Who must be given overall
+  responsibility for anti-money laundering systems?" was refused as harmful, because the rule
+  matched the word *laundering*. For a tool whose corpus is a third AML/KYC, that is a serious
+  false positive. **Fix:** the rule now needs a *request to do* the act ("how can I…", "help me…")
+  rather than the topic, with regression tests for legitimate AML, mule-account and phishing
+  questions.
+- **5 of 60 answers cited sources as `【1】` instead of `[1]`,** gpt-oss's native style, so the
+  verifier marked them uncited. **Fix:** markers are normalised before verification.
+
+The lesson: an average can hide a broken measurement. Always check *how many* items a metric
+was computed on, and read some failures by hand.
 
 ## The common thread
 Each failure was caught by a number, not by intuition, and each time the fix was a **design
