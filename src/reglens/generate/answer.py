@@ -1,0 +1,207 @@
+"""Answering: retrieval result -> (abstain?) -> LLM answer with citations -> verification.
+
+Abstention happens twice:
+1. **before** the LLM: if the best reranked passage scores below a calibrated threshold, the
+   corpus almost certainly doesn't cover the question, so we answer "not found" without
+   spending an API call;
+2. **by** the LLM: the prompt tells it to reply NOT_FOUND when the sources don't answer.
+"""
+
+from __future__ import annotations
+
+import re
+from collections.abc import Iterator
+from dataclasses import dataclass, field
+from datetime import date
+
+from reglens.generate.prompts import NOT_FOUND, PROMPT_VERSION, answer_messages
+from reglens.generate.verify import MARKER, Verification, verify
+from reglens.index.store import Hit
+from reglens.llm.client import LLMClient, LLMUnavailableError
+from reglens.retrieve.pipeline import RetrievalResult
+
+ABSTAIN_TEXT = (
+    "I could not find this in the indexed regulations (RBI, SEBI, FCA and PRA documents "
+    "on KYC, outsourcing, cyber and operational resilience, complaints, governance and "
+    "model risk). Please check the regulator's website or rephrase the question."
+)
+UNAVAILABLE_TEXT = (
+    "The answer service is temporarily unavailable. The most relevant passages are listed below."
+)
+ANSWER_MAX_TOKENS = 900
+
+
+@dataclass(frozen=True)
+class Citation:
+    number: int
+    label: str  # "[SS1/23 §2.4]"
+    chunk_id: str
+    doc_id: str
+    doc_key: str
+    ref: str
+    regulator: str
+    title: str
+    url: str
+    status: str
+    valid_from: str | None
+    valid_to: str | None
+    text: str
+
+
+@dataclass
+class Answer:
+    question: str
+    text: str
+    abstained: bool
+    route: str
+    as_of: date | None
+    citations: list[Citation] = field(default_factory=list)
+    verification: Verification | None = None
+    reason: str = ""  # why we abstained / degraded
+    prompt_version: str = PROMPT_VERSION
+
+
+def citation_for(number: int, hit: Hit) -> Citation:
+    c = hit.chunk
+    return Citation(
+        number=number,
+        label=c.citation,
+        chunk_id=c.chunk_id,
+        doc_id=c.doc_id,
+        doc_key=c.doc_key,
+        ref=c.ref,
+        regulator=c.regulator,
+        title=c.title,
+        url=c.url,
+        status=c.status,
+        valid_from=c.valid_from.isoformat() if c.valid_from else None,
+        valid_to=c.valid_to.isoformat() if c.valid_to else None,
+        text=c.text,
+    )
+
+
+def is_not_found(text: str) -> bool:
+    return NOT_FOUND in text.strip()[:40] or not text.strip()
+
+
+def strip_invalid_markers(text: str, sources: int) -> str:
+    return MARKER.sub(lambda m: m.group(0) if 1 <= int(m.group(1)) <= sources else "", text)
+
+
+class Answerer:
+    def __init__(
+        self,
+        llm: LLMClient,
+        abstain_threshold: float,
+        alias: str = "reasoning-large",
+        summaries: dict[str, str] | None = None,
+    ) -> None:
+        self.llm = llm
+        self.abstain_threshold = abstain_threshold
+        self.alias = alias
+        self.summaries = summaries or {}
+
+    def should_abstain(self, retrieval: RetrievalResult) -> bool:
+        if not retrieval.hits:
+            return True
+        if retrieval.route == "out_of_scope":
+            return True
+        return retrieval.hits[0].score < self.abstain_threshold
+
+    def _messages(self, retrieval: RetrievalResult) -> list[dict[str, str]]:
+        summaries = self.summaries if retrieval.route == "global" else None
+        return answer_messages(
+            retrieval.question, retrieval.hits, retrieval.as_of, retrieval.route, summaries
+        )
+
+    def _finish(self, retrieval: RetrievalResult, text: str) -> Answer:
+        if is_not_found(text):
+            return Answer(
+                retrieval.question,
+                ABSTAIN_TEXT,
+                True,
+                retrieval.route,
+                retrieval.as_of,
+                reason="model_not_found",
+            )
+        text = strip_invalid_markers(text.strip(), len(retrieval.hits))
+        used = sorted({int(m) for m in MARKER.findall(text)})
+        citations = [citation_for(n, retrieval.hits[n - 1]) for n in used]
+        return Answer(
+            retrieval.question,
+            text,
+            False,
+            retrieval.route,
+            retrieval.as_of,
+            citations=citations,
+            verification=verify(text, retrieval.hits),
+        )
+
+    def answer(self, retrieval: RetrievalResult) -> Answer:
+        if self.should_abstain(retrieval):
+            return Answer(
+                retrieval.question,
+                ABSTAIN_TEXT,
+                True,
+                retrieval.route,
+                retrieval.as_of,
+                reason="low_retrieval_score",
+            )
+        try:
+            response = self.llm.complete(
+                self._messages(retrieval),
+                alias=self.alias,
+                max_tokens=ANSWER_MAX_TOKENS,
+                purpose="answer",
+            )
+        except LLMUnavailableError:
+            fallback = Answer(
+                retrieval.question,
+                UNAVAILABLE_TEXT,
+                True,
+                retrieval.route,
+                retrieval.as_of,
+                reason="llm_unavailable",
+            )
+            fallback.citations = [citation_for(i, h) for i, h in enumerate(retrieval.hits, start=1)]
+            return fallback
+        return self._finish(retrieval, response.text)
+
+    def stream(self, retrieval: RetrievalResult) -> Iterator[str | Answer]:
+        """Yield text deltas, then the final verified Answer as the last item."""
+        if self.should_abstain(retrieval):
+            yield Answer(
+                retrieval.question,
+                ABSTAIN_TEXT,
+                True,
+                retrieval.route,
+                retrieval.as_of,
+                reason="low_retrieval_score",
+            )
+            return
+        parts: list[str] = []
+        released = False  # hold the opening text until we know it isn't "NOT_FOUND"
+        try:
+            for delta in self.llm.stream(
+                self._messages(retrieval),
+                alias=self.alias,
+                max_tokens=ANSWER_MAX_TOKENS,
+                purpose="answer",
+            ):
+                parts.append(delta)
+                if released:
+                    yield delta
+                    continue
+                so_far = "".join(parts).lstrip()
+                if NOT_FOUND.startswith(so_far) or so_far.startswith(NOT_FOUND):
+                    continue  # still ambiguous, or a refusal we will replace
+                released = True
+                yield so_far
+        except LLMUnavailableError:
+            yield self.answer(retrieval)  # falls back to passages
+            return
+        yield self._finish(retrieval, "".join(parts))
+
+
+def answer_text_without_markers(text: str) -> str:
+    return re.sub(r"\s*\[\d{1,2}\]", "", text)

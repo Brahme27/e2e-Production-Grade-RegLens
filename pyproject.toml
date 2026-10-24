@@ -63,6 +63,12 @@ check = { sequence = ["lint", "typecheck", "test"], help = "Everything CI runs" 
 crawl = { cmd = "python -m reglens.corpus.crawl", help = "Download the curated regulatory corpus (cached)" }
 parse = { cmd = "python -m reglens.parse.run", help = "Parse raw documents into numbered paragraphs" }
 temporal = { cmd = "python -m reglens.temporal.run", help = "Supersession graph + validity intervals -> DB" }
+index = { cmd = "python -m reglens.index.build", help = "Chunk, contextualise, embed and load all index variants" }
+golden = { cmd = "python -m reglens.evals.build_golden", help = "Build the golden evaluation set (LLM, cached)" }
+router = { cmd = "python -m reglens.retrieve.train_router", help = "Train the query router" }
+ablation = { cmd = "python -m reglens.evals.ablation", help = "Retrieval ablation A-G (no LLM)" }
+eval-answers = { cmd = "python -m reglens.evals.generation --calibrate", help = "End-to-end answer evaluation with LLM judge" }
+eval-impact = { cmd = "python -m reglens.evals.impact_eval", help = "Obligation extraction + gap judgement evaluation" }
 api = { cmd = "uvicorn reglens.api.app:create_app --factory --reload --port 8000", help = "Run the API" }
 up = { cmd = "docker compose up -d --build", help = "Build and start the stack" }
 down = { cmd = "docker compose down", help = "Stop the stack" }
@@ -75,7 +81,11 @@ src = ["src", "tests"]
 [tool.ruff.lint]
 select = ["E", "F", "W", "I", "B", "UP", "S", "N", "SIM", "RUF", "PL"]
 # RUF001-003: regulatory text is full of typographic quotes and dashes we must match
-ignore = ["PLR0913", "RUF001", "RUF002", "RUF003"]
+# S311: random is used for reproducible sampling, never for security
+ignore = ["PLR0913", "RUF001", "RUF002", "RUF003", "S311"]
+
+[tool.ruff.lint.pycodestyle]
+max-line-length = 140  # the formatter wraps code at 100; long prompt/regex strings may run to 140
 
 [tool.ruff.lint.per-file-ignores]
 "tests/**" = ["S101", "PLR2004", "E501"]  # long lines = inline HTML fixtures
@@ -87,7 +97,7 @@ plugins = ["pydantic.mypy"]
 mypy_path = "src"
 
 [[tool.mypy.overrides]]
-module = ["litellm.*", "sklearn.*", "fastembed.*", "pypdfium2.*", "selectolax.*", "langgraph.*"]
+module = ["litellm.*", "sklearn.*", "fastembed.*", "pypdfium2.*", "selectolax.*"]
 ignore_missing_imports = true
 
 [tool.pytest.ini_options]
