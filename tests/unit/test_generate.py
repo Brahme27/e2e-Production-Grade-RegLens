@@ -194,3 +194,13 @@ def test_native_gpt_oss_markers_are_normalised(tmp_path: Path) -> None:
     result = ans.answer(retrieval())
     assert [c.number for c in result.citations] == [1]
     assert result.verification is not None and result.verification.ok
+
+
+def test_paragraph_number_used_as_source_number_is_resolved() -> None:
+    refs = ["20", "21", "2"]
+    assert normalise_markers("Annual review【20†para20(1)(i)】.", refs) == "Annual review[1]."
+    assert normalise_markers("Board approval【21†para 21】.", refs) == "Board approval[2]."
+    assert normalise_markers("Valid number wins【3†para 20】.", refs) == "Valid number wins[3]."
+    assert normalise_markers("No label【9】.", refs) == "No label[9]."  # stripped later
+    assert normalise_markers("Unknown【99†para 7】.", refs) == "Unknown[99]."
+    assert normalise_markers("Ambiguous【12†para 20】.", ["20", "20"]) == "Ambiguous[12]."

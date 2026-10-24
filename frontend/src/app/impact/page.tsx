@@ -95,7 +95,7 @@ export default function ImpactPage() {
             data-testid="impact-start"
             className="ml-auto rounded-lg bg-brand px-4 py-2 text-sm font-semibold text-white disabled:opacity-50"
           >
-            {busy && !runId ? "Analysing… (about a minute)" : "Run impact analysis"}
+            {busy && !runId ? "Analysing… (a few minutes on the free LLM tier; repeat runs are instant)" : "Run impact analysis"}
           </button>
         </div>
         <Note>

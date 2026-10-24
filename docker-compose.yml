@@ -31,7 +31,7 @@ services:
     mem_limit: 256m
 
   qdrant:
-    image: qdrant/qdrant:v1.16.2
+    image: qdrant/qdrant:v1.20.0 # keep in step with qdrant-client (uv.lock)
     volumes:
       - qdrant:/qdrant/storage
     ports:
@@ -69,6 +69,7 @@ services:
     mem_limit: 1g
 
   api:
+    build: . # same image as the indexer; declared here too so `docker compose build api` works
     image: reglens-api:local
     environment:
       <<: *app-env

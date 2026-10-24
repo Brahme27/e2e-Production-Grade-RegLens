@@ -31,7 +31,7 @@ variable "api_desired_count" {
 
 variable "qdrant_version" {
   type    = string
-  default = "v1.16.2"
+  default = "v1.20.0" # keep in step with qdrant-client (uv.lock)
 }
 
 variable "crawl_schedule" {

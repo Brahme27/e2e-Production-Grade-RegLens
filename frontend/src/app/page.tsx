@@ -283,7 +283,13 @@ export default function AskPage() {
                     </div>
                   </li>
                 ))}
-                {sources.length === 0 && <li className="text-xs text-slate-500">—</li>}
+                {sources.length === 0 && (
+                  <li className="text-xs text-slate-500">
+                    {answer?.cached
+                      ? "Answered from the cache: open a citation chip to see its paragraph."
+                      : "—"}
+                  </li>
+                )}
               </ol>
             </Card>
           </div>

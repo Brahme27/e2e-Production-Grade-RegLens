@@ -10,7 +10,7 @@ Abstention happens twice:
 from __future__ import annotations
 
 import re
-from collections.abc import Iterator
+from collections.abc import Iterator, Sequence
 from dataclasses import dataclass, field
 from datetime import date
 
@@ -84,12 +84,35 @@ def is_not_found(text: str) -> bool:
     return NOT_FOUND in text.strip()[:40] or not text.strip()
 
 
-# gpt-oss sometimes falls back to its native citation style: 【1】 or 【2†para 1.8】
-FULLWIDTH_MARKER = re.compile(r"【(\d{1,2})(?:†[^】]*)?】")
+# gpt-oss sometimes falls back to its native citation style: 【1】 or 【2†para 1.8】.
+# It occasionally puts the PARAGRAPH number where the source number belongs (【12†para12(1)】
+# with 8 sources); the label after † then tells us which source it meant.
+FULLWIDTH_MARKER = re.compile(r"【(\d{1,3})(?:†\s*(?:para\s*)?([^】]*))?】")
 
 
-def normalise_markers(text: str) -> str:
-    return FULLWIDTH_MARKER.sub(r"[\1]", text)
+def _source_for_label(label: str, refs: Sequence[str]) -> int | None:
+    """The one source whose paragraph ref the label names ("12(1)(i)" names ref "12", not "1")."""
+    label = label.replace("\u202f", " ").strip()
+    matches = [
+        (len(ref), number)
+        for number, ref in enumerate(refs, start=1)
+        if ref and label.startswith(ref) and not label[len(ref) : len(ref) + 1].isalnum()
+    ]
+    if not matches:
+        return None
+    longest = max(length for length, _ in matches)
+    best = [number for length, number in matches if length == longest]
+    return best[0] if len(best) == 1 else None  # ambiguous: leave it to the invalid-marker check
+
+
+def normalise_markers(text: str, refs: Sequence[str] = ()) -> str:
+    def to_bracket(match: re.Match[str]) -> str:
+        number, label = int(match.group(1)), match.group(2)
+        if refs and label and not 1 <= number <= len(refs):
+            number = _source_for_label(label, refs) or number
+        return f"[{number}]"
+
+    return FULLWIDTH_MARKER.sub(to_bracket, text)
 
 
 def strip_invalid_markers(text: str, sources: int) -> str:
@@ -132,7 +155,8 @@ class Answerer:
                 retrieval.as_of,
                 reason="model_not_found",
             )
-        text = strip_invalid_markers(normalise_markers(text.strip()), len(retrieval.hits))
+        refs = [hit.chunk.ref for hit in retrieval.hits]
+        text = strip_invalid_markers(normalise_markers(text.strip(), refs), len(refs))
         used = sorted({int(m) for m in MARKER.findall(text)})
         citations = [citation_for(n, retrieval.hits[n - 1]) for n in used]
         return Answer(

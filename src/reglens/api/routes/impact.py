@@ -31,6 +31,7 @@ class GapPatch(BaseModel):
 def _save(engine: Any, state: dict[str, Any]) -> None:
     gaps = {g["obligation_id"]: g for g in state.get("gaps", [])}
     with session_scope(engine) as session:
+        judgements = []
         for o in state.get("obligations", []):
             row_id = f"{state['run_id']}:{o['id']}"  # never shared between runs or firms
             session.add(
@@ -50,7 +51,7 @@ def _save(engine: Any, state: dict[str, Any]) -> None:
             )
             gap = gaps.get(o["id"])
             if gap:
-                session.add(
+                judgements.append(
                     GapJudgement(
                         obligation_id=row_id,
                         entity=state["entity"],
@@ -60,6 +61,10 @@ def _save(engine: Any, state: dict[str, Any]) -> None:
                         confidence=gap.get("confidence", 0.0),
                     )
                 )
+        # no ORM relationship links the two models, so the insert order is ours to enforce:
+        # obligations first, or the judgements' foreign key fails (Postgres checks it)
+        session.flush()
+        session.add_all(judgements)
 
 
 def _rows(

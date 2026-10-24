@@ -55,11 +55,11 @@ test("evaluation page shows the ablation table", async ({ page }) => {
 });
 
 test("impact board: run, review, approve, tickets", async ({ page }) => {
-  test.setTimeout(300_000);
+  test.setTimeout(900_000); // a cold run makes one LLM call per obligation on the free tier (~15 s each)
   await page.goto("/impact");
   await page.getByTestId("impact-target").selectOption("pra-outsourcing@asof2026-10-24");
   await page.getByTestId("impact-start").click();
-  await expect(page.getByTestId("impact-status")).toContainText("awaiting review", { timeout: 240_000 });
+  await expect(page.getByTestId("impact-status")).toContainText("awaiting review", { timeout: 780_000 });
   await page.getByRole("button", { name: "Agree" }).first().click();
   await page.getByTestId("impact-approve").click();
   await expect(page.getByRole("link", { name: "Download tickets (CSV)" })).toBeVisible({ timeout: 60_000 });

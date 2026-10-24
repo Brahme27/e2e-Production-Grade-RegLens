@@ -69,6 +69,7 @@ router = { cmd = "python -m reglens.retrieve.train_router", help = "Train the qu
 ablation = { cmd = "python -m reglens.evals.ablation", help = "Retrieval ablation A-G (no LLM)" }
 eval-answers = { cmd = "python -m reglens.evals.generation --calibrate", help = "End-to-end answer evaluation with LLM judge" }
 eval-impact = { cmd = "python -m reglens.evals.impact_eval", help = "Obligation extraction + gap judgement evaluation" }
+results = { cmd = "python -m reglens.results", help = "Write docs/RESULTS.md from artifacts/reports" }
 api = { cmd = "uvicorn reglens.api.app:create_app --factory --reload --port 8000", help = "Run the API" }
 pipeline = { sequence = ["crawl", "parse", "temporal", "index", "router"], help = "Corpus -> parsed -> time model -> indexes -> router" }
 worker = { cmd = "python -m reglens.worker --once", help = "One scheduled-worker cycle (crawl, parse, temporal, re-index)" }

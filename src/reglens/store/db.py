@@ -10,8 +10,20 @@ from __future__ import annotations
 from collections.abc import Iterator
 from contextlib import contextmanager
 from datetime import UTC, date, datetime
+from typing import Any
 
-from sqlalchemy import JSON, Date, DateTime, Float, ForeignKey, Integer, String, Text, create_engine
+from sqlalchemy import (
+    JSON,
+    Date,
+    DateTime,
+    Float,
+    ForeignKey,
+    Integer,
+    String,
+    Text,
+    create_engine,
+    event,
+)
 from sqlalchemy.engine import Engine
 from sqlalchemy.orm import DeclarativeBase, Mapped, Session, mapped_column, sessionmaker
 
@@ -103,8 +115,17 @@ class Feedback(Base):
 
 
 def make_engine(url: str) -> Engine:
-    connect_args = {"check_same_thread": False} if url.startswith("sqlite") else {}
-    return create_engine(url, pool_pre_ping=True, connect_args=connect_args)
+    if not url.startswith("sqlite"):
+        return create_engine(url, pool_pre_ping=True)
+    engine = create_engine(url, pool_pre_ping=True, connect_args={"check_same_thread": False})
+
+    @event.listens_for(engine, "connect")
+    def _enforce_foreign_keys(dbapi_connection: Any, _record: Any) -> None:
+        # SQLite ignores foreign keys unless asked; Postgres always enforces them, so tests
+        # on SQLite must too (an insert-order bug once passed every test and failed in Docker)
+        dbapi_connection.execute("PRAGMA foreign_keys=ON")
+
+    return engine
 
 
 def init_db(engine: Engine) -> None:
