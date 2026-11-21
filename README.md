@@ -74,6 +74,7 @@ docker compose up -d --build       # console http://localhost:3000 · API :8000/
 
 ## Learn more
 
+- [Learn](learn/README.md): the whole project as a beginner-friendly story, from setup to deployment
 - [Walkthrough](walkthrough/README.md): the build story in plain English
 - [Results](docs/RESULTS.md) · [Limitations](docs/LIMITATIONS.md) · [Decisions (ADRs)](docs/adr/)
 - **Known weak spots:** comparison questions (nDCG@10 0.58) and 18% false abstention on hard questions.
